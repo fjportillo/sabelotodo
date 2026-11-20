@@ -1,0 +1,51 @@
+{
+ "name": "Sabelotodo · El quiz diario de cultura general",
+ "short_name": "Sabelotodo",
+ "description": "El quiz diario de cultura general: reto diario, campeonato, logros y ranking.",
+ "lang": "es",
+ "id": "./",
+ "start_url": "./?app=1",
+ "scope": "./",
+ "display": "standalone",
+ "orientation": "portrait",
+ "background_color": "#0b1324",
+ "theme_color": "#0f172a",
+ "categories": [
+  "games",
+  "education",
+  "entertainment"
+ ],
+ "icons": [
+  {
+   "src": "icons/icon-192.png",
+   "sizes": "192x192",
+   "type": "image/png",
+   "purpose": "any"
+  },
+  {
+   "src": "icons/icon-512.png",
+   "sizes": "512x512",
+   "type": "image/png",
+   "purpose": "any"
+  },
+  {
+   "src": "icons/maskable-512.png",
+   "sizes": "512x512",
+   "type": "image/png",
+   "purpose": "maskable"
+  }
+ ],
+ "shortcuts": [
+  {
+   "name": "Reto diario",
+   "short_name": "Reto",
+   "url": "./?app=1#reto",
+   "icons": [
+    {
+     "src": "icons/icon-192.png",
+     "sizes": "192x192"
+    }
+   ]
+  }
+ ]
+}
