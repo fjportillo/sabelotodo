@@ -325,3 +325,862 @@ pregunta_es,visual,correcta_es,pregunta,correcta,incorrecta1,incorrecta2,incorre
 ¿Qué guerra mítica empezó por el rapto de Helena?,,Guerra de Troya,Quina guerra mítica va començar pel rapte d'Helena?,Guerra de Troia,Guerra dels Titans,Guerra del Peloponès,Guerres Mèdiques
 ¿Qué criatura de la mitología asturiana es un espíritu femenino que vive en fuentes y ríos?,,Xana,Quina criatura mitològica asturiana és un esperit femení de les aigües?,,,,
 "Según la leyenda catalana, ¿qué criatura mató Sant Jordi?",,El dragón,"A la llegenda catalana, quina criatura va matar Sant Jordi?",El drac,La víbria,La Cuca Fera,La Mulassa
+¿Cuál es la capital de Portugal?,,Lisboa,Quina és la capital de Portugal?,Lisboa,Porto,Coïmbra,Braga
+¿En qué continente está Egipto?,,África,En quin continent és Egipte?,Àfrica,Asia,Europa,Oceania
+¿Cuál es la capital de Italia?,,Roma,Quina és la capital d'Itàlia?,Roma,Milà,Nàpols,Florència
+¿Qué río atraviesa Londres?,,Támesis,Quin riu travessa Londres?,Tàmesi,Sena,Danubi,Rin
+¿En qué país está la Torre Eiffel?,,Francia,En quin país és la Torre Eiffel?,França,Bèlgica,Itàlia,Suïssa
+¿Cuál es la capital de Japón?,,Tokio,Quina és la capital del Japó?,Tòquio,Osaka,Kyoto,Pequín
+¿Qué país tiene como capital Berlín?,,Alemania,Quin país té Berlín com a capital?,Alemanya,Àustria,Polònia,Països Baixos
+¿Cuál es el desierto cálido más grande del mundo?,,Sahara,Quin és el desert càlid més gran del món?,Sàhara,Gobi,Kalahari,Atacama
+¿En qué país están las pirámides de Guiza?,,Egipto,En quin país hi ha les piràmides de Gizeh?,Egipte,Mèxic,Perú,Sudan
+¿Cuál es la capital de Argentina?,,Buenos Aires,Quina és la capital de l'Argentina?,Buenos Aires,Córdoba,Rosario,Montevideo
+¿Qué cordillera separa España de Francia?,,Pirineos,Quina serralada separa Espanya de França?,Pirineus,Alps,Serralada Cantàbrica,Sistema Central
+¿En qué país está la ciudad de Ámsterdam?,,Países Bajos,En quin país és la ciutat d'Amsterdam?,Països Baixos,Bèlgica,Dinamarca,Alemanya
+"¿Qué país es conocido como ""el país del sol naciente""?",,Japón,"Quin país és conegut com ""el país del sol naixent""?",Japó,Xina,Corea del Sud,Tailàndia
+¿Cuál es la capital de México?,,Ciudad de México,Quina és la capital de Mèxic?,Ciutat de Mèxic,Guadalajara,Monterrey,Cancún
+¿Qué isla española es la más grande de las Baleares?,,Mallorca,Quina illa és la més gran de les Balears?,Mallorca,Menorca,Eivissa,Formentera
+¿En qué país está el Coliseo?,,Italia,En quin país és el Colosseu?,Itàlia,Grècia,Espanya,Turquia
+¿Cuál es la capital de Rusia?,,Moscú,Quina és la capital de Rússia?,Moscou,Sant Petersburg,Kíiv,Minsk
+¿Qué país tiene más habitantes de América del Sur?,,Brasil,Quin país té més habitants de l'Amèrica del Sud?,Brasil,Argentina,Colòmbia,Perú
+¿Cuál es la capital de Noruega?,,Oslo,Quina és la capital de Noruega?,Oslo,Bergen,Estocolm,Hèlsinki
+"¿Qué río pasa por Viena, Budapest y Belgrado?",,Danubio,"Quin riu passa per Viena, Budapest i Belgrad?",Danubi,Rin,Elba,Vístula
+¿Cuál es la capital de Egipto?,,El Cairo,Quina és la capital d'Egipte?,el Caire,Alexandria,Luxor,Gizeh
+¿Qué país tiene más islas del mundo?,,Suecia,Quin país té més illes del món?,Suècia,Indonesia,Filipines,Japó
+¿Cuál es la capital de Suiza?,,Berna,Quina és la capital de Suïssa?,Berna,Zúric,Ginebra,Basilea
+¿Qué canal une el mar Mediterráneo con el mar Rojo?,,Canal de Suez,Quin canal uneix la Mediterrània amb el mar Roig?,Canal de Suez,Canal de Panamà,Canal de Corint,Canal de Kiel
+¿Cuál es el río más largo de España que nace y desemboca en el país?,,Ebro,Quin és el riu més llarg que neix i desemboca a Espanya?,Ebro,Tajo,Guadalquivir,Duero
+¿Cuál es la capital de Vietnam?,,Hanói,Quina és la capital del Vietnam?,Hanoi,Ho Chi Minh,Hué,Da Nang
+¿En qué país está la región de Transilvania?,,Rumanía,En quin país és la regió de Transsilvània?,Romania,Hongria,Bulgària,Sèrbia
+¿Qué estrecho separa Asia de América?,,Estrecho de Bering,Quin estret separa l'Àsia de l'Amèrica?,Estret de Bering,Estret de Magallanes,Estret d'Ormuz,Estret de Malacca
+¿Cuál es la capital de Perú?,,Lima,Quina és la capital del Perú?,Lima,Cusco,Arequipa,Quito
+¿Qué volcán es el punto más alto de España?,,Teide,Quin volcà és el punt més alt d'Espanya?,Teide,Mulhacén,Aneto,Roque de los Muchachos
+¿En qué país está el monte Fuji?,,Japón,En quin país és el mont Fuji?,Japó,Xina,Corea del Sud,Filipines
+¿Cuál es la capital de Islandia?,,Reikiavik,Quina és la capital d'Islàndia?,Reykjavík,Akureyri,Nuuk,Tórshavn
+¿Qué país europeo tiene como capital La Valeta?,,Malta,Quin país europeu té la Valletta com a capital?,Malta,Xipre,Mònaco,San Marino
+¿Cuál es el país más grande de África por superficie?,,Argelia,Quin és el país més gran de l'Àfrica per superfície?,Algèria,República Democràtica del Congo,Sudan,Líbia
+¿Qué ciudad es la capital de Escocia?,,Edimburgo,Quina ciutat és la capital d'Escòcia?,Edimburg,Glasgow,Aberdeen,Inverness
+¿Qué dos países comparten la isla de La Española?,,Haití y República Dominicana,Quins dos països comparteixen l'illa de l'Hispaniola?,Haití i la República Dominicana,Cuba i Haití,Jamaica i Cuba,Puerto Rico i la República Dominicana
+¿En qué provincia española está el cabo de Finisterre?,,A Coruña,En quina província és el cap de Finisterre?,la Corunya,Astúries,Lugo,Pontevedra
+¿Cuál es la capital de Polonia?,,Varsovia,Quina és la capital de Polònia?,Varsòvia,Cracòvia,Gdańsk,Praga
+¿Qué río forma parte de la frontera entre Estados Unidos y México?,,Río Bravo,Quin riu forma part de la frontera entre els Estats Units i Mèxic?,Riu Bravo,Mississipí,Colorado,Missouri
+¿Cuál es la capital de Grecia?,,Atenas,Quina és la capital de Grècia?,Atenes,Tessalònica,Esparta,Corint
+"¿En qué país está el desierto del Gobi, además de China?",,Mongolia,"En quin país és el desert del Gobi, a més de la Xina?",Mongòlia,Kazakhstan,Rússia,Afganistan
+¿Qué isla es la más grande del Mediterráneo?,,Sicilia,Quina illa és la més gran de la Mediterrània?,Sicília,Sardenya,Xipre,Còrsega
+¿Cuál es la capital de Colombia?,,Bogotá,Quina és la capital de Colòmbia?,Bogotá,Medellín,Cali,Cartagena d'Índies
+¿Qué país atraviesa la línea del ecuador y le debe su nombre?,,Ecuador,Quin país travessa la línia de l'equador i li deu el nom?,Equador,Colòmbia,Perú,Kenya
+¿Qué cascada está en la frontera entre Canadá y Estados Unidos?,,Cataratas del Niágara,Quina cascada és a la frontera entre el Canadà i els Estats Units?,Cascades del Niàgara,Cascades de l'Iguaçú,Salt Àngel,Cascades Victòria
+¿Cuál es la capital de Irlanda?,,Dublín,Quina és la capital d'Irlanda?,Dublín,Cork,Belfast,Galway
+¿Cuál es la capital de Mongolia?,,Ulán Bator,Quina és la capital de Mongòlia?,Ulan Bator,Astaná,Bixkek,Taixkent
+"¿Qué país africano tiene tres capitales: Pretoria, Ciudad del Cabo y Bloemfontein?",,Sudáfrica,"Quin país africà té tres capitals: Pretòria, Ciutat del Cap i Bloemfontein?",Sud-àfrica,Namíbia,Botswana,Zimbàbue
+¿Cuál es el lago más grande de África?,,Lago Victoria,Quin és el llac més gran de l'Àfrica?,Llac Victòria,Llac Tanganyika,Llac Malawi,Llac Txad
+¿Qué país tiene como capital Uagadugú?,,Burkina Faso,Quin país té Ouagadougou com a capital?,Burkina Faso,Mali,Níger,Senegal
+¿Cuál es el país sin salida al mar más grande del mundo?,,Kazajistán,Quin és el país sense sortida al mar més gran del món?,Kazakhstan,Mongòlia,Txad,Bolívia
+¿Qué ciudad es la capital de Bolivia sede del Gobierno?,,La Paz,Quina ciutat és la seu del Govern de Bolívia?,La Paz,Sucre,Santa Cruz de la Sierra,Cochabamba
+¿Cuál es el punto más bajo de la superficie terrestre emergida?,,Orillas del mar Muerto,Quin és el punt més baix de la superfície terrestre emergida?,Riba de la mar Morta,Vall de la Mort,Depressió de Qattara,Depressió d'Afar
+¿Qué río es el más largo de Asia?,,Yangtsé,Quin és el riu més llarg de l'Àsia?,Iang-tsé,Mekong,Ganges,Groc
+¿Cuál es la capital de Myanmar desde 2005?,,Naipyidó,Quina és la capital de Myanmar des del 2005?,Naypyidaw,Yangon,Mandalay,Bangkok
+¿Qué estrecho separa Sicilia de la península italiana?,,Estrecho de Mesina,Quin estret separa Sicília de la península italiana?,Estret de Messina,Estret de Bonifacio,Estret d'Otranto,Estret del Bòsfor
+¿Cuál es la montaña más alta de América?,,Aconcagua,Quina és la muntanya més alta d'Amèrica?,Aconcagua,Denali,Chimborazo,Ojos del Salado
+"¿En qué país está el salar de Uyuni, el mayor desierto de sal del mundo?",,Bolivia,"En quin país és el salar d'Uyuni, el desert de sal més gran del món?",Bolívia,Xile,Argentina,Perú
+¿Qué país tiene como capital Timbu?,,Bután,Quin país té Thimphu com a capital?,Bután,Nepal,Laos,Bangladesh
+¿Cuál es la capital de Australia Occidental?,,Perth,Quina és la capital d'Austràlia Occidental?,Perth,Adelaide,Darwin,Brisbane
+¿Qué isla es la más grande de las Canarias?,,Tenerife,Quina és l'illa més gran de les Canàries?,Tenerife,Gran Canaria,Fuerteventura,Lanzarote
+¿A qué país pertenece la isla de Gozo?,,Malta,A quin país pertany l'illa de Gozo?,Malta,Grècia,Croàcia,Itàlia
+¿Cuál es la capital de Eslovenia?,,Liubliana,Quina és la capital d'Eslovènia?,Ljubljana,Zagreb,Bratislava,Maribor
+¿Qué río desemboca en el Atlántico formando la frontera natural entre Portugal y Galicia?,,Miño,Quin riu desemboca a l'Atlàntic fent de frontera entre Portugal i Galícia?,Minho,Duero,Limia,Tajo
+¿Cuál es el país más pequeño de África continental?,,Gambia,Quin és el país més petit de l'Àfrica continental?,Gàmbia,Swazilàndia,Djibouti,Ruanda
+¿Qué ciudad europea se asienta sobre 14 islas unidas por 57 puentes?,,Estocolmo,Quina ciutat europea s'assenta sobre 14 illes unides per 57 ponts?,Estocolm,Venècia,Amsterdam,Copenhaguen
+¿Qué país tiene la mayor longitud de costa del mundo?,,Canadá,Quin país té la costa més llarga del món?,Canadà,Noruega,Indonèsia,Rússia
+¿En qué año terminó la Segunda Guerra Mundial?,,1945,En quin any va acabar la Segona Guerra Mundial?,1945,1939,1944,1950
+¿Qué antigua civilización construyó las pirámides de Guiza?,,Egipcia,Quina civilització antiga va construir les piràmides de Gizeh?,Egípcia,Romana,Grega,Maia
+¿Quién fue el primer presidente de Estados Unidos?,,George Washington,Qui va ser el primer president dels Estats Units?,George Washington,Thomas Jefferson,Abraham Lincoln,John Adams
+¿Qué emperador francés fue derrotado en Waterloo?,,Napoleón Bonaparte,Quin emperador francès va ser derrotat a Waterloo?,Napoleó Bonaparte,Lluís XIV,Carlemany,Napoleó III
+¿Qué barco se hundió en 1912 tras chocar con un iceberg?,,Titanic,Quin vaixell es va enfonsar el 1912 després de xocar amb un iceberg?,Titanic,Lusitania,Britannic,Queen Mary
+¿En qué ciudad fue asesinado John F. Kennedy en 1963?,,Dallas,A quina ciutat va ser assassinat John F. Kennedy el 1963?,Dallas,Washington,Nova York,Chicago
+¿Qué pueblo del norte de Europa navegaba en barcos llamados drakkars?,,Vikingos,Quin poble del nord d'Europa navegava en vaixells anomenats drakkars?,Víkings,Celtes,Gots,Francs
+¿Qué reyes financiaron el primer viaje de Colón?,,Reyes Católicos,Quins reis van finançar el primer viatge de Colom?,Reis Catòlics,Felip II i Isabel de Valois,Carles V i Isabel de Portugal,Ferran VII i Maria Cristina
+¿Qué muralla dividía en dos una ciudad alemana durante la Guerra Fría?,,Muro de Berlín,Quin mur dividia en dues una ciutat alemanya durant la Guerra Freda?,Mur de Berlín,Mur d'Adrià,Mur de Munic,Teló d'acer d'Hamburg
+¿Qué líder indio promovió la resistencia no violenta contra el dominio británico?,,Mahatma Gandhi,Quin líder indi va promoure la resistència no violenta contra el domini britànic?,Mahatma Gandhi,Jawaharlal Nehru,Indira Gandhi,Muhammad Ali Jinnah
+¿En qué siglo vivió Leonardo da Vinci?,,XV-XVI,En quin segle va viure Leonardo da Vinci?,XV-XVI,XIII-XIV,XVII,XVIII
+¿Qué famosa ciudad inca está en los Andes de Perú?,,Machu Picchu,Quina famosa ciutat inca és als Andes del Perú?,Machu Picchu,Tikal,Teotihuacán,Chichén Itzá
+¿Qué cosmonauta soviético fue el primer ser humano en viajar al espacio?,,Yuri Gagarin,Quin cosmonauta soviètic va ser el primer ésser humà a viatjar a l'espai?,Iuri Gagarin,Valentina Tereixkova,Aleksei Leónov,Serguei Koroliov
+¿Qué reina de Egipto se alió con Julio César y Marco Antonio?,,Cleopatra,Quina reina d'Egipte es va aliar amb Juli Cèsar i Marc Antoni?,Cleòpatra,Nefertiti,Hatshepsut,Nefertari
+¿En qué año se produjo el atentado contra las Torres Gemelas de Nueva York?,,2001,En quin any es va produir l'atemptat contra les Torres Bessones de Nova York?,2001,1999,2003,1993
+¿Qué rey español abdicó en 2014 en favor de su hijo Felipe?,,Juan Carlos I,Quin rei espanyol va abdicar el 2014 a favor del seu fill Felip?,Joan Carles I,Alfons XIII,Felip V,Ferran VII
+¿Qué filósofo griego fue maestro de Alejandro Magno?,,Aristóteles,Quin filòsof grec va ser mestre d'Alexandre el Gran?,Aristòtil,Sòcrates,Plató,Pitàgores
+¿Qué continente colonizaron sobre todo los británicos con la llegada a Botany Bay en 1788?,,Oceanía,Quin continent van colonitzar sobretot els britànics amb l'arribada a Botany Bay el 1788?,Oceania,Àfrica,Amèrica del Sud,Àsia
+"¿Qué rey francés era conocido como ""el Rey Sol""?",,Luis XIV,"Quin rei francès era conegut com ""el Rei Sol""?",Lluís XIV,Lluís XVI,Lluís XIII,Francesc I
+¿En qué año se produjo la toma de la Bastilla?,,1789,En quin any es va produir la presa de la Bastilla?,1789,1776,1799,1815
+¿Qué general cartaginés cruzó los Alpes con elefantes?,,Aníbal,Quin general cartaginès va travessar els Alps amb elefants?,Anníbal,Amílcar Barca,Asdrúbal,Escipió
+¿Qué fecha marca la Diada Nacional de Cataluña por la caída de Barcelona en 1714?,,11 de septiembre,Quina data marca la Diada Nacional de Catalunya per la caiguda de Barcelona el 1714?,11 de setembre,23 d'abril,24 de juny,12 d'octubre
+¿Qué imperio gobernó Solimán el Magnífico?,,Otomano,Quin imperi va governar Solimà el Magnífic?,Otomà,Persa,Mogol,Bizantí
+¿En qué año llegó el hombre a la Luna por primera vez?,,1969,En quin any va arribar l'home a la Lluna per primera vegada?,1969,1965,1972,1961
+¿Qué rey de Macedonia conquistó el Imperio persa?,,Alejandro Magno,Quin rei de Macedònia va conquerir l'Imperi persa?,Alexandre el Gran,Filip II,Darios III,Ptolemeu I
+¿Qué político británico fue primer ministro durante casi toda la Segunda Guerra Mundial?,,Winston Churchill,Quin polític britànic va ser primer ministre durant gairebé tota la Segona Guerra Mundial?,Winston Churchill,Neville Chamberlain,Clement Attlee,Anthony Eden
+¿Qué batalla de 1212 supuso una gran victoria cristiana sobre los almohades?,,Las Navas de Tolosa,Quina batalla del 1212 va suposar una gran victòria cristiana sobre els almohades?,Las Navas de Tolosa,Covadonga,Alarcos,Sagrajas
+¿Qué navegante portugués llegó a la India por mar rodeando África en 1498?,,Vasco da Gama,Quin navegant portuguès va arribar a l'Índia per mar vorejant l'Àfrica el 1498?,Vasco da Gama,Bartolomeu Dias,Ferran de Magalhães,Pedro Álvares Cabral
+"¿Qué expedición completó la primera vuelta al mundo, terminada por Juan Sebastián Elcano?",,La de Magallanes,"Quina expedició va completar la primera volta al món, acabada per Juan Sebastián Elcano?",La de Magalhães,La de Colom,La de Vasco da Gama,La de Cook
+¿Qué revolución de 1917 llevó a los bolcheviques al poder?,,Revolución rusa,Quina revolució del 1917 va portar els bolxevics al poder?,Revolució russa,Revolució francesa,Revolució mexicana,Revolució xinesa
+¿Qué ciudad italiana fue gobernada durante siglos por la familia Médici?,,Florencia,Quina ciutat italiana va governar durant segles la família Mèdici?,Florència,Venècia,Milà,Gènova
+"¿Qué rey de Castilla tenía el sobrenombre de ""el Sabio""?",,Alfonso X,"Quin rei de Castella tenia el sobrenom de ""el Savi""?",Alfons X,Ferran III,Sanç IV,Alfons VIII
+¿Qué conquistador español derrotó al Imperio azteca?,,Hernán Cortés,Quin conqueridor espanyol va derrotar l'Imperi asteca?,Hernán Cortés,Francisco Pizarro,Pedro de Valdivia,Diego de Almagro
+¿Qué año se considera el fin del Imperio romano de Occidente?,,476,Quin any es considera la fi de l'Imperi romà d'Occident?,476,410,395,1453
+¿En qué ciudad se firmó en 1919 el tratado que puso fin a la Primera Guerra Mundial con Alemania?,,Versalles,A quina ciutat es va signar el 1919 el tractat que va posar fi a la Primera Guerra Mundial amb Alemanya?,Versalles,Viena,Ginebra,Berlín
+"¿Qué líder de los derechos civiles pronunció el discurso ""I have a dream""?",,Martin Luther King,"Quin líder dels drets civils va pronunciar el discurs ""I have a dream""?",Martin Luther King,Malcolm X,Rosa Parks,Barack Obama
+"¿Qué civilización mesoamericana desarrolló un calendario de ""cuenta larga"" y ciudades como Tikal?",,Maya,"Quina civilització mesoamericana va desenvolupar un calendari de ""compte llarg"" i ciutats com Tikal?",Maia,Asteca,Inca,Olmeca
+¿Qué guerra enfrentó a Estados Unidos y la Unión Soviética sin combate directo entre ambos?,,Guerra Fría,Quina guerra va enfrontar els Estats Units i la Unió Soviètica sense combat directe entre tots dos?,Guerra Freda,Guerra de Corea,Guerra del Vietnam,Guerra del Golf
+¿Qué dictador gobernó España entre 1939 y 1975?,,Francisco Franco,Quin dictador va governar Espanya entre el 1939 i el 1975?,Francisco Franco,Miguel Primo de Rivera,Manuel Azaña,Dámaso Berenguer
+¿Qué peste devastó Europa a mediados del siglo XIV?,,Peste negra,Quina pesta va devastar Europa a mitjan segle XIV?,Pesta negra,Grip espanyola,Verola,Còlera
+¿Qué rey inglés tuvo seis esposas?,,Enrique VIII,Quin rei anglès va tenir sis esposes?,Enric VIII,Eduard VI,Ricard III,Jaume I
+¿En qué año entró España en la Comunidad Económica Europea?,,1986,En quin any va entrar Espanya a la Comunitat Econòmica Europea?,1986,1982,1992,1977
+¿Qué pueblo de la península ibérica resistió en Numancia el asedio romano?,,Celtíberos,Quin poble de la península Ibèrica va resistir a Numància el setge romà?,Celtibers,Ibers,Vascons,Tartessis
+¿Qué emperador romano dividió definitivamente el imperio entre sus hijos en el año 395?,,Teodosio I,Quin emperador romà va dividir definitivament l'imperi entre els seus fills l'any 395?,Teodosi I,Constantí,Dioclecià,Justinià
+"¿Qué conde de Barcelona es considerado el fundador de la dinastía y apodado ""el Velloso""?",,Wifredo el Velloso,"Quin comte de Barcelona és considerat el fundador de la dinastia i és conegut com ""el Pilós""?",Guifré el Pilós,Ramon Berenguer IV,Borrell II,Ramon Berenguer I
+¿En qué año se firmó el Compromiso de Caspe?,,1412,En quin any es va signar el Compromís de Casp?,1412,1492,1348,1469
+¿Qué faraón impulsó el culto al dios único Atón?,,Akenatón,Quin faraó va impulsar el culte al déu únic Aton?,Akhenaton,Ramsès II,Kheops,Tutmosis III
+¿Qué batalla de 1571 enfrentó a la Liga Santa contra el Imperio otomano?,,Lepanto,Quina batalla del 1571 va enfrontar la Lliga Santa amb l'Imperi otomà?,Lepant,Pavia,Mohács,Sant Quintí
+¿Qué rey visigodo fue derrotado en la batalla de Guadalete en 711?,,Rodrigo,Quin rei visigot va ser derrotat a la batalla de Guadalete el 711?,Roderic,Recared,Leovigild,Wamba
+¿Qué emperador inca fue capturado por Pizarro en Cajamarca?,,Atahualpa,Quin emperador inca va ser capturat per Pizarro a Cajamarca?,Atahualpa,Huáscar,Pachacútec,Manco Cápac
+¿Qué tratado de 1713 puso fin a la Guerra de Sucesión española?,,Tratado de Utrecht,Quin tractat del 1713 va posar fi a la Guerra de Successió espanyola?,Tractat d'Utrecht,Pau de Westfàlia,Tractat dels Pirineus,Pau de Ryswick
+¿Qué ciudad fue la capital del Imperio azteca?,,Tenochtitlan,Quina ciutat va ser la capital de l'Imperi asteca?,Tenochtitlan,Teotihuacán,Tula,Texcoco
+¿Qué almirante dirigió la flota de la Corona de Aragón en las Vísperas Sicilianas?,,Roger de Llúria,Quin almirall va dirigir la flota de la Corona d'Aragó a les Vespres Sicilianes?,Roger de Llúria,Roger de Flor,Bernat de Cabrera,Ramon Muntaner
+¿Qué rey asirio es famoso por su gran biblioteca de tablillas en Nínive?,,Asurbanipal,Quin rei assiri és famós per la gran biblioteca de tauletes de Nínive?,Assurbanipal,Nabucodonosor II,Sargon d'Accad,Hammurabi
+¿En qué año proclamó Simón Bolívar la creación de la Gran Colombia en el Congreso de Angostura?,,1819,En quin any es va proclamar la creació de la Gran Colòmbia al Congrés d'Angostura?,1819,1810,1830,1824
+¿Qué dinastía gobernó China entre 1644 y 1912?,,Qing,Quina dinastia va governar la Xina entre el 1644 i el 1912?,Qing,Ming,Han,Tang
+¿Qué emperador bizantino ordenó construir Santa Sofía en el siglo VI?,,Justiniano I,Quin emperador bizantí va fer construir Santa Sofia al segle VI?,Justinià I,Constantí I,Teodosi II,Basili II
+¿Qué código legal babilónico grabado en una estela es uno de los más antiguos conocidos?,,Código de Hammurabi,Quin codi legal babiloni gravat en una estela és un dels més antics coneguts?,Codi d'Hammurabi,Codi de Justinià,Llei de les Dotze Taules,Codi napoleònic
+¿Qué militar dirigió la expedición de los almogávares a Bizancio?,,Roger de Flor,Quin militar va dirigir l'expedició dels almogàvers a Bizanci?,Roger de Flor,Roger de Llúria,Jaume I,Berenguer d'Entença
+¿En qué año se inauguró el canal de Suez?,,1869,En quin any es va inaugurar el canal de Suez?,1869,1914,1825,1893
+¿Qué pacto de 1939 firmaron la Alemania nazi y la Unión Soviética?,,Pacto Ribbentrop-Mólotov,Quin pacte del 1939 van signar l'Alemanya nazi i la Unió Soviètica?,Pacte Ribbentrop-Molotov,Pacte d'Acer,Pacte Anti-Komintern,Acords de Munic
+"¿Qué reina de Castilla era conocida como ""la Loca""?",,Juana I,"Quina reina de Castella era coneguda com ""la Boja""?",Joana I,Isabel I,Urraca I,Berenguela
+¿Qué presidente de EE. UU. dimitió en 1974 por el escándalo Watergate?,,Richard Nixon,Quin president dels EUA va dimitir el 1974 per l'escàndol Watergate?,Richard Nixon,Gerald Ford,Lyndon B. Johnson,Jimmy Carter
+¿Qué ciudad mesopotámica gobernó el legendario rey Gilgamesh?,,Uruk,Quina ciutat mesopotàmica va governar el llegendari rei Gilgameix?,Uruk,Babilònia,Ur,Nínive
+¿Cuál es la fórmula química del agua?,,H2O,Quina és la fórmula química de l'aigua?,H2O,CO2,O2,H2O2
+¿Qué planeta está más cerca del Sol?,,Mercurio,Quin planeta és més a prop del Sol?,Mercuri,Venus,Marte,Terra
+¿Qué órgano bombea la sangre por el cuerpo?,,Corazón,Quin òrgan bombeja la sang pel cos?,Cor,Fetge,Pulmons,Ronyons
+¿Qué gas necesitamos respirar para vivir?,,Oxígeno,Quin gas necessitem respirar per viure?,Oxigen,Nitrogen,Diòxid de carboni,Heli
+¿Cuántos planetas tiene el sistema solar?,,8,Quants planetes té el sistema solar?,8,9,7,10
+¿Qué científico formuló la ley de la gravitación universal?,,Isaac Newton,Quin científic va formular la llei de la gravitació universal?,Isaac Newton,Galileu Galilei,Albert Einstein,Johannes Kepler
+¿A qué temperatura se congela el agua en grados Celsius?,,0,A quina temperatura es congela l'aigua en graus Celsius?,0,-10,4,32
+¿Qué satélite natural gira alrededor de la Tierra?,,La Luna,Quin satèl·lit natural gira al voltant de la Terra?,La Lluna,Fobos,Europa,Tità
+¿Qué estrella es la más cercana a la Tierra?,,El Sol,Quina estrella és la més propera a la Terra?,El Sol,Próxima Centauri,Sírius,Betelgeuse
+¿Cuál es el símbolo químico del hierro?,,Fe,Quin és el símbol químic del ferro?,Fe,Hi,Ir,F
+¿Qué órgano del cuerpo humano es el más grande?,,La piel,Quin òrgan del cos humà és el més gran?,La pell,El fetge,L'intestí,El cervell
+¿Qué instrumento se usa para observar objetos muy pequeños?,,Microscopio,Quin instrument s'utilitza per observar objectes molt petits?,Microscopi,Telescopi,Periscopi,Estetoscopi
+¿Cuántos dientes tiene un adulto con la dentición completa?,,32,Quantes dents té un adult amb la dentició completa?,32,28,30,36
+¿Qué tipo de sangre se considera donante universal?,,0 negativo,Quin tipus de sang es considera donant universal?,0 negatiu,AB positiu,A positiu,B negatiu
+¿Qué planeta tiene los anillos más visibles?,,Saturno,Quin planeta té els anells més visibles?,Saturn,Júpiter,Urà,Neptú
+¿Qué fuerza nos mantiene pegados al suelo?,,Gravedad,Quina força ens manté enganxats a terra?,Gravetat,Magnetisme,Fricció,Electricitat estàtica
+¿Qué se mide en grados Celsius?,,Temperatura,Què es mesura en graus Celsius?,Temperatura,Pressió,Humitat,Velocitat
+¿Qué vitamina produce la piel al recibir la luz del sol?,,Vitamina D,Quina vitamina produeix la pell en rebre la llum del sol?,Vitamina D,Vitamina C,Vitamina A,Vitamina B12
+¿Cuál es el símbolo químico del sodio?,,Na,Quin és el símbol químic del sodi?,Na,So,Sd,S
+¿Qué gas emiten las plantas durante la fotosíntesis?,,Oxígeno,Quin gas desprenen les plantes durant la fotosíntesi?,Oxigen,Diòxid de carboni,Nitrogen,Metà
+¿Qué unidad mide la potencia eléctrica?,,Vatio,Quina unitat mesura la potència elèctrica?,Watt,Volt,Ampere,Joule
+¿Cuál es el planeta más caliente del sistema solar?,,Venus,Quin és el planeta més calent del sistema solar?,Venus,Mercuri,Marte,Júpiter
+¿Qué glándula produce la insulina?,,Páncreas,Quina glàndula produeix la insulina?,Pàncrees,Tiroide,Fetge,Hipòfisi
+¿Qué científico propuso el modelo heliocéntrico en el siglo XVI?,,Nicolás Copérnico,Quin científic va proposar el model heliocèntric al segle XVI?,Nicolau Copèrnic,Ptolemeu,Tycho Brahe,Galileu Galilei
+¿Cuál es el hueso más pequeño del cuerpo humano?,,Estribo,Quin és l'os més petit del cos humà?,Estrep,Martell,Enclusa,Falange
+¿Qué partícula del núcleo atómico no tiene carga eléctrica?,,Neutrón,Quina partícula del nucli atòmic no té càrrega elèctrica?,Neutró,Protó,Electró,Positró
+¿Qué elemento químico tiene el símbolo K?,,Potasio,Quin element químic té el símbol K?,Potassi,Criptó,Calci,Carboni
+¿Qué astrónomo da nombre a un telescopio espacial lanzado en 1990?,,Edwin Hubble,Quin astrònom dona nom a un telescopi espacial llançat el 1990?,Edwin Hubble,Carl Sagan,James Webb,Johannes Kepler
+¿Qué tipo de energía tiene un cuerpo por estar en movimiento?,,Cinética,Quin tipus d'energia té un cos pel fet d'estar en moviment?,Cinètica,Potencial,Química,Tèrmica
+¿Qué célula sanguínea transporta el oxígeno?,,Glóbulo rojo,Quina cèl·lula sanguínia transporta l'oxigen?,Glòbul vermell,Glòbul blanc,Plaqueta,Limfòcit
+"¿Qué planeta tiene la gran mancha roja, una tormenta gigante?",,Júpiter,"Quin planeta té la gran taca vermella, una tempesta gegant?",Júpiter,Saturn,Marte,Neptú
+¿Qué químico ruso creó la tabla periódica de los elementos?,,Dmitri Mendeléiev,Quin químic rus va crear la taula periòdica dels elements?,Dmitri Mendeléiev,Antoine Lavoisier,John Dalton,Niels Bohr
+¿Cuántos litros de sangre tiene aproximadamente un adulto?,,5,Quants litres de sang té aproximadament un adult?,5,2,8,12
+¿Qué gas noble se usa en los letreros luminosos rojos?,,Neón,Quin gas noble s'utilitza als rètols lluminosos vermells?,Neó,Argó,Heli,Xenó
+¿Qué parte del cerebro controla principalmente el equilibrio y la coordinación?,,Cerebelo,Quina part de l'encèfal controla principalment l'equilibri i la coordinació?,Cerebel,Hipotàlem,Bulb raquidi,Lòbul frontal
+"¿Qué escala mide la magnitud de los terremotos según la energía liberada, usada hoy en lugar de la de Richter?",,Escala de magnitud de momento,"Quina escala mesura la magnitud dels terratrèmols segons l'energia alliberada, usada avui en lloc de la de Richter?",Escala de magnitud de moment,Escala de Beaufort,Escala de Mohs,Escala Kelvin
+¿Cuál es el mineral más duro de la escala de Mohs?,,Diamante,Quin és el mineral més dur de l'escala de Mohs?,Diamant,Corindó,Topazi,Quars
+¿Qué científico descubrió las leyes de la herencia experimentando con guisantes?,,Gregor Mendel,Quin científic va descobrir les lleis de l'herència experimentant amb pèsols?,Gregor Mendel,Louis Pasteur,Charles Darwin,Robert Hooke
+¿Cuánto tarda aproximadamente la luz del Sol en llegar a la Tierra?,,8 minutos,Quant tarda aproximadament la llum del Sol a arribar a la Terra?,8 minuts,8 segons,1 hora,1 dia
+¿Qué científico francés desarrolló la vacuna contra la rabia?,,Louis Pasteur,Quin científic francès va desenvolupar la vacuna contra la ràbia?,Louis Pasteur,Robert Koch,Edward Jenner,Claude Bernard
+¿Qué ácido contiene el jugo gástrico del estómago?,,Ácido clorhídrico,Quin àcid conté el suc gàstric de l'estómac?,Àcid clorhídric,Àcid sulfúric,Àcid cítric,Àcid acètic
+¿Cuál es la capa más externa de la atmósfera terrestre?,,Exosfera,Quina és la capa més externa de l'atmosfera terrestre?,Exosfera,Troposfera,Estratosfera,Mesosfera
+¿Qué científico enunció el principio de que un cuerpo sumergido recibe un empuje igual al peso del fluido desalojado?,,Arquímedes,Quin científic va enunciar el principi que un cos submergit rep una empenta igual al pes del fluid desallotjat?,Arquimedes,Pascal,Torricelli,Bernoulli
+"¿Qué planeta enano, antes considerado el noveno planeta, fue reclasificado en 2006?",,Plutón,"Quin planeta nan, abans considerat el novè planeta, va ser reclassificat el 2006?",Plutó,Ceres,Eris,Makemake
+¿Cuál es el número atómico del oxígeno?,,8,Quin és el nombre atòmic de l'oxigen?,8,6,16,12
+¿Qué elemento químico tiene el símbolo W?,,Wolframio,Quin element químic té el símbol W?,Wolframi,Vanadi,Xenó,Osmi
+¿Qué hermanos españoles aislaron por primera vez el wolframio en 1783?,,Hermanos Elhuyar,Quins germans van aïllar per primera vegada el wolframi el 1783?,Germans Elhuyar,Germans Ulloa,Germans Pinzón,Germans Machado
+¿Qué científico español ganó el Nobel de Medicina en 1906 por sus estudios de la neurona?,,Santiago Ramón y Cajal,Quin científic espanyol va guanyar el Nobel de Medicina el 1906 pels seus estudis de la neurona?,Santiago Ramón y Cajal,Severo Ochoa,Gregorio Marañón,Isaac Peral
+¿Cuál es la luna más grande del sistema solar?,,Ganimedes,Quina és la lluna més gran del sistema solar?,Ganimedes,Tità,Calisto,Ío
+¿Qué constante física se representa con la letra h?,,Constante de Planck,Quina constant física es representa amb la lletra h?,Constant de Planck,Constant de gravitació,Constant de Boltzmann,Velocitat de la llum
+"¿A cuántos grados Celsius equivale el cero absoluto, aproximadamente?",,-273,"A quants graus Celsius equival el zero absolut, aproximadament?",-273,-100,-459,-373
+¿Qué elemento es el más abundante en la corteza terrestre?,,Oxígeno,Quin element és el més abundant a l'escorça terrestre?,Oxigen,Silici,Ferro,Alumini
+"¿Qué partícula fue detectada en el CERN en 2012 y es conocida como ""partícula de Dios""?",,Bosón de Higgs,"Quina partícula es va detectar al CERN el 2012 i és coneguda com ""partícula de Déu""?",Bosó de Higgs,Quark top,Neutrí,Gluó
+¿Qué científico español ganó el Nobel de Medicina en 1959 por sus estudios sobre el ARN?,,Severo Ochoa,Quin científic espanyol va guanyar el Nobel de Medicina el 1959 pels seus estudis sobre l'ARN?,Severo Ochoa,Santiago Ramón y Cajal,Margarita Salas,Francisco Mojica
+¿Qué hormona segrega la glándula pineal regulando el sueño?,,Melatonina,Quina hormona segrega la glàndula pineal per regular la son?,Melatonina,Serotonina,Cortisol,Adrenalina
+¿Qué científico alicantino descubrió las secuencias CRISPR en microorganismos?,,Francisco Mojica,Quin científic alacantí va descobrir les seqüències CRISPR en microorganismes?,Francisco Mojica,Juan Carlos Izpisúa,Mariano Barbacid,Margarita Salas
+"¿Qué ley física relaciona tensión, intensidad y resistencia?",,Ley de Ohm,"Quina llei física relaciona tensió, intensitat i resistència?",Llei d'Ohm,Llei de Coulomb,Llei de Faraday,Llei de Boyle
+¿Cuál es el metal más abundante en la corteza terrestre?,,Aluminio,Quin és el metall més abundant a l'escorça terrestre?,Alumini,Ferro,Coure,Calci
+"¿Qué científica británica obtuvo la ""Fotografía 51"", clave para descubrir la estructura del ADN?",,Rosalind Franklin,"Quina científica britànica va obtenir la ""Fotografia 51"", clau per descobrir l'estructura de l'ADN?",Rosalind Franklin,Dorothy Hodgkin,Barbara McClintock,Lise Meitner
+"¿Qué planeta gira de lado, con su eje de rotación casi paralelo a su órbita?",,Urano,"Quin planeta gira de costat, amb l'eix de rotació gairebé paral·lel a l'òrbita?",Urà,Neptú,Venus,Saturn
+¿Cuántos pares de costillas tiene normalmente el ser humano?,,12,Quants parells de costelles té normalment l'ésser humà?,12,10,14,24
+¿Qué tipo de enlace químico une los átomos compartiendo electrones?,,Covalente,Quin tipus d'enllaç químic uneix els àtoms compartint electrons?,Covalent,Iònic,Metàl·lic,Pont d'hidrogen
+¿Qué nombre recibe el punto de la órbita de la Tierra más cercano al Sol?,,Perihelio,Com s'anomena el punt de l'òrbita de la Terra més proper al Sol?,Periheli,Afeli,Perigeu,Apogeu
+¿Qué científico italiano construyó la primera pila eléctrica en 1800?,,Alessandro Volta,Quin científic italià va construir la primera pila elèctrica el 1800?,Alessandro Volta,Luigi Galvani,Enrico Fermi,Guglielmo Marconi
+¿Qué misión espacial europea aterrizó un módulo en un cometa en 2014?,,Rosetta,Quina missió espacial europea va fer aterrar un mòdul en un cometa el 2014?,Rosetta,Giotto,Huygens,Mars Express
+"¿Quién pintó ""La Gioconda""?",,Leonardo da Vinci,"Qui va pintar ""La Gioconda""?",Leonardo da Vinci,Miquel Àngel,Rafael,Botticelli
+"¿Quién escribió ""Hamlet""?",,William Shakespeare,"Qui va escriure ""Hamlet""?",William Shakespeare,Christopher Marlowe,Charles Dickens,Oscar Wilde
+¿Qué escritor creó a Drácula?,,Bram Stoker,Quin escriptor va crear Dràcula?,Bram Stoker,Mary Shelley,Edgar Allan Poe,H. P. Lovecraft
+¿Qué pintor español es famoso por sus relojes blandos?,,Salvador Dalí,Quin pintor és famós pels seus rellotges tous?,Salvador Dalí,Joan Miró,Pablo Picasso,Antoni Tàpies
+"¿Quién escribió ""Las aventuras de Tom Sawyer""?",,Mark Twain,"Qui va escriure ""Les aventures de Tom Sawyer""?",Mark Twain,Jack London,Herman Melville,Charles Dickens
+¿Qué escultura de Miguel Ángel representa a un joven bíblico desnudo?,,David,Quina escultura de Miquel Àngel representa un jove bíblic nu?,David,Moisès,La Pietat,Bacus
+"¿Quién escribió ""Alicia en el país de las maravillas""?",,Lewis Carroll,"Qui va escriure ""Alícia al país de les meravelles""?",Lewis Carroll,J. M. Barrie,Roald Dahl,C. S. Lewis
+"¿Qué autor escribió ""La vuelta al mundo en ochenta días""?",,Julio Verne,"Quin autor va escriure ""La volta al món en vuitanta dies""?",Jules Verne,H. G. Wells,Alexandre Dumas,Victor Hugo
+"¿Qué escritor inglés escribió ""Oliver Twist""?",,Charles Dickens,"Quin escriptor anglès va escriure ""Oliver Twist""?",Charles Dickens,Jane Austen,Thomas Hardy,Lewis Carroll
+¿Qué pintor de Málaga cofundó el cubismo?,,Pablo Picasso,Quin pintor de Màlaga va cofundar el cubisme?,Pablo Picasso,Juan Gris,Joan Miró,Georges Braque
+¿Qué monumento indio de mármol blanco mandó construir un emperador para su esposa?,,Taj Mahal,Quin monument indi de marbre blanc va fer construir un emperador per a la seva esposa?,Taj Mahal,Fort Roig,Temple d'Or,Qutb Minar
+"¿Quién escribió ""Pinocho""?",,Carlo Collodi,"Qui va escriure ""Pinotxo""?",Carlo Collodi,Hans Christian Andersen,Germans Grimm,Charles Perrault
+"¿Qué escritor danés escribió ""La sirenita""?",,Hans Christian Andersen,"Quin escriptor danès va escriure ""La sireneta""?",Hans Christian Andersen,Charles Perrault,Germans Grimm,Isop
+"¿Qué pintor holandés pintó ""Los girasoles""?",,Vincent van Gogh,"Quin pintor neerlandès va pintar ""Els gira-sols""?",Vincent van Gogh,Rembrandt,Vermeer,Piet Mondrian
+"¿Qué escritora inglesa escribió ""Orgullo y prejuicio""?",,Jane Austen,"Quina escriptora anglesa va escriure ""Orgull i prejudici""?",Jane Austen,Emily Brontë,Virginia Woolf,Mary Shelley
+"¿Qué autor escribió ""El señor de los anillos""?",,J. R. R. Tolkien,"Quin autor va escriure ""El senyor dels anells""?",J. R. R. Tolkien,C. S. Lewis,George R. R. Martin,Terry Pratchett
+¿En qué ciudad está el Museo del Prado?,,Madrid,A quina ciutat és el Museu del Prado?,Madrid,Barcelona,Sevilla,València
+¿Qué arquitecto diseñó el Museo Guggenheim de Bilbao?,,Frank Gehry,Quin arquitecte va dissenyar el Museu Guggenheim de Bilbao?,Frank Gehry,Santiago Calatrava,Norman Foster,Rafael Moneo
+"¿Qué poeta escribió ""Campos de Castilla""?",,Antonio Machado,"Quin poeta va escriure ""Campos de Castilla""?",Antonio Machado,Juan Ramón Jiménez,Miguel Hernández,Gustavo Adolfo Bécquer
+"¿Qué escritor francés escribió ""Los miserables""?",,Victor Hugo,"Quin escriptor francès va escriure ""Els miserables""?",Victor Hugo,Émile Zola,Gustave Flaubert,Honoré de Balzac
+"¿Qué pintor catalán es conocido por sus estrellas, lunas y colores primarios?",,Joan Miró,"Quin pintor català és conegut per les seves estrelles, llunes i colors primaris?",Joan Miró,Ramon Casas,Antoni Tàpies,Santiago Rusiñol
+"¿Quién escribió ""La Divina Comedia""?",,Dante Alighieri,"Qui va escriure ""La Divina Comèdia""?",Dante Alighieri,Petrarca,Boccaccio,Virgili
+"¿Qué escritor checo escribió ""La metamorfosis""?",,Franz Kafka,"Quin escriptor txec va escriure ""La metamorfosi""?",Franz Kafka,Milan Kundera,Bohumil Hrabal,Jaroslav Hašek
+"¿Qué pintor flamenco pintó ""El jardín de las delicias""?",,El Bosco,"Quin pintor flamenc va pintar ""El jardí de les delícies""?",El Bosch,Pieter Brueghel el Vell,Jan van Eyck,Rubens
+"¿Qué escritor argentino escribió ""Ficciones"" y ""El Aleph""?",,Jorge Luis Borges,"Quin escriptor argentí va escriure ""Ficciones"" i ""El Aleph""?",Jorge Luis Borges,Julio Cortázar,Ernesto Sabato,Adolfo Bioy Casares
+¿Qué movimiento pictórico debe su nombre a un cuadro de Monet?,,Impresionismo,Quin moviment pictòric deu el nom a un quadre de Monet?,Impressionisme,Expressionisme,Fauvisme,Puntillisme
+"¿Qué poeta catalán escribió ""Canigó"" y ""L'Atlàntida""?",,Jacint Verdaguer,"Quin poeta va escriure ""Canigó"" i ""L'Atlàntida""?",Jacint Verdaguer,Joan Maragall,Salvador Espriu,Josep Carner
+"¿Qué escritor estadounidense escribió ""El viejo y el mar""?",,Ernest Hemingway,"Quin escriptor nord-americà va escriure ""El vell i el mar""?",Ernest Hemingway,John Steinbeck,William Faulkner,F. Scott Fitzgerald
+"¿Qué pintor pintó ""La noche estrellada""?",,Vincent van Gogh,"Qui va pintar ""La nit estelada""?",Vincent van Gogh,Claude Monet,Paul Gauguin,Edvard Munch
+"¿Qué autor escribió ""Frankenstein""?",,Mary Shelley,"Qui va escriure ""Frankenstein""?",Mary Shelley,Bram Stoker,Percy Shelley,Lord Byron
+"¿Qué escritor ruso escribió ""Guerra y paz""?",,León Tolstói,"Quin escriptor rus va escriure ""Guerra i pau""?",Lev Tolstoi,Fiódor Dostoievski,Anton Txékhov,Nikolai Gógol
+"¿Qué edificio de Gaudí es conocido como ""La Pedrera""?",,Casa Milà,"Quin edifici de Gaudí és conegut com ""La Pedrera""?",Casa Milà,Casa Batlló,Palau Güell,Casa Vicens
+"¿Qué escritor escribió ""Cinco horas con Mario""?",,Miguel Delibes,"Quin escriptor va escriure ""Cinco horas con Mario""?",Miguel Delibes,Camilo José Cela,Carmen Martín Gaite,Juan Goytisolo
+"¿Qué pintor austriaco pintó ""El beso"" con pan de oro?",,Gustav Klimt,"Quin pintor austríac va pintar ""El petó"" amb pa d'or?",Gustav Klimt,Egon Schiele,Oskar Kokoschka,Koloman Moser
+"¿Qué escritor colombiano escribió ""El amor en los tiempos del cólera""?",,Gabriel García Márquez,"Quin escriptor colombià va escriure ""L'amor en temps del còlera""?",Gabriel García Márquez,Álvaro Mutis,Mario Vargas Llosa,Carlos Fuentes
+"¿Qué pintor sevillano es autor de ""La Inmaculada de los Venerables""?",,Bartolomé Esteban Murillo,"Quin pintor sevillà és l'autor de ""La Immaculada dels Venerables""?",Bartolomé Esteban Murillo,Francisco de Zurbarán,Diego Velázquez,Juan de Valdés Leal
+"¿Qué escritora escribió ""Nada"", ganadora del primer Premio Nadal?",,Carmen Laforet,"Quina escriptora va escriure ""Nada"", guanyadora del primer Premi Nadal?",Carmen Laforet,Ana María Matute,Rosa Chacel,Mercè Rodoreda
+"¿Qué escritora catalana escribió ""La plaça del Diamant""?",,Mercè Rodoreda,"Quina escriptora va escriure ""La plaça del Diamant""?",Mercè Rodoreda,Caterina Albert,Montserrat Roig,Maria Aurèlia Capmany
+"¿Qué escritor británico escribió ""Un mundo feliz""?",,Aldous Huxley,"Quin escriptor britànic va escriure ""Un món feliç""?",Aldous Huxley,George Orwell,H. G. Wells,Ray Bradbury
+¿Qué escultor griego esculpió la estatua de Zeus en Olimpia?,,Fidias,Quin escultor grec va esculpir l'estàtua de Zeus a Olímpia?,Fídies,Praxíteles,Miró,Policlet
+"¿Qué pintor pintó ""El caminante sobre el mar de nubes""?",,Caspar David Friedrich,"Qui va pintar ""El caminant sobre un mar de núvols""?",Caspar David Friedrich,William Turner,John Constable,Eugène Delacroix
+"¿Qué escritor italiano escribió ""El nombre de la rosa""?",,Umberto Eco,"Quin escriptor italià va escriure ""El nom de la rosa""?",Umberto Eco,Italo Calvino,Alberto Moravia,Primo Levi
+¿En qué ciudad está la Galería de los Uffizi?,,Florencia,A quina ciutat és la Galeria dels Uffizi?,Florència,Roma,Venècia,Milà
+¿Qué escritor español ganó el Nobel de Literatura en 1989?,,Camilo José Cela,Quin escriptor espanyol va guanyar el Nobel de Literatura el 1989?,Camilo José Cela,Vicente Aleixandre,Juan Ramón Jiménez,Jacinto Benavente
+¿Qué pintor francés es conocido por sus nenúfares de Giverny?,,Claude Monet,Quin pintor francès és conegut pels nenúfars de Giverny?,Claude Monet,Édouard Manet,Pierre-Auguste Renoir,Edgar Degas
+"¿Qué escritor escribió ""La colmena""?",,Camilo José Cela,"Quin escriptor va escriure ""La colmena""?",Camilo José Cela,Miguel Delibes,Rafael Sánchez Ferlosio,Luis Martín-Santos
+"¿Qué pintor barroco pintó ""La conversión de san Mateo"" con un fuerte claroscuro?",,Caravaggio,"Quin pintor barroc va pintar ""La conversió de sant Mateu"" amb un fort clarobscur?",Caravaggio,Rubens,Tiziano,El Greco
+¿Qué escritor portugués ganó el Nobel de Literatura en 1998?,,José Saramago,Quin escriptor portuguès va guanyar el Nobel de Literatura el 1998?,José Saramago,Fernando Pessoa,António Lobo Antunes,Eça de Queirós
+¿Qué pintor cretense desarrolló su carrera en Toledo?,,El Greco,Quin pintor cretenc va desenvolupar la seva carrera a Toledo?,El Greco,Tintoretto,Luis de Morales,Alonso Cano
+¿Qué arquitecto modernista diseñó el Palau de la Música Catalana?,,Lluís Domènech i Montaner,Quin arquitecte modernista va dissenyar el Palau de la Música Catalana?,Lluís Domènech i Montaner,Antoni Gaudí,Josep Puig i Cadafalch,Enric Sagnier
+"¿Qué poeta escribió ""Cántico espiritual"" en el siglo XVI?",,San Juan de la Cruz,"Quin poeta va escriure el ""Càntic espiritual"" al segle XVI?",Sant Joan de la Creu,Santa Teresa de Jesús,Fra Lluís de León,Garcilaso de la Vega
+"¿Qué escritor irlandés escribió ""Ulises""?",,James Joyce,"Quin escriptor irlandès va escriure ""Ulisses""?",James Joyce,Samuel Beckett,Oscar Wilde,W. B. Yeats
+"¿Qué pintor neerlandés pintó ""La ronda de noche""?",,Rembrandt,"Quin pintor neerlandès va pintar ""La ronda de nit""?",Rembrandt,Frans Hals,Johannes Vermeer,Jan Steen
+"¿Qué poeta medieval valenciano escribió en catalán ""Així com cell qui en lo somni es delita""?",,Ausiàs March,"Quin poeta medieval valencià va escriure ""Així com cell qui en lo somni es delita""?",Ausiàs March,Jordi de Sant Jordi,Joan Roís de Corella,Ramon Llull
+¿Qué novela de Marcel Proust consta de siete volúmenes?,,En busca del tiempo perdido,Quina novel·la de Marcel Proust consta de set volums?,A la recerca del temps perdut,Madame Bovary,L'educació sentimental,Germinal
+¿Qué pintor alemán del Renacimiento es famoso por sus grabados y su autorretrato de 1500?,,Alberto Durero,Quin pintor alemany del Renaixement és famós pels gravats i l'autoretrat del 1500?,Albrecht Dürer,Hans Holbein el Jove,Lucas Cranach el Vell,Matthias Grünewald
+"¿Qué autor escribió ""La Celestina""?",,Fernando de Rojas,"Quin autor va escriure ""La Celestina""?",Fernando de Rojas,"Juan Ruiz, Arcipreste de Hita",Lope de Vega,Jorge Manrique
+"¿Qué escritor ruso escribió ""El maestro y Margarita""?",,Mijaíl Bulgákov,"Quin escriptor rus va escriure ""El mestre i Margarida""?",Mikhaïl Bulgàkov,Borís Pasternak,Ivan Turguénev,Aleksandr Soljenitsin
+"¿Qué escultor rumano creó ""La columna sin fin""?",,Constantin Brâncuși,"Quin escultor romanès va crear ""La columna sense fi""?",Constantin Brâncuși,Alberto Giacometti,Henry Moore,Jean Arp
+"¿Qué escritor español escribió ""Luces de bohemia""?",,Ramón María del Valle-Inclán,"Quin escriptor espanyol va escriure ""Luces de bohemia""?",Ramón María del Valle-Inclán,Pío Baroja,Miguel de Unamuno,Azorín
+¿Qué pintor valenciano es célebre por sus escenas luminosas de playa?,,Joaquín Sorolla,Quin pintor valencià és cèlebre per les seves escenes lluminoses de platja?,Joaquín Sorolla,Ignacio Pinazo,Antonio Muñoz Degrain,José Benlliure
+¿Qué arquitecta iraquí-británica fue la primera mujer en ganar el premio Pritzker?,,Zaha Hadid,Quina arquitecta iraquianobritànica va ser la primera dona a guanyar el premi Pritzker?,Zaha Hadid,Kazuyo Sejima,Carme Pinós,Denise Scott Brown
+"¿Qué autor japonés escribió ""Tokio blues (Norwegian Wood)""?",,Haruki Murakami,"Quin autor japonès va escriure ""Tòquio blues (Norwegian Wood)""?",Haruki Murakami,Yasunari Kawabata,Yukio Mishima,Kenzaburō Ōe
+¿Qué movimiento artístico fundó en 1909 Filippo Tommaso Marinetti?,,Futurismo,Quin moviment artístic va fundar el 1909 Filippo Tommaso Marinetti?,Futurisme,Dadaisme,Constructivisme,Vorticisme
+¿Qué poeta chileno ganó el Nobel en 1971?,,Pablo Neruda,Quin poeta xilè va guanyar el Nobel el 1971?,Pablo Neruda,Gabriela Mistral,Vicente Huidobro,Nicanor Parra
+¿Qué artista catalán es conocido por su pintura matérica en la que aparecen a menudo cruces y la letra T?,,Antoni Tàpies,Quin artista català és conegut per la pintura matèrica on sovint apareixen creus i la lletra T?,Antoni Tàpies,Joan Miró,Eduardo Chillida,Modest Cuixart
+¿Cuántos jugadores tiene un equipo de fútbol en el campo?,,11,Quants jugadors té un equip de futbol al camp?,11,10,12,9
+¿En qué deporte se usa un volante o pluma?,,Bádminton,En quin esport s'utilitza un volant?,Bàdminton,Tennis,Esquaix,Pàdel
+¿De qué color es la camiseta del líder del Tour de Francia?,,Amarilla,De quin color és el mallot del líder del Tour de França?,Groc,Vermell,Rosa,Verd
+¿Cuántos aros tiene el símbolo olímpico?,,5,Quantes anelles té el símbol olímpic?,5,4,6,7
+"¿En qué deporte se realiza un ""home run""?",,Béisbol,"En quin esport es fa un ""home run""?",Beisbol,Criquet,Rugbi,Hoquei
+¿Qué deporte practica Lionel Messi?,,Fútbol,Quin esport practica Lionel Messi?,Futbol,Bàsquet,Tennis,Handbol
+¿En qué deporte se compite en Wimbledon?,,Tenis,En quin esport es competeix a Wimbledon?,Tennis,Golf,Criquet,Rem
+¿Cuántos jugadores forman un equipo de balonmano en pista?,,7,Quants jugadors formen un equip d'handbol a la pista?,7,6,5,8
+"¿En qué deporte se usan un ""stick"" y un ""puck""?",,Hockey sobre hielo,"En quin esport s'utilitzen un estic i un disc (""puck"")?",Hoquei sobre gel,Cúrling,Lacrosse,Polo
+¿Qué equipo de fútbol juega en el Camp Nou?,,FC Barcelona,Quin equip de futbol juga al Camp Nou?,FC Barcelona,RCD Espanyol,Real Madrid,Girona FC
+¿Cada cuántos años se celebra el Mundial de fútbol masculino?,,4,Cada quants anys se celebra el Mundial de futbol masculí?,4,2,3,5
+¿En qué deporte destacó Severiano Ballesteros?,,Golf,En quin esport va destacar Severiano Ballesteros?,Golf,Tennis,Ciclisme,Motociclisme
+"¿Qué deporte se juega en un ""green"" con hoyos?",,Golf,"Quin esport es juga en un ""green"" amb forats?",Golf,Croquet,Petanca,Billar
+¿Qué país organizó el Mundial de fútbol de 1982?,,España,Quin país va organitzar el Mundial de futbol del 1982?,Espanya,Itàlia,Argentina,Mèxic
+¿En qué deporte se lanza una jabalina?,,Atletismo,En quin esport es llança una javelina?,Atletisme,Esgrima,Tir amb arc,Halterofília
+¿Cuántos sets hay que ganar para vencer un partido masculino de Grand Slam?,,3,Quants sets cal guanyar per vèncer un partit masculí de Grand Slam?,3,2,4,5
+¿Qué deporte se practica en el Tour de Francia?,,Ciclismo,Quin esport es practica al Tour de França?,Ciclisme,Atletisme,Motociclisme,Automobilisme
+¿Qué país es famoso por el sumo?,,Japón,Quin país és famós pel sumo?,Japó,Xina,Mongòlia,Corea del Sud
+¿Cuánto mide una piscina olímpica?,,50 metros,Quant fa una piscina olímpica?,50 metres,25 metres,100 metres,33 metres
+¿Qué tenista suiza ganó cinco Grand Slams y fue número 1 a los 16 años?,,Martina Hingis,Quina tennista suïssa va guanyar cinc Grand Slams i va ser número 1 als 16 anys?,Martina Hingis,Belinda Bencic,Patty Schnyder,Timea Bacsinszky
+¿Qué piloto británico ha ganado siete títulos de Fórmula 1?,,Lewis Hamilton,Quin pilot britànic ha guanyat set títols de Fórmula 1?,Lewis Hamilton,Jenson Button,Nigel Mansell,Jackie Stewart
+¿Cuál es la distancia de una piscina corta de competición?,,25 metros,Quina és la distància d'una piscina curta de competició?,25 metres,50 metres,20 metres,33 metres
+¿En qué ciudad se celebraron los Juegos Olímpicos de 2016?,,Río de Janeiro,A quina ciutat es van celebrar els Jocs Olímpics del 2016?,Rio de Janeiro,Londres,Tòquio,Pequín
+¿Cuántos puntos vale un tiro libre en baloncesto?,,1,Quants punts val un tir lliure en bàsquet?,1,2,3,"0,5"
+¿Qué piloto de MotoGP nació en Cervera (Lleida)?,,Marc Márquez,Quin pilot de MotoGP va néixer a Cervera?,Marc Márquez,Jorge Lorenzo,Dani Pedrosa,Àlex Crivillé
+¿En qué deporte destaca la gimnasta estadounidense Simone Biles?,,Gimnasia artística,En quin esport destaca la gimnasta nord-americana Simone Biles?,Gimnàstica artística,Natació,Atletisme,Patinatge artístic
+¿Qué selección ganó la Eurocopa de 2008 y 2012?,,España,Quina selecció va guanyar l'Eurocopa del 2008 i del 2012?,Espanya,Alemanya,Itàlia,França
+¿En qué deporte se disputa la Ryder Cup?,,Golf,En quin esport es disputa la Ryder Cup?,Golf,Tennis,Vela,Polo
+¿Qué boxeador se llamaba Cassius Clay antes de cambiarse el nombre?,,Muhammad Ali,Quin boxejador es deia Cassius Clay abans de canviar-se el nom?,Muhammad Ali,Joe Frazier,George Foreman,Sugar Ray Leonard
+"¿Cuántos jugadores de cada equipo hay en pista en el waterpolo, incluido el portero?",,7,"Quants jugadors de cada equip hi ha a l'aigua en el waterpolo, inclòs el porter?",7,6,5,11
+"¿Qué atleta etíope, conocido por correr descalzo, ganó el maratón olímpico de Roma 1960?",,Abebe Bikila,"Quin atleta etíop, conegut per córrer descalç, va guanyar la marató olímpica de Roma 1960?",Abebe Bikila,Haile Gebrselassie,Kenenisa Bekele,Miruts Yifter
+"¿En qué deporte se usa la expresión ""jaque mate""?",,Ajedrez,"En quin esport s'utilitza l'expressió ""escac i mat""?",Escacs,Dames,Go,Backgammon
+"¿Cuántos minutos dura un partido de baloncesto FIBA, sin prórroga?",,40,"Quants minuts dura un partit de bàsquet FIBA, sense pròrroga?",40,48,60,36
+¿Qué tenista estadounidense ganó 23 títulos individuales de Grand Slam?,,Serena Williams,Quina tennista nord-americana va guanyar 23 títols individuals de Grand Slam?,Serena Williams,Venus Williams,Martina Navratilova,Chris Evert
+"¿Qué deporte combina natación, ciclismo y carrera a pie?",,Triatlón,"Quin esport combina natació, ciclisme i cursa a peu?",Triatló,Pentatló modern,Duatló,Heptatló
+¿En qué ciudad se celebraron los Juegos Olímpicos de 2008?,,Pekín,A quina ciutat es van celebrar els Jocs Olímpics del 2008?,Pequín,Atenes,Londres,Sydney
+"¿Qué país ganó el primer Mundial de fútbol, en 1930?",,Uruguay,"Quin país va guanyar el primer Mundial de futbol, el 1930?",Uruguai,Argentina,Brasil,Itàlia
+"¿Qué deporte practicaba la española Carolina Marín, campeona olímpica en 2016?",,Bádminton,"Quin esport practica Carolina Marín, campiona olímpica el 2016?",Bàdminton,Tennis de taula,Judo,Taekwondo
+¿Cuál es el Grand Slam de tenis que se juega sobre tierra batida?,,Roland Garros,Quin és el Grand Slam de tennis que es juga sobre terra batuda?,Roland Garros,Wimbledon,Open d'Austràlia,US Open
+¿En qué deporte compiten los equipos en la Copa América de vela?,,Vela,En quin esport competeixen els equips de la Copa Amèrica?,Vela,Rem,Piragüisme,Surf
+¿Qué futbolista portugués ha ganado cinco Balones de Oro?,,Cristiano Ronaldo,Quin futbolista portuguès ha guanyat cinc Pilotes d'Or?,Cristiano Ronaldo,Luís Figo,Eusébio,Deco
+¿Qué piloto alemán ganó siete títulos de Fórmula 1 con Benetton y Ferrari?,,Michael Schumacher,Quin pilot alemany va guanyar set títols de Fórmula 1 amb Benetton i Ferrari?,Michael Schumacher,Sebastian Vettel,Nico Rosberg,Ralf Schumacher
+"¿En qué deporte se realiza un ""slam dunk"" o mate?",,Baloncesto,"En quin esport es fa un ""slam dunk"" o esmaixada?",Bàsquet,Voleibol,Handbol,Beisbol
+"¿Qué equipo de la NBA tiene como mascota y apodo a los ""Celtics""?",,Boston,"Quin equip de l'NBA té com a sobrenom els ""Celtics""?",Boston,Nova York,Chicago,Filadèlfia
+¿En qué año ganó España su primer Mundial de baloncesto masculino?,,2006,En quin any va guanyar Espanya el seu primer Mundial de bàsquet masculí?,2006,2019,1984,2002
+"¿Qué ciclista belga, apodado ""el Caníbal"", ganó cinco Tours de Francia?",,Eddy Merckx,"Quin ciclista belga, conegut com ""el Caníbal"", va guanyar cinc Tours de França?",Eddy Merckx,Jacques Anquetil,Bernard Hinault,Rik Van Looy
+"¿Qué ciudad acogió los primeros Juegos Olímpicos de invierno, en 1924?",,Chamonix,"Quina ciutat va acollir els primers Jocs Olímpics d'hivern, el 1924?",Chamonix,St. Moritz,Lake Placid,Oslo
+¿Cuántos jugadores tiene un equipo de críquet en el campo?,,11,Quants jugadors té un equip de criquet al camp?,11,9,13,15
+¿Qué país ha ganado más medallas de oro en la historia de los Juegos Olímpicos de verano?,,Estados Unidos,Quin país ha guanyat més medalles d'or en la història dels Jocs Olímpics d'estiu?,Estats Units,Unió Soviètica,Xina,Regne Unit
+¿Qué ciclista español ganó el Tour de Francia en 1959?,,Federico Martín Bahamontes,Quin ciclista espanyol va guanyar el Tour de França el 1959?,Federico Martín Bahamontes,Luis Ocaña,Pedro Delgado,Carlos Sastre
+"¿Qué deporte se juega con una ""pala"" en un frontón y es tradicional en el País Vasco?",,Pelota vasca,Quin esport es juga amb pala en un frontó i és tradicional al País Basc?,Pilota basca,Esquaix,Hurling,Lacrosse
+"¿Qué país ganó el Mundial de rugby de 1995, el primero tras el apartheid en su territorio?",,Sudáfrica,"Quin país va guanyar el Mundial de rugbi del 1995, el primer després de l'apartheid al seu territori?",Sud-àfrica,Nova Zelanda,Austràlia,Anglaterra
+¿Qué tenista española ganó cuatro Grand Slams individuales y fue número 1 en 1995?,,Arantxa Sánchez Vicario,Quina tennista espanyola va guanyar quatre Grand Slams individuals i va ser número 1 el 1995?,Arantxa Sánchez Vicario,Conchita Martínez,Garbiñe Muguruza,Lilí Álvarez
+¿En qué ciudad se celebraron los Juegos Olímpicos de 1936?,,Berlín,A quina ciutat es van celebrar els Jocs Olímpics del 1936?,Berlín,Amsterdam,Los Ángeles,Roma
+¿Qué atleta estadounidense ganó cuatro oros en Berlín 1936?,,Jesse Owens,Quin atleta nord-americà va guanyar quatre ors a Berlín 1936?,Jesse Owens,Carl Lewis,Jim Thorpe,Paavo Nurmi
+¿Cuánto pesa aproximadamente un balón oficial de fútbol?,,430 gramos,Quant pesa aproximadament una pilota oficial de futbol?,430 grams,250 grams,600 grams,800 grams
+¿Qué piloto finlandés ganó dos Mundiales de Fórmula 1 con McLaren en 1998 y 1999?,,Mika Häkkinen,Quin pilot finlandès va guanyar dos Mundials de Fórmula 1 amb McLaren el 1998 i el 1999?,Mika Häkkinen,Kimi Räikkönen,Keke Rosberg,Valtteri Bottas
+¿Qué estilo de natación es el más lento de los cuatro olímpicos?,,Braza,Quin estil de natació és el més lent dels quatre olímpics?,Braça,Esquena,Papallona,Crol
+¿Qué jugador de la NBA anotó 100 puntos en un solo partido en 1962?,,Wilt Chamberlain,Quin jugador de l'NBA va anotar 100 punts en un sol partit el 1962?,Wilt Chamberlain,Bill Russell,Kareem Abdul-Jabbar,Elgin Baylor
+¿Qué país ha ganado más veces la Copa Davis?,,Estados Unidos,Quin país ha guanyat més vegades la Copa Davis?,Estats Units,Austràlia,França,Espanya
+¿En qué deporte se compite por la Copa Stanley?,,Hockey sobre hielo,En quin esport es competeix per la Copa Stanley?,Hoquei sobre gel,Beisbol,Futbol americà,Lacrosse
+¿Qué alpinista fue el primero en subir los 14 ochomiles sin oxígeno embotellado?,,Reinhold Messner,Quin alpinista va ser el primer a pujar els 14 vuitmils sense oxigen embotellat?,Reinhold Messner,Edmund Hillary,Juanito Oiarzabal,Jerzy Kukuczka
+"¿Qué equipo ganó la primera edición de la Copa de Europa de fútbol, en 1956?",,Real Madrid,"Quin equip va guanyar la primera edició de la Copa d'Europa de futbol, el 1956?",Real Madrid,Stade de Reims,AC Milan,Benfica
+¿Cuántos metros mide la distancia entre las bases del béisbol?,,"27,4",Quants metres hi ha entre les bases del beisbol?,"27,4",20,"30,5","18,4"
+¿Cuántas caras tiene un dado normal?,,6,Quantes cares té un dau normal?,6,4,8,12
+¿Qué color empieza moviendo en el ajedrez?,,Blancas,Quin color comença movent als escacs?,Blanques,Negres,Es sorteja,El jugador més jove
+¿Cómo se llama el hermano de Mario en los videojuegos de Nintendo?,,Luigi,Com es diu el germà de Mario als videojocs de Nintendo?,Luigi,Wario,Toad,Yoshi
+¿Qué superhéroe tiene como identidad secreta a Clark Kent?,,Superman,Quin superheroi té com a identitat secreta Clark Kent?,Superman,Batman,Flash,Llanterna Verda
+¿Qué cubo de colores inventó Ernő Rubik?,,Cubo de Rubik,Quin cub de colors va inventar Ernő Rubik?,Cub de Rubik,Tangram,Tetris,Cub Soma
+¿Qué videojuego de Nintendo tiene como protagonista a Link?,,The Legend of Zelda,Quin videojoc de Nintendo té com a protagonista Link?,The Legend of Zelda,Metroid,Kirby,Star Fox
+¿Qué galo bajito y bigotudo es amigo de Obélix?,,Astérix,Quin gal petit i amb bigoti és amic d'Obèlix?,Astèrix,Panoràmix,Abraracúrcix,Idèfix
+¿Qué juego de mesa usa fichas con letras para formar palabras?,,Scrabble,Quin joc de taula fa servir fitxes amb lletres per formar paraules?,Scrabble,Parxís,Trivial,Risk
+¿Qué personaje de cómic es un marinero que se hace fuerte comiendo espinacas?,,Popeye,Quin personatge de còmic és un mariner que es fa fort menjant espinacs?,Popeye,Brutus,Capità Haddock,Olívia
+¿Qué empresa fabrica la consola Xbox?,,Microsoft,Quina empresa fabrica la consola Xbox?,Microsoft,Sony,Nintendo,Sega
+¿Cuántas fichas tiene cada jugador en el parchís?,,4,Quantes fitxes té cada jugador al parxís?,4,3,5,6
+¿Qué muñeca creó la empresa Mattel en 1959?,,Barbie,Quina nina va crear l'empresa Mattel el 1959?,Barbie,Nancy,Chabel,Polly Pocket
+"¿En qué juego se grita ""¡Bingo!"" al completar un cartón?",,Bingo,"En quin joc es crida ""Bingo!"" en completar un cartró?",Bingo,Loteria,Ruleta,Pòquer
+¿Cómo se llama el perro de Tintín?,,Milú,Com es diu el gos de Tintín?,Milú,Pluto,Snoopy,Idèfix
+¿Qué superhéroe de Marvel es el dios nórdico del trueno?,,Thor,Quin superheroi de Marvel és el déu nòrdic del tro?,Thor,Loki,Odin,Hulk
+¿Qué videojuego consiste en encajar piezas que caen formadas por cuatro cuadrados?,,Tetris,Quin videojoc consisteix a encaixar peces que cauen formades per quatre quadrats?,Tetris,Pac-Man,Arkanoid,Candy Crush
+"¿En qué juego se usan los palos de oros, copas, espadas y bastos?",,Baraja española,"En quin joc s'utilitzen els pals d'oros, copes, espases i bastos?",Baralla espanyola,Baralla francesa,Tarot de Marsella,Mahjong
+¿Qué personaje de Nintendo es un dinosaurio verde que monta Mario?,,Yoshi,Quin personatge de Nintendo és un dinosaure verd que munta Mario?,Yoshi,Bowser,Donkey Kong,Koopa
+¿Qué personaje es el archienemigo de Mario?,,Bowser,Quin personatge és l'enemic principal de Mario?,Bowser,Wario,Ganon,Dr. Robotnik
+"¿Qué figura del ajedrez puede ""enrocarse"" con el rey?",,Torre,Quina peça dels escacs pot fer l'enroc amb el rei?,Torre,Alfil,Cavall,Dama
+¿Qué superhéroe es el millonario Tony Stark?,,Iron Man,Quin superheroi és el milionari Tony Stark?,Iron Man,Batman,Capità Amèrica,Doctor Strange
+¿Qué dibujante creó a Mortadelo y Filemón?,,Francisco Ibáñez,Quin dibuixant va crear Mortadel·lo i Filemó?,Francisco Ibáñez,Escobar,Jan,Vázquez
+"¿Qué juego de cartas vendía Nintendo, fundada en 1889, antes de dedicarse a los videojuegos?",,Hanafuda,"Quin joc de cartes venia Nintendo, fundada el 1889, abans dels videojocs?",Hanafuda,Mahjong,Pachinko,Shogi
+"¿Qué videojuego de 2017 de Epic Games popularizó el modo ""battle royale""?",,Fortnite,"Quin videojoc del 2017 d'Epic Games va popularitzar el mode ""battle royale""?",Fortnite,PUBG,Apex Legends,Call of Duty: Warzone
+¿Qué juego de estrategia consiste en conquistar territorios del mapa del mundo?,,Risk,Quin joc d'estratègia consisteix a conquerir territoris del mapa del món?,Risk,Catan,Stratego,Diplomacy
+¿Qué juego de mesa alemán de 1995 consiste en colonizar una isla con recursos?,,Catan,Quin joc de taula alemany del 1995 consisteix a colonitzar una illa amb recursos?,Catan,Carcassonne,Ticket to Ride,Agrícola
+¿Qué superhéroe tiene garras de adamantium?,,Lobezno,Quin superheroi té urpes d'adamàntium?,Wolverine,Cíclop,Dents de Sabre,Bèstia
+¿Cómo se llama el villano de Batman que tiene la cara de un payaso?,,Joker,Com es diu el vilà de Batman que té cara de pallasso?,Joker,Pingüí,Enigma,Dues Cares
+¿Qué videojuego de Rockstar transcurre en la ficticia Los Santos?,,Grand Theft Auto V,Quin videojoc de Rockstar transcorre a la ciutat fictícia de Los Santos?,Grand Theft Auto V,Red Dead Redemption 2,Max Payne 3,L.A. Noire
+"¿Qué figura del ajedrez se mueve en forma de ""L""?",,Caballo,"Quina peça dels escacs es mou en forma de ""L""?",Cavall,Alfil,Torre,Peó
+¿Qué consola portátil de Nintendo se lanzó en 1989?,,Game Boy,Quina consola portàtil de Nintendo es va llançar el 1989?,Game Boy,Nintendo DS,Game Gear,PSP
+"¿Qué personaje de Pokémon es un dragón naranja que escupe fuego, evolución final de Charmander?",,Charizard,"Quin Pokémon és un drac taronja que escup foc, evolució final de Charmander?",Charizard,Charmeleon,Dragonite,Arcanine
+"¿Qué número suma un ""blackjack"" en el juego del mismo nombre?",,21,"Quin número suma un ""blackjack"" en el joc del mateix nom?",21,20,24,17
+¿Qué ciudad ficticia es el hogar de Superman?,,Metrópolis,Quina ciutat fictícia és la llar de Superman?,Metròpolis,Gotham,Star City,Smallville
+"¿Qué juego de mesa de preguntas tiene ""quesitos"" de seis colores?",,Trivial Pursuit,"Quin joc de taula de preguntes té ""formatgets"" de sis colors?",Trivial Pursuit,Party & Co,Scattergories,Pictionary
+"¿Qué juego de cartas se juega en España con ""envido"" y ""truco""?",,Truc,"Quin joc de cartes es juga amb ""envit"" i ""truc""?",Truc,Mus,Tute,Brisca
+"¿Qué juego de cartas vasco tiene lances como ""grande"", ""chica"", ""pares"" y ""juego""?",,Mus,"Quin joc de cartes basc té jugades com ""grande"", ""chica"", ""pares"" i ""juego""?",Mus,Tute,Chinchón,Brisca
+¿Qué superheroína amazona usa un lazo de la verdad?,,Wonder Woman,Quina superheroïna amazona fa servir un llaç de la veritat?,Wonder Woman,Catwoman,Batgirl,Supergirl
+¿Cómo se llama el erizo azul de Sega?,,Sonic,Com es diu l'eriçó blau de Sega?,Sonic,Tails,Knuckles,Shadow
+¿Qué videojuego consiste en gestionar la vida de personas virtuales?,,Los Sims,Quin videojoc consisteix a gestionar la vida de persones virtuals?,Els Sims,SimCity,Animal Crossing,Second Life
+¿Qué tebeo español nació en 1917 y dio nombre a las historietas en España?,,TBO,"Quina revista de còmic espanyola va néixer el 1917 i va donar nom a les historietes (""tebeos"")?",TBO,Pulgarcito,DDT,Jaimito
+¿Cuántos cuadrados tiene cada lado de un cubo de Rubik clásico?,,9,Quants quadrats té cada cara d'un cub de Rubik clàssic?,9,4,16,6
+¿Qué juego de mesa consiste en hundir la flota del rival?,,Hundir la flota,Quin joc consisteix a enfonsar la flota del rival?,Enfonsar la flota,Stratego,Risk,Mastermind
+¿Qué superhéroe de Marvel es el doctor Bruce Banner?,,Hulk,Quin superheroi de Marvel és el doctor Bruce Banner?,Hulk,Ant-Man,Doctor Strange,La Cosa
+¿Qué ajedrecista estadounidense ganó el título mundial a Borís Spaski en 1972?,,Bobby Fischer,Quin escaquista nord-americà va guanyar el títol mundial a Borís Spasski el 1972?,Bobby Fischer,Garri Kaspàrov,Paul Morphy,Hikaru Nakamura
+¿Qué superordenador de IBM derrotó a Kaspárov al ajedrez en 1997?,,Deep Blue,Quin superordinador d'IBM va derrotar Kaspàrov als escacs el 1997?,Deep Blue,Watson,AlphaZero,Big Blue
+¿Qué programa de DeepMind venció al campeón de go Lee Sedol en 2016?,,AlphaGo,Quin programa de DeepMind va vèncer el campió de go Lee Sedol el 2016?,AlphaGo,Deep Blue,Stockfish,Watson
+¿Qué juego de rol de mesa crearon Gary Gygax y Dave Arneson en 1974?,,Dungeons & Dragons,Quin joc de rol de taula van crear Gary Gygax i Dave Arneson el 1974?,Dungeons & Dragons,Warhammer,La crida de Cthulhu,Vampir: La mascarada
+¿En qué año salió a la venta la primera Nintendo Entertainment System en Japón (Famicom)?,,1983,En quin any va sortir a la venda la primera Famicom de Nintendo al Japó?,1983,1980,1986,1990
+¿Qué videojuego arcade de 1978 de Taito tenía alienígenas que bajaban por la pantalla?,,Space Invaders,Quin videojoc arcade del 1978 de Taito tenia alienígenes que baixaven per la pantalla?,Space Invaders,Asteroids,Galaga,Defender
+¿Qué empresa creó la consola Atari 2600?,,Atari,Quina empresa va crear la consola Atari 2600?,Atari,Coleco,Mattel,Magnavox
+"¿Qué dibujante creó la serie ""Watchmen"" junto a Alan Moore?",,Dave Gibbons,"Quin dibuixant va crear ""Watchmen"" amb Alan Moore?",Dave Gibbons,Frank Miller,Neil Gaiman,Jim Lee
+¿Qué famosa pareja de creadores dio vida a Superman en 1938?,,Jerry Siegel y Joe Shuster,Quina parella de creadors va donar vida a Superman el 1938?,Jerry Siegel i Joe Shuster,Stan Lee i Jack Kirby,Bob Kane i Bill Finger,Goscinny i Uderzo
+¿Qué juego de mesa chino usa 144 fichas en su versión más habitual?,,Mahjong,Quin joc de taula xinès fa servir 144 fitxes en la versió més habitual?,Mahjong,Go,Xiangqi,Dòmino xinès
+¿Qué saga de videojuegos de Hideo Kojima protagoniza Solid Snake?,,Metal Gear,Quina saga de videojocs d'Hideo Kojima protagonitza Solid Snake?,Metal Gear,Silent Hill,Resident Evil,Death Stranding
+¿Cuántas líneas tiene por lado un tablero de go estándar?,,19,Quantes interseccions per costat té un tauler de go estàndard?,19,15,21,13
+"¿Qué ilustradora catalana creó a ""Les Tres Bessones""?",,Roser Capdevila,"Quina il·lustradora va crear ""Les Tres Bessones""?",Roser Capdevila,Francisco Ibáñez,Cesc,Josep Coll
+"¿Qué videojuego de 1980 de Namco tenía como enemigos a Blinky, Pinky, Inky y Clyde?",,Pac-Man,"Quin videojoc del 1980 de Namco tenia com a enemics Blinky, Pinky, Inky i Clyde?",Pac-Man,Dig Dug,Galaxian,Pole Position
+¿Qué juego de cartas coleccionables tiene a Pikachu y se lanzó en Japón en 1996?,,Pokémon TCG,Quin joc de cartes col·leccionables amb Pikachu es va llançar al Japó el 1996?,Pokémon TCG,Yu-Gi-Oh!,Magic: The Gathering,Digimon Card Game
+¿Qué superhéroe de DC es el policía Barry Allen?,,Flash,Quin superheroi de DC és el policia científic Barry Allen?,Flash,Llanterna Verda,Aquaman,Cyborg
+¿Qué juego de lógica japonés consiste en rellenar una cuadrícula de 9x9 con números del 1 al 9?,,Sudoku,Quin joc de lògica japonès consisteix a omplir una quadrícula de 9x9 amb nombres de l'1 al 9?,Sudoku,Kakuro,Nonograma,KenKen
+"¿Qué editorial creó a Spider-Man, los X-Men y los Vengadores?",,Marvel,"Quina editorial va crear Spider-Man, els X-Men i els Venjadors?",Marvel,DC,Image,Dark Horse
+¿Qué gran maestro noruego fue campeón mundial de ajedrez entre 2013 y 2023?,,Magnus Carlsen,Quin gran mestre noruec va ser campió mundial d'escacs entre el 2013 i el 2023?,Magnus Carlsen,Fabiano Caruana,Vishy Anand,Ding Liren
+"¿Qué director dirigió ""E.T., el extraterrestre""?",,Steven Spielberg,"Quin director va dirigir ""E.T., l'extraterrestre""?",Steven Spielberg,George Lucas,James Cameron,Robert Zemeckis
+¿Cómo se llama el mago protagonista de la saga creada por J. K. Rowling?,,Harry Potter,Com es diu el mag protagonista de la saga creada per J. K. Rowling?,Harry Potter,Gandalf,Merlí,Ron Weasley
+¿Qué actor interpretó a Indiana Jones?,,Harrison Ford,Quin actor va interpretar Indiana Jones?,Harrison Ford,Kevin Costner,Mel Gibson,Bruce Willis
+¿Cómo se llama la ciudad donde viven los Simpson?,,Springfield,Com es diu la ciutat on viuen els Simpson?,Springfield,Shelbyville,Quahog,South Park
+¿Qué película de Disney tiene como protagonista a una princesa que pierde un zapato de cristal?,,La Cenicienta,Quina pel·lícula de Disney té com a protagonista una princesa que perd una sabata de vidre?,La Ventafocs,La Blancaneu,La bella dorment,Rapunzel
+¿Qué tiburón aterrorizaba una playa en la película de Spielberg de 1975?,,Tiburón,Quina pel·lícula de Spielberg del 1975 tracta d'un tauró que aterreix una platja?,Tauró,Megalodó,Orca,Deep Blue
+"¿Qué personaje de ""La guerra de las galaxias"" lleva un casco negro y respira con fuerza?",,Darth Vader,"Quin personatge de ""La guerra de les galàxies"" porta un casc negre i respira amb força?",Darth Vader,Boba Fett,Kylo Ren,Darth Maul
+¿Qué película de animación tiene como protagonistas a un cowboy y un astronauta de juguete?,,Toy Story,Quina pel·lícula d'animació té com a protagonistes un cowboy i un astronauta de joguina?,Toy Story,Cars,"Monstres, S.A.",Shrek
+¿Cómo se llama el ogro verde de DreamWorks?,,Shrek,Com es diu l'ogre verd de DreamWorks?,Shrek,Hulk,Fiona,Grinch
+¿Qué actor interpreta a Iron Man en el Universo Cinematográfico de Marvel?,,Robert Downey Jr.,Quin actor interpreta Iron Man a l'univers cinematogràfic de Marvel?,Robert Downey Jr.,Chris Evans,Chris Hemsworth,Mark Ruffalo
+¿En qué serie aparece el café Central Perk?,,Friends,En quina sèrie apareix el cafè Central Perk?,Friends,Com vaig conèixer la vostra mare,Seinfeld,The Big Bang Theory
+¿Qué película de 1997 narra el hundimiento de un famoso transatlántico?,,Titanic,Quina pel·lícula del 1997 narra l'enfonsament d'un famós transatlàntic?,Titanic,Posidó,Pearl Harbor,Master and Commander
+"¿Qué muñeco de nieve canta en ""Frozen""?",,Olaf,"Quin ninot de neu canta a ""Frozen""?",Olaf,Sven,Kristoff,Hans
+¿Qué película de Disney de 1994 transcurre en la sabana africana?,,El rey león,Quina pel·lícula de Disney del 1994 transcorre a la sabana africana?,El rei lleó,Tarzan,Madagascar,El llibre de la selva
+¿Qué espía británico tiene el código 007?,,James Bond,Quin espia britànic té el codi 007?,James Bond,Jason Bourne,Ethan Hunt,Austin Powers
+¿Qué estatuilla dorada se entrega en los premios de la Academia de Hollywood?,,Óscar,Quina estatueta daurada es lliura als premis de l'Acadèmia de Hollywood?,Oscar,Goya,Emmy,Globus d'Or
+"¿Qué serie de HBO adapta las novelas ""Canción de hielo y fuego""?",,Juego de tronos,"Quina sèrie d'HBO adapta les novel·les ""Cançó de gel i foc""?",Joc de trons,The Witcher,Vikings,Els anells de poder
+¿Qué cómico británico interpreta a Mr. Bean?,,Rowan Atkinson,Quin còmic britànic interpreta Mr. Bean?,Rowan Atkinson,John Cleese,Benny Hill,Ricky Gervais
+"¿Qué director dirigió ""Psicosis"" (1960)?",,Alfred Hitchcock,"Qui va dirigir ""Psicosi"" (1960)?",Alfred Hitchcock,Stanley Kubrick,Orson Welles,Billy Wilder
+"¿Qué película de 1999 popularizó la ""píldora roja"" y la ""píldora azul""?",,Matrix,"Quina pel·lícula del 1999 va popularitzar la ""pastilla vermella"" i la ""pastilla blava""?",Matrix,Origen,Dark City,eXistenZ
+"¿Qué actriz protagonizó ""Desayuno con diamantes""?",,Audrey Hepburn,"Quina actriu va protagonitzar ""Esmorzar amb diamants""?",Audrey Hepburn,Marilyn Monroe,Grace Kelly,Elizabeth Taylor
+¿Qué película española de 2006 de Guillermo del Toro transcurre en la posguerra?,,El laberinto del fauno,Quina pel·lícula del 2006 de Guillermo del Toro transcorre a la postguerra espanyola?,El laberint del faune,L'espinada del diable,Els altres,L'orfenat
+¿Qué serie de HBO sigue a una familia rica que lucha por el control de un imperio mediático?,,Succession,Quina sèrie d'HBO segueix una família rica que lluita pel control d'un imperi mediàtic?,Succession,Billions,Dallas,Mad Men
+"¿Qué director español dirigió ""Mar adentro"", ganadora del Óscar?",,Alejandro Amenábar,"Quin director espanyol va dirigir ""Mar adentro"", guanyadora de l'Oscar?",Alejandro Amenábar,Pedro Almodóvar,Juan Antonio Bayona,Fernando Trueba
+¿Qué película de 1994 cuenta la amistad de dos presos en la cárcel de Shawshank?,,Cadena perpetua,Quina pel·lícula del 1994 explica l'amistat de dos presos a la presó de Shawshank?,Cadena perpètua,La milla verda,Fuga d'Alcatraz,L'exprés de mitjanit
+"¿Qué actor interpretó al Joker en ""El caballero oscuro"" (2008)?",,Heath Ledger,"Quin actor va interpretar el Joker a ""El cavaller fosc"" (2008)?",Heath Ledger,Joaquin Phoenix,Jack Nicholson,Jared Leto
+"¿Qué estudio japonés creó ""El viaje de Chihiro""?",,Studio Ghibli,"Quin estudi japonès va crear ""El viatge de Chihiro""?",Studio Ghibli,Toei Animation,Madhouse,Sunrise
+"¿Qué director dirigió ""2001: una odisea del espacio""?",,Stanley Kubrick,"Qui va dirigir ""2001: una odissea de l'espai""?",Stanley Kubrick,Ridley Scott,Steven Spielberg,Andrei Tarkovski
+"¿En qué ciudad transcurre la serie ""The Wire""?",,Baltimore,"A quina ciutat transcorre la sèrie ""The Wire""?",Baltimore,Chicago,Nova York,Detroit
+¿Qué película ganó el primer Óscar a la mejor película de animación en 2002?,,Shrek,Quina pel·lícula va guanyar el primer Oscar a la millor pel·lícula d'animació el 2002?,Shrek,"Monstres, S.A.",Toy Story 2,Ice Age
+"¿Qué actriz española ganó el Óscar por ""Vicky Cristina Barcelona""?",,Penélope Cruz,"Quina actriu espanyola va guanyar l'Oscar per ""Vicky Cristina Barcelona""?",Penélope Cruz,Carmen Maura,Maribel Verdú,Elena Anaya
+"¿Qué actor español ganó el Óscar por ""No es país para viejos""?",,Javier Bardem,"Quin actor espanyol va guanyar l'Oscar per ""No és país per a vells""?",Javier Bardem,Antonio Banderas,Eduardo Noriega,Luis Tosar
+¿Qué saga tiene como protagonista a Marty McFly?,,Regreso al futuro,Quina saga té com a protagonista Marty McFly?,Retorn al futur,Indiana Jones,Els Goonies,Els caçafantasmes
+¿Qué serie española transcurre en un instituto llamado Las Encinas?,,Élite,Quina sèrie espanyola transcorre en un institut anomenat Las Encinas?,Élite,Física o química,Merlí,Al salir de clase
+¿Qué serie catalana sigue a un profesor de filosofía y sus alumnos?,,Merlí,Quina sèrie catalana segueix un professor de filosofia i els seus alumnes?,Merlí,Polseres vermelles,Plats bruts,Ventdelplà
+"¿Qué director neozelandés llevó al cine ""El señor de los anillos""?",,Peter Jackson,"Quin director neozelandès va portar al cinema ""El senyor dels anells""?",Peter Jackson,Taika Waititi,Jane Campion,Andrew Adamson
+¿Qué película de Pixar sigue a un pez payaso que busca a su hijo?,,Buscando a Nemo,Quina pel·lícula de Pixar segueix un peix pallasso que busca el seu fill?,Buscant en Nemo,Buscant la Dory,Luca,Elemental
+"¿Qué director dirigió ""Titanic"" y ""Avatar""?",,James Cameron,"Qui va dirigir ""Titanic"" i ""Avatar""?",James Cameron,Steven Spielberg,Ridley Scott,Peter Jackson
+¿Qué película muda de 1927 de Fritz Lang muestra una ciudad futurista?,,Metrópolis,Quina pel·lícula muda del 1927 de Fritz Lang mostra una ciutat futurista?,Metròpolis,Nosferatu,El gabinet del doctor Caligari,Aurora
+"¿Qué actor británico interpretó a Hannibal Lecter en ""El silencio de los corderos""?",,Anthony Hopkins,"Quin actor britànic va interpretar Hannibal Lecter a ""El silenci dels anyells""?",Anthony Hopkins,Gary Oldman,Ralph Fiennes,Michael Caine
+¿Qué serie de Netflix surcoreana de 2021 trata de juegos infantiles mortales?,,El juego del calamar,Quina sèrie de Netflix sud-coreana del 2021 tracta de jocs infantils mortals?,El joc del calamar,Alice in Borderland,Kingdom,Estamos muertos
+"¿Qué cineasta español dirigió ""Bienvenido, Mister Marshall"" (1953)?",,Luis García Berlanga,"Quin cineasta espanyol va dirigir ""Bienvenido, Mister Marshall"" (1953)?",Luis García Berlanga,Juan Antonio Bardem,Luis Buñuel,Fernando Fernán Gómez
+¿Qué premios del cine español llevan el nombre de un pintor aragonés?,,Goya,Quins premis del cinema espanyol porten el nom d'un pintor aragonès?,Goya,Velázquez,Sorolla,Buñuel
+¿Qué película de 1939 está ambientada en la Guerra de Secesión y protagoniza Scarlett O'Hara?,,Lo que el viento se llevó,Quina pel·lícula del 1939 està ambientada a la Guerra de Secessió i protagonitza Scarlett O'Hara?,Allò que el vent s'endugué,Casablanca,Ciutadà Kane,El màgic d'Oz
+"¿Qué director aragonés dirigió ""Un perro andaluz"" junto a Dalí?",,Luis Buñuel,"Quin director aragonès va dirigir ""Un gos andalús"" amb Dalí?",Luis Buñuel,Carlos Saura,José Luis Borau,Florián Rey
+"¿Qué película de Orson Welles gira en torno a la palabra ""Rosebud""?",,Ciudadano Kane,"Quina pel·lícula d'Orson Welles gira al voltant de la paraula ""Rosebud""?",Ciutadà Kane,Set de mal,El tercer home,La dama de Xangai
+"¿Qué actriz francesa ganó el Óscar por ""La vida en rosa"" (2007), interpretando a Édith Piaf?",,Marion Cotillard,"Quina actriu francesa va guanyar l'Oscar per ""La vida en rosa"" (2007), interpretant Édith Piaf?",Marion Cotillard,Juliette Binoche,Audrey Tautou,Isabelle Huppert
+"¿Qué director japonés dirigió ""Los siete samuráis"" (1954)?",,Akira Kurosawa,"Quin director japonès va dirigir ""Els set samurais"" (1954)?",Akira Kurosawa,Yasujirō Ozu,Kenji Mizoguchi,Hayao Miyazaki
+"¿Qué película española fue la primera en ganar el Óscar a la mejor película de habla no inglesa, en 1983?",,Volver a empezar,"Quina pel·lícula espanyola va ser la primera a guanyar l'Oscar a la millor pel·lícula de parla no anglesa, el 1983?",Volver a empezar,Belle Époque,Todo sobre mi madre,Mar adentro
+¿Qué actriz tiene el récord de cuatro Óscar a la mejor actriz?,,Katharine Hepburn,Quina actriu té el rècord de quatre Oscars a la millor actriu?,Katharine Hepburn,Meryl Streep,Ingrid Bergman,Bette Davis
+¿Qué película de 1927 fue la primera película sonora con diálogos sincronizados?,,El cantor de jazz,Quina pel·lícula del 1927 va ser la primera amb diàlegs sonors sincronitzats?,El cantant de jazz,Aurora,Ales,Metròpolis
+"¿Qué director dirigió ""Taxi Driver"" y ""Uno de los nuestros""?",,Martin Scorsese,"Qui va dirigir ""Taxi Driver"" i ""Un dels nostres""?",Martin Scorsese,Francis Ford Coppola,Brian De Palma,Sidney Lumet
+¿En qué festival de cine se entrega la Palma de Oro?,,Cannes,A quin festival de cinema es lliura la Palma d'Or?,Cannes,Venècia,Berlín,Sant Sebastià
+¿Qué premio entrega el Festival de Berlín como máximo galardón?,,Oso de Oro,Quin premi lliura el Festival de Berlín com a màxim guardó?,Os d'Or,Lleó d'Or,Conxa d'Or,Palma d'Or
+¿Qué película catalana de Carla Simón ganó el Oso de Oro en 2022?,,Alcarràs,Quina pel·lícula de Carla Simón va guanyar l'Os d'Or el 2022?,Alcarràs,Estiu 1993,Pa negre,Mediterrani
+"¿Qué director catalán dirigió ""Pa negre"", ganadora de nueve premios Goya?",,Agustí Villaronga,"Quin director va dirigir ""Pa negre"", guanyadora de nou premis Goya?",Agustí Villaronga,Cesc Gay,Isabel Coixet,Ventura Pons
+¿Qué serie de David Lynch de 1990 gira en torno al asesinato de Laura Palmer?,,Twin Peaks,Quina sèrie de David Lynch del 1990 gira al voltant de l'assassinat de Laura Palmer?,Twin Peaks,Expedient X,Picket Fences,Northern Exposure
+"¿Qué director dirigió ""El séptimo sello"" (1957)?",,Ingmar Bergman,"Qui va dirigir ""El setè segell"" (1957)?",Ingmar Bergman,Carl Theodor Dreyer,Federico Fellini,Michelangelo Antonioni
+¿Qué película de Fellini muestra a Anita Ekberg en la Fontana de Trevi?,,La dolce vita,Quina pel·lícula de Fellini mostra Anita Ekberg a la Fontana de Trevi?,La dolce vita,Vuit i mig,La strada,Amarcord
+¿Qué director dirigió la trilogía del dólar con Clint Eastwood?,,Sergio Leone,Quin director va dirigir la trilogia del dòlar amb Clint Eastwood?,Sergio Leone,Sergio Corbucci,Don Siegel,John Ford
+"¿Quién creó la serie ""Los Soprano"" para HBO?",,David Chase,"Qui va crear la sèrie ""Els Soprano"" per a HBO?",David Chase,David Simon,Vince Gilligan,Matthew Weiner
+¿Qué película de 1960 de Billy Wilder protagonizaron Jack Lemmon y Shirley MacLaine?,,El apartamento,Quina pel·lícula del 1960 de Billy Wilder van protagonitzar Jack Lemmon i Shirley MacLaine?,L'apartament,Ningú no és perfecte,Irma la dolça,Primera plana
+¿Qué película de Víctor Erice de 1973 protagoniza la niña Ana Torrent?,,El espíritu de la colmena,Quina pel·lícula de Víctor Erice del 1973 protagonitza la nena Ana Torrent?,L'esperit del rusc,El sud,Cria corbs,La caça
+"¿Qué actor ha ganado más Óscar como actor principal, con tres?",,Daniel Day-Lewis,"Quin actor ha guanyat més Oscars com a actor protagonista, amb tres?",Daniel Day-Lewis,Jack Nicholson,Marlon Brando,Tom Hanks
+¿Qué instrumento tocaba principalmente Chopin?,,Piano,Quin instrument tocava principalment Chopin?,Piano,Violí,Orgue,Arpa
+¿Cuántos miembros tenían los Beatles?,,4,Quants membres tenien els Beatles?,4,3,5,6
+"¿Qué cantante era conocido como ""el Rey del Rock and Roll""?",,Elvis Presley,"Quin cantant era conegut com ""el Rei del Rock and Roll""?",Elvis Presley,Chuck Berry,Little Richard,Jerry Lee Lewis
+¿Qué instrumento tiene teclas blancas y negras?,,Piano,Quin instrument té tecles blanques i negres?,Piano,Arpa,Violí,Flauta
+¿De qué país es el grupo U2?,,Irlanda,De quin país és el grup U2?,Irlanda,Regne Unit,Estats Units,Austràlia
+¿Qué cantante británico lideraba el grupo Queen?,,Freddie Mercury,Quin cantant liderava el grup Queen?,Freddie Mercury,Mick Jagger,Elton John,David Bowie
+¿Qué instrumento toca un violinista?,,Violín,Quin instrument toca un violinista?,Violí,Viola,Violoncel,Contrabaix
+"¿Qué estilo musical se asocia a Andalucía, con cante, toque y baile?",,Flamenco,"Quin estil musical s'associa a Andalusia, amb cant, toc i ball?",Flamenco,Jota,Sardana,Muinyeira
+¿Qué baile tradicional catalán se baila en círculo cogidos de las manos?,,Sardana,Quina dansa tradicional catalana es balla en rotllana agafats de les mans?,Sardana,Jota,Muinyeira,Fandango
+"¿Qué cantante estadounidense es conocida como ""la Reina del Pop""?",,Madonna,"Quina cantant nord-americana és coneguda com ""la Reina del Pop""?",Madonna,Britney Spears,Whitney Houston,Mariah Carey
+¿Cuántos músicos forman un cuarteto?,,4,Quants músics formen un quartet?,4,3,5,6
+¿Qué instrumento de percusión tiene platillos y bombo?,,Batería,Quin instrument de percussió té plats i bombo?,Bateria,Xilòfon,Timbal,Pandereta
+"¿Qué grupo británico cantó ""Wonderwall""?",,Oasis,"Quin grup britànic va cantar ""Wonderwall""?",Oasis,Blur,Radiohead,Coldplay
+"¿Qué cantante canadiense saltó a la fama con ""Baby"" en 2010?",,Justin Bieber,"Quin cantant canadenc es va fer famós amb ""Baby"" el 2010?",Justin Bieber,Shawn Mendes,Drake,The Weeknd
+"¿Qué grupo de Liverpool grabó ""Yellow Submarine""?",,The Beatles,"Quin grup de Liverpool va gravar ""Yellow Submarine""?",The Beatles,The Rolling Stones,The Who,The Kinks
+"¿Qué cantante española es famosa por canciones como ""Malamente""?",,Rosalía,"Quina cantant és famosa per cançons com ""Malamente""?",Rosalía,Aitana,Lola Índigo,Bad Gyal
+¿Qué instrumento de cuerda pulsada es típico del flamenco?,,Guitarra,Quin instrument de corda polsada és típic del flamenc?,Guitarra,Llaüt,Bandúrria,Mandolina
+¿Cómo se llama la persona que dirige una orquesta?,,Director,Com s'anomena la persona que dirigeix una orquestra?,Director,Solista,Concertino,Compositor
+"¿Qué compositor alemán escribió los ""Conciertos de Brandeburgo""?",,Johann Sebastian Bach,"Quin compositor alemany va escriure els ""Concerts de Brandenburg""?",Johann Sebastian Bach,Georg Friedrich Händel,Ludwig van Beethoven,Johannes Brahms
+"¿Qué banda de rock británica grabó ""The Dark Side of the Moon""?",,Pink Floyd,"Quina banda de rock britànica va gravar ""The Dark Side of the Moon""?",Pink Floyd,Led Zeppelin,Genesis,Deep Purple
+"¿Qué compositor italiano escribió la ópera ""La Traviata""?",,Giuseppe Verdi,"Quin compositor italià va escriure l'òpera ""La Traviata""?",Giuseppe Verdi,Giacomo Puccini,Gioachino Rossini,Vincenzo Bellini
+¿Qué cantante de Jamaica popularizó el reggae en todo el mundo?,,Bob Marley,Quin cantant de Jamaica va popularitzar el reggae a tot el món?,Bob Marley,Peter Tosh,Jimmy Cliff,Desmond Dekker
+"¿Qué grupo sueco ganó Eurovisión en 1974 con ""Waterloo""?",,ABBA,"Quin grup suec va guanyar Eurovisió el 1974 amb ""Waterloo""?",ABBA,Roxette,Europe,Ace of Base
+¿Qué compositor polaco es famoso por sus nocturnos y polonesas para piano?,,Frédéric Chopin,Quin compositor polonès és famós pels nocturns i les poloneses per a piano?,Frédéric Chopin,Franz Liszt,Robert Schumann,Ignacy Paderewski
+"¿Qué cantante grabó el disco ""Purple Rain""?",,Prince,"Quin cantant va gravar el disc ""Purple Rain""?",Prince,Michael Jackson,Stevie Wonder,Lionel Richie
+¿Cuántas sinfonías completó Beethoven?,,9,Quantes simfonies va completar Beethoven?,9,5,7,12
+"¿Qué cantante catalán es autor de ""Mediterráneo""?",,Joan Manuel Serrat,"Quin cantant és l'autor de ""Mediterráneo""?",Joan Manuel Serrat,Lluís Llach,Raimon,Sisa
+"¿Qué cantautor catalán compuso ""L'estaca""?",,Lluís Llach,"Quin cantautor va compondre ""L'estaca""?",Lluís Llach,Joan Manuel Serrat,Raimon,Pau Riba
+"¿Qué compositor austriaco es conocido como ""el rey del vals""?",,Johann Strauss hijo,"Quin compositor austríac és conegut com ""el rei del vals""?",Johann Strauss fill,Franz Schubert,Gustav Mahler,Joseph Haydn
+"¿Qué banda irlandesa de Bono grabó ""With or Without You""?",,U2,"Quina banda irlandesa de Bono va gravar ""With or Without You""?",U2,The Cranberries,Thin Lizzy,The Pogues
+"¿Qué cantante cubana era conocida como ""la Reina de la Salsa""?",,Celia Cruz,"Quina cantant cubana era coneguda com ""la Reina de la Salsa""?",Celia Cruz,Gloria Estefan,Omara Portuondo,La Lupe
+¿Qué instrumento tocaba Paco de Lucía?,,Guitarra flamenca,Quin instrument tocava Paco de Lucía?,Guitarra flamenca,Caixó,Piano,Bandúrria
+"¿Qué grupo español cantó ""Cuéntame"" y ganó fama en los años 60?",,Fórmula V,"Quin grup espanyol va cantar ""Cuéntame"" i es va fer famós als anys 60?",Fórmula V,Los Bravos,Los Brincos,Mocedades
+"¿Qué grupo español grabó ""Black Is Black"" en 1966?",,Los Bravos,"Quin grup espanyol va gravar ""Black Is Black"" el 1966?",Los Bravos,Los Brincos,Fórmula V,Los Pekenikes
+¿Cómo se llama la voz femenina más aguda?,,Soprano,Com s'anomena la veu femenina més aguda?,Soprano,Contralto,Mezzosoprano,Tenor
+"¿Qué cantante británico compuso ""Your Song"" y ""Rocket Man""?",,Elton John,"Quin cantant britànic va compondre ""Your Song"" i ""Rocket Man""?",Elton John,Rod Stewart,Phil Collins,George Michael
+¿Qué banda de Seattle lideró Kurt Cobain?,,Nirvana,Quina banda de Seattle va liderar Kurt Cobain?,Nirvana,Pearl Jam,Soundgarden,Alice in Chains
+"¿Qué compositor ruso escribió ""El cascanueces""?",,Piotr Ilich Chaikovski,"Quin compositor rus va escriure ""El trencanous""?",Piotr Ilitx Txaikovski,Ígor Stravinski,Serguei Prokófiev,Nikolai Rimski-Kórsakov
+"¿Qué cantante española de copla y flamenco era conocida como ""la Faraona""?",,Lola Flores,"Quina cantant de copla i flamenc era coneguda com ""la Faraona""?",Lola Flores,Rocío Jurado,Isabel Pantoja,Marifé de Triana
+"¿Qué cantante grabó ""Like a Rolling Stone"" en 1965?",,Bob Dylan,"Quin cantant va gravar ""Like a Rolling Stone"" el 1965?",Bob Dylan,Bruce Springsteen,Neil Young,Johnny Cash
+"¿Qué músico de jazz era apodado ""Satchmo""?",,Louis Armstrong,"Quin músic de jazz era conegut com ""Satchmo""?",Louis Armstrong,Duke Ellington,Miles Davis,Dizzy Gillespie
+¿Qué grupo británico de rock lideran Mick Jagger y Keith Richards?,,The Rolling Stones,Quin grup britànic de rock lideren Mick Jagger i Keith Richards?,The Rolling Stones,The Who,The Animals,The Yardbirds
+"¿Qué compositor francés escribió el ""Bolero"" (1928)?",,Maurice Ravel,"Quin compositor francès va escriure el ""Bolero"" (1928)?",Maurice Ravel,Claude Debussy,Erik Satie,Camille Saint-Saëns
+"¿Qué grupo madrileño de la Movida cantaba ""Chica de ayer""?",,Nacha Pop,"Quin grup madrileny de la Movida cantava ""Chica de ayer""?",Nacha Pop,Radio Futura,Alaska y los Pegamoides,Mecano
+¿Qué trío español formaban Ana Torroja y los hermanos Cano?,,Mecano,Quin trio espanyol formaven Ana Torroja i els germans Cano?,Mecano,La Oreja de Van Gogh,Presuntos Implicados,Amaral
+"¿Qué compositor checo escribió la ""Sinfonía del Nuevo Mundo""?",,Antonín Dvořák,"Quin compositor txec va escriure la ""Simfonia del Nou Món""?",Antonín Dvořák,Bedřich Smetana,Leoš Janáček,Bohuslav Martinů
+"¿Qué compositor catalán escribió la suite para piano ""Iberia""?",,Isaac Albéniz,"Quin compositor català va escriure la suite per a piano ""Iberia""?",Isaac Albéniz,Enrique Granados,Federico Mompou,Manuel de Falla
+"¿Qué compositor leridano escribió las ""Goyescas""?",,Enrique Granados,"Quin compositor lleidatà va escriure les ""Goyescas""?",Enric Granados,Isaac Albéniz,Federico Mompou,Xavier Montsalvatge
+"¿Qué compositor alemán escribió el ciclo de óperas ""El anillo del nibelungo""?",,Richard Wagner,"Quin compositor alemany va escriure el cicle d'òperes ""L'anell del nibelung""?",Richard Wagner,Richard Strauss,Carl Maria von Weber,Engelbert Humperdinck
+"¿Qué soprano barcelonesa fue una de las grandes divas de la ópera, intérprete de ""Norma"" y ""Salomé""?",,Montserrat Caballé,"Quina soprano barcelonina va ser una de les grans dives de l'òpera, intèrpret de ""Norma"" i ""Salome""?",Montserrat Caballé,Victoria de los Ángeles,Teresa Berganza,Ainhoa Arteta
+"¿Qué compositor estadounidense escribió ""Rhapsody in Blue""?",,George Gershwin,"Quin compositor nord-americà va escriure ""Rhapsody in Blue""?",George Gershwin,Leonard Bernstein,Aaron Copland,Cole Porter
+"¿Qué compositor escribió el oratorio ""El Mesías"" con su ""Aleluya""?",,Georg Friedrich Händel,"Quin compositor va escriure l'oratori ""El Messies"" amb el seu ""Al·leluia""?",Georg Friedrich Händel,Johann Sebastian Bach,Joseph Haydn,Henry Purcell
+"¿Qué compositor ruso escribió ""La consagración de la primavera"", cuyo estreno en 1913 provocó un escándalo?",,Ígor Stravinski,"Quin compositor rus va escriure ""La consagració de la primavera"", l'estrena de la qual el 1913 va provocar un escàndol?",Ígor Stravinski,Serguei Rakhmàninov,Modest Mússorgski,Dmitri Xostakóvitx
+¿En qué ciudad nació Wolfgang Amadeus Mozart?,,Salzburgo,A quina ciutat va néixer Wolfgang Amadeus Mozart?,Salzburg,Viena,Linz,Praga
+¿Qué violagambista catalán fundó el conjunto Hespèrion XXI?,,Jordi Savall,Quin músic va fundar Hespèrion XXI i és especialista en viola de gamba?,Jordi Savall,Pau Casals,Jordi Cervelló,Xavier Turull
+"¿Qué compositor italiano escribió ""El barbero de Sevilla""?",,Gioachino Rossini,"Quin compositor italià va escriure ""El barber de Sevilla""?",Gioachino Rossini,Wolfgang Amadeus Mozart,Gaetano Donizetti,Giuseppe Verdi
+¿Cuántas cuerdas tiene un violín?,,4,Quantes cordes té un violí?,4,5,6,3
+"¿Qué compositor húngaro creó las ""Rapsodias húngaras""?",,Franz Liszt,"Quin compositor hongarès va crear les ""Rapsòdies hongareses""?",Franz Liszt,Béla Bartók,Zoltán Kodály,Johannes Brahms
+¿Qué disco de los Beatles de 1967 tiene una portada con decenas de personajes famosos?,,Sgt. Pepper's Lonely Hearts Club Band,Quin disc dels Beatles del 1967 té una portada amb desenes de personatges famosos?,Sgt. Pepper's Lonely Hearts Club Band,Abbey Road,Revolver,Let It Be
+"¿Qué compositor escribió la ópera ""Madama Butterfly""?",,Giacomo Puccini,"Quin compositor va escriure l'òpera ""Madama Butterfly""?",Giacomo Puccini,Giuseppe Verdi,Pietro Mascagni,Ruggero Leoncavallo
+¿En qué ciudad se celebra cada año el Festival Internacional de Benicàssim?,,Benicàssim,A quina ciutat se celebra cada any el Festival Internacional de Benicàssim?,Benicàssim,Benidorm,Castelló de la Plana,València
+"¿Qué compositor gaditano escribió ""La vida breve"" y ""El sombrero de tres picos""?",,Manuel de Falla,"Quin compositor gadità va escriure ""La vida breu"" i ""El barret de tres puntes""?",Manuel de Falla,Joaquín Turina,Isaac Albéniz,Joaquín Rodrigo
+¿Qué cantante portuguesa es la gran figura del fado?,,Amália Rodrigues,Quina cantant portuguesa és la gran figura del fado?,Amália Rodrigues,Mariza,Dulce Pontes,Cesária Évora
+"¿Qué país ganó Eurovisión tres años seguidos, de 1992 a 1994?",,Irlanda,"Quin país va guanyar Eurovisió tres anys seguits, del 1992 al 1994?",Irlanda,Suècia,Regne Unit,Noruega
+"¿Qué compositor alemán es autor del ""Himno a la alegría"", himno de la Unión Europea?",,Ludwig van Beethoven,"Quin compositor alemany és l'autor de l'""Himne a l'alegria"", himne de la Unió Europea?",Ludwig van Beethoven,Johannes Brahms,Robert Schumann,Felix Mendelssohn
+¿De qué país es típica la paella?,,España,De quin país és típica la paella?,Espanya,Itàlia,Portugal,Mèxic
+¿Qué ingrediente principal tiene la tortilla de patatas además del huevo?,,Patata,Quin ingredient principal té la truita de patates a més de l'ou?,Patata,Ceba,Pebrot,Xoriço
+¿De qué país es típico el croissant?,,Francia,De quin país és típic el croissant?,França,Àustria,Bèlgica,Suïssa
+¿De qué fruta se obtiene el vino?,,Uva,De quina fruita s'obté el vi?,Raïm,Poma,Pera,Pruna
+"¿Qué plato japonés consiste en pescado crudo cortado en láminas, sin arroz?",,Sashimi,"Quin plat japonès consisteix en peix cru tallat a làmines, sense arròs?",Sashimi,Sushi,Tempura,Ramen
+¿Qué bebida se obtiene de la fermentación de la cebada y el lúpulo?,,Cerveza,Quina beguda s'obté de la fermentació de l'ordi i el llúpol?,Cervesa,Vi,Sidra,Whisky
+¿De qué país son típicos los tacos?,,México,De quin país són típics els tacos?,Mèxic,Espanya,Argentina,Perú
+¿Qué alimento producen las abejas?,,Miel,Quin aliment produeixen les abelles?,Mel,Melmelada,Sucre,Codonyat
+¿Qué ingrediente se tuesta y muele para hacer café?,,Granos de café,Quin ingredient es torra i es mol per fer cafè?,Grans de cafè,Fulles de te,Llavors de cacau,Glans
+¿Qué hortaliza es la base del ketchup?,,Tomate,Quina hortalissa és la base del quètxup?,Tomàquet,Pebrot vermell,Pastanaga,Remolatxa
+¿Qué país es famoso por el queso con agujeros emmental?,,Suiza,Quin país és famós pel formatge amb forats emmental?,Suïssa,França,Països Baixos,Alemanya
+"¿Con qué se elabora el pan con tomate catalán, además de pan y tomate?",,Aceite y sal,"Amb què s'elabora el pa amb tomàquet, a més de pa i tomàquet?",Oli i sal,Mantega,Maionesa,Formatge
+¿Qué tipo de alimento es la lenteja?,,Legumbre,Quin tipus d'aliment és la llentia?,Llegum,Cereal,Fruit sec,Tubercle
+¿De qué país es originario el té matcha?,,Japón,De quin país és originari el te matcha?,Japó,Índia,Marroc,Anglaterra
+"¿Qué dulce navideño se elabora con almendras y miel, típico de Jijona y Alicante?",,Turrón,"Quin dolç nadalenc s'elabora amb ametlles i mel, típic de Xixona i Alacant?",Torró,Polvoró,Massapà,Tortell
+¿Qué fruta tropical tiene una corona de hojas y piel con escamas?,,Piña,Quina fruita tropical té una corona de fulles i pell amb escates?,Pinya,Mango,Papaya,Coco
+¿De qué animal procede el jamón?,,Cerdo,De quin animal prové el pernil?,Porc,Vaca,Xai,Cabra
+¿Qué país es famoso por el strudel de manzana?,,Austria,Quin país és famós per l'strudel de poma?,Àustria,Itàlia,Grècia,Suècia
+¿De qué región es típica la fabada?,,Asturias,De quina regió és típica la fabada?,Astúries,Galícia,Cantàbria,Lleó
+"¿Qué plato catalán consiste en verduras asadas como berenjena, pimiento y cebolla?",,Escalivada,"Quin plat català consisteix en verdures escalivades com albergínia, pebrot i ceba?",Escalivada,Samfaina,Esqueixada,Trinxat
+¿Qué legumbre es la base del hummus?,,Garbanzo,Quin llegum és la base de l'hummus?,Cigró,Llentia,Mongeta blanca,Fava
+¿Qué tipo de vino es el champán?,,Espumoso,Quin tipus de vi és el xampany?,Escumós,Negre,Generós,Rosat
+¿Qué plato peruano es pescado crudo marinado en zumo de lima?,,Ceviche,Quin plat peruà és peix cru marinat amb suc de llima?,Ceviche,Ají de gallina,Lomo saltado,Causa limeña
+"¿De qué ciudad es típico el cocido con garbanzos servido en tres ""vuelcos""?",,Madrid,"De quina ciutat és típic el cuit amb cigrons servit en tres ""vuelcos""?",Madrid,Barcelona,Sevilla,Bilbao
+"¿Qué fruta seca es la base de la crema de ""marron glacé""?",,Castaña,"Quin fruit sec és la base del ""marron glacé""?",Castanya,Nou,Avellana,Ametlla
+¿Qué tipo de leche se usa tradicionalmente en la mozzarella di bufala?,,Búfala,Quin tipus de llet s'utilitza tradicionalment a la mozzarella di bufala?,Búfala,Vaca,Cabra,Ovella
+¿Qué dulce catalán se rellena de crema y se quema el azúcar por encima?,,Crema catalana,Quin postre català es fa amb crema i sucre cremat per sobre?,Crema catalana,Flam,Natilles,Tocinillo de cielo
+¿Qué región francesa da nombre a un vino espumoso?,,Champaña,Quina regió francesa dona nom a un vi escumós?,Xampanya,Borgonya,Alsàcia,Provença
+¿Qué plato vasco se cocina con bacalao y una salsa emulsionada con aceite?,,Bacalao al pil-pil,Quin plat basc es cuina amb bacallà i una salsa emulsionada amb oli?,Bacallà al pil-pil,Marmitako,Txangurro,Kokotxas en salsa verde
+¿Qué cereal es la base de la polenta italiana?,,Maíz,Quin cereal és la base de la polenta italiana?,Blat de moro,Blat,Arròs,Ordi
+¿Qué variedad de arroz valenciano es muy apreciada para la paella?,,Bomba,Quina varietat d'arròs valencià és molt apreciada per a la paella?,Bomba,Basmati,Jazmí,Arborio
+¿Qué especia da el color amarillo al curry?,,Cúrcuma,Quina espècia dona el color groc al curri?,Cúrcuma,Safrà,Comí,Pebre vermell
+"¿Qué plato griego lleva capas de berenjena, carne picada y bechamel?",,Musaka,"Quin plat grec porta capes d'albergínia, carn picada i beixamel?",Mussaca,Souvlaki,Tzatziki,Dolmades
+¿De qué país es el goulash?,,Hungría,De quin país és el goulash?,Hongria,Polònia,Romania,Àustria
+¿Qué fruto se usa para elaborar el aceite de oliva?,,Aceituna,Quin fruit s'utilitza per elaborar l'oli d'oliva?,Oliva,Ametlla,Gira-sol,Nou
+¿Qué embutido gallego se acompaña tradicionalmente con grelos en el lacón?,,Chorizo,Quin embotit acompanya tradicionalment el llacó amb grells a Galícia?,Xoriço,Sobrassada,Fuet,Botifarra
+¿De qué isla es típica la sobrasada?,,Mallorca,De quina illa és típica la sobrassada?,Mallorca,Tenerife,Eivissa,Menorca
+¿Qué tipo de pasta rellena tiene forma cuadrada?,,Raviolis,Quin tipus de pasta farcida té forma quadrada?,Raviolis,Penne,Fusilli,Linguine
+¿Qué licor italiano de limón es típico de la costa amalfitana?,,Limoncello,Quin licor italià de llimona és típic de la costa amalfitana?,Limoncello,Amaretto,Sambuca,Grappa
+¿Qué plato catalán de invierno se come con salsa romesco y cebollas tiernas a la brasa?,,Calçotada,Quin àpat català d'hivern es menja amb salsa romesco i cebes tendres a la brasa?,Calçotada,Escudella,Fideuà,Suquet
+¿Qué tubérculo es la base de la horchata valenciana?,,Chufa,Quin tubercle és la base de l'orxata valenciana?,Xufla,Ametlla,Avellana,Cacauet
+¿Qué cocinero vasco tiene el restaurante Arzak en San Sebastián?,,Juan Mari Arzak,Quin cuiner basc té el restaurant Arzak a Sant Sebastià?,Juan Mari Arzak,Martín Berasategui,Pedro Subijana,Karlos Arguiñano
+¿Qué hortaliza es la base del baba ganoush?,,Berenjena,Quina hortalissa és la base del baba ganoush?,Albergínia,Carbassó,Cigró,Pebrot
+¿Qué guía gastronómica otorga estrellas a los restaurantes?,,Guía Michelin,Quina guia gastronòmica atorga estrelles als restaurants?,Guia Michelin,Guia Repsol,Guia Campsa,Gault & Millau
+¿Qué hermanos dirigen El Celler de Can Roca en Girona?,,Roca,Quins germans dirigeixen El Celler de Can Roca a Girona?,Roca,Adrià,Torres,Arola
+"¿Qué hongo provoca la ""podredumbre noble"" de las uvas de los vinos de Sauternes?",,Botrytis cinerea,"Quin fong provoca la ""podridura noble"" del raïm dels vins de Sauternes?",Botrytis cinerea,Penicillium roqueforti,Saccharomyces cerevisiae,Aspergillus niger
+¿Qué queso francés de oveja madura en cuevas naturales con moho azul?,,Roquefort,Quin formatge francès d'ovella madura en coves naturals amb floridura blava?,Roquefort,Camembert,Brie,Comté
+"¿Qué plato andaluz es una sopa fría de pan, almendras y ajo, servida con uvas?",,Ajoblanco,"Quina sopa freda andalusa es fa amb pa, ametlles i all i se serveix amb raïm?",Ajoblanco,Salmorejo,Porra antequerana,Gazpachuelo
+¿Qué ingrediente da su sabor ahumado al pimentón de la Vera?,,Secado con humo de leña de encina,Quin procés dona el gust fumat al pebre vermell de la Vera?,Assecat amb fum de llenya d'alzina,Torrat al sol,Fermentació en bóta,Fulles de llorer
+¿Qué variedad de uva tinta es la principal de la Rioja?,,Tempranillo,Quina varietat de raïm negre és la principal de la Rioja?,Ull de llebre (tempranillo),Garnatxa,Monestrell,Cabernet Sauvignon
+¿Qué denominación de origen gallega es famosa por sus vinos blancos de albariño?,,Rías Baixas,Quina denominació d'origen gallega és famosa pels vins blancs d'albariño?,Rías Baixas,Ribeiro,Valdeorras,Ribeira Sacra
+¿De qué ciudad italiana es originaria la salsa boloñesa?,,Bolonia,De quina ciutat italiana és originària la salsa bolonyesa?,Bolonya,Nàpols,Milà,Parma
+"¿Qué marisco se usa en el ""txangurro"" vasco?",,Centollo,"Quin marisc s'utilitza al ""txangurro"" basc?",Cabra de mar,Llamàntol,Nècora,Llagosta
+¿Qué jamón ibérico de máxima categoría procede de cerdos alimentados con bellota en libertad?,,Etiqueta negra,Quin pernil ibèric de màxima categoria prové de porcs alimentats amb gla en llibertat?,Etiqueta negra,Etiqueta vermella,Etiqueta verda,Etiqueta blanca
+¿Qué vino generoso andaluz se cría en Jerez con velo de flor?,,Fino,Quin vi generós andalús es cria a Jerez amb vel de flor?,Fino,Moscatel,Pedro Ximénez,Oloroso
+¿Qué ingrediente da el color verde a la salsa verde vasca?,,Perejil,Quin ingredient dona el color verd a la salsa verda basca?,Julivert,Espinac,Alfàbrega,Pebrot verd
+"¿Qué plato valenciano, nacido en Gandía, se hace con fideos en lugar de arroz?",,Fideuà,"Quin plat valencià, nascut a Gandia, es fa amb fideus en lloc d'arròs?",Fideuà,Arròs a banda,Arròs al forn,All i pebre
+¿Qué bebida peruana y chilena se elabora destilando vino de uva?,,Pisco,Quina beguda peruana i xilena s'elabora destil·lant vi de raïm?,Pisco,Mezcal,Chicha,Cachaça
+¿De qué planta se obtiene el tequila?,,Agave azul,De quina planta s'obté el tequila?,Atzavara blava,Canya de sucre,Nopal,Maguey pulquero
+¿Qué queso italiano con denominación de origen se elabora en Parma y Reggio Emilia?,,Parmigiano Reggiano,Quin formatge italià amb denominació d'origen s'elabora a Parma i Reggio Emilia?,Parmigiano Reggiano,Pecorino romano,Gorgonzola,Taleggio
+¿Qué cocinero catalán dirige el restaurante ABaC de Barcelona?,,Jordi Cruz,Quin cuiner català dirigeix el restaurant ABaC de Barcelona?,Jordi Cruz,Martín Berasategui,Carme Ruscalleda,Paco Pérez
+¿Qué cocinera catalana fue la mujer con más estrellas Michelin del mundo?,,Carme Ruscalleda,Quina cuinera catalana va arribar a ser la dona amb més estrelles Michelin del món?,Carme Ruscalleda,Elena Arzak,Fina Puigdevall,Ada Parellada
+¿Qué empresa fabrica los ordenadores Mac?,,Apple,Quina empresa fabrica els ordinadors Mac?,Apple,Microsoft,IBM,Dell
+¿Qué red social se basa en vídeos cortos y es de origen chino?,,TikTok,Quina xarxa social es basa en vídeos curts i és d'origen xinès?,TikTok,Instagram,Snapchat,Twitter
+¿Qué dispositivo se usa para mover el cursor en la pantalla de un ordenador?,,Ratón,Quin dispositiu s'utilitza per moure el cursor a la pantalla de l'ordinador?,Ratolí,Teclat,Monitor,Altaveu
+¿Qué empresa creó el sistema operativo Windows?,,Microsoft,Quina empresa va crear el sistema operatiu Windows?,Microsoft,Apple,Google,IBM
+¿Qué plataforma de vídeos fundaron en 2005 tres antiguos empleados de PayPal?,,YouTube,Quina plataforma de vídeos van fundar el 2005 tres antics treballadors de PayPal?,YouTube,Vimeo,Netflix,Twitch
+¿Qué inventaron los hermanos Wright en 1903?,,El avión,Què van inventar els germans Wright el 1903?,L'avió,L'automòbil,L'helicòpter,El globus aerostàtic
+¿Qué aplicación de mensajería tiene un logo verde con un teléfono?,,WhatsApp,Quina aplicació de missatgeria té un logotip verd amb un telèfon?,WhatsApp,Telegram,Signal,Messenger
+"¿Qué significa ""Wi-Fi"" en la práctica?",,Conexión inalámbrica a internet,Què és la wifi a la pràctica?,Connexió sense fil a internet,Cable de fibra òptica,Memòria del mòbil,Tipus de bateria
+¿Qué empresa fabrica los teléfonos Galaxy?,,Samsung,Quina empresa fabrica els telèfons Galaxy?,Samsung,Huawei,Xiaomi,Sony
+¿Qué tienda online fundó Jeff Bezos en 1994?,,Amazon,Quina botiga en línia va fundar Jeff Bezos el 1994?,Amazon,eBay,Alibaba,AliExpress
+¿Qué inventor italiano es considerado pionero de la radio?,,Guglielmo Marconi,Quin inventor italià és considerat pioner de la ràdio?,Guglielmo Marconi,Alessandro Volta,Enrico Fermi,Antonio Meucci
+¿Qué componente guarda la carga eléctrica de un móvil?,,Batería,Quin component guarda la càrrega elèctrica d'un mòbil?,Bateria,Pantalla,Processador,Antena
+¿Qué empresa de coches eléctricos dirige Elon Musk?,,Tesla,Quina empresa de cotxes elèctrics dirigeix Elon Musk?,Tesla,Rivian,BYD,Lucid
+¿Qué símbolo se usa en las direcciones de correo electrónico?,,Arroba (@),Quin símbol s'utilitza a les adreces de correu electrònic?,Arrova (@),Coixinet (#),I comercial (&),Percentatge (%)
+¿Qué inventor creó la máquina de vapor mejorada que impulsó la Revolución Industrial?,,James Watt,Quin inventor va millorar la màquina de vapor que va impulsar la Revolució Industrial?,James Watt,Thomas Edison,Nikola Tesla,George Stephenson
+¿Qué empresa creó el asistente de voz Alexa?,,Amazon,Quina empresa va crear l'assistent de veu Alexa?,Amazon,Apple,Google,Microsoft
+¿Qué dispositivo sirve para imprimir documentos en papel?,,Impresora,Quin dispositiu serveix per imprimir documents en paper?,Impressora,Escàner,Encaminador,Projector
+"¿Qué consola de Nintendo puede usarse como portátil y en la tele, lanzada en 2017?",,Nintendo Switch,"Quina consola de Nintendo es pot fer servir com a portàtil i a la tele, llançada el 2017?",Nintendo Switch,Wii U,Nintendo 3DS,GameCube
+"¿Qué significan las siglas ""HTML""?",,HyperText Markup Language,"Què volen dir les sigles ""HTML""?",HyperText Markup Language,High Tech Modern Language,Home Tool Markup Language,Hyperlink Text Main Language
+¿Qué inventor serbio-estadounidense desarrolló la corriente alterna?,,Nikola Tesla,Quin inventor serbi-nord-americà va desenvolupar el corrent altern?,Nikola Tesla,Thomas Edison,George Westinghouse,Michael Faraday
+¿Qué empresa desarrolla el navegador Chrome?,,Google,Quina empresa desenvolupa el navegador Chrome?,Google,Microsoft,Mozilla,Apple
+¿Qué fundador de Apple presentó el iPhone en 2007?,,Steve Jobs,Quin fundador d'Apple va presentar l'iPhone el 2007?,Steve Jobs,Steve Wozniak,Tim Cook,Jony Ive
+"¿Qué significa ""PDF""?",,Portable Document Format,"Què vol dir ""PDF""?",Portable Document Format,Printable Data File,Public Digital Form,Personal Document File
+¿Qué empresa creó ChatGPT?,,OpenAI,Quina empresa va crear ChatGPT?,OpenAI,Google,Meta,Anthropic
+¿Qué sistema numérico usan los ordenadores internamente?,,Binario,Quin sistema numèric fan servir els ordinadors internament?,Binari,Decimal,Hexadecimal,Romà
+¿Qué red social profesional compró Microsoft en 2016?,,LinkedIn,Quina xarxa social professional va comprar Microsoft el 2016?,LinkedIn,Xing,Glassdoor,Indeed
+¿Qué tipo de memoria se borra al apagar el ordenador?,,RAM,Quin tipus de memòria s'esborra en apagar l'ordinador?,RAM,ROM,Disc dur,SSD
+¿Qué lenguaje de programación debe su nombre a un grupo de humor británico?,,Python,Quin llenguatge de programació deu el nom a un grup d'humor britànic?,Python,Ruby,Perl,Java
+¿Qué sistema operativo libre creó Linus Torvalds en 1991?,,Linux,Quin sistema operatiu lliure va crear Linus Torvalds el 1991?,Linux,Unix,MS-DOS,FreeBSD
+¿Qué compañía japonesa creó el Walkman en 1979?,,Sony,Quina companyia japonesa va crear el Walkman el 1979?,Sony,Panasonic,Toshiba,JVC
+¿Qué empresa adquirió Instagram en 2012?,,Facebook,Quina empresa va adquirir Instagram el 2012?,Facebook,Google,Twitter,Microsoft
+¿Qué tecnología usan los pagos con el móvil acercándolo al datáfono?,,NFC,Quina tecnologia fan servir els pagaments amb el mòbil apropant-lo al datàfon?,NFC,Bluetooth,Infrarojos,GPS
+¿Qué sonda de la NASA lanzada en 1977 es el objeto humano más lejano de la Tierra?,,Voyager 1,Quina sonda de la NASA llançada el 1977 és l'objecte humà més llunyà de la Terra?,Voyager 1,Pioneer 10,New Horizons,Voyager 2
+"¿Qué significan las siglas ""URL""?",,Uniform Resource Locator,"Què volen dir les sigles ""URL""?",Uniform Resource Locator,Universal Remote Link,Unified Routing Language,User Registration Log
+¿Qué unidad equivale a 1.024 gigabytes?,,Terabyte,Quina unitat equival a 1.024 gigabytes?,Terabyte,Petabyte,Megabyte,Exabyte
+¿Qué inventor estadounidense patentó el fonógrafo en 1877?,,Thomas Edison,Quin inventor nord-americà va patentar el fonògraf el 1877?,Thomas Edison,Alexander Graham Bell,Emile Berliner,Nikola Tesla
+¿Qué cohete llevó a los astronautas del Apolo 11 a la Luna?,,Saturno V,Quin coet va portar els astronautes de l'Apol·lo 11 a la Lluna?,Saturn V,Atlas,Falcon 9,Soiuz
+¿Qué empresa fabrica los procesadores Ryzen?,,AMD,Quina empresa fabrica els processadors Ryzen?,AMD,Intel,Nvidia,Qualcomm
+"¿Qué significa ""VPN""?",,Red privada virtual,"Què vol dir ""VPN""?",Xarxa privada virtual,Vídeo per xarxa,Protocol de navegació verificat,Visor de pàgines noves
+¿Qué estación espacial está habitada de forma continua desde el año 2000?,,Estación Espacial Internacional,Quina estació espacial està habitada de manera contínua des de l'any 2000?,Estació Espacial Internacional,Mir,Skylab,Tiangong-1
+"¿Qué invento de Laszlo Biro se popularizó como ""boli""?",,Bolígrafo,"Quin invent de László Bíró es va popularitzar com a ""boli""?",Bolígraf,Ploma estilogràfica,Retolador,Portamines
+¿Qué empresa barcelonesa de reparto a domicilio tiene una app con un logo amarillo?,,Glovo,Quina empresa barcelonina de repartiment a domicili té una app amb un logotip groc?,Glovo,Cabify,Wallapop,Letgo
+¿Qué tecnología permite que un coche frene solo ante un obstáculo?,,Frenada automática de emergencia,Quina tecnologia permet que un cotxe freni sol davant d'un obstacle?,Frenada automàtica d'emergència,ABS,Control de creuer clàssic,Direcció assistida
+¿Qué inventor escocés es considerado uno de los padres de la televisión?,,John Logie Baird,Quin inventor escocès és considerat un dels pares de la televisió?,John Logie Baird,Alexander Fleming,James Clerk Maxwell,Philo Farnsworth
+¿Qué ingeniero de Xerox PARC está asociado al desarrollo de la interfaz gráfica que inspiró al Macintosh?,,Alan Kay,Quin enginyer del Xerox PARC s'associa al desenvolupament de la interfície gràfica que va inspirar el Macintosh?,Alan Kay,Bill Gates,Dennis Ritchie,Ken Thompson
+¿Qué científico creó el lenguaje de programación C en los Laboratorios Bell?,,Dennis Ritchie,Quin científic va crear el llenguatge de programació C als Laboratoris Bell?,Dennis Ritchie,Bjarne Stroustrup,James Gosling,Guido van Rossum
+¿Qué máquina descifró los mensajes de la Enigma en Bletchley Park?,,La Bomba,Quina màquina va desxifrar els missatges de l'Enigma a Bletchley Park?,La Bomba,ENIAC,Colossus,Z3
+¿Qué ordenador electrónico de propósito general se presentó en 1946 en EE. UU.?,,ENIAC,Quin ordinador electrònic de propòsit general es va presentar el 1946 als EUA?,ENIAC,UNIVAC,Colossus,Mark I
+¿Qué ley predice que el número de transistores en un chip se duplica cada dos años?,,Ley de Moore,Quina llei prediu que el nombre de transistors d'un xip es duplica cada dos anys?,Llei de Moore,Llei de Metcalfe,Llei d'Amdahl,Llei de Murphy
+"¿Qué satélite soviético fue el primero en orbitar la Tierra, en 1957?",,Sputnik 1,"Quin satèl·lit soviètic va ser el primer a orbitar la Terra, el 1957?",Sputnik 1,Vostok 1,Explorer 1,Luna 2
+"¿Qué ingeniero alemán construyó el Z3, uno de los primeros ordenadores programables?",,Konrad Zuse,"Quin enginyer alemany va construir el Z3, un dels primers ordinadors programables?",Konrad Zuse,Wernher von Braun,Heinrich Hertz,Karl Benz
+¿Qué protocolo convierte nombres de dominio en direcciones IP?,,DNS,Quin protocol converteix noms de domini en adreces IP?,DNS,HTTP,FTP,SMTP
+¿Qué superordenador de Barcelona está instalado en una antigua capilla?,,MareNostrum,Quin superordinador de Barcelona està instal·lat en una antiga capella?,MareNostrum,Mare Magnum,Tibidabo,Finisterrae
+"¿Qué ingeniero español diseñó el Spanish Aerocar, el teleférico de las cataratas del Niágara (1916)?",,Leonardo Torres Quevedo,"Quin enginyer va dissenyar el Spanish Aerocar, el telefèric de les cascades del Niàgara (1916)?",Leonardo Torres Quevedo,Carles Buïgas,Narcís Monturiol,Isaac Peral
+¿Qué marino cartagenero diseñó uno de los primeros submarinos propulsados por electricidad (1888)?,,Isaac Peral,Quin mariner de Cartagena va dissenyar un dels primers submarins de propulsió elèctrica (1888)?,Isaac Peral,Narcís Monturiol,Cosme García,Jerónimo de Ayanz
+"¿Qué inventor español creó el ""Telekino"", uno de los primeros mandos a distancia?",,Leonardo Torres Quevedo,"Quin inventor espanyol va crear el ""Telekino"", un dels primers comandaments a distància?",Leonardo Torres Quevedo,Isaac Peral,Juan de la Cierva,Manuel Jalón
+¿Qué ingeniero español inventó la fregona moderna en 1964?,,Manuel Jalón,Quin enginyer espanyol va inventar la fregona moderna el 1964?,Manuel Jalón,Enric Bernat,Emilio Herrera,Mónico Sánchez
+¿Qué empresario catalán creó el caramelo con palo Chupa Chups?,,Enric Bernat,Quin empresari català va crear el caramel amb pal Chupa Chups?,Enric Bernat,Manuel Jalón,Josep Maria Fargas,Joan Gaspart
+"¿Qué militar e ingeniero español diseñó una escafandra estratonáutica, precursora de los trajes espaciales?",,Emilio Herrera,"Quin militar i enginyer espanyol va dissenyar una escafandra estratonàutica, precursora dels vestits espacials?",Emilio Herrera,Juan de la Cierva,Isaac Peral,Pedro Duque
+¿Qué empresa holandesa fabrica las máquinas de litografía ultravioleta extrema para chips?,,ASML,Quina empresa neerlandesa fabrica les màquines de litografia d'ultraviolat extrem per a xips?,ASML,Philips,NXP,TSMC
+¿Qué astronauta español viajó al espacio por primera vez en 1998?,,Pedro Duque,Quin astronauta espanyol va viatjar a l'espai per primera vegada el 1998?,Pedro Duque,Pablo Álvarez,Miguel López-Alegría,Sara García
+¿Qué empresa taiwanesa es el mayor fabricante de chips por encargo del mundo?,,TSMC,Quina empresa taiwanesa és el fabricant de xips per encàrrec més gran del món?,TSMC,Foxconn,MediaTek,Acer
+¿Qué lenguaje de programación creó Brendan Eich en 1995 en solo diez días?,,JavaScript,Quin llenguatge de programació va crear Brendan Eich el 1995 en només deu dies?,JavaScript,PHP,Ruby,Java
+"¿Qué animal es conocido como ""el rey de la selva""?",,León,"Quin animal és conegut com ""el rei de la selva""?",Lleó,Tigre,Elefant,Goril·la
+¿Cuántas patas tiene un insecto?,,6,Quantes potes té un insecte?,6,8,4,10
+¿Qué animal tiene trompa?,,Elefante,Quin animal té trompa?,Elefant,Rinoceront,Hipopòtam,Girafa
+¿Cuál es el animal más alto del mundo?,,Jirafa,Quin és l'animal més alt del món?,Girafa,Elefant,Estruç,Camell
+¿Qué animal es una cría de rana?,,Renacuajo,Quin animal és una cria de granota?,Cap-gros,Larva,Aleví,Pollet
+¿Qué estación del año sigue al invierno?,,Primavera,Quina estació de l'any segueix l'hivern?,Primavera,Estiu,Tardor,L'hivern de nou
+¿Qué animal fabrica telarañas?,,Araña,Quin animal fa teranyines?,Aranya,Formiga,Abella,Papallona
+¿Qué ave es conocida por repetir palabras?,,Loro,Quin ocell és conegut per repetir paraules?,Lloro,Colom,Pardal,Mussol
+¿Qué animal es conocido por su caparazón y su lentitud?,,Tortuga,Quin animal és conegut per la closca i la lentitud?,Tortuga,Cargol,Armadillo,Eriçó
+¿Qué animal en peligro de extinción vive solo en la península ibérica y tiene orejas con pinceles?,,Lince ibérico,Quin animal en perill d'extinció viu només a la península Ibèrica i té pinzells a les orelles?,Linx ibèric,Gat salvatge,Guineu,Geneta
+¿Qué color tienen normalmente las hojas por la clorofila?,,Verde,De quin color són normalment les fulles per la clorofil·la?,Verd,Groc,Vermell,Marró
+"¿Qué animal es el mejor amigo del hombre, según el dicho?",,Perro,"Quin animal és el millor amic de l'home, segons la dita?",Gos,Gat,Cavall,Dofí
+¿Qué mamífero marino es famoso por su inteligencia y sus saltos?,,Delfín,Quin mamífer marí és famós per la intel·ligència i els salts?,Dofí,Foca,Morsa,Manatí
+¿De qué se alimenta principalmente el panda gigante?,,Bambú,De què s'alimenta principalment el panda gegant?,Bambú,Eucaliptus,Peix,Fruites
+¿Qué animal es famoso por dormir colgado boca abajo?,,Murciélago,Quin animal és famós per dormir penjat cap per avall?,Ratpenat,Peresós,Mussol,Mona aranya
+¿Qué animal es la mascota típica que ronronea?,,Gato,Quin animal és la mascota típica que ronca de gust (ronroneja)?,Gat,Gos,Conill,Hàmster
+¿Cómo se llama el animal que se alimenta solo de plantas?,,Herbívoro,Com s'anomena l'animal que s'alimenta només de plantes?,Herbívor,Carnívor,Omnívor,Insectívor
+¿Qué árbol da piñas y piñones?,,Pino,Quin arbre fa pinyes i pinyons?,Pi,Roure,Olivera,Castanyer
+¿Cuál es el ave más rápida del mundo en picado?,,Halcón peregrino,Quin és l'ocell més ràpid del món en picat?,Falcó pelegrí,Àguila daurada,Falciot,Albatros
+¿Cuántos años puede vivir aproximadamente un elefante africano en libertad?,,60-70,Quants anys pot viure aproximadament un elefant africà en llibertat?,60-70,20-30,100-120,10-15
+¿Qué animal tiene el período de gestación más largo entre los mamíferos?,,Elefante,Quin animal té el període de gestació més llarg entre els mamífers?,Elefant,Balena blava,Girafa,Rinoceront
+¿Qué tipo de animal es el ornitorrinco?,,Mamífero que pone huevos,Quin tipus d'animal és l'ornitorinc?,Mamífer que pon ous,Ocell sense ales,Rèptil aquàtic,Amfibi
+¿Qué animal es el mayor pez del mundo?,,Tiburón ballena,Quin és el peix més gran del món?,Tauró balena,Tauró blanc,Peix lluna,Manta
+¿Qué gas absorben las plantas del aire para la fotosíntesis?,,Dióxido de carbono,Quin gas absorbeixen les plantes de l'aire per a la fotosíntesi?,Diòxid de carboni,Oxigen,Nitrogen,Hidrogen
+¿Qué animal australiano duerme hasta 20 horas al día y come hojas de eucalipto?,,Koala,Quin animal australià dorm fins a 20 hores al dia i menja fulles d'eucaliptus?,Coala,Cangur,Wombat,Ornitorinc
+¿Cuál es el río más largo de África?,,Nilo,Quin és el riu més llarg de l'Àfrica?,Nil,Congo,Níger,Zambezi
+¿Qué tipo de roca se forma al enfriarse el magma?,,Ígnea,Quin tipus de roca es forma en refredar-se el magma?,Ígnia,Sedimentària,Metamòrfica,Calcària
+¿Cómo se llama el proceso por el que una serpiente cambia de piel?,,Muda,Com s'anomena el procés en què una serp canvia de pell?,Muda,Hibernació,Migració,Metamorfosi
+¿Qué ave migratoria es símbolo de la llegada de la primavera y anida en campanarios?,,Cigüeña blanca,Quin ocell migratori és símbol de l'arribada de la primavera i fa el niu als campanars?,Cigonya blanca,Oreneta,Grua,Flamenc
+¿Cuántos corazones tiene una lombriz de tierra (arcos aórticos)?,,5,"Quants ""cors"" (arcs aòrtics) té un cuc de terra?",5,1,2,8
+¿Qué animal produce la seda?,,Gusano de seda,Quin animal produeix la seda que fem servir als teixits?,Cuc de seda,Aranya teixidora,Arna comuna,Escarabat
+¿Qué parque nacional de Cataluña tiene el lago de Sant Maurici?,,Aigüestortes i Estany de Sant Maurici,Quin parc nacional de Catalunya té l'estany de Sant Maurici?,Aigüestortes i Estany de Sant Maurici,Ordesa i Mont Perdut,Picos de Europa,Montseny
+¿Qué animal es el mayor reptil vivo del mundo?,,Cocodrilo marino,Quin és el rèptil viu més gran del món?,Cocodril marí,Dragó de Komodo,Anaconda verda,Tortuga llaüt
+¿Qué fenómeno provoca las mareas?,,La atracción de la Luna,Quin fenomen provoca les marees?,L'atracció de la Lluna,El vent,Els corrents oceànics,La rotació del Sol
+¿Qué animal tiene rayas blancas y negras y vive en la sabana africana?,,Cebra,Quin animal té ratlles blanques i negres i viu a la sabana africana?,Zebra,Okapi,Tapir,Antílop
+¿Qué árbol es el símbolo de Gernika?,,Roble,Quin arbre és el símbol de Guernica?,Roure,Faig,Castanyer,Alzina
+¿Qué animal marino tiene cinco brazos y puede regenerarlos?,,Estrella de mar,Quin animal marí té cinc braços i els pot regenerar?,Estrella de mar,Pop,Eriçó de mar,Medusa
+¿Qué volcán italiano sepultó Pompeya?,,Vesubio,Quin volcà italià va sepultar Pompeia?,Vesuvi,Etna,Stromboli,Vulcano
+¿Qué tipo de nube trae normalmente tormentas?,,Cumulonimbo,Quin tipus de núvol porta normalment tempestes?,Cumulonimbus,Cirrus,Estrat,Altocúmulus
+¿Qué ave rapaz nocturna puede girar la cabeza unos 270 grados?,,Búho,Quin ocell rapinyaire nocturn pot girar el cap uns 270 graus?,Duc,Falcó,Àguila,Voltor
+¿Cuál es el océano más pequeño?,,Ártico,Quin és l'oceà més petit?,Àrtic,Índic,Antàrtic,Atlàntic
+¿Qué mamífero marino respira por un orificio en la cabeza llamado espiráculo?,,Ballena,Quin mamífer respira per un orifici al cap anomenat espiracle?,Balena,Foca,Llúdriga marina,Morsa
+¿Cómo se llama el período de inactividad invernal de animales como el oso?,,Hibernación,Com s'anomena el període d'inactivitat hivernal d'animals com l'ós?,Hibernació,Migració,Muda,Estivació
+¿Qué planta carnívora cierra sus hojas para atrapar insectos?,,Venus atrapamoscas,Quina planta carnívora tanca les fulles per atrapar insectes?,Dionea atrapamosques,Drosera,Nepenthes,Sarracenia
+¿Cuál es el animal terrestre más grande de América?,,Bisonte,Quin és l'animal terrestre més gran d'Amèrica?,Bisó,Ant,Ós bru,Tapir
+¿Qué ave tiene la mayor envergadura alar del mundo?,,Albatros viajero,Quin ocell té la major envergadura alar del món?,Albatros viatger,Còndor dels Andes,Pelicà,Àguila harpia
+¿Qué mamífero europeo tiene saliva venenosa?,,Musgaño de cabrera,Quin mamífer europeu té saliva verinosa?,Musaranya d'aigua mediterrània,Eriçó,Talp,Ratpenat de ferradura
+"¿Cuál es el árbol más antiguo conocido del mundo, un pino de California?",,Pino longevo (Pinus longaeva),"Quin és l'arbre individual més antic conegut del món, un pi de Califòrnia?",Pi longeu (Pinus longaeva),Sequoia gegant,Xiprer de Patagònia,Olivera mil·lenària
+¿Qué ave endémica de Nueva Zelanda no puede volar y da nombre a una fruta?,,Kiwi,Quin ocell endèmic de Nova Zelanda no pot volar i dona nom a una fruita?,Kiwi,Kakapo,Moa,Emú
+¿Qué animal tiene el cerebro más grande del reino animal?,,Cachalote,Quin animal té el cervell més gran del regne animal?,Catxalot,Elefant africà,Balena blava,Orca
+¿Cuántos estómagos (compartimentos) tiene una vaca?,,4,Quants compartiments té l'estómac d'una vaca?,4,2,3,1
+¿Qué tipo de animal es el ajolote?,,Anfibio,Quin tipus d'animal és l'axolot?,Amfibi,Peix,Rèptil,Crustaci
+"¿En qué isla vive el dragón de Komodo, entre otras de Indonesia?",,Komodo,"En quina illa viu el dragó de Komodo, entre altres d'Indonèsia?",Komodo,Borneo,Sumatra,Java
+¿Qué ave rapaz ibérica es la más grande y se alimenta casi solo de huesos?,,Quebrantahuesos,Quin ocell rapinyaire ibèric s'alimenta gairebé només d'ossos?,Trencalòs,Voltor comú,Voltor negre,Àguila imperial
+¿Qué planta tiene la flor más grande del mundo?,,Rafflesia arnoldii,Quina planta té la flor individual més gran del món?,Rafflesia arnoldii,Àrum titànic,Nenúfar gegant,Gira-sol
+¿Cuál es el único continente sin reptiles terrestres nativos ni serpientes?,,Antártida,Quin és l'únic continent sense rèptils terrestres nadius?,Antàrtida,Oceania,Europa,Amèrica del Nord
+¿Qué arrecife de coral es el más grande del mundo?,,Gran Barrera de Coral,Quin escull de corall és el més gran del món?,Gran Barrera de Corall,Escull de Belize,Escull de Florida,Mar Roja
+¿Qué mamífero tiene el pelaje más denso del mundo?,,Nutria marina,Quin mamífer té el pelatge més dens del món?,Llúdriga marina,Ós polar,Xinxilla,Visó
+¿Qué insecto realiza una migración de miles de kilómetros entre Canadá y México?,,Mariposa monarca,Quin insecte fa una migració de milers de quilòmetres entre el Canadà i Mèxic?,Papallona monarca,Libèl·lula comuna,Llagosta del desert,Abella mel·lífera
+"¿Qué parque nacional fue el primero del mundo, en 1872?",,Yellowstone,"Quin parc nacional va ser el primer del món, el 1872?",Yellowstone,Yosemite,Banff,Covadonga
+"¿Qué ballena canta largas canciones complejas, sobre todo los machos?",,Ballena jorobada,"Quina balena canta cançons llargues i complexes, sobretot els mascles?",Balena geperuda,Balena blava,Balena franca,Rorqual comú
+¿Qué mineral forma las estalactitas de las cuevas calizas?,,Calcita,Quin mineral forma les estalactites de les coves calcàries?,Calcita,Quars,Guix,Pirita
+"¿Qué parque nacional español fue el primero, declarado en 1918?",,Montaña de Covadonga,"Quin parc nacional espanyol va ser el primer, declarat el 1918?",Muntanya de Covadonga,Ordesa,Doñana,Teide
+"¿Qué significa ""hello"" en inglés?",,Hola,"Què vol dir ""hello"" en anglès?",Hola,Adéu,Gràcies,Si us plau
+¿Qué idioma se habla en Francia?,,Francés,Quina llengua es parla a França?,Francès,Italià,Alemany,Anglès
+"¿Qué significa ""bonjour"" en francés?",,Buenos días,"Què vol dir ""bonjour"" en francès?",Bon dia,Bona nit,Adéu,Gràcies
+¿Qué idioma se habla oficialmente en Argentina?,,Español,Quina llengua es parla oficialment a l'Argentina?,Castellà,Portuguès,Italià,Anglès
+"¿Qué significa ""grazie"" en italiano?",,Gracias,"Què vol dir ""grazie"" en italià?",Gràcies,Hola,Si us plau,Perdó
+¿Qué idioma se habla en Austria?,,Alemán,Quina llengua es parla a Àustria?,Alemany,Austríac,Hongarès,Txec
+"¿Qué significa ""cat"" en inglés?",,Gato,"Què vol dir ""cat"" en anglès?",Gat,Gos,Cotxe,Casa
+¿Qué idioma se habla en México mayoritariamente?,,Español,Quina llengua es parla majoritàriament a Mèxic?,Castellà,Nàhuatl,Anglès,Maia
+"¿Qué significa ""Auf Wiedersehen"" en alemán?",,Adiós,"Què vol dir ""Auf Wiedersehen"" en alemany?",Adéu,Hola,Gràcies,Bona nit
+"¿Qué idioma tiene palabras como ""obrigado"" y ""saudade""?",,Portugués,"Quina llengua té paraules com ""obrigado"" i ""saudade""?",Portuguès,Gallec,Italià,Romanès
+"¿Qué significa ""amore"" en italiano?",,Amor,"Què vol dir ""amore"" en italià?",Amor,Amic,Mar,Mort
+¿Qué lengua es cooficial en Galicia?,,Gallego,Quina llengua és cooficial a Galícia?,Gallec,Asturià,Portuguès,Basc
+"¿Qué significa ""kaixo"" en euskera?",,Hola,"Què vol dir ""kaixo"" en basc?",Hola,Adéu,Gràcies,Sí
+"¿En qué idioma se escribió originalmente ""Harry Potter""?",,Inglés,"En quina llengua es va escriure originalment ""Harry Potter""?",Anglès,Francès,Alemany,Castellà
+¿Qué idioma se habla en Egipto?,,Árabe,Quina llengua es parla a Egipte?,Àrab,Egipci antic,Turc,Persa
+"¿Qué significa ""nein"" en alemán?",,No,"Què vol dir ""nein"" en alemany?",No,Nou,Sí,Mai
+"¿Qué significa ""buongiorno"" en italiano?",,Buenos días,"Què vol dir ""buongiorno"" en italià?",Bon dia,Bona nit,Adéu,Gràcies
+"¿Qué significa ""sí"" en inglés?",,Yes,"Què vol dir ""yes"" en anglès?",Sí,No,Si us plau,Perdó
+"¿Qué significa ""sayonara"" en japonés?",,Adiós,"Què vol dir ""sayonara"" en japonès?",Adéu,Hola,Gràcies,Bon dia
+¿Cuál es el idioma oficial de Irán?,,Persa,Quina és la llengua oficial de l'Iran?,Persa,Àrab,Turc,Kurd
+"¿Qué significa ""Kindergarten"" en alemán, literalmente?",,Jardín de niños,"Què vol dir literalment ""Kindergarten"" en alemany?",Jardí d'infants,Casa de jocs,Escola petita,Pati d'esbarjo
+¿Qué idioma tiene más hablantes en la India?,,Hindi,Quina llengua té més parlants a l'Índia?,Hindi,Bengalí,Urdú,Tàmil
+"¿Qué significa ""tsunami"" en japonés?",,Ola de puerto,"Què vol dir ""tsunami"" en japonès?",Onada de port,Gran tempesta,Vent diví,Mar enfadat
+"¿Qué significa ""kamikaze"" en japonés?",,Viento divino,"Què vol dir ""kamikaze"" en japonès?",Vent diví,Guerrer suïcida,Onada gegant,Foc del cel
+¿Qué alfabeto usa el idioma griego?,,Griego,Quin alfabet fa servir la llengua grega?,Grec,Ciríl·lic,Llatí,Armeni
+¿Qué idioma se habla en Quebec además del inglés?,,Francés,Quina llengua es parla al Quebec a més de l'anglès?,Francès,Només anglès,Italià,Castellà
+"¿Qué significa la expresión latina ""in vino veritas""?",,En el vino está la verdad,"Què vol dir l'expressió llatina ""in vino veritas""?",En el vi hi ha la veritat,El vi és vida,Brindem per la veritat,La veritat embriaga
+"¿Qué idioma tiene la palabra ""hygge"", sobre el bienestar acogedor?",,Danés,"Quina llengua té la paraula ""hygge"", sobre el benestar acollidor?",Danès,Suec,Finès,Islandès
+¿Qué lengua oficial comparte Bélgica con Francia?,,Francés,Quina llengua oficial comparteix Bèlgica amb França?,Francès,Neerlandès,Alemany,Luxemburguès
+"¿Qué significa ""Gesundheit"", lo que dicen los alemanes tras un estornudo?",,Salud,"Què vol dir ""Gesundheit"", el que diuen els alemanys després d'un esternut?",Salut,Jesús,Benedicció,Cuida't
+"¿Qué idioma se habla en Brasil, Portugal, Angola y Mozambique?",,Portugués,"Quina llengua es parla al Brasil, Portugal, Angola i Moçambic?",Portuguès,Castellà,Francès,Anglès
+"¿Qué significa ""ubuntu"" en lenguas bantúes como el zulú?",,Humanidad hacia los demás,"Què vol dir ""ubuntu"" en llengües bantus com el zulu?",Humanitat envers els altres,Llibertat,Terra mare,Comunitat tancada
+¿Qué idioma es oficial en Filipinas junto con el inglés?,,Filipino,Quina llengua és oficial a les Filipines juntament amb l'anglès?,Filipí,Castellà,Malai,Indonesi
+"¿Qué significa la expresión latina ""alea iacta est""?",,La suerte está echada,"Què vol dir l'expressió llatina ""alea iacta est""?",La sort està tirada,Així és la vida,"Vaig venir, vaig veure, vaig vèncer",Fins a la victòria
+"¿Qué idioma tiene la palabra ""zeitgeist"", espíritu de la época?",,Alemán,"Quina llengua té la paraula ""zeitgeist"", esperit de l'època?",Alemany,Neerlandès,Suec,Noruec
+¿Qué lengua se habla en el Valle de Arán?,,Aranés,Quina llengua es parla a la Vall d'Aran?,Aranès,Català,Francès,Aragonès
+¿Cuál es el idioma oficial de Etiopía a nivel federal?,,Amárico,Quina és la llengua oficial federal d'Etiòpia?,Amhàric,Suahili,Àrab,Somali
+¿Qué idioma se escribe de derecha a izquierda?,,Hebreo,Quina llengua s'escriu de dreta a esquerra?,Hebreu,Grec,Rus,Hindi
+"¿Qué significa ""dolce far niente"" en italiano?",,El dulce placer de no hacer nada,"Què vol dir ""dolce far niente"" en italià?",El dolç plaer de no fer res,La vida dolça,Menjar bé,Fer la migdiada
+"¿Qué significa ""déjà vu"" en francés, literalmente?",,Ya visto,"Què vol dir literalment ""déjà vu"" en francès?",Ja vist,Una altra vegada,Record,Somni
+¿Qué lengua se habla en Luxemburgo además del francés y el alemán?,,Luxemburgués,Quina llengua es parla a Luxemburg a més del francès i l'alemany?,Luxemburguès,Neerlandès,Való,Flamenc
+¿Qué idioma es el más hablado de África como lengua franca en el este del continente?,,Suajili,Quina llengua és la més estesa com a llengua franca a l'est de l'Àfrica?,Suahili,Amhàric,Zulu,Ioruba
+"¿Qué significa ""safari"" en suajili?",,Viaje,"Què vol dir ""safari"" en suahili?",Viatge,Caça,Lleó,Sabana
+"¿Qué significa ""Schadenfreude"" en alemán?",,Alegrarse del mal ajeno,"Què vol dir ""Schadenfreude"" en alemany?",Alegrar-se del mal aliè,Por de la foscor,Enyorança de casa,Ganes de viatjar
+¿Qué lengua tiene casos gramaticales como el ablativo y el vocativo y fue la lengua del Imperio romano?,,Latín,Quina llengua té casos gramaticals com l'ablatiu i el vocatiu i va ser la llengua de l'Imperi romà?,Llatí,Grec antic,Etrusc,Sànscrit
+¿Qué sistema de escritura japonés se usa sobre todo para palabras extranjeras?,,Katakana,Quin sistema d'escriptura japonès s'utilitza sobretot per a paraules estrangeres?,Katakana,Hiragana,Kanji,Romaji
+¿Cuántas lenguas oficiales tiene la Unión Europea?,,24,Quantes llengües oficials té la Unió Europea?,24,12,27,20
+¿Qué lengua indígena es cooficial en Paraguay?,,Guaraní,Quina llengua indígena és cooficial al Paraguai?,Guaraní,Quítxua,Aimara,Maputxe
+"¿Qué significa ""Wanderlust"" en alemán?",,Ganas de viajar,"Què vol dir ""Wanderlust"" en alemany?",Ganes de viatjar,Por de perdre's,Amor per la muntanya,Nostàlgia del passat
+"¿De qué lengua proceden las palabras ""algoritmo"", ""álgebra"" y ""cifra""?",,Árabe,"De quina llengua procedeixen les paraules ""algorisme"", ""àlgebra"" i ""xifra""?",Àrab,Grec,Llatí,Persa
+¿Qué lengua clásica de la India es la lengua litúrgica del hinduismo?,,Sánscrito,Quina llengua clàssica de l'Índia és la llengua litúrgica de l'hinduisme?,Sànscrit,Pali,Hindi,Tàmil
+"¿Qué idioma, además del inglés, es oficial en Malta?",,Maltés,"Quina llengua, a més de l'anglès, és oficial a Malta?",Maltès,Italià,Àrab,Grec
+¿A qué familia lingüística pertenecen el finés y el húngaro?,,Urálica,A quina família lingüística pertanyen el finès i l'hongarès?,Uràlica,Indoeuropea,Altaica,Eslava
+¿Qué lengua se hablaba en el Imperio inca?,,Quechua,Quina llengua es parlava a l'Imperi inca?,Quítxua,Nàhuatl,Guaraní,Aimara
+"¿De qué lengua indígena mexicana proceden palabras como ""chocolate"", ""tomate"" y ""aguacate""?",,Náhuatl,"De quina llengua indígena mexicana procedeixen paraules com ""xocolata"", ""tomàquet"" i ""alvocat""?",Nàhuatl,Maia,Quítxua,Taïno
+"¿Qué significa la palabra griega ""democracia""?",,Gobierno del pueblo,"Què vol dir la paraula grega ""democràcia""?",Govern del poble,Govern dels millors,Govern d'un,Govern dels rics
+"¿Qué lengua se habla en Cerdeña, considerada la lengua romance más cercana al latín?",,Sardo,"Quina llengua es parla a Sardenya, considerada la llengua romànica més propera al llatí?",Sard,Cors,Sicilià,Lígur
+¿Qué idioma se escribe con el alfabeto georgiano propio llamado mjedruli?,,Georgiano,Quina llengua s'escriu amb l'alfabet propi anomenat mkhedruli?,Georgià,Armeni,Àzeri,Txetxè
+"¿En qué ciudad de Cerdeña se habla una variante del catalán, el alguerés?",,Alguer,"A quina ciutat de Sardenya es parla una variant del català, l'alguerès?",l'Alguer,Sàsser,Càller,Olbia
+"¿Qué significa ""Weltschmerz"" en alemán?",,Dolor del mundo,"Què vol dir ""Weltschmerz"" en alemany?",Dolor del món,Alegria de viure,Por al futur,Amor a la pàtria
+¿Qué idioma tiene el mayor número de caracteres en su escritura?,,Chino,Quina llengua té el nombre més gran de caràcters a la seva escriptura?,Xinès,Japonès,Coreà,Tailandès
+¿Qué lengua oficial de Suiza es la menos hablada?,,Romanche,Quina llengua oficial de Suïssa és la menys parlada?,Romanx,Italià,Francès,Alemany
+"¿Qué significa ""Shalom"" en hebreo?",,Paz,"Què vol dir ""shalom"" en hebreu?",Pau,Amor,Déu,Amic
+¿Qué lengua resurgió como idioma hablado moderno gracias a Eliezer Ben-Yehuda?,,Hebreo,Quina llengua va ressorgir com a idioma parlat modern gràcies a Eliezer Ben-Yehuda?,Hebreu,Ídix,Arameu,Copte
+¿Qué dios griego gobierna los mares?,,Poseidón,Quin déu grec governa els mars?,Posidó,Hades,Apol·lo,Hermes
+¿Qué diosa griega es la diosa del amor y la belleza?,,Afrodita,Quina deessa grega és la deessa de l'amor i la bellesa?,Afrodita,Hera,Atena,Àrtemis
+¿Qué criatura mitológica es mitad hombre y mitad caballo?,,Centauro,Quina criatura mitològica és meitat home i meitat cavall?,Centaure,Minotaure,Sàtir,Griu
+¿Qué criatura marina es mitad mujer y mitad pez?,,Sirena,Quina criatura marina és meitat dona i meitat peix?,Sirena,Nereida,Harpia,Gorgona
+¿Qué dios griego gobierna el inframundo?,,Hades,Quin déu grec governa l'inframón?,Hades,Zeus,Ares,Dionís
+¿Qué ser mitológico de Irlanda guarda una olla de oro al final del arcoíris?,,Leprechaun,Quin ésser mitològic d'Irlanda guarda una olla d'or al final de l'arc de Sant Martí?,Leprechaun,Fada,Trol,Gnom
+"¿Qué dios romano es el mensajero de los dioses, equivalente a Hermes?",,Mercurio,"Quin déu romà és el missatger dels déus, equivalent a Hermes?",Mercuri,Júpiter,Neptú,Vulcà
+¿Qué héroe griego mató al Minotauro?,,Teseo,Quin heroi grec va matar el Minotaure?,Teseu,Perseu,Jàson,Ulisses
+"¿Qué criatura de la ""Odisea"" es un gigante de un solo ojo?",,Cíclope,"Quina criatura de l'""Odissea"" és un gegant d'un sol ull?",Ciclop,Tità,Gorgona,Cèrber
+¿Qué dios nórdico es famoso por sus engaños y travesuras?,,Loki,Quin déu nòrdic és famós pels seus enganys i entremaliadures?,Loki,Thor,Odin,Freyr
+¿Qué criatura alada lanza flechas para enamorar en la mitología romana?,,Cupido,Quina criatura alada llança fletxes per enamorar a la mitologia romana?,Cupido,Pegàs,Ícar,Mercuri
+¿Qué joven griego voló demasiado cerca del sol con alas de cera?,,Ícaro,Quin jove grec va volar massa a prop del sol amb ales de cera?,Ícar,Dèdal,Faetont,Perseu
+¿Qué caja abrió una mujer mítica liberando todos los males del mundo?,,Caja de Pandora,Quina capsa va obrir una dona mítica alliberant tots els mals del món?,Capsa de Pandora,Arca de l'Aliança,Cofre de Mides,Àmfora d'Hera
+¿Qué rey convertía en oro todo lo que tocaba?,,Midas,Quin rei convertia en or tot el que tocava?,Mides,Cresos,Minos,Príam
+¿Qué dios griego es el dios del vino y la fiesta?,,Dioniso,Quin déu grec és el déu del vi i la festa?,Dionís,Apol·lo,Hefest,Hermes
+¿Qué criatura legendaria del lago Ness es famosa en Escocia?,,Nessie,Quina criatura llegendària del llac Ness és famosa a Escòcia?,Nessie,Kraken,Leviatan,Ieti
+"¿Qué ser legendario del Himalaya se conoce también como ""abominable hombre de las nieves""?",,Yeti,"Quin ésser llegendari de l'Himàlaia es coneix també com ""abominable home de les neus""?",Ieti,Bigfoot,Wendigo,Sasquatch
+¿Qué caballo de madera usaron los griegos para entrar en una ciudad?,,Caballo de Troya,Quin cavall de fusta van fer servir els grecs per entrar en una ciutat?,Cavall de Troia,Cavall d'Esparta,Cavall d'Atenes,Cavall de Creta
+¿Qué dios griego es el herrero de los dioses?,,Hefesto,Quin déu grec és el ferrer dels déus?,Hefest,Ares,Apol·lo,Hermes
+¿Qué esposa de Zeus es la reina de los dioses olímpicos?,,Hera,Quina esposa de Zeus és la reina dels déus olímpics?,Hera,Demèter,Leto,Metis
+¿Qué diosa egipcia es esposa de Osiris y madre de Horus?,,Isis,Quina deessa egípcia és esposa d'Osiris i mare d'Horus?,Isis,Hathor,Bastet,Sekhmet
+¿Qué héroe griego cortó la cabeza de Medusa?,,Perseo,Quin heroi grec va tallar el cap de Medusa?,Perseu,Teseu,Hèracles,Bel·lerofont
+¿Qué héroe dirigió a los argonautas en busca del vellocino de oro?,,Jasón,Quin heroi va dirigir els argonautes a la recerca del velló d'or?,Jàson,Teseu,Aquil·les,Orfeu
+¿Qué rey de Ítaca tardó diez años en volver a casa tras la guerra de Troya?,,Ulises,Quin rei d'Ítaca va trigar deu anys a tornar a casa després de la guerra de Troia?,Ulisses,Agamèmnon,Menelau,Nèstor
+¿Qué músico mítico bajó al inframundo para rescatar a Eurídice?,,Orfeo,Quin músic mític va baixar a l'inframón per rescatar Eurídice?,Orfeu,Apol·lo,Linos,Tàmiris
+¿Qué diosa griega de la caza es hermana gemela de Apolo?,,Artemisa,Quina deessa grega de la caça és germana bessona d'Apol·lo?,Àrtemis,Atena,Afrodita,Persèfone
+¿Qué diosa nórdica del amor viaja en un carro tirado por gatos?,,Freyja,Quina deessa nòrdica de l'amor viatja en un carro tirat per gats?,Freyja,Frigg,Hel,Sif
+¿Qué dios egipcio es juez de los muertos y señor del más allá?,,Osiris,Quin déu egipci és jutge dels morts i senyor del més enllà?,Osiris,Set,Thot,Amon
+¿Qué criaturas guerreras femeninas recogen a los caídos en combate en la mitología nórdica?,,Valquirias,Quines criatures guerreres femenines recullen els caiguts en combat a la mitologia nòrdica?,Valquíries,Nornes,Amazones,Fúries
+¿Qué dios griego de la guerra era equivalente al Marte romano?,,Ares,Quin déu grec de la guerra era equivalent al Mart romà?,Ares,Apol·lo,Hermes,Hefest
+¿Qué hija de Deméter fue raptada por Hades?,,Perséfone,Quina filla de Demèter va ser raptada per Hades?,Persèfone,Eurídice,Ariadna,Psique
+¿Qué princesa cretense dio a Teseo un ovillo de hilo para salir del laberinto?,,Ariadna,Quina princesa cretenca va donar a Teseu un cabdell de fil per sortir del laberint?,Ariadna,Fedra,Medea,Pasífae
+¿Qué dios romano de dos caras da nombre al mes de enero?,,Jano,Quin déu romà de dues cares dona nom al mes de gener?,Janus,Saturn,Júpiter,Plutó
+¿Qué rey fue condenado a empujar eternamente una roca cuesta arriba?,,Sísifo,Quin rei va ser condemnat a empènyer eternament una roca costa amunt?,Sísif,Tàntal,Ixíon,Prometeu
+¿Qué dios inca era el dios del sol?,,Inti,Quin déu inca era el déu del sol?,Inti,Viracocha,Pachamama,Mama Quilla
+¿Qué diosa andina representa a la Madre Tierra?,,Pachamama,Quina deessa andina representa la Mare Terra?,Pachamama,Mama Quilla,Mama Cocha,Inti
+¿Qué barquero transportaba las almas a través del río Estigia?,,Caronte,Quin barquer transportava les ànimes a través del riu Estix?,Caront,Hermes,Tànatos,Hipnos
+¿Qué criatura con cuerpo de león y cabeza humana planteaba enigmas en Tebas?,,Esfinge,Quina criatura amb cos de lleó i cap humà plantejava enigmes a Tebes?,Esfinx,Quimera,Griu,Mantícora
+¿Qué gigantes precedieron a los dioses olímpicos según la mitología griega?,,Titanes,Quins gegants van precedir els déus olímpics segons la mitologia grega?,Titans,Ciclops,Hecatonquirs,Gegants de Flegra
+"¿Qué espada legendaria sacó el rey Arturo de una piedra, según algunas versiones?",,Excalibur,"Quina espasa llegendària va treure el rei Artús d'una pedra, segons algunes versions?",Excalibur,Durandal,Tizona,Joiosa
+¿Qué mago aconsejaba al rey Arturo?,,Merlín,Quin mag aconsellava el rei Artús?,Merlí,Gandalf,Morgana,Lancelot
+¿Qué dios hindú tiene cabeza de elefante?,,Ganesha,Quin déu hindú té cap d'elefant?,Ganesha,Xiva,Vixnu,Brahma
+"¿Qué criatura de la mitología griega tenía cuerpo de león, cabeza de cabra y cola de serpiente?",,Quimera,"Quina criatura de la mitologia grega tenia cos de lleó, cap de cabra i cua de serp?",Quimera,Esfinx,Mantícora,Griu
+¿Qué diosa romana de la sabiduría equivale a Atenea?,,Minerva,Quina deessa romana de la saviesa equival a Atena?,Minerva,Juno,Diana,Vesta
+"Según la leyenda, ¿qué son los Encantats de Aigüestortes?",,Dos cazadores petrificados,"Segons la llegenda, què són els Encantats d'Aigüestortes?",Dos caçadors petrificats,Un gegant adormit,Una bruixa convertida en llac,Un pastor i el seu ramat
+¿Qué dios egipcio de la sabiduría y la escritura tiene cabeza de ibis?,,Thot,Quin déu egipci de la saviesa i l'escriptura té cap d'ibis?,Thot,Horus,Anubis,Ptah
+¿Qué lobo gigante matará a Odín durante el Ragnarök?,,Fenrir,Quin llop gegant matarà Odin durant el Ragnarök?,Fenrir,Sköll,Garm,Hati
+¿Qué serpiente gigante rodea el mundo en la mitología nórdica?,,Jörmungandr,Quina serp gegant envolta el món a la mitologia nòrdica?,Jörmungandr,Níðhöggr,Fafnir,Leviatan
+¿Qué ninfa fue convertida en laurel para huir de Apolo?,,Dafne,Quina nimfa es va convertir en llorer per fugir d'Apol·lo?,Dafne,Eco,Cal·listo,Siringa
+¿Qué caballo de ocho patas monta Odín?,,Sleipnir,Quin cavall de vuit potes munta Odin?,Sleipnir,Grani,Skinfaxi,Árvakr
+¿Qué ser mitológico gallego es una procesión de almas en pena?,,Santa Compaña,Quin ésser mitològic gallec és una processó d'ànimes en pena?,Santa Companya,Meiga,Follet,Moura
+"¿Qué gigante vasco de la mitología es un ser de los bosques, peludo y protector del ganado?",,Basajaun,"Quin ésser de la mitologia basca és un home dels boscos, pelut i protector del bestiar?",Basajaun,Mari,Olentzero,Tartalo
+¿Qué diosa de la mitología vasca vive en cuevas y controla el tiempo atmosférico?,,Mari,Quina deessa de la mitologia basca viu en coves i controla el temps atmosfèric?,Mari,Ekhi,Amalur,Sugaar
+"¿Qué ser de la tradición catalana es un tronco que ""caga"" regalos en Navidad?",,Tió de Nadal,"Quin ésser de la tradició catalana és un tronc que ""caga"" regals per Nadal?",Tió de Nadal,Caganer,Home dels nassos,Patge Gregori
+¿Qué dios azteca de la guerra y el sol era el patrón de Tenochtitlan?,,Huitzilopochtli,Quin déu asteca de la guerra i el sol era el patró de Tenochtitlan?,Huitzilopochtli,Tláloc,Tezcatlipoca,Xipe Tótec
+¿Qué dios sumerio del agua dulce y la sabiduría es equivalente al Ea babilónico?,,Enki,Quin déu sumeri de l'aigua dolça i la saviesa equival a l'Ea babiloni?,Enki,Enlil,Anu,Marduk
+¿Qué diosa japonesa del sol es antepasada mítica de la familia imperial?,,Amaterasu,Quina deessa japonesa del sol és avantpassada mítica de la família imperial?,Amaterasu,Izanami,Inari,Benzaiten
+¿Qué rey fue castigado con hambre y sed eternas teniendo agua y frutas a su alcance?,,Tántalo,Quin rei va ser castigat amb fam i set eternes tenint aigua i fruita a l'abast?,Tàntal,Sísif,Ixíon,Licàon
+¿Qué ser mitológico cántabro es un cíclope de un solo ojo?,,Ojáncano,Quin ésser mitològic càntabre és un ciclop d'un sol ull?,Ojáncano,Nuberu,Cuélebre,Trasgu
+¿Qué ser mitológico asturiano es una serpiente alada que guarda tesoros?,,Cuélebre,Quin ésser mitològic asturià és una serp alada que guarda tresors?,Cuélebre,Nuberu,Trasgu,Xana
+¿Qué tres hermanas tejen el destino de los hombres en la mitología griega?,,Moiras,Quines tres germanes teixeixen el destí dels homes a la mitologia grega?,Moires,Gràcies,Fúries,Muses
+¿Cuántas musas había en la mitología griega?,,9,Quantes muses hi havia a la mitologia grega?,9,7,3,12
+¿Qué musa griega presidía la historia?,,Clío,Quina musa grega presidia la història?,Clio,Cal·líope,Talia,Urània
+¿Qué dios hindú es el destructor en la trimurti?,,Shiva,Quin déu hindú és el destructor a la trimurti?,Xiva,Brahma,Vixnu,Krixna
+¿Qué héroe sumerio buscó la inmortalidad en la epopeya más antigua conocida?,,Gilgamesh,Quin heroi sumeri va buscar la immortalitat en l'epopeia més antiga coneguda?,Gilgameix,Enkidu,Utnapixtim,Sargon
+¿Qué gigante de la mitología nórdica dio origen al mundo con su cuerpo?,,Ymir,Quin gegant de la mitologia nòrdica va donar origen al món amb el seu cos?,Ymir,Surtr,Thrym,Skadi
+¿Qué ciudad griega era famosa por la dureza de la educación militar de sus ciudadanos?,,Esparta,Quina ciutat grega era famosa per la duresa de l'educació militar dels seus ciutadans?,Esparta,Atenes,Corint,Tebes
+¿Qué rey de los francos fue coronado emperador en el año 800?,,Carlomagno,Quin rei dels francs va ser coronat emperador l'any 800?,Carlemany,Clodoveu,Pipí el Breu,Carles Martell
+¿Qué muralla mandó construir un emperador romano en el norte de Britania?,,Muro de Adriano,Quin mur va fer construir un emperador romà al nord de Britània?,Mur d'Adrià,Mur de Trajà,Mur d'August,Mur de Neró
+¿Qué famoso explorador veneciano viajó a la corte de Kublai Kan?,,Marco Polo,Quin famós explorador venecià va viatjar a la cort de Kublai Khan?,Marco Polo,Cristòfor Colom,Amerigo Vespucci,Joan Cabot
+¿Qué navegante dio nombre al continente americano?,,Américo Vespucio,Quin navegant va donar nom al continent americà?,Amerigo Vespucci,Cristòfor Colom,Ferran de Magalhães,Juan de la Cosa
+¿En qué año fue proclamada la independencia de Estados Unidos?,,1776,En quin any es va proclamar la independència dels Estats Units?,1776,1789,1812,1492
+"¿Qué guerra entre Inglaterra y Francia duró, con pausas, de 1337 a 1453?",,Guerra de los Cien Años,"Quina guerra entre Anglaterra i França va durar, amb pauses, del 1337 al 1453?",Guerra dels Cent Anys,Guerra de les Dues Roses,Guerra dels Trenta Anys,Guerra dels Set Anys
+¿Qué heroína francesa fue quemada en Ruan en 1431?,,Juana de Arco,Quina heroïna francesa va ser cremada a Rouen el 1431?,Joana d'Arc,Elionor d'Aquitània,Caterina de Mèdici,Maria Antonieta
+¿Qué rey de Aragón conquistó el reino de Valencia en 1238?,,Jaime I,Quin rei d'Aragó va conquerir el regne de València el 1238?,Jaume I,Pere III,Alfons V,Pere IV
+¿Qué cruzada terminó con el saqueo de Constantinopla en 1204?,,Cuarta Cruzada,Quina croada va acabar amb el saqueig de Constantinoble el 1204?,Quarta Croada,Primera Croada,Tercera Croada,Setena Croada
+"¿Qué político ateniense dio nombre al ""siglo de oro"" de Atenas en el siglo V a. C.?",,Pericles,"Quin polític atenès va donar nom al ""segle d'or"" d'Atenes al segle V aC?",Pèricles,Soló,Clístenes,Temístocles
+¿En qué año se produjo el intento de golpe de Estado del 23-F en España?,,1981,En quin any es va produir l'intent de cop d'estat del 23-F a Espanya?,1981,1977,1982,1975
+¿Qué órgano usamos para respirar?,,Pulmones,Quin òrgan fem servir per respirar?,Pulmons,Estómac,Fetge,Ronyons
+¿Qué estado de la materia tiene el hielo?,,Sólido,En quin estat de la matèria és el gel?,Sòlid,Líquid,Gasós,Plasma
+¿Qué científico italiano mejoró el telescopio y descubrió las lunas de Júpiter?,,Galileo Galilei,Quin científic italià va millorar el telescopi i va descobrir les llunes de Júpiter?,Galileu Galilei,Giordano Bruno,Evangelista Torricelli,Giovanni Cassini
+¿Qué unidad mide la frecuencia?,,Hercio,Quina unitat mesura la freqüència?,Hertz,Decibel,Newton,Pascal
+¿Qué órgano filtra la sangre y produce la orina?,,Riñón,Quin òrgan filtra la sang i produeix l'orina?,Ronyó,Fetge,Melsa,Bufeta
+¿Qué elemento químico tiene el símbolo Ag?,,Plata,Quin element químic té el símbol Ag?,Plata,Or,Argó,Alumini
+¿Qué científico neozelandés descubrió el núcleo atómico en 1911?,,Ernest Rutherford,Quin científic neozelandès va descobrir el nucli atòmic el 1911?,Ernest Rutherford,J. J. Thomson,Niels Bohr,James Chadwick
+¿Qué físico alemán descubrió los rayos X en 1895?,,Wilhelm Röntgen,Quin físic alemany va descobrir els raigs X el 1895?,Wilhelm Röntgen,Max Planck,Heinrich Hertz,Werner Heisenberg
+¿Qué científico formuló el principio de incertidumbre?,,Werner Heisenberg,Quin científic va formular el principi d'incertesa?,Werner Heisenberg,Erwin Schrödinger,Paul Dirac,Max Born
+¿Cuál es el elemento químico de número atómico 1?,,Hidrógeno,Quin és l'element químic de nombre atòmic 1?,Hidrogen,Heli,Liti,Carboni
+¿Qué químico francés es considerado el padre de la química moderna y formuló la conservación de la masa?,,Antoine Lavoisier,Quin químic francès és considerat el pare de la química moderna i va formular la conservació de la massa?,Antoine Lavoisier,Louis Pasteur,Joseph Proust,Pierre Curie
