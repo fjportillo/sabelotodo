@@ -808,6 +808,11 @@ const SUPABASE_KEY = "sb_publishable_LaMPVutoRf9rrjdmOWzBOw_ZDVX-W-1";   // clav
 const PAYPAL_ME = "";
 const DONATION_AMOUNTS = [[1, "☕"], [3, "🍺"], [5, "🤘"]];   // importes en euros y su emoji
 const IMG_FONT = "\"Fraunces\", Georgia, serif";
+const ICONO_NIVEL = "🧠";
+const ICONOS_LOGROS = {"Debut": "🌱", "Habitual": "📘", "Leyenda": "🌟", "Inmortal": "🏛️", "Finde metalero": "☕", "Noctámbulo": "🌙", "Monográfico": "🎯"};
+const IMG_PESO = "800";
+const IMG_TITULO = "SABELOTODO";
+const IMG_COLORES = {"fondo": "#0b1324", "brillo": "rgba(13,148,136,.35)", "franja": "", "logoFondo": "", "titulo": "#f1f5f9", "acento": "#ffd166", "caja": "#121c33", "borde": "#26365a", "banda": "#0d9488"};
 const TEMAS = false;   // decoración de temporada (fiestas de Badalona, etc.)
 
 /* Preguntas incluidas de respaldo (se usan si no se puede leer la hoja ni el CSV) */
@@ -2058,29 +2063,30 @@ const ShareImg = (() => {
   function draw(r){
     const W = 1080, H = 1350, c = document.createElement("canvas"); c.width = W; c.height = H;
     const x = c.getContext("2d");
-    x.fillStyle = "#111112"; x.fillRect(0, 0, W, H);
-    let g = x.createRadialGradient(W / 2, 420, 40, W / 2, 420, 820); g.addColorStop(0, "rgba(91,108,240,.30)"); g.addColorStop(1, "rgba(91,108,240,0)");
+    const C = IMG_COLORES;
+    x.fillStyle = C.fondo; x.fillRect(0, 0, W, H);
+    let g = x.createRadialGradient(W / 2, 420, 40, W / 2, 420, 820); g.addColorStop(0, C.brillo); g.addColorStop(1, "rgba(0,0,0,0)");
     x.fillStyle = g; x.fillRect(0, 0, W, H);
-    x.fillStyle = "#fff"; x.fillRect(0, 0, W, 46);
-    x.fillStyle = "#000"; x.fillRect(W / 2 - 100, 0, 200, 200);
+    if (C.franja){ x.fillStyle = C.franja; x.fillRect(0, 0, W, 46); }
+    if (C.logoFondo){ x.fillStyle = C.logoFondo; x.fillRect(W / 2 - 100, 0, 200, 200); }
     if (logo.naturalWidth){ const k = Math.min(200 / logo.naturalWidth, 200 / logo.naturalHeight), lw = logo.naturalWidth * k, lh = logo.naturalHeight * k; x.drawImage(logo, W / 2 - lw / 2, 100 - lh / 2, lw, lh); }
     x.textAlign = "center"; x.textBaseline = "alphabetic";
-    spaced(x, 6); x.fillStyle = "#8f8f8b"; x.font = '400 150px ' + IMG_FONT; x.fillText("SABELOTODO", W / 2, 352);
+    spaced(x, 6); x.fillStyle = C.titulo; fit(x, IMG_TITULO, IMG_PESO, 150, IMG_FONT, W - 100); x.fillText(IMG_TITULO, W / 2, 352);
     spaced(x, 12); x.font = '900 54px "Red Hat Display", sans-serif';
     const a = "QUIZ ", b = "DIARIO", wa = x.measureText(a).width, wb = x.measureText(b).width, sx = W / 2 - (wa + wb) / 2;
-    x.textAlign = "left"; x.fillStyle = "#F2F2EC"; x.fillText(a, sx, 422); x.fillStyle = "#9aa5ff"; x.fillText(b, sx + wa, 422); x.textAlign = "center";
+    x.textAlign = "left"; x.fillStyle = "#F2F2EC"; x.fillText(a, sx, 422); x.fillStyle = C.acento; x.fillText(b, sx + wa, 422); x.textAlign = "center";
     spaced(x, 4); x.fillStyle = "#9a9a94";
     const label = r.mode === "reto" ? T("RETO DIARIO {num}", {num: r.num}) + " · " + new Date().toLocaleDateString(LOCALE, {day: "numeric", month: "long", timeZone: "Europe/Madrid"}).toUpperCase()
       : r.kind === "campeonato" ? [T("Campeonato"), T("{n} preguntas", {n: r.total})].join(" · ").toUpperCase()
       : [r.cat ? catLabel(r.cat) : T("Todas las categorías"), r.diff === "auto" ? T("Automática") : r.diff ? DIFF_LABEL[r.diff] : "", T("{n} preguntas", {n: r.total})].filter(Boolean).join(" · ").toUpperCase();
     fit(x, label, 700, 30, '"Red Hat Display", sans-serif', W - 140); x.fillText(label, W / 2, 500);
     spaced(x, 1); x.fillStyle = "#F2F2EC"; fit(x, r.verdict, 900, 46, `"Red Hat Display", sans-serif, ${EMO}`, W - 120); x.fillText(r.verdict, W / 2, 580);
-    spaced(x, 0); x.font = '400 250px ' + IMG_FONT; x.fillText(String(r.score), W / 2, 820);
+    spaced(x, 0); x.font = IMG_PESO + ' 250px ' + IMG_FONT; x.fillText(String(r.score), W / 2, 820);
     spaced(x, 8); x.fillStyle = "#9a9a94"; x.font = '700 30px "Red Hat Display", sans-serif'; x.fillText(T("PUNTOS"), W / 2, 875);
     const boxes = [[`${r.ok}/${r.total}`, T("ACIERTOS")], [r.pct + "%", T("PRECISIÓN")], [String(r.best), T("MEJOR RACHA")]];
     boxes.forEach(([v, l], i) => {
       const bx = 75 + i * 320, by = 920;
-      x.fillStyle = "#1d1e20"; x.fillRect(bx, by, 290, 140); x.strokeStyle = "#313236"; x.lineWidth = 2; x.strokeRect(bx, by, 290, 140);
+      x.fillStyle = C.caja; x.fillRect(bx, by, 290, 140); x.strokeStyle = C.borde; x.lineWidth = 2; x.strokeRect(bx, by, 290, 140);
       spaced(x, 0); x.fillStyle = "#F2F2EC"; x.font = '900 60px "Red Hat Display", sans-serif'; x.fillText(v, bx + 145, by + 78);
       spaced(x, 3); x.fillStyle = "#9a9a94"; x.font = '700 22px "Red Hat Display", sans-serif'; x.fillText(l, bx + 145, by + 116);
     });
@@ -2094,7 +2100,7 @@ const ShareImg = (() => {
     spaced(x, 1); x.fillStyle = "#F2F2EC";
     const who = (r.name && r.name !== "Anónimo" ? r.name : T("Un Liante")) + (posTxt ? "  ·  " + posTxt : "");
     fit(x, who, 800, 36, '"Red Hat Display", sans-serif', W - 120); x.fillText(who, W / 2, y);
-    x.fillStyle = "#5b6cf0"; x.fillRect(0, H - 96, W, 96);
+    x.fillStyle = C.banda; x.fillRect(0, H - 96, W, 96);
     spaced(x, 2); x.fillStyle = "#fff"; x.font = '900 34px "Red Hat Display", sans-serif'; x.fillText(T("¿TE ATREVES?") + "  fjportillo.github.io/sabelotodo", W / 2, H - 36);
     spaced(x, 0);
     return c;
@@ -2236,6 +2242,7 @@ const Profile = (() => {
     return {n: i + 1, nombre: T(nombre), base, next: next ? next[0] : null, nextNombre: next ? T(next[1]) : null,
             pct: next ? Math.min(100, Math.round((pts - base) / (next[0] - base) * 100)) : 100};
   }
+  BADGES_ES.forEach(b => { if (ICONOS_LOGROS[b[1]]) b[0] = ICONOS_LOGROS[b[1]]; });   // iconos propios de cada quiz
   const BADGES = BADGES_ES.map(([ic, t, d, f, g]) => [ic, T(t), T(d), f, g]);
   const n = v => Number(v || 0).toLocaleString(LOCALE);
   function render(p){
@@ -2307,7 +2314,7 @@ const Profile = (() => {
   function showLevel(key, p){
     if (norm($("name").value.trim()) !== key) return;
     const lv = p ? nivel(p.puntos) : null;
-    $("logged-lv").textContent = lv ? "🤘 " + T("Nv. {n}", {n: lv.n}) + " · " + lv.nombre : "";
+    $("logged-lv").textContent = lv ? ICONO_NIVEL + " " + T("Nv. {n}", {n: lv.n}) + " · " + lv.nombre : "";
   }
   async function checkNew(key){                   // al terminar una partida guardada: ¿hay logros nuevos?
     if (!HOF.online || !key) return [];
