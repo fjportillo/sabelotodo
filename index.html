@@ -1057,7 +1057,13 @@ function forgetPin(key){ const p = pins(); delete p[key]; store("rmq-pins", p); 
 async function rpcCall(fn, args){
   const h = {apikey: SUPABASE_KEY, "Content-Type": "application/json"};
   if (SUPABASE_KEY.startsWith("eyJ")) h.Authorization = "Bearer " + SUPABASE_KEY;
-  const res = await fetch(SUPABASE_URL.replace(/\/+$/, "") + "/rest/v1/rpc/" + fn, {method: "POST", headers: h, body: JSON.stringify(args)});
+  const url = SUPABASE_URL.replace(/\/+$/, "") + "/rest/v1/rpc/" + fn, opt = {method: "POST", headers: h, body: JSON.stringify(args)};
+  let res; rpcCall.reintentos = 0;
+  for (let i = 0; ; i++){ rpcCall.reintentos = i;                       // un corte de red momentáneo no debe perder la partida: 2 reintentos
+    try{ res = await fetch(url, opt); if (res.status < 500 || i >= 2) break; }
+    catch(e){ if (i >= 2) throw e; }
+    await new Promise(r => setTimeout(r, 1500 * (i + 1)));
+  }
   const txt = await res.text();
   if (!res.ok){ let m = txt; try{ m = JSON.parse(txt).message || txt; }catch(e){} const err = new Error(m); err.status = res.status; throw err; }
   return txt ? JSON.parse(txt) : null;
@@ -1516,8 +1522,9 @@ const HOF = (() => {
     async save(g){
       const pin = (store("rmq-pins") || {})[g.key] || null;
       try{
-        return await rpcCall("guardar_partida2", {p_nombre: g.name.slice(0, 24), p_clave: g.key.slice(0, 40), p_puntos: g.score, p_aciertos: g.ok, p_total: g.total, p_pin: pin,
+        const r = await rpcCall("guardar_partida2", {p_nombre: g.name.slice(0, 24), p_clave: g.key.slice(0, 40), p_puntos: g.score, p_aciertos: g.ok, p_total: g.total, p_pin: pin,
           p_modo: g.mode || "normal", p_racha: g.racha || 0, p_detalle: g.det || null, p_cuadro: g.grid || null});
+        return (r === "repetido" && rpcCall.reintentos) ? "ok" : r;   // el 1er intento sí llegó a guardarse
       }catch(e){ if (e.status !== 404) throw e; }      // aún sin retos_perfil.sql: método anterior
       try{
         await rpcCall("guardar_partida", {p_nombre: g.name.slice(0, 24), p_clave: g.key.slice(0, 40), p_puntos: g.score, p_aciertos: g.ok, p_total: g.total, p_pin: (store("rmq-pins") || {})[g.key] || null});
