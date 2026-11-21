@@ -3,6 +3,16 @@
    Si falta una traducción, se muestra el texto en castellano. */
 window.I18N = {
  "ca": {
+  "La partida": "La partida",
+  "Las preguntas": "Les preguntes",
+  "Opciones": "Opcions",
+  "Otra partida en la sala {c}": "Una altra partida a la sala {c}",
+  "Los jugadores siguen conectados: no tienen que volver a entrar. Elige cómo será la nueva partida.": "Els jugadors continuen connectats: no han de tornar a entrar. Tria com serà la nova partida.",
+  "Preparar la partida": "Preparar la partida",
+  "¿Prefieres empezar de cero con otro código?": "Prefereixes començar de zero amb un altre codi?",
+  "Crear una sala nueva": "Crear una sala nova",
+  "¿Seguir en la sala {c} con los mismos jugadores?": "Continuar a la sala {c} amb els mateixos jugadors?",
+  "Usar esa sala": "Fer servir aquesta sala",
   "Cómo se juega": "Com es juga",
   "Responde desde tu móvil antes de que se acabe el tiempo. Solo vale la primera respuesta.": "Respon des del mòbil abans que s'acabi el temps. Només val la primera resposta.",
   "{n} preguntas · {s} segundos cada una": "{n} preguntes · {s} segons cadascuna",
@@ -581,6 +591,16 @@ window.I18N = {
   "las preguntas se adaptan a tu nivel: si aciertas, suben; si fallas, bajan.": "les preguntes s'adapten al teu nivell: si encertes, pugen; si falles, baixen."
  },
  "en": {
+  "La partida": "The game",
+  "Las preguntas": "The questions",
+  "Opciones": "Options",
+  "Otra partida en la sala {c}": "Another game in room {c}",
+  "Los jugadores siguen conectados: no tienen que volver a entrar. Elige cómo será la nueva partida.": "Players stay connected: they don't need to join again. Choose what the new game will be like.",
+  "Preparar la partida": "Set up the game",
+  "¿Prefieres empezar de cero con otro código?": "Would you rather start from scratch with a new code?",
+  "Crear una sala nueva": "Create a new room",
+  "¿Seguir en la sala {c} con los mismos jugadores?": "Stay in room {c} with the same players?",
+  "Usar esa sala": "Use that room",
   "Cómo se juega": "How to play",
   "Responde desde tu móvil antes de que se acabe el tiempo. Solo vale la primera respuesta.": "Answer on your phone before time runs out. Only your first answer counts.",
   "{n} preguntas · {s} segundos cada una": "{n} questions · {s} seconds each",
