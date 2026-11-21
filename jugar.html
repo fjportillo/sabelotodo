@@ -265,16 +265,31 @@ async function myStats(){
   }catch(e){ return null; }
 }
 
+/* Consulta del estado. Para gastar poco (el plan gratuito de Supabase incluye 5 GB al mes):
+   - cada vez solo se piden los datos pequeños (estado, tiempo, respuestas); la pregunta con sus traducciones
+     y las reglas se piden solo cuando cambia algo (otra pregunta, otra fase, otra partida);
+   - se consulta más despacio cuando no hace falta rapidez (sala de espera, ya has respondido, fin, pantalla apagada). */
+const LIGERO = "estado,idx,partida,deadline,ahora,jugadores,respondidas,en_espera";
+let PESADO = "total,segundos,pregunta,correcta,config";
+let pesado = null, clavePesado = "", tPesado = 0, tYo = 0;
+let enCurso = false;
 async function poll(){
   clearTimeout(pollT);
+  if (enCurso) return; enCurso = true;          // nunca dos consultas a la vez
+  let espera = 1000;
   try{
-    let s;
-    try{ s = (await api(`ev_estado?select=${CAMPOS}&codigo=eq.${P.codigo}`))[0]; }
-    catch(e){ if (CAMPOS.endsWith(",config") && /config/.test(e.message)){ CAMPOS = CAMPOS.slice(0, -7); } throw e; }   // base de datos sin reglas.sql
-    if (!s){ sdel("sab:ev-player"); P = null; view("v-join"); if (params.get("sala")) $("join-err").textContent = ERR.SALA_NO_EXISTE; return; }
-    offset = Date.parse(s.ahora) - Date.now();
-    if (s.partida !== lastPart || myPart === null || myPart > s.partida){    // ¿en qué partida juego yo?
-      const yo = (await api(`ev_jugadores?select=partida&jugador=eq.${P.jugador}`))[0];
+    const l = (await api(`ev_estado?select=${LIGERO}&codigo=eq.${P.codigo}`))[0];
+    if (!l){ sdel("sab:ev-player"); P = null; view("v-join"); if (params.get("sala")) $("join-err").textContent = ERR.SALA_NO_EXISTE; return; }
+    offset = Date.parse(l.ahora) - Date.now();
+    const kp = l.partida + ":" + l.estado + ":" + l.idx;
+    if (kp !== clavePesado || (l.estado === "lobby" && Date.now() - tPesado > 15000)){       // en la sala de espera, las reglas pueden llegar después
+      try{ pesado = (await api(`ev_estado?select=${PESADO}&codigo=eq.${P.codigo}`))[0] || {}; }
+      catch(e){ if (PESADO.endsWith(",config") && /config/.test(e.message)) PESADO = PESADO.slice(0, -7); throw e; }   // base de datos sin reglas.sql
+      clavePesado = kp; tPesado = Date.now();
+    }
+    const s = {...pesado, ...l};
+    if (s.partida !== lastPart || myPart === null || (myPart > s.partida && Date.now() - tYo > 10000)){    // ¿en qué partida juego yo?
+      const yo = (await api(`ev_jugadores?select=partida&jugador=eq.${P.jugador}`))[0]; tYo = Date.now();
       if (!yo){ sdel("sab:ev-player"); P = null; view("v-join"); $("join-err").textContent = T("Has salido de la sala."); return; }
       if (lastPart !== null && s.partida !== lastPart){ myAnswer = {}; saveAns(); }   // empieza otra partida en la sala
       myPart = yo.partida; lastPart = s.partida;
@@ -283,12 +298,19 @@ async function poll(){
     const key = s.partida + ":" + (s.espero ? "w:" : "") + s.estado + ":" + s.idx;
     if (key !== lastKey){ lastKey = key; await render(s); }
     vivo(s);
+    espera = s.estado === "fin" ? 6000
+           : s.estado === "lobby" || s.espero ? 3000
+           : s.estado === "pregunta" && myAnswer[s.idx] !== undefined ? 2000
+           : 1000;                                   // pregunta sin responder o resultado: la siguiente puede llegar en cualquier momento
   }catch(e){}
-  pollT = setTimeout(poll, lastKey.includes(":fin:") ? 3000 : 1000);
+  finally{ enCurso = false; }
+  if (!P) return;
+  if (document.hidden) espera = Math.max(espera, 5000);
+  pollT = setTimeout(poll, espera);
 }
+document.addEventListener("visibilitychange", () => { if (!document.hidden && P) poll(); });   // al volver a la pantalla, al momento
 
 // Lo que cambia sin que cambie la pantalla: quién hay en la sala y cuántos han respondido
-let CAMPOS = "estado,idx,total,segundos,pregunta,correcta,deadline,ahora,jugadores,respondidas,partida,en_espera,config";
 let nJug = -1, cfgVista = "";
 async function vivo(s){
   if (s.estado === "lobby" || s.espero){                      // reglas de la partida que va a empezar

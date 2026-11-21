@@ -396,15 +396,20 @@ function openLobby(){
   else { $("qr").textContent = url; $("qr").style.cssText = "color:#111;font-weight:700;max-width:320px;word-break:break-all;font-size:18px"; }
   clearInterval(poll);
   const seen = new Set();
+  let nVisto = -1, tLista = 0;
   const refresh = async () => {
     try{
+      // primero solo el número de jugadores (pequeño); la lista de nombres, solo si ha cambiado
+      const e = (await api(`ev_estado?select=jugadores&codigo=eq.${S.codigo}`).catch(() => []))[0];
+      if (e && e.jugadores === nVisto && Date.now() - tLista < 15000) return;
       const ps = await api(`ev_jugadores?select=nombre&codigo=eq.${S.codigo}&order=creado.asc`).catch(() => []);
+      nVisto = e ? e.jugadores : ps.length; tLista = Date.now();
       $("lobby-count").textContent = ps.length;
       for (const p of ps){ if (!seen.has(p.nombre)){ seen.add(p.nombre); Sonido.fx("respuesta"); const s = document.createElement("span"); s.textContent = p.nombre; $("lobby-players").appendChild(s); } }
       $("b-start").disabled = !ps.length;
     }catch(e){}
   };
-  $("lobby-players").innerHTML = ""; refresh(); poll = setInterval(refresh, 1500);
+  $("lobby-players").innerHTML = ""; refresh(); poll = setInterval(refresh, 2000);
   Sonido.musica("espera");
 }
 
