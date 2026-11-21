@@ -104,6 +104,13 @@
   .jugada{font-family:"Red Hat Display";font-weight:900;font-size:clamp(20px,2.6vw,40px);text-align:center;margin-top:16px;line-height:1.35}
   .jugada .menos{color:var(--bad)} .jugada .mas{color:var(--ok)}
   .rank-row .dl{font-size:.65em;margin-left:12px;font-weight:900} .rank-row .dl.mas{color:var(--ok)} .rank-row .dl.menos{color:var(--bad)}
+  .snd-btn{appearance:none;background:transparent;border:1px solid #555;color:var(--text);font-size:18px;line-height:1;padding:7px 9px;cursor:pointer;margin-left:10px}
+  .snd-btn.off{opacity:.35;text-decoration:line-through}
+  .chk{display:flex !important;align-items:center;gap:8px;margin-top:16px !important;cursor:pointer}
+  .chk input{width:18px;height:18px;accent-color:var(--blue);margin:0}
+  .auto-bar{position:fixed;left:50%;bottom:16px;transform:translateX(-50%);display:flex;align-items:center;gap:14px;background:var(--panel);border:1px solid var(--line);padding:8px 10px 8px 16px;font-family:"Red Hat Display";font-weight:800;font-size:16px;z-index:50;overflow:hidden}
+  .auto-bar i{position:absolute;left:0;bottom:0;height:3px;background:var(--blue2);width:0}
+  .auto-bar button{appearance:none;border:1px solid var(--line);background:#000;color:var(--text);font-family:"Red Hat Display";font-weight:800;font-size:13px;padding:6px 10px;cursor:pointer;text-transform:uppercase;letter-spacing:1px}
   .lang-sw{display:flex;border:1px solid #3a3b40;flex:0 0 auto}
   .lang-sw button{appearance:none;cursor:pointer;background:transparent;color:#9a9a94;border:0;font-family:"Red Hat Display";font-weight:800;font-size:12px;letter-spacing:1px;padding:6px 8px}
   .lang-sw button+button{border-left:1px solid #3a3b40}
@@ -125,6 +132,8 @@
   <div class="t">Sabelo<em>todo</em><span data-t>MODO EVENTO</span></div>
   <div class="room hidden" id="room-tag"><span data-t>Sala</span> <b id="room-code"></b></div>
   <div class="lang-sw" id="lang-sw" role="group" aria-label="Idioma / Language"><button type="button" data-lang="es">ES</button><button type="button" data-lang="ca">CA</button><button type="button" data-lang="en">EN</button></div>
+  <button class="snd-btn" id="b-mus" title="Música" data-t-title>🎵</button>
+  <button class="snd-btn" id="b-sfx" title="Efectos de sonido" data-t-title>🔊</button>
   <button class="exit-btn" id="b-exit" title="Salir del modo evento" data-t-title data-t>✕ Salir</button>
 </header>
 <main>
@@ -152,6 +161,7 @@
       <div><label for="s-diff" data-t>Dificultad</label>
         <select id="s-diff"><option value="" data-t>Todas</option><option value="facil" data-t>Fácil</option><option value="media" data-t>Media</option><option value="dificil" data-t>Difícil</option></select></div>
     </div>
+    <label class="chk"><input type="checkbox" id="s-auto" checked> <span data-t>Avance automático (las preguntas pasan solas)</span></label>
     <div class="controls"><button class="btn" id="b-create" disabled data-t>Crear sala</button></div>
     <div class="err center" id="setup-err"></div>
     <p class="hint center" id="setup-info" data-t>Cargando preguntas…</p>
@@ -220,12 +230,14 @@
   </section>
 </main>
 
+<div class="auto-bar hidden" id="auto-bar"><span id="auto-txt"></span><button id="auto-pause"></button><i id="auto-prog"></i></div>
 <div class="xmodal hidden" id="x-modal" role="dialog" aria-modal="true">
   <div class="box"><h4 data-t>¿Salir del modo evento?</h4><p id="x-text"></p>
     <div class="acts"><button class="yes" id="x-yes" data-t>Sí, salir</button><button class="no" id="x-no" data-t>Cancelar</button></div></div>
 </div>
 <script src="concurso.js"></script>
-<script src="i18n/ui.js?v=a1e45a12"></script>
+<script src="sonido.js"></script>
+<script src="i18n/ui.js?v=cd54f768"></script>
 <script src="i18n/marca.js?v=fe450482"></script>
 <script src="i18n/i18n.js?v=7837665f"></script>
 <script>
@@ -281,6 +293,31 @@ async function loadBank(){
 /* ---------- Estado del presentador ---------- */
 let S = null;        // {codigo, secret, list, i, segundos}
 let poll = null, tick = null, offset = 0, revealed = false;
+/* ---------- Avance automático ---------- */
+let autoT = null, autoFn = null, autoFin = 0, autoDur = 0, pausa = false;
+function programar(seg, fn){
+  cancelarAuto();
+  if (!S || !S.auto) return;
+  autoFn = fn; autoDur = seg * 1000; autoFin = Date.now() + autoDur; pausaQueda = autoDur;
+  $("auto-bar").classList.remove("hidden"); pintarAuto();
+  autoT = setInterval(pintarAuto, 200);
+}
+function pintarAuto(){
+  if (!autoFn) return;
+  const left = pausa ? pausaQueda : Math.max(0, autoFin - Date.now());
+  $("auto-txt").textContent = pausa ? T("En pausa") : T("Siguiente en {n} s", {n: Math.ceil(left / 1000)});
+  $("auto-pause").textContent = pausa ? "▶ " + T("Continuar") : "⏸ " + T("Pausar");
+  $("auto-prog").style.width = (100 - left / autoDur * 100) + "%";
+  if (!pausa && left <= 0){ const f = autoFn; cancelarAuto(); f(); }
+}
+function cancelarAuto(){ clearInterval(autoT); autoT = null; autoFn = null; $("auto-bar").classList.add("hidden"); }
+let pausaQueda = 0;
+$("auto-pause").addEventListener("click", () => {
+  if (!pausa){ pausaQueda = Math.max(0, autoFin - Date.now()); pausa = true; }
+  else { pausa = false; autoFin = Date.now() + pausaQueda; }
+  pintarAuto();
+});
+
 function view(id){ ["v-setup","v-lobby","v-ronda","v-q","v-rank","v-end"].forEach(v => $(v).classList.toggle("hidden", v !== id)); }
 
 async function createRoom(){
@@ -304,7 +341,7 @@ async function createRoom(){
   $("b-create").disabled = true;
   try{
     const codigo = await rpc("ev_crear_sala", {p_secret: secret, p_total: n, p_segundos: secs});
-    S = {codigo, secret, list, i: -1, segundos: secs, intro: -1};
+    S = {codigo, secret, list, i: -1, segundos: secs, intro: -1, auto: $("s-auto").checked};
     store("sab:ev-host", S);
     openLobby();
   }catch(e){ $("setup-err").textContent = T("No se pudo crear la sala:") + " " + e.message; }
@@ -326,15 +363,16 @@ function openLobby(){
     try{
       const ps = await api(`ev_jugadores?select=nombre&codigo=eq.${S.codigo}&order=creado.asc`);
       $("lobby-count").textContent = ps.length;
-      for (const p of ps){ if (!seen.has(p.nombre)){ seen.add(p.nombre); const s = document.createElement("span"); s.textContent = p.nombre; $("lobby-players").appendChild(s); } }
+      for (const p of ps){ if (!seen.has(p.nombre)){ seen.add(p.nombre); Sonido.fx("respuesta"); const s = document.createElement("span"); s.textContent = p.nombre; $("lobby-players").appendChild(s); } }
       $("b-start").disabled = !ps.length;
     }catch(e){}
   };
   $("lobby-players").innerHTML = ""; refresh(); poll = setInterval(refresh, 1500);
+  Sonido.musica("espera");
 }
 
 async function nextQuestion(){
-  clearInterval(poll); clearInterval(tick);
+  clearInterval(poll); clearInterval(tick); cancelarAuto();
   S.i++; store("sab:ev-host", S);
   if (S.i >= S.list.length) return finish();
   const q = S.list[S.i];
@@ -350,16 +388,20 @@ function showRound(q){
   $("r-k").textContent = q.tipo === "final" ? T("Última ronda") : T("Ronda {i} de {n}", {i: q.ronda, n: q.rondas});
   $("r-nombre").textContent = T(r.nombre);
   $("r-reglas").textContent = T(r.reglas);
+  Sonido.musica(null); Sonido.fx("ronda");
+  setTimeout(() => { if (!$("v-ronda").classList.contains("hidden")) Sonido.musica("espera"); }, 1600);
+  programar(8, startQuestion);
 }
 
 async function startQuestion(){
-  clearInterval(poll); clearInterval(tick);
+  clearInterval(poll); clearInterval(tick); cancelarAuto();
   const q = S.list[S.i]; revealed = false;
   view("v-q");
   const r = q.tipo && RONDAS[q.tipo];
   $("q-ronda").classList.toggle("hidden", !r);
   if (r) $("q-ronda").innerHTML = `${r.ico} <b>${esc(T(r.nombre))}</b> · ${esc(T(r.corto))}`;
   $("q-vale").textContent = ""; $("q-jugada").classList.add("hidden");
+  Sonido.musica(q.tipo === "final" ? "final" : "pregunta"); Sonido.fx("pregunta");
   $("q-num").textContent = T("Pregunta {i} de {n}", {i: S.i + 1, n: S.list.length});
   const shown = LANG !== "es" && q.tr && q.tr[LANG] ? q.tr[LANG] : {texto: q.q, opciones: q.opts};
   $("q-text").textContent = shown.texto;
@@ -376,8 +418,11 @@ async function startQuestion(){
   offset = Date.parse(st.ahora) - Date.now();
   const deadline = Date.parse(st.deadline), inicio = deadline - S.segundos * 1000;
   $("q-players").textContent = st.jugadores;
+  let lastLeft = null;
   const draw = () => {
     const left = Math.max(0, Math.ceil((deadline - (Date.now() + offset)) / 1000));
+    if (left !== lastLeft && lastLeft !== null && !revealed){ if (left > 0 && left <= 5) Sonido.fx("tic", left === 1); if (left === 0) Sonido.fx("tiempo"); }
+    lastLeft = left;
     const vale = valeAhora(q.tipo, Date.now() + offset - inicio, S.segundos);
     if (vale !== null) $("q-vale").textContent = T("Acertar ahora vale {n} puntos", {n: vale});
     $("q-timer").textContent = left; $("q-timer").classList.toggle("low", left <= 5);
@@ -387,6 +432,7 @@ async function startQuestion(){
   poll = setInterval(async () => {
     try{
       const s = (await api(`ev_estado?select=respondidas,jugadores&codigo=eq.${S.codigo}`))[0];
+      if (s.respondidas > +$("q-ans").textContent) Sonido.fx("respuesta");
       $("q-ans").textContent = s.respondidas; $("q-players").textContent = s.jugadores;
       if (s.jugadores > 0 && s.respondidas >= s.jugadores && !revealed) reveal();
     }catch(e){}
@@ -395,7 +441,8 @@ async function startQuestion(){
 
 async function reveal(){
   if (revealed) return; revealed = true;
-  clearInterval(poll); clearInterval(tick);
+  clearInterval(poll); clearInterval(tick); cancelarAuto();
+  Sonido.musica(null);
   const q = S.list[S.i];
   $("q-timer").textContent = "✓";
   try{ await rpc("ev_revelar", {p_codigo: S.codigo, p_secret: S.secret, p_correcta: q.correct}); }catch(e){}
@@ -404,12 +451,14 @@ async function reveal(){
     const votes = await api(`ev_votos?select=opcion,votos&codigo=eq.${S.codigo}&idx=eq.${S.i}`);
     const answered = votes.reduce((a, v) => a + v.votos, 0), hits = (votes.find(x => x.opcion === q.correct) || {votos: 0}).votos;
     rpc("contar_preguntas", {p: [{q: q.q, v: q.vis || "", r: answered, a: hits}]}).catch(() => {});   // para retirar las más vistas
+    Sonido.fx(hits ? "acierto" : "nadie");
     const total = answered || 1;
     q.opts.forEach((_, k) => { const v = (votes.find(x => x.opcion === k) || {votos: 0}).votos;
       $("n" + k).textContent = v; $("n" + k).classList.remove("hidden"); $("bar" + k).style.width = (v / total * 100) + "%"; });
   }catch(e){}
-  if (q.tipo) showPlay(q);
+  if (q.tipo) await showPlay(q);
   $("b-reveal").classList.add("hidden"); $("b-rank").classList.remove("hidden");
+  programar(q.tipo ? 7 : 6, showRanking);
   $("b-rank").textContent = S.i + 1 >= S.list.length ? T("Ver resultado final") : T("Ver clasificación");
 }
 
@@ -427,12 +476,15 @@ async function showPlay(q){
     if (q.tipo === "calentamiento") L.push(`✅ ${T("Aciertos: {n}", {n: by("acierto").length})}`);
     if (fallos.length) L.push(`<span class="menos">❌ ${T("Fallos: {n}", {n: fallos.length})}</span>`);
     if (L.length){ $("q-jugada").innerHTML = L.join("<br>"); $("q-jugada").classList.remove("hidden"); }
+    if (robo && robado) setTimeout(() => Sonido.fx("robo"), 700); else if (primero) setTimeout(() => Sonido.fx("rayo"), 700);
   }catch(e){}
 }
 
 async function showRanking(){
+  cancelarAuto();
   if (S.i + 1 >= S.list.length) return finish();
   view("v-rank");
+  Sonido.fx("redoble", 1); setTimeout(() => { if (!$("v-rank").classList.contains("hidden")) Sonido.musica("espera"); }, 1300);
   $("rank-list").innerHTML = `<p class='muted center'>${T("Calculando…")}</p>`;
   try{
     const rows = await api(`ev_ranking?select=nombre,puntos,aciertos&codigo=eq.${S.codigo}&order=puntos.desc,aciertos.desc&limit=10`);
@@ -440,10 +492,14 @@ async function showRanking(){
     const delta = n => dl[n] ? `<span class="dl ${dl[n] > 0 ? "mas" : "menos"}">${dl[n] > 0 ? "+" : "−"}${Math.abs(dl[n])}</span>` : "";
     $("rank-list").innerHTML = rows.map((r, i) => `<div class="rank-row ${i < 3 ? "r" + (i+1) : ""}" style="animation-delay:${i * 80}ms"><span class="p">${["🥇","🥈","🥉"][i] || i + 1}</span><span class="nm">${esc(r.nombre)}</span><span class="pt">${r.puntos}${delta(r.nombre)}</span></div>`).join("") || `<p class='muted center'>${T("Nadie ha puntuado todavía")}</p>`;
   }catch(e){ $("rank-list").innerHTML = `<p class='err center'>${T("No se pudo cargar la clasificación")}</p>`; }
+  const sig = S.list[S.i + 1];
+  programar(sig && sig.tipo && sig.nueva ? 6 : 7, nextQuestion);
 }
 
 async function finish(){
-  clearInterval(poll); clearInterval(tick);
+  clearInterval(poll); clearInterval(tick); cancelarAuto();
+  Sonido.musica(null); Sonido.fx("redoble", 1.6); setTimeout(() => Sonido.fx("podio"), 1900);
+  setTimeout(() => { if (!$("v-end").classList.contains("hidden")) Sonido.musica("espera"); }, 7500);
   try{ await rpc("ev_fin", {p_codigo: S.codigo, p_secret: S.secret}); }catch(e){}
   view("v-end");
   try{
@@ -468,11 +524,15 @@ $("b-reveal").addEventListener("click", reveal);
 $("b-rank").addEventListener("click", showRanking);
 $("b-next").addEventListener("click", nextQuestion);
 $("b-ronda").addEventListener("click", startQuestion);
+const pintaSonido = () => { $("b-mus").classList.toggle("off", !Sonido.musicaOn); $("b-sfx").classList.toggle("off", !Sonido.efectosOn); };
+$("b-mus").addEventListener("click", () => { Sonido.setMusica(!Sonido.musicaOn); pintaSonido(); });
+$("b-sfx").addEventListener("click", () => { Sonido.setEfectos(!Sonido.efectosOn); pintaSonido(); });
+pintaSonido();
 // Selector de rondas del modo concurso
 $("s-rondas").innerHTML = RONDAS_ORDEN.map(k => `<label title="${esc(T(RONDAS[k].reglas))}"><input type="checkbox" value="${k}" checked> ${RONDAS[k].ico} ${esc(T(RONDAS[k].nombre))}</label>`).join("");
 const setupModo = () => { const c = $("s-modo").value === "concurso"; $("s-rondas-box").classList.toggle("hidden", !c); $("s-count-box").classList.toggle("hidden", c); };
 $("s-modo").addEventListener("change", setupModo); setupModo();
-$("b-new").addEventListener("click", () => { S = null; $("room-tag").classList.add("hidden"); view("v-setup"); });
+$("b-new").addEventListener("click", () => { cancelarAuto(); Sonido.musica(null); S = null; $("room-tag").classList.add("hidden"); view("v-setup"); });
 document.addEventListener("keydown", e => { if (!$("x-modal").classList.contains("hidden")) return; if (e.key === " " || e.key === "Enter"){ if (document.activeElement && document.activeElement.tagName === "SELECT") return; e.preventDefault(); advance(); } });
 
 /* ---------- Salir del modo evento ---------- */
@@ -485,7 +545,7 @@ function exitEvent(){
 }
 async function doExit(){
   $("x-yes").disabled = true;
-  clearInterval(poll); clearInterval(tick);
+  clearInterval(poll); clearInterval(tick); cancelarAuto(); Sonido.musica(null);
   if (S && S.codigo){ try{ await rpc("ev_fin", {p_codigo: S.codigo, p_secret: S.secret}); }catch(e){} }
   store("sab:ev-host", null);
   location.href = "./";

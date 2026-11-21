@@ -3,6 +3,12 @@
    Si falta una traducción, se muestra el texto en castellano. */
 window.I18N = {
  "ca": {
+  "Música": "Música",
+  "Efectos de sonido": "Efectes de so",
+  "Avance automático (las preguntas pasan solas)": "Avanç automàtic (les preguntes passen soles)",
+  "Siguiente en {n} s": "Següent en {n} s",
+  "En pausa": "En pausa",
+  "Pausar": "Pausa",
   "Fallos: {n}": "Errades: {n}",
   "Concurso por rondas": "Concurs per rondes",
   "Clásica (todas las preguntas puntúan igual)": "Clàssica (totes les preguntes puntuen igual)",
@@ -550,6 +556,12 @@ window.I18N = {
   "las preguntas se adaptan a tu nivel: si aciertas, suben; si fallas, bajan.": "les preguntes s'adapten al teu nivell: si encertes, pugen; si falles, baixen."
  },
  "en": {
+  "Música": "Music",
+  "Efectos de sonido": "Sound effects",
+  "Avance automático (las preguntas pasan solas)": "Auto-advance (questions move on by themselves)",
+  "Siguiente en {n} s": "Next in {n} s",
+  "En pausa": "Paused",
+  "Pausar": "Pause",
   "Fallos: {n}": "Wrong: {n}",
   "Concurso por rondas": "Game show with rounds",
   "Clásica (todas las preguntas puntúan igual)": "Classic (all questions score the same)",
