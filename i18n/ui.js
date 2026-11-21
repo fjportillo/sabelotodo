@@ -3,6 +3,11 @@
    Si falta una traducción, se muestra el texto en castellano. */
 window.I18N = {
  "ca": {
+  "¿Ya estabas jugando y has salido? Entra con el mismo nombre para recuperar tu sitio y tus puntos.": "Ja estaves jugant i has sortit? Entra amb el mateix nom per recuperar el teu lloc i els teus punts.",
+  "🔑 Soy yo, recuperar mi sitio": "🔑 Sóc jo, recuperar el meu lloc",
+  "Ese nombre ya está en esta sala. Si eres tú (por ejemplo, entras desde otro navegador o móvil), pulsa «Soy yo» para recuperar tu sitio; si no, elige otro nombre.": "Aquest nom ja és a la sala. Si ets tu (per exemple, entres des d'un altre navegador o mòbil), prem «Sóc jo» per recuperar el teu lloc; si no, tria un altre nom.",
+  "Has entrado con este nombre desde otro móvil o navegador.": "Has entrat amb aquest nom des d'un altre mòbil o navegador.",
+  "Ese nombre ya no está en la sala: entra normalmente.": "Aquest nom ja no és a la sala: entra normalment.",
   "Ese nombre ya está jugando en esta sala. Si eres tú, abre la partida en el mismo móvil y navegador que usabas; si no, elige otro nombre.": "Aquest nom ja està jugant en aquesta sala. Si ets tu, obre la partida al mateix mòbil i navegador que feies servir; si no, tria un altre nom.",
   "Saldrás de la sala {code}. Si ha sido sin querer, vuelve a entrar con el mismo nombre y conservarás tus puntos.": "Sortiràs de la sala {code}. Si ha estat sense voler, torna a entrar amb el mateix nom i conservaràs els punts.",
   "La partida": "La partida",
@@ -593,6 +598,11 @@ window.I18N = {
   "las preguntas se adaptan a tu nivel: si aciertas, suben; si fallas, bajan.": "les preguntes s'adapten al teu nivell: si encertes, pugen; si falles, baixen."
  },
  "en": {
+  "¿Ya estabas jugando y has salido? Entra con el mismo nombre para recuperar tu sitio y tus puntos.": "Were you already playing and left? Join with the same name to get your place and points back.",
+  "🔑 Soy yo, recuperar mi sitio": "🔑 It's me, get my place back",
+  "Ese nombre ya está en esta sala. Si eres tú (por ejemplo, entras desde otro navegador o móvil), pulsa «Soy yo» para recuperar tu sitio; si no, elige otro nombre.": "That name is already in this room. If it's you (for example, you're joining from another browser or phone), tap \"It's me\" to get your place back; otherwise, choose another name.",
+  "Has entrado con este nombre desde otro móvil o navegador.": "You've joined with this name from another phone or browser.",
+  "Ese nombre ya no está en la sala: entra normalmente.": "That name is no longer in the room: just join normally.",
   "Ese nombre ya está jugando en esta sala. Si eres tú, abre la partida en el mismo móvil y navegador que usabas; si no, elige otro nombre.": "That name is already playing in this room. If it's you, open the game on the same phone and browser you were using; otherwise, choose another name.",
   "Saldrás de la sala {code}. Si ha sido sin querer, vuelve a entrar con el mismo nombre y conservarás tus puntos.": "You'll leave room {code}. If it was a mistake, rejoin with the same name and you'll keep your points.",
   "La partida": "The game",

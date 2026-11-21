@@ -111,6 +111,8 @@
   .rr b{font-family:"Red Hat Display";font-weight:900;font-size:15px}
   .rr .n{color:var(--muted);font-size:12px}
   .rr small{font-size:13px;color:var(--muted);line-height:1.35}
+  .btn.alt{background:transparent;color:var(--text);border:1px solid var(--blue2);font-size:15px;margin-top:10px}
+  .pista{font-size:13px;color:var(--muted);margin:8px 0 0;line-height:1.35}
   .snd-btn{appearance:none;background:transparent;border:1px solid #555;color:var(--text);font-size:16px;line-height:1;padding:6px 7px;cursor:pointer;flex:0 0 auto}
   .snd-btn.off{opacity:.35}
   .lang-sw{display:flex;border:1px solid #3a3b40;flex:0 0 auto}
@@ -147,7 +149,9 @@
     <label for="in-name" data-t>Tu nombre</label>
     <input id="in-name" maxlength="20" autocomplete="off" placeholder="Tu nombre" data-t-ph>
     <button class="btn" id="b-join" data-t>¡Entrar!</button>
+    <p class="pista" data-t>¿Ya estabas jugando y has salido? Entra con el mismo nombre para recuperar tu sitio y tus puntos.</p>
     <div class="err" id="join-err"></div>
+    <button class="btn alt hidden" id="b-reclamar" data-t>🔑 Soy yo, recuperar mi sitio</button>
   </section>
 
   <!-- ESPERA -->
@@ -197,7 +201,7 @@
 </div>
 <script src="concurso.js"></script>
 <script src="sonido.js"></script>
-<script src="i18n/ui.js?v=5a91daa6"></script>
+<script src="i18n/ui.js?v=92a83fe7"></script>
 <script src="i18n/marca.js?v=fe450482"></script>
 <script src="i18n/i18n.js?v=7837665f"></script>
 <script>
@@ -207,7 +211,7 @@ const SUPABASE_KEY = "sb_publishable_LaMPVutoRf9rrjdmOWzBOw_ZDVX-W-1";
 const $ = id => document.getElementById(id);
 const esc = s => String(s).replace(/[&<>"']/g, m => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[m]));
 const SHAPES = ["▲","◆","●","■"];
-const ERR = {SALA_NO_EXISTE: T("No existe ninguna sala con ese código."), SALA_TERMINADA: T("Esa partida ya ha terminado."), ESPERANDO_SIGUIENTE: T("Entrarás en la siguiente partida."), NOMBRE_OCUPADO: T("Ese nombre ya está jugando en esta sala. Si eres tú, abre la partida en el mismo móvil y navegador que usabas; si no, elige otro nombre."),
+const ERR = {SALA_NO_EXISTE: T("No existe ninguna sala con ese código."), SALA_TERMINADA: T("Esa partida ya ha terminado."), ESPERANDO_SIGUIENTE: T("Entrarás en la siguiente partida."), NOMBRE_OCUPADO: T("Ese nombre ya está en esta sala. Si eres tú (por ejemplo, entras desde otro navegador o móvil), pulsa «Soy yo» para recuperar tu sitio; si no, elige otro nombre."), JUGADOR_NO_VALIDO: T("Has entrado con este nombre desde otro móvil o navegador."), JUGADOR_NO_EXISTE: T("Ese nombre ya no está en la sala: entra normalmente."),
   NOMBRE_NO_VALIDO: T("Escribe un nombre (máx. 20 letras)."), SALA_LLENA: T("La sala está llena."), FUERA_DE_TIEMPO: T("¡Se acabó el tiempo!")};
 const nice = m => { for (const k in ERR) if (String(m).includes(k)) return ERR[k]; return T("Error de conexión. Inténtalo de nuevo."); };
 
@@ -236,7 +240,21 @@ if (params.get("sala")) $("in-code").value = params.get("sala").toUpperCase().sl
 if (!P && sget("sab:ev-nombre")) $("in-name").value = sget("sab:ev-nombre");      // al volver a entrar, su nombre de antes
 if (!P) setTimeout(() => ($("in-code").value ? $("in-name") : $("in-code")).focus(), 100);
 
+// "Soy yo": recuperar el sitio de un nombre que sigue en la sala (otro navegador o móvil, datos borrados…)
+async function reclamar(){
+  const codigo = $("in-code").value.trim().toUpperCase(), nombre = $("in-name").value.trim();
+  $("b-reclamar").disabled = true;
+  try{
+    const r = await rpc("ev_reclamar", {p_codigo: codigo, p_nombre: nombre});
+    const row = Array.isArray(r) ? r[0] : r;
+    P = {codigo, jugador: row.jugador, token: row.token, nombre};
+    sset("sab:ev-player", P); sset("sab:ev-nombre", nombre); $("b-reclamar").classList.add("hidden"); $("join-err").textContent = ""; start();
+  }catch(e){ $("join-err").textContent = nice(e.message); }
+  $("b-reclamar").disabled = false;
+}
+
 async function join(){
+  $("b-reclamar").classList.add("hidden");
   const codigo = $("in-code").value.trim().toUpperCase(), nombre = $("in-name").value.trim();
   $("join-err").textContent = "";
   if (codigo.length !== 4){ $("join-err").textContent = T("El código tiene 4 letras."); return; }
@@ -247,7 +265,7 @@ async function join(){
     const row = Array.isArray(r) ? r[0] : r;
     P = {codigo, jugador: row.jugador, token: row.token, nombre};
     sset("sab:ev-player", P); sset("sab:ev-nombre", nombre); start();
-  }catch(e){ $("join-err").textContent = nice(e.message); }
+  }catch(e){ $("join-err").textContent = nice(e.message); $("b-reclamar").classList.toggle("hidden", !String(e.message).includes("NOMBRE_OCUPADO")); }
   $("b-join").disabled = false;
 }
 
@@ -463,7 +481,8 @@ async function answer(idx, k){
   if (navigator.vibrate) try{ navigator.vibrate(25); }catch(e){}
   Sonido.fx("toque");
   try{ await rpc("ev_responder", {p_codigo: P.codigo, p_jugador: P.jugador, p_token: P.token, p_idx: idx, p_opcion: k}); $("q-msg").textContent = T("Respuesta enviada ✅"); }
-  catch(e){ $("q-msg").textContent = nice(e.message); if (!String(e.message).includes("FUERA_DE_TIEMPO")) { delete myAnswer[idx]; saveAns(); $("q-opts").querySelectorAll(".opt").forEach(b => { b.disabled = false; b.classList.remove("mine"); }); } }
+  catch(e){ if (String(e.message).includes("JUGADOR_NO_VALIDO")){ const n = P.nombre; sdel("sab:ev-player"); P = null; clearTimeout(pollT); clearInterval(tick); view("v-join"); $("in-name").value = n; $("join-err").textContent = ERR.JUGADOR_NO_VALIDO; return; }
+    $("q-msg").textContent = nice(e.message); if (!String(e.message).includes("FUERA_DE_TIEMPO")) { delete myAnswer[idx]; saveAns(); $("q-opts").querySelectorAll(".opt").forEach(b => { b.disabled = false; b.classList.remove("mine"); }); } }
 }
 
 /* ---------- Salir ---------- */
@@ -483,6 +502,7 @@ $("x-no").addEventListener("click", () => $("x-modal").classList.add("hidden"));
 $("x-modal").addEventListener("click", e => { if (e.target.id === "x-modal") $("x-modal").classList.add("hidden"); });
 
 $("b-join").addEventListener("click", join);
+$("b-reclamar").addEventListener("click", reclamar);
 const pintaSonido = () => $("b-sfx").classList.toggle("off", !Sonido.efectosOn);
 $("b-sfx").addEventListener("click", () => { Sonido.setEfectos(!Sonido.efectosOn); pintaSonido(); if (Sonido.efectosOn) Sonido.fx("toque"); });
 pintaSonido();
