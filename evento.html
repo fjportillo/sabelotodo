@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Modo evento · Sabelotodo</title>
+<link rel="icon" type="image/png" href="logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Color+Emoji&family=Fraunces:wght@600;800&family=Red+Hat+Display:wght@400;700;800;900&family=DM+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+<style>
+  :root{ --bg:#111112; --panel:#1d1e20; --line:#313236; --text:#F2F2EC; --muted:#9a9a94; --grey:#8f8f8b; --blue:#5b6cf0; --blue2:#9aa5ff;
+    --ok:#3ccf7e; --bad:#ef4b4f; --o0:#e5484d; --o1:#3b82f6; --o2:#eab308; --o3:#22c55e; }
+  *{box-sizing:border-box}
+  html,body{margin:0;height:100%;background:var(--bg);color:var(--text);font-family:"DM Sans",system-ui,sans-serif}
+  body{display:flex;flex-direction:column;min-height:100vh}
+  header{display:flex;align-items:center;gap:16px;padding:12px 24px;background:#1a1a1a;border-bottom:3px solid #fff}
+  header img{width:52px;height:52px;background:#000}
+  header .t{font-family:"Rubik Dirt";font-size:30px;color:var(--grey);line-height:1}
+  header .t span{font-family:"Red Hat Display";font-weight:900;font-size:18px;letter-spacing:4px;color:var(--text);margin-left:10px}
+  header .room{margin-left:auto;font-family:"Red Hat Display";font-weight:900;font-size:22px;letter-spacing:3px}
+  header .room b{color:var(--blue2)}
+  main{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:24px;width:100%}
+  .hidden{display:none !important}
+  .btn{appearance:none;border:0;cursor:pointer;font-family:"Red Hat Display";font-weight:900;letter-spacing:1.5px;text-transform:uppercase;font-size:20px;padding:16px 30px;color:#1a1a1a;background:var(--text)}
+  .btn:hover{background:var(--blue);color:#fff}
+  .btn:disabled{opacity:.4;cursor:not-allowed}
+  .btn.ghost{background:#000;color:var(--text);border:1px solid var(--line)}
+  .card{background:var(--panel);border:1px solid var(--line);padding:28px;width:min(640px,100%)}
+  h1{font-family:"Rubik Dirt";font-weight:400;font-size:clamp(40px,6vw,80px);color:var(--grey);margin:0 0 6px;text-align:center}
+  h2{font-family:"Red Hat Display";font-weight:900;margin:0 0 16px}
+  label{display:block;font-family:"Red Hat Display";font-weight:700;font-size:14px;margin:14px 0 6px}
+  select{width:100%;background:#F5F8FB;border:0;padding:12px;font-size:17px;font-family:"DM Sans"}
+  .row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  .muted{color:var(--muted)} .center{text-align:center}
+  .err{color:var(--bad);margin-top:10px;min-height:20px}
+  /* Lobby */
+  .lobby{display:grid;grid-template-columns:auto 1fr;gap:40px;align-items:center;width:min(1200px,100%)}
+  .qrbox{background:#fff;padding:18px;display:inline-block}
+  .join-info{font-family:"Red Hat Display";font-weight:700;font-size:clamp(18px,2vw,26px)}
+  .code{font-family:"Red Hat Display";font-weight:900;font-size:clamp(70px,11vw,150px);letter-spacing:12px;color:var(--blue2);line-height:1;margin:6px 0}
+  .url{font-size:clamp(14px,1.5vw,20px);color:var(--muted);word-break:break-all}
+  .players{display:flex;flex-wrap:wrap;gap:10px;margin:22px 0;min-height:48px}
+  .players span{background:#000;border:1px solid var(--line);padding:8px 14px;font-family:"Red Hat Display";font-weight:800;font-size:18px;animation:pop .3s}
+  @keyframes pop{from{transform:scale(.6);opacity:0}to{transform:scale(1);opacity:1}}
+  /* Pregunta */
+  .q-top{display:flex;justify-content:space-between;align-items:center;width:min(1400px,100%);font-family:"Red Hat Display";font-weight:800;font-size:clamp(16px,1.6vw,24px);margin-bottom:14px}
+  .q-text{font-family:"Red Hat Display";font-weight:900;font-size:clamp(28px,4vw,62px);line-height:1.15;text-align:center;width:min(1400px,100%);margin:0 0 18px}
+  .q-vis{font-family:"Noto Color Emoji","Apple Color Emoji","Segoe UI Emoji",sans-serif;font-size:clamp(60px,9vw,130px);text-align:center;letter-spacing:10px;margin-bottom:10px}
+  .q-vis img{max-height:30vh;max-width:100%}
+  .timer{width:clamp(80px,9vw,130px);height:clamp(80px,9vw,130px);border-radius:50%;display:grid;place-items:center;font-family:"Red Hat Display";font-weight:900;font-size:clamp(34px,4vw,60px);border:8px solid var(--blue)}
+  .timer.low{border-color:var(--bad);color:var(--bad)}
+  .opts{display:grid;grid-template-columns:1fr 1fr;gap:16px;width:min(1400px,100%);margin-top:10px}
+  .opt{display:flex;align-items:center;gap:18px;padding:clamp(14px,2vw,26px);font-family:"Red Hat Display";font-weight:800;font-size:clamp(20px,2.4vw,36px);color:#fff;position:relative;overflow:hidden;min-height:clamp(70px,10vh,130px)}
+  .opt .sh{font-size:1.2em;width:1.4em;text-align:center}
+  .opt .bar{position:absolute;left:0;bottom:0;height:8px;background:rgba(255,255,255,.85);width:0;transition:width .8s}
+  .opt .n{margin-left:auto;font-weight:900}
+  .o0{background:var(--o0)} .o1{background:var(--o1)} .o2{background:var(--o2);color:#1a1a1a} .o3{background:var(--o3);color:#1a1a1a}
+  .opt.dim{opacity:.25} .opt.win{outline:6px solid #fff;outline-offset:-6px}
+  .answered{font-family:"Red Hat Display";font-weight:800;font-size:clamp(18px,2vw,28px)}
+  .answered b{color:var(--blue2)}
+  /* Ranking */
+  .rank{width:min(900px,100%)}
+  .rank-row{display:flex;align-items:center;gap:16px;padding:12px 18px;margin-bottom:8px;background:var(--panel);border:1px solid var(--line);font-family:"Red Hat Display";font-weight:800;font-size:clamp(18px,2.2vw,30px);animation:pop .3s both}
+  .rank-row .p{width:2.2em;text-align:center;color:var(--muted)}
+  .rank-row .nm{flex:1}
+  .rank-row .pt{font-weight:900}
+  .rank-row.r1{border-color:#ffd76a;color:#ffd76a} .rank-row.r2{color:#d7d9e0} .rank-row.r3{color:#e2a36b}
+  .podium{display:flex;align-items:flex-end;justify-content:center;gap:18px;margin:20px 0 30px}
+  .pod{text-align:center;font-family:"Red Hat Display";font-weight:900}
+  .pod .nm{font-size:clamp(18px,2.4vw,34px);margin-bottom:8px}
+  .pod .blk{width:clamp(110px,14vw,220px);display:grid;place-items:center;font-size:clamp(40px,5vw,80px);background:var(--panel);border:1px solid var(--line)}
+  .pod.p1 .blk{height:clamp(160px,26vh,280px);border-color:#ffd76a} .pod.p2 .blk{height:clamp(120px,19vh,210px)} .pod.p3 .blk{height:clamp(90px,14vh,160px)}
+  .pod .pt{color:var(--muted);font-size:clamp(14px,1.6vw,22px);margin-top:6px}
+  .controls{display:flex;gap:12px;margin-top:22px;flex-wrap:wrap;justify-content:center}
+  .hint{color:var(--muted);font-size:14px;margin-top:10px}
+  @media (max-width:900px){ .lobby{grid-template-columns:1fr;text-align:center} .opts{grid-template-columns:1fr} }
+
+  .exit-btn{appearance:none;background:transparent;border:1px solid #555;color:var(--text);font-family:"Red Hat Display";font-weight:800;font-size:14px;letter-spacing:1px;padding:9px 14px;cursor:pointer;text-transform:uppercase}
+  .exit-btn:hover{border-color:var(--bad);color:var(--bad)}
+  .xmodal{position:fixed;inset:0;background:rgba(0,0,0,.75);display:grid;place-items:center;padding:20px;z-index:100}
+  .xmodal .box{background:var(--panel);border:1px solid var(--line);border-top:3px solid var(--bad);max-width:440px;width:100%;padding:24px}
+  .xmodal h4{margin:0 0 8px;font-family:"Red Hat Display";font-weight:900;font-size:22px}
+  .xmodal p{margin:0 0 18px;color:var(--muted);line-height:1.45}
+  .xmodal .acts{display:flex;gap:10px;flex-wrap:wrap}
+  .xmodal .acts button{flex:1;min-width:140px;appearance:none;border:0;cursor:pointer;font-family:"Red Hat Display";font-weight:900;text-transform:uppercase;letter-spacing:1px;font-size:15px;padding:14px}
+  .xmodal .yes{background:var(--bad);color:#fff} .xmodal .no{background:#000;color:var(--text);border:1px solid var(--line) !important}
+  header .room{margin-left:auto}
+  header .exit-btn{margin-left:18px}
+  .lang-sw{display:flex;border:1px solid #3a3b40;flex:0 0 auto}
+  .lang-sw button{appearance:none;cursor:pointer;background:transparent;color:#9a9a94;border:0;font-family:"Red Hat Display";font-weight:800;font-size:12px;letter-spacing:1px;padding:6px 8px}
+  .lang-sw button+button{border-left:1px solid #3a3b40}
+  .lang-sw button.on{background:var(--text);color:#111}
+
+  :root{--bg:#0b1324;--panel:#121c33;--line:#26365a;--text:#f1f5f9;--muted:#94a3b8;--grey:#e2e8f0;--blue:#0d9488;--blue2:#5eead4;--gold:#ffd166}
+  header{background:linear-gradient(90deg,#0f172a,#0d9488);border-bottom:3px solid var(--blue2)}
+  header img{background:transparent}
+  header .t,h1{font-family:"Fraunces",Georgia,serif !important;font-weight:800 !important;color:var(--text) !important;letter-spacing:0}
+  header .t em,h1 em{font-style:normal;color:var(--gold)}
+  .btn:hover{background:var(--blue2);color:#0b1324}
+  .lang-sw button.on{background:var(--blue2);color:#0b1324}
+
+</style>
+</head>
+<body>
+<header>
+  <img src="logo.png" alt="Sabelotodo">
+  <div class="t">Sabelo<em>todo</em><span data-t>MODO EVENTO</span></div>
+  <div class="room hidden" id="room-tag"><span data-t>Sala</span> <b id="room-code"></b></div>
+  <div class="lang-sw" id="lang-sw" role="group" aria-label="Idioma / Language"><button type="button" data-lang="es">ES</button><button type="button" data-lang="ca">CA</button><button type="button" data-lang="en">EN</button></div>
+  <button class="exit-btn" id="b-exit" title="Salir del modo evento" data-t-title data-t>✕ Salir</button>
+</header>
+<main>
+
+  <!-- CONFIGURACIÓN -->
+  <section id="v-setup" class="card">
+    <h1 data-t>Modo evento</h1>
+    <p class="muted center" data-t>Proyecta esta pantalla. Cada jugador responde desde su móvil escaneando el QR.</p>
+    <div class="row">
+      <div><label for="s-count" data-t>Preguntas</label>
+        <select id="s-count"><option>5</option><option selected>10</option><option>15</option><option>20</option></select></div>
+      <div><label for="s-secs" data-t>Segundos por pregunta</label>
+        <select id="s-secs"><option>15</option><option selected>20</option><option>30</option></select></div>
+    </div>
+    <div class="row">
+      <div><label for="s-cat" data-t>Categoría</label><select id="s-cat"><option value="" data-t>Todas</option></select></div>
+      <div><label for="s-diff" data-t>Dificultad</label>
+        <select id="s-diff"><option value="" data-t>Todas</option><option value="facil" data-t>Fácil</option><option value="media" data-t>Media</option><option value="dificil" data-t>Difícil</option></select></div>
+    </div>
+    <div class="controls"><button class="btn" id="b-create" disabled data-t>Crear sala</button></div>
+    <div class="err center" id="setup-err"></div>
+    <p class="hint center" id="setup-info" data-t>Cargando preguntas…</p>
+  </section>
+
+  <!-- SALA DE ESPERA -->
+  <section id="v-lobby" class="hidden" style="width:100%;display:flex;flex-direction:column;align-items:center">
+    <div class="lobby">
+      <div class="qrbox"><div id="qr"></div></div>
+      <div>
+        <div class="join-info" data-t>Escanea el QR o entra en la web y pon el código:</div>
+        <div class="code" id="lobby-code"></div>
+        <div class="url" id="lobby-url"></div>
+        <div class="join-info" style="margin-top:22px"><span id="lobby-count">0</span> <span data-t>jugadores conectados</span></div>
+        <div class="players" id="lobby-players"></div>
+        <button class="btn" id="b-start" disabled data-t>¡Empezar!</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- PREGUNTA / RESULTADO -->
+  <section id="v-q" class="hidden" style="width:100%;display:flex;flex-direction:column;align-items:center">
+    <div class="q-top">
+      <span id="q-num"></span>
+      <div class="timer" id="q-timer">20</div>
+      <span class="answered"><b id="q-ans">0</b>/<span id="q-players">0</span> <span data-t>han respondido</span></span>
+    </div>
+    <div class="q-vis hidden" id="q-vis"></div>
+    <h2 class="q-text" id="q-text"></h2>
+    <div class="opts" id="q-opts"></div>
+    <div class="controls">
+      <button class="btn hidden" id="b-reveal" data-t>Mostrar respuesta</button>
+      <button class="btn hidden" id="b-rank" data-t>Ver clasificación</button>
+    </div>
+  </section>
+
+  <!-- CLASIFICACIÓN -->
+  <section id="v-rank" class="hidden" style="width:100%;display:flex;flex-direction:column;align-items:center">
+    <h1 data-t>Clasificación</h1>
+    <div class="rank" id="rank-list"></div>
+    <div class="controls"><button class="btn" id="b-next" data-t>Siguiente pregunta</button></div>
+    <p class="hint" data-t>Atajo: barra espaciadora para avanzar</p>
+  </section>
+
+  <!-- FINAL -->
+  <section id="v-end" class="hidden" style="width:100%;display:flex;flex-direction:column;align-items:center">
+    <h1 data-t>¡Campeones! 🏆</h1>
+    <div class="podium" id="podium"></div>
+    <div class="rank" id="end-list"></div>
+    <div class="controls"><button class="btn" id="b-new" data-t>Nueva partida</button></div>
+  </section>
+</main>
+
+<div class="xmodal hidden" id="x-modal" role="dialog" aria-modal="true">
+  <div class="box"><h4 data-t>¿Salir del modo evento?</h4><p id="x-text"></p>
+    <div class="acts"><button class="yes" id="x-yes" data-t>Sí, salir</button><button class="no" id="x-no" data-t>Cancelar</button></div></div>
+</div>
+<script src="i18n/ui.js?v=602917aa"></script>
+<script src="i18n/marca.js?v=fe450482"></script>
+<script src="i18n/i18n.js?v=7837665f"></script>
+<script>
+I18NX.translateStatic();
+window.I18N_CONFIRM = () => !(S && S.codigo) || confirm(T("Se perderá la partida en curso."));
+const SUPABASE_URL = "https://bdtkngisgjarnyabzhsy.supabase.co";
+const SUPABASE_KEY = "sb_publishable_LaMPVutoRf9rrjdmOWzBOw_ZDVX-W-1";
+const PLAYER_URL = new URL("jugar.html", location.href).href.split("#")[0];
+
+const $ = id => document.getElementById(id);
+const esc = s => String(s).replace(/[&<>"']/g, m => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[m]));
+const SHAPES = ["▲","◆","●","■"];
+const LET = ["A","B","C","D"];
+function shuffle(a){ a = a.slice(); for (let i=a.length-1;i>0;i--){ const j=Math.floor(Math.random()*(i+1)); [a[i],a[j]]=[a[j],a[i]]; } return a; }
+function store(k, v){ try{ if (v === undefined) return JSON.parse(localStorage.getItem(k)); if (v === null) localStorage.removeItem(k); else localStorage.setItem(k, JSON.stringify(v)); }catch(e){ return null; } }
+
+async function api(path, opts = {}){
+  const h = {apikey: SUPABASE_KEY, "Content-Type": "application/json"};
+  if (SUPABASE_KEY.startsWith("eyJ")) h.Authorization = "Bearer " + SUPABASE_KEY;
+  const res = await fetch(SUPABASE_URL + "/rest/v1/" + path, {...opts, headers: {...h, ...(opts.headers || {})}});
+  const txt = await res.text();
+  if (!res.ok){ let m = txt; try{ m = JSON.parse(txt).message || txt; }catch(e){} throw new Error(m); }
+  return txt ? JSON.parse(txt) : null;
+}
+const rpc = (fn, args) => api("rpc/" + fn, {method: "POST", body: JSON.stringify(args)});
+
+/* ---------- Preguntas ---------- */
+function parseCSV(text){
+  const rows = []; let row = [], f = "", q = false; text = text.replace(/^﻿/, "");
+  for (let i = 0; i < text.length; i++){ const c = text[i];
+    if (q){ if (c === '"'){ if (text[i+1] === '"'){ f += '"'; i++; } else q = false; } else f += c; }
+    else if (c === '"') q = true; else if (c === ","){ row.push(f); f = ""; }
+    else if (c === "\n" || c === "\r"){ if (c === "\r" && text[i+1] === "\n") i++; row.push(f); rows.push(row); row = []; f = ""; }
+    else f += c; }
+  if (f !== "" || row.length){ row.push(f); rows.push(row); }
+  return rows.filter(r => r.some(v => v.trim() !== ""));
+}
+let BANK = [], TRMAPS = {ca: new Map(), en: new Map()};
+async function loadBank(){
+  const rows = parseCSV(await (await fetch("preguntas.csv?t=" + Date.now(), {cache: "no-store"})).text());
+  const h = rows[0].map(x => x.trim().toLowerCase());
+  const ix = n => h.indexOf(n);
+  BANK = rows.slice(1).map(r => ({q: r[ix("pregunta")], c: r[ix("correcta")], wrong: [r[ix("incorrecta1")], r[ix("incorrecta2")], r[ix("incorrecta3")]].filter(Boolean),
+    cat: r[ix("categoria")], diff: r[ix("dificultad")], vis: ix("visual") >= 0 ? (r[ix("visual")] || "") : "", act: ix("activa") >= 0 ? r[ix("activa")] : ""}))
+    .filter(x => x.q && x.c && x.wrong.length >= 2 && !/^(no|0|false)$/i.test(x.act || ""));
+  const cats = [...new Set(BANK.map(b => b.cat).filter(Boolean))].sort((a,b) => T(a).localeCompare(T(b), LOCALE));
+  $("s-cat").innerHTML = `<option value="">${T("Todas")}</option>` + cats.map(c => `<option value="${esc(c)}">${esc(T(c))}</option>`).join("");
+  TRMAPS = {ca: await I18NX.questionMap("ca"), en: await I18NX.questionMap("en")};
+  $("setup-info").textContent = T("{n} preguntas disponibles", {n: BANK.length});
+  $("b-create").disabled = false;
+}
+
+/* ---------- Estado del presentador ---------- */
+let S = null;        // {codigo, secret, list, i, segundos}
+let poll = null, tick = null, offset = 0, revealed = false;
+function view(id){ ["v-setup","v-lobby","v-q","v-rank","v-end"].forEach(v => $(v).classList.toggle("hidden", v !== id)); }
+
+async function createRoom(){
+  $("setup-err").textContent = "";
+  const cat = $("s-cat").value, diff = $("s-diff").value, n = +$("s-count").value, secs = +$("s-secs").value;
+  let pool = BANK.filter(b => (!cat || b.cat === cat) && (!diff || b.diff === diff));
+  if (pool.length < n){ $("setup-err").textContent = T("Solo hay {n} preguntas con esa combinación. Elige menos preguntas u otra categoría.", {n: pool.length}); return; }
+  // Mismo orden de respuestas en los tres idiomas: cada móvil muestra la pregunta en su idioma
+  const list = shuffle(pool).slice(0, n).map(b => {
+    const base = [b.c, ...b.wrong].slice(0, 4), perm = shuffle(base.map((_, i) => i)), opts = perm.map(i => base[i]);
+    const tr = {};
+    for (const l of ["ca", "en"]){ const t = I18NX.translateQ(TRMAPS[l], b); tr[l] = {texto: t.texto, opciones: perm.map(i => t.base[i] || base[i])}; }
+    return {...b, opts, correct: perm.indexOf(0), tr};
+  });
+  const secret = (crypto.randomUUID ? crypto.randomUUID() : Math.random().toString(36).slice(2)) + Math.random().toString(36).slice(2);
+  $("b-create").disabled = true;
+  try{
+    const codigo = await rpc("ev_crear_sala", {p_secret: secret, p_total: n, p_segundos: secs});
+    S = {codigo, secret, list, i: -1, segundos: secs};
+    store("sab:ev-host", S);
+    openLobby();
+  }catch(e){ $("setup-err").textContent = T("No se pudo crear la sala:") + " " + e.message; }
+  $("b-create").disabled = false;
+}
+
+function openLobby(){
+  view("v-lobby");
+  $("room-tag").classList.remove("hidden"); $("room-code").textContent = S.codigo;
+  $("lobby-code").textContent = S.codigo;
+  const url = PLAYER_URL + "?sala=" + S.codigo;
+  $("lobby-url").textContent = url.replace(/^https?:\/\//, "");
+  $("qr").innerHTML = "";
+  if (window.QRCode) new QRCode($("qr"), {text: url, width: Math.min(360, innerWidth * .32), height: Math.min(360, innerWidth * .32), correctLevel: QRCode.CorrectLevel.M});
+  else { $("qr").textContent = url; $("qr").style.cssText = "color:#111;font-weight:700;max-width:320px;word-break:break-all;font-size:18px"; }
+  clearInterval(poll);
+  const seen = new Set();
+  const refresh = async () => {
+    try{
+      const ps = await api(`ev_jugadores?select=nombre&codigo=eq.${S.codigo}&order=creado.asc`);
+      $("lobby-count").textContent = ps.length;
+      for (const p of ps){ if (!seen.has(p.nombre)){ seen.add(p.nombre); const s = document.createElement("span"); s.textContent = p.nombre; $("lobby-players").appendChild(s); } }
+      $("b-start").disabled = !ps.length;
+    }catch(e){}
+  };
+  $("lobby-players").innerHTML = ""; refresh(); poll = setInterval(refresh, 1500);
+}
+
+async function nextQuestion(){
+  clearInterval(poll); clearInterval(tick);
+  S.i++; store("sab:ev-host", S);
+  if (S.i >= S.list.length) return finish();
+  const q = S.list[S.i]; revealed = false;
+  view("v-q");
+  $("q-num").textContent = T("Pregunta {i} de {n}", {i: S.i + 1, n: S.list.length});
+  const shown = LANG !== "es" && q.tr && q.tr[LANG] ? q.tr[LANG] : {texto: q.q, opciones: q.opts};
+  $("q-text").textContent = shown.texto;
+  const vis = $("q-vis");
+  if (q.vis){ vis.innerHTML = /^(img\/|https?:)|\.(png|jpe?g|webp|gif)$/i.test(q.vis) ? `<img src="${esc(q.vis)}" alt="">` : esc(q.vis); vis.classList.remove("hidden"); }
+  else vis.classList.add("hidden");
+  $("q-opts").innerHTML = shown.opciones.map((o, k) => `<div class="opt o${k}" id="opt${k}"><span class="sh">${SHAPES[k]}</span><span>${esc(o)}</span><span class="n hidden" id="n${k}"></span><i class="bar" id="bar${k}"></i></div>`).join("");
+  $("b-reveal").classList.remove("hidden"); $("b-rank").classList.add("hidden");
+  $("q-ans").textContent = "0";
+  try{
+    await rpc("ev_pregunta", {p_codigo: S.codigo, p_secret: S.secret, p_idx: S.i, p_pregunta: {texto: q.q, opciones: q.opts, cat: q.cat, vis: q.vis, tr: q.tr || null}});
+  }catch(e){ alert(T("Error de conexión:") + " " + e.message); return; }
+  const st = (await api(`ev_estado?select=deadline,ahora,jugadores&codigo=eq.${S.codigo}`))[0];
+  offset = Date.parse(st.ahora) - Date.now();
+  const deadline = Date.parse(st.deadline);
+  $("q-players").textContent = st.jugadores;
+  const draw = () => {
+    const left = Math.max(0, Math.ceil((deadline - (Date.now() + offset)) / 1000));
+    $("q-timer").textContent = left; $("q-timer").classList.toggle("low", left <= 5);
+    if (left <= 0 && !revealed) reveal();
+  };
+  draw(); tick = setInterval(draw, 200);
+  poll = setInterval(async () => {
+    try{
+      const s = (await api(`ev_estado?select=respondidas,jugadores&codigo=eq.${S.codigo}`))[0];
+      $("q-ans").textContent = s.respondidas; $("q-players").textContent = s.jugadores;
+      if (s.jugadores > 0 && s.respondidas >= s.jugadores && !revealed) reveal();
+    }catch(e){}
+  }, 1000);
+}
+
+async function reveal(){
+  if (revealed) return; revealed = true;
+  clearInterval(poll); clearInterval(tick);
+  const q = S.list[S.i];
+  $("q-timer").textContent = "✓";
+  try{ await rpc("ev_revelar", {p_codigo: S.codigo, p_secret: S.secret, p_correcta: q.correct}); }catch(e){}
+  q.opts.forEach((_, k) => { $("opt" + k).classList.toggle("dim", k !== q.correct); $("opt" + k).classList.toggle("win", k === q.correct); });
+  try{
+    const votes = await api(`ev_votos?select=opcion,votos&codigo=eq.${S.codigo}&idx=eq.${S.i}`);
+    const answered = votes.reduce((a, v) => a + v.votos, 0), hits = (votes.find(x => x.opcion === q.correct) || {votos: 0}).votos;
+    rpc("contar_preguntas", {p: [{q: q.q, v: q.vis || "", r: answered, a: hits}]}).catch(() => {});   // para retirar las más vistas
+    const total = answered || 1;
+    q.opts.forEach((_, k) => { const v = (votes.find(x => x.opcion === k) || {votos: 0}).votos;
+      $("n" + k).textContent = v; $("n" + k).classList.remove("hidden"); $("bar" + k).style.width = (v / total * 100) + "%"; });
+  }catch(e){}
+  $("b-reveal").classList.add("hidden"); $("b-rank").classList.remove("hidden");
+  $("b-rank").textContent = S.i + 1 >= S.list.length ? T("Ver resultado final") : T("Ver clasificación");
+}
+
+async function showRanking(){
+  if (S.i + 1 >= S.list.length) return finish();
+  view("v-rank");
+  $("rank-list").innerHTML = `<p class='muted center'>${T("Calculando…")}</p>`;
+  try{
+    const rows = await api(`ev_ranking?select=nombre,puntos,aciertos&codigo=eq.${S.codigo}&order=puntos.desc,aciertos.desc&limit=10`);
+    $("rank-list").innerHTML = rows.map((r, i) => `<div class="rank-row ${i < 3 ? "r" + (i+1) : ""}" style="animation-delay:${i * 80}ms"><span class="p">${["🥇","🥈","🥉"][i] || i + 1}</span><span class="nm">${esc(r.nombre)}</span><span class="pt">${r.puntos}</span></div>`).join("") || `<p class='muted center'>${T("Nadie ha puntuado todavía")}</p>`;
+  }catch(e){ $("rank-list").innerHTML = `<p class='err center'>${T("No se pudo cargar la clasificación")}</p>`; }
+}
+
+async function finish(){
+  clearInterval(poll); clearInterval(tick);
+  try{ await rpc("ev_fin", {p_codigo: S.codigo, p_secret: S.secret}); }catch(e){}
+  view("v-end");
+  try{
+    const rows = await api(`ev_ranking?select=nombre,puntos,aciertos&codigo=eq.${S.codigo}&order=puntos.desc,aciertos.desc&limit=50`);
+    const top = rows.slice(0, 3), order = [1, 0, 2];
+    $("podium").innerHTML = order.filter(i => top[i]).map(i => `<div class="pod p${i+1}"><div class="nm">${esc(top[i].nombre)}</div><div class="blk">${["🥇","🥈","🥉"][i]}</div><div class="pt">${top[i].puntos} pts · ${top[i].aciertos}/${S.list.length}</div></div>`).join("");
+    $("end-list").innerHTML = rows.slice(3, 15).map((r, i) => `<div class="rank-row"><span class="p">${i + 4}</span><span class="nm">${esc(r.nombre)}</span><span class="pt">${r.puntos}</span></div>`).join("");
+  }catch(e){}
+  store("sab:ev-host", null);
+}
+
+function advance(){
+  if (!$("v-lobby").classList.contains("hidden") && !$("b-start").disabled) return nextQuestion();
+  if (!$("v-q").classList.contains("hidden")) return revealed ? showRanking() : reveal();
+  if (!$("v-rank").classList.contains("hidden")) return nextQuestion();
+}
+
+$("b-create").addEventListener("click", createRoom);
+$("b-start").addEventListener("click", nextQuestion);
+$("b-reveal").addEventListener("click", reveal);
+$("b-rank").addEventListener("click", showRanking);
+$("b-next").addEventListener("click", nextQuestion);
+$("b-new").addEventListener("click", () => { S = null; $("room-tag").classList.add("hidden"); view("v-setup"); });
+document.addEventListener("keydown", e => { if (!$("x-modal").classList.contains("hidden")) return; if (e.key === " " || e.key === "Enter"){ if (document.activeElement && document.activeElement.tagName === "SELECT") return; e.preventDefault(); advance(); } });
+
+/* ---------- Salir del modo evento ---------- */
+function exitEvent(){
+  const active = !!(S && S.codigo) && $("v-end").classList.contains("hidden") && $("v-setup").classList.contains("hidden");
+  $("x-text").textContent = active
+    ? T("Se cerrará la sala {code} y la partida terminará para todos los jugadores.", {code: S.codigo})
+    : T("Volverás a la página principal del quiz.");
+  $("x-modal").classList.remove("hidden");
+}
+async function doExit(){
+  $("x-yes").disabled = true;
+  clearInterval(poll); clearInterval(tick);
+  if (S && S.codigo){ try{ await rpc("ev_fin", {p_codigo: S.codigo, p_secret: S.secret}); }catch(e){} }
+  store("sab:ev-host", null);
+  location.href = "./";
+}
+$("b-exit").addEventListener("click", exitEvent);
+$("x-yes").addEventListener("click", doExit);
+$("x-no").addEventListener("click", () => $("x-modal").classList.add("hidden"));
+$("x-modal").addEventListener("click", e => { if (e.target.id === "x-modal") $("x-modal").classList.add("hidden"); });
+document.addEventListener("keydown", e => { if (e.key === "Escape" && !$("x-modal").classList.contains("hidden")) $("x-modal").classList.add("hidden"); }, true);
+
+loadBank().catch(e => { $("setup-info").textContent = T("No se pudieron cargar las preguntas."); });
+// Recuperar una sala si se recarga la página por error
+(() => { const s = store("sab:ev-host"); if (s && s.codigo && s.i === -1){ S = s; openLobby(); } })();
+</script>
+</body>
+</html>

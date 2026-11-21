@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#1a1a1a">
+<title>Jugar · Sabelotodo</title>
+<link rel="icon" type="image/png" href="logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Color+Emoji&family=Fraunces:wght@600;800&family=Red+Hat+Display:wght@400;700;800;900&family=DM+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{ --bg:#111112; --panel:#1d1e20; --line:#313236; --text:#F2F2EC; --muted:#9a9a94; --grey:#8f8f8b; --blue:#5b6cf0; --blue2:#9aa5ff;
+    --ok:#3ccf7e; --bad:#ef4b4f; --o0:#e5484d; --o1:#3b82f6; --o2:#eab308; --o3:#22c55e; }
+  *{box-sizing:border-box}
+  html,body{margin:0;min-height:100%;background:var(--bg);color:var(--text);font-family:"DM Sans",system-ui,sans-serif}
+  body{min-height:100dvh;display:flex;flex-direction:column;padding:env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left)}
+  button{touch-action:manipulation;-webkit-tap-highlight-color:transparent}
+  header{display:flex;align-items:center;gap:10px;padding:10px 14px;background:#1a1a1a;border-bottom:3px solid #fff}
+  header img{width:38px;height:38px;background:#000}
+  header .t{font-family:"Rubik Dirt";font-size:22px;color:var(--grey)}
+  header .me{margin-left:auto;font-family:"Red Hat Display";font-weight:800;font-size:14px;text-align:right}
+  header .me b{color:var(--blue2)}
+  main{flex:1;display:flex;flex-direction:column;padding:18px;gap:14px}
+  .hidden{display:none !important}
+  .card{background:var(--panel);border:1px solid var(--line);padding:22px}
+  h1{font-family:"Rubik Dirt";font-weight:400;font-size:46px;color:var(--grey);margin:0;text-align:center;line-height:1}
+  .sub{font-family:"Red Hat Display";font-weight:900;letter-spacing:4px;text-align:center;text-transform:uppercase;margin-bottom:12px}
+  label{display:block;font-family:"Red Hat Display";font-weight:700;font-size:14px;margin:14px 0 6px}
+  input{width:100%;background:#F5F8FB;border:0;padding:14px;font-size:18px;font-family:"DM Sans";color:#1a1a1a}
+  #in-code{text-transform:uppercase;letter-spacing:8px;font-family:"Red Hat Display";font-weight:900;font-size:26px;text-align:center}
+  .btn{appearance:none;border:0;cursor:pointer;width:100%;margin-top:18px;font-family:"Red Hat Display";font-weight:900;letter-spacing:1.5px;text-transform:uppercase;font-size:18px;padding:16px;color:#1a1a1a;background:var(--text);min-height:54px}
+  .btn:disabled{opacity:.5}
+  .err{color:var(--bad);min-height:22px;margin-top:10px;font-size:15px}
+  .center{text-align:center} .muted{color:var(--muted)}
+  .big{font-family:"Red Hat Display";font-weight:900;font-size:28px;text-align:center;line-height:1.2}
+  .wait-emoji{font-size:72px;text-align:center;animation:bob 1.4s ease-in-out infinite;font-family:"Noto Color Emoji","Apple Color Emoji","Segoe UI Emoji",sans-serif}
+  @keyframes bob{50%{transform:translateY(-8px)}}
+  .qbar{display:flex;justify-content:space-between;font-family:"Red Hat Display";font-weight:800;font-size:15px}
+  .qbar .tm{color:var(--blue2)} .qbar .tm.low{color:var(--bad)}
+  .qtext{font-family:"Red Hat Display";font-weight:800;font-size:18px;line-height:1.3}
+  .qvis{font-family:"Noto Color Emoji","Apple Color Emoji","Segoe UI Emoji",sans-serif;font-size:44px;text-align:center;letter-spacing:6px}
+  .opts{flex:1;display:grid;grid-template-columns:1fr 1fr;gap:10px;min-height:52vh}
+  .opt{appearance:none;border:0;cursor:pointer;color:#fff;font-family:"Red Hat Display";font-weight:800;font-size:17px;padding:14px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;text-align:center;line-height:1.2}
+  .opt .sh{font-size:40px;line-height:1}
+  .opt:active{transform:scale(.97)}
+  .o0{background:var(--o0)} .o1{background:var(--o1)} .o2{background:var(--o2);color:#1a1a1a} .o3{background:var(--o3);color:#1a1a1a}
+  .opt:disabled{opacity:.25} .opt.mine{opacity:1;outline:5px solid #fff;outline-offset:-5px}
+  .res{padding:30px 20px;text-align:center}
+  .res.ok{background:var(--ok);color:#06150d} .res.bad{background:var(--bad);color:#fff} .res.none{background:var(--panel);border:1px solid var(--line)}
+  .res .ic{font-size:70px;line-height:1}
+  .res .tt{font-family:"Red Hat Display";font-weight:900;font-size:30px;margin-top:8px}
+  .res .ex{font-size:16px;margin-top:8px}
+  .stat{display:flex;justify-content:space-around;font-family:"Red Hat Display";text-align:center}
+  .stat b{display:block;font-size:30px;font-weight:900}
+  .stat span{font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:1px}
+  a.link{color:var(--blue2);text-align:center;display:block;margin-top:14px}
+  @media (min-width:700px){ main{max-width:640px;margin:0 auto;width:100%} }
+
+  .exit-btn{appearance:none;background:transparent;border:1px solid #555;color:var(--text);font-family:"Red Hat Display";font-weight:800;font-size:14px;letter-spacing:1px;padding:9px 14px;cursor:pointer;text-transform:uppercase}
+  .exit-btn:hover{border-color:var(--bad);color:var(--bad)}
+  .xmodal{position:fixed;inset:0;background:rgba(0,0,0,.75);display:grid;place-items:center;padding:20px;z-index:100}
+  .xmodal .box{background:var(--panel);border:1px solid var(--line);border-top:3px solid var(--bad);max-width:440px;width:100%;padding:24px}
+  .xmodal h4{margin:0 0 8px;font-family:"Red Hat Display";font-weight:900;font-size:22px}
+  .xmodal p{margin:0 0 18px;color:var(--muted);line-height:1.45}
+  .xmodal .acts{display:flex;gap:10px;flex-wrap:wrap}
+  .xmodal .acts button{flex:1;min-width:140px;appearance:none;border:0;cursor:pointer;font-family:"Red Hat Display";font-weight:900;text-transform:uppercase;letter-spacing:1px;font-size:15px;padding:14px}
+  .xmodal .yes{background:var(--bad);color:#fff} .xmodal .no{background:#000;color:var(--text);border:1px solid var(--line) !important}
+  header .exit-btn{margin-left:12px;padding:8px 10px;font-size:12px}
+  .lang-sw{display:flex;border:1px solid #3a3b40;flex:0 0 auto}
+  .lang-sw button{appearance:none;cursor:pointer;background:transparent;color:#9a9a94;border:0;font-family:"Red Hat Display";font-weight:800;font-size:12px;letter-spacing:1px;padding:6px 8px}
+  .lang-sw button+button{border-left:1px solid #3a3b40}
+  .lang-sw button.on{background:var(--text);color:#111}
+
+  :root{--bg:#0b1324;--panel:#121c33;--line:#26365a;--text:#f1f5f9;--muted:#94a3b8;--grey:#e2e8f0;--blue:#0d9488;--blue2:#5eead4;--gold:#ffd166}
+  header{background:linear-gradient(90deg,#0f172a,#0d9488);border-bottom:3px solid var(--blue2)}
+  header img{background:transparent}
+  header .t,h1{font-family:"Fraunces",Georgia,serif !important;font-weight:800 !important;color:var(--text) !important;letter-spacing:0}
+  header .t em,h1 em{font-style:normal;color:var(--gold)}
+  .btn:hover{background:var(--blue2);color:#0b1324}
+  .lang-sw button.on{background:var(--blue2);color:#0b1324}
+
+</style>
+</head>
+<body>
+<header>
+  <img src="logo.png" alt="Sabelotodo">
+  <div class="t">Sabelo<em>todo</em></div>
+  <div class="me hidden" id="me"><b id="me-name"></b><br><span data-t>Sala</span> <span id="me-room"></span></div>
+  <div class="lang-sw" id="lang-sw" role="group" aria-label="Idioma / Language"><button type="button" data-lang="es">ES</button><button type="button" data-lang="ca">CA</button><button type="button" data-lang="en">EN</button></div>
+  <button class="exit-btn" id="b-exit" title="Salir" data-t-title data-t>✕ Salir</button>
+</header>
+<main>
+  <!-- UNIRSE -->
+  <section id="v-join" class="card">
+    <h1>Sabelo<em>todo</em></h1>
+    <div class="sub" data-t>Quiz en directo</div>
+    <label for="in-code" data-t>Código de la sala</label>
+    <input id="in-code" maxlength="4" autocomplete="off" placeholder="ABCD">
+    <label for="in-name" data-t>Tu nombre</label>
+    <input id="in-name" maxlength="20" autocomplete="off" placeholder="Tu nombre" data-t-ph>
+    <button class="btn" id="b-join" data-t>¡Entrar!</button>
+    <div class="err" id="join-err"></div>
+  </section>
+
+  <!-- ESPERA -->
+  <section id="v-wait" class="hidden">
+    <div class="wait-emoji">🧠</div>
+    <div class="big" id="wait-title" data-t>¡Estás dentro!</div>
+    <p class="center muted" id="wait-text" data-t>Mira la pantalla grande. La partida empezará enseguida.</p>
+  </section>
+
+  <!-- PREGUNTA -->
+  <section id="v-q" class="hidden" style="display:flex;flex-direction:column;gap:12px;flex:1">
+    <div class="qbar"><span id="q-num"></span><span class="tm" id="q-tm"></span></div>
+    <div class="qvis hidden" id="q-vis"></div>
+    <div class="qtext" id="q-text"></div>
+    <div class="opts" id="q-opts"></div>
+    <p class="center muted" id="q-msg"></p>
+  </section>
+
+  <!-- RESULTADO -->
+  <section id="v-res" class="hidden">
+    <div class="res" id="res-box"><div class="ic" id="res-ic"></div><div class="tt" id="res-tt"></div><div class="ex" id="res-ex"></div></div>
+    <div class="card stat" style="margin-top:14px"><div><b id="res-pos">–</b><span data-t>Puesto</span></div><div><b id="res-pts">0</b><span data-t>Puntos</span></div><div><b id="res-ok">0</b><span data-t>Aciertos</span></div></div>
+    <p class="center muted" data-t>Espera a la siguiente pregunta…</p>
+  </section>
+
+  <!-- FINAL -->
+  <section id="v-end" class="hidden">
+    <div class="wait-emoji" id="end-emoji">🏆</div>
+    <div class="big" id="end-title" data-t>¡Partida terminada!</div>
+    <div class="card stat" style="margin-top:16px"><div><b id="end-pos">–</b><span data-t>Puesto</span></div><div><b id="end-pts">0</b><span data-t>Puntos</span></div><div><b id="end-ok">0</b><span data-t>Aciertos</span></div></div>
+    <a class="link" href="./" data-t>Jugar al quiz normal →</a>
+  </section>
+</main>
+<div class="xmodal hidden" id="x-modal" role="dialog" aria-modal="true">
+  <div class="box"><h4 data-t>¿Salir de la partida?</h4><p id="x-text"></p>
+    <div class="acts"><button class="yes" id="x-yes" data-t>Sí, salir</button><button class="no" id="x-no" data-t>Cancelar</button></div></div>
+</div>
+<script src="i18n/ui.js?v=602917aa"></script>
+<script src="i18n/marca.js?v=fe450482"></script>
+<script src="i18n/i18n.js?v=7837665f"></script>
+<script>
+I18NX.translateStatic();
+const SUPABASE_URL = "https://bdtkngisgjarnyabzhsy.supabase.co";
+const SUPABASE_KEY = "sb_publishable_LaMPVutoRf9rrjdmOWzBOw_ZDVX-W-1";
+const $ = id => document.getElementById(id);
+const esc = s => String(s).replace(/[&<>"']/g, m => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[m]));
+const SHAPES = ["▲","◆","●","■"];
+const ERR = {SALA_NO_EXISTE: T("No existe ninguna sala con ese código."), SALA_TERMINADA: T("Esa partida ya ha terminado."), NOMBRE_OCUPADO: T("Ese nombre ya está cogido en esta sala. Prueba otro."),
+  NOMBRE_NO_VALIDO: T("Escribe un nombre (máx. 20 letras)."), SALA_LLENA: T("La sala está llena."), FUERA_DE_TIEMPO: T("¡Se acabó el tiempo!")};
+const nice = m => { for (const k in ERR) if (String(m).includes(k)) return ERR[k]; return T("Error de conexión. Inténtalo de nuevo."); };
+
+async function api(path, opts = {}){
+  const h = {apikey: SUPABASE_KEY, "Content-Type": "application/json"};
+  if (SUPABASE_KEY.startsWith("eyJ")) h.Authorization = "Bearer " + SUPABASE_KEY;
+  const res = await fetch(SUPABASE_URL + "/rest/v1/" + path, {...opts, headers: {...h, ...(opts.headers || {})}});
+  const txt = await res.text();
+  if (!res.ok){ let m = txt; try{ m = JSON.parse(txt).message || txt; }catch(e){} throw new Error(m); }
+  return txt ? JSON.parse(txt) : null;
+}
+const rpc = (fn, args) => api("rpc/" + fn, {method: "POST", body: JSON.stringify(args)});
+function sget(k){ try{ return JSON.parse(sessionStorage.getItem(k)); }catch(e){ return null; } }
+function sset(k, v){ try{ sessionStorage.setItem(k, JSON.stringify(v)); }catch(e){} }
+
+let P = null;               // {codigo, jugador, token, nombre}
+let lastKey = "", myAnswer = {}, offset = 0, tick = null, pollT = null;
+const saveAns = () => P && sset("sab:ev-ans-" + P.codigo, myAnswer);
+function view(id){ ["v-join","v-wait","v-q","v-res","v-end"].forEach(v => $(v).classList.toggle("hidden", v !== id)); }
+
+const params = new URLSearchParams(location.search);
+if (params.get("sala")) $("in-code").value = params.get("sala").toUpperCase().slice(0, 4);
+(() => { const saved = sget("sab:ev-player"); if (saved && (!params.get("sala") || saved.codigo === params.get("sala").toUpperCase())){ P = saved; start(); } })();
+if (!P) setTimeout(() => ($("in-code").value ? $("in-name") : $("in-code")).focus(), 100);
+
+async function join(){
+  const codigo = $("in-code").value.trim().toUpperCase(), nombre = $("in-name").value.trim();
+  $("join-err").textContent = "";
+  if (codigo.length !== 4){ $("join-err").textContent = T("El código tiene 4 letras."); return; }
+  if (!nombre){ $("join-err").textContent = ERR.NOMBRE_NO_VALIDO; return; }
+  $("b-join").disabled = true;
+  try{
+    const r = await rpc("ev_unirse", {p_codigo: codigo, p_nombre: nombre});
+    const row = Array.isArray(r) ? r[0] : r;
+    P = {codigo, jugador: row.jugador, token: row.token, nombre};
+    sset("sab:ev-player", P); start();
+  }catch(e){ $("join-err").textContent = nice(e.message); }
+  $("b-join").disabled = false;
+}
+
+function start(){
+  myAnswer = sget("sab:ev-ans-" + P.codigo) || {};
+  $("me").classList.remove("hidden"); $("me-name").textContent = P.nombre; $("me-room").textContent = P.codigo;
+  view("v-wait"); poll();
+}
+
+async function myStats(){
+  try{
+    const rows = await api(`ev_ranking?select=jugador,puntos,aciertos&codigo=eq.${P.codigo}&order=puntos.desc,aciertos.desc`);
+    const pos = rows.findIndex(r => r.jugador === P.jugador);
+    return {pos: pos + 1, pts: pos >= 0 ? rows[pos].puntos : 0, ok: pos >= 0 ? rows[pos].aciertos : 0};
+  }catch(e){ return null; }
+}
+
+async function poll(){
+  clearTimeout(pollT);
+  try{
+    const s = (await api(`ev_estado?select=estado,idx,total,segundos,pregunta,correcta,deadline,ahora&codigo=eq.${P.codigo}`))[0];
+    if (!s){ sessionStorage.removeItem("sab:ev-player"); P = null; view("v-join"); $("join-err").textContent = ERR.SALA_NO_EXISTE; return; }
+    offset = Date.parse(s.ahora) - Date.now();
+    const key = s.estado + ":" + s.idx;
+    if (key !== lastKey){ lastKey = key; render(s); }
+  }catch(e){}
+  pollT = setTimeout(poll, 1000);
+}
+
+async function render(s){
+  clearInterval(tick);
+  if (s.estado === "lobby"){ view("v-wait"); $("wait-title").textContent = T("¡Estás dentro, {name}!", {name: P.nombre}); $("wait-text").textContent = T("Mira la pantalla grande. La partida empezará enseguida."); return; }
+  if (s.estado === "pregunta"){
+    view("v-q");
+    const q = s.pregunta || {}, mine = myAnswer[s.idx];
+    $("q-num").textContent = T("Pregunta {i}/{n}", {i: s.idx + 1, n: s.total});
+    const tq = LANG !== "es" && q.tr && q.tr[LANG] ? q.tr[LANG] : q;      // la pregunta llega en los tres idiomas
+    $("q-text").textContent = tq.texto || q.texto || "";
+    if (q.vis && !/^(img\/|https?:)|\.(png|jpe?g|webp|gif)$/i.test(q.vis)){ $("q-vis").textContent = q.vis; $("q-vis").classList.remove("hidden"); } else $("q-vis").classList.add("hidden");
+    $("q-opts").innerHTML = (tq.opciones || q.opciones || []).map((o, k) => `<button class="opt o${k}" data-k="${k}"><span class="sh">${SHAPES[k]}</span><span>${esc(o)}</span></button>`).join("");
+    $("q-opts").querySelectorAll(".opt").forEach(b => b.addEventListener("click", () => answer(s.idx, +b.dataset.k)));
+    $("q-msg").textContent = "";
+    if (mine !== undefined) lock(mine, T("Respuesta enviada ✅ Mira la pantalla…"));
+    const deadline = Date.parse(s.deadline);
+    const draw = () => { const left = Math.max(0, Math.ceil((deadline - (Date.now() + offset)) / 1000));
+      $("q-tm").textContent = "⏱ " + left + " s"; $("q-tm").classList.toggle("low", left <= 5);
+      if (left <= 0 && myAnswer[s.idx] === undefined) lock(-1, T("¡Se acabó el tiempo!")); };
+    draw(); tick = setInterval(draw, 250);
+    return;
+  }
+  if (s.estado === "resultado"){
+    view("v-res");
+    const mine = myAnswer[s.idx], ok = mine === s.correcta;
+    const box = $("res-box"); box.className = "res " + (mine === undefined || mine < 0 ? "none" : ok ? "ok" : "bad");
+    $("res-ic").textContent = mine === undefined || mine < 0 ? "⏰" : ok ? "🎉" : "❌";
+    $("res-tt").textContent = mine === undefined || mine < 0 ? T("Sin respuesta") : ok ? T("¡Correcto!") : T("¡Fallaste!");
+    const q = s.pregunta || {};
+    const tqr = LANG !== "es" && q.tr && q.tr[LANG] ? q.tr[LANG] : q;
+    $("res-ex").textContent = T("Respuesta:") + " " + ((tqr.opciones || q.opciones || [])[s.correcta] || "");
+    if (navigator.vibrate) try{ navigator.vibrate(ok ? 80 : [60, 60, 60]); }catch(e){}
+    const st = await myStats();
+    if (st){ $("res-pos").textContent = st.pos ? "#" + st.pos : "–"; $("res-pts").textContent = st.pts; $("res-ok").textContent = st.ok; }
+    return;
+  }
+  if (s.estado === "fin"){
+    view("v-end"); clearTimeout(pollT);
+    const st = await myStats();
+    if (st){ $("end-pos").textContent = st.pos ? "#" + st.pos : "–"; $("end-pts").textContent = st.pts; $("end-ok").textContent = st.ok + "/" + s.total;
+      $("end-emoji").textContent = st.pos === 1 ? "👑" : st.pos === 2 ? "🥈" : st.pos === 3 ? "🥉" : "🧠";
+      $("end-title").textContent = st.pos === 1 ? T("¡Eres el campeón!") : st.pos && st.pos <= 3 ? T("¡Al podio!") : T("¡Gracias por jugar!"); }
+    if (s.idx + 1 < s.total){ $("end-emoji").textContent = "🚪"; $("end-title").textContent = T("El presentador ha cerrado la partida"); }
+    sessionStorage.removeItem("sab:ev-player");
+  }
+}
+
+function lock(k, msg){
+  $("q-opts").querySelectorAll(".opt").forEach(b => { b.disabled = true; b.classList.toggle("mine", +b.dataset.k === k); });
+  $("q-msg").textContent = msg;
+}
+
+async function answer(idx, k){
+  if (myAnswer[idx] !== undefined) return;
+  myAnswer[idx] = k; saveAns(); lock(k, T("Enviando…"));
+  try{ await rpc("ev_responder", {p_codigo: P.codigo, p_jugador: P.jugador, p_token: P.token, p_idx: idx, p_opcion: k}); $("q-msg").textContent = "Respuesta enviada ✅ Mira la pantalla…"; }
+  catch(e){ $("q-msg").textContent = nice(e.message); if (!String(e.message).includes("FUERA_DE_TIEMPO")) { delete myAnswer[idx]; saveAns(); $("q-opts").querySelectorAll(".opt").forEach(b => { b.disabled = false; b.classList.remove("mine"); }); } }
+}
+
+/* ---------- Salir ---------- */
+function exitGame(){
+  if (!P){ location.href = "./"; return; }
+  $("x-text").textContent = T("Saldrás de la sala {code} y tus puntos de esta partida se perderán. Podrás volver a entrar con el código, pero empezarás de cero.", {code: P.codigo});
+  $("x-modal").classList.remove("hidden");
+}
+async function doExit(){
+  $("x-yes").disabled = true; clearTimeout(pollT); clearInterval(tick);
+  if (P){ try{ await rpc("ev_salir", {p_jugador: P.jugador, p_token: P.token}); }catch(e){} try{ sessionStorage.removeItem("sab:ev-player"); sessionStorage.removeItem("sab:ev-ans-" + P.codigo); }catch(e){} }
+  location.href = "./";
+}
+$("b-exit").addEventListener("click", exitGame);
+$("x-yes").addEventListener("click", doExit);
+$("x-no").addEventListener("click", () => $("x-modal").classList.add("hidden"));
+$("x-modal").addEventListener("click", e => { if (e.target.id === "x-modal") $("x-modal").classList.add("hidden"); });
+
+$("b-join").addEventListener("click", join);
+$("in-name").addEventListener("keydown", e => { if (e.key === "Enter") join(); });
+$("in-code").addEventListener("keydown", e => { if (e.key === "Enter") $("in-name").focus(); });
+</script>
+</body>
+</html>
