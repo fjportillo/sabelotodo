@@ -109,7 +109,18 @@
   .chk{display:flex !important;align-items:center;gap:8px;margin-top:16px !important;cursor:pointer}
   .chk.hidden{display:none !important}
   .chk input{width:18px;height:18px;accent-color:var(--blue);margin:0}
+  /* Reglas de la partida */
+  .reglas{width:min(1200px,100%)}
+  .reglas h1{text-align:center;margin:0 0 18px}
+  .reglas-gen{list-style:none;padding:0;margin:0 0 18px;display:grid;gap:8px;font-family:"Red Hat Display";font-weight:800;font-size:clamp(18px,2.1vw,30px)}
+  .reglas-rondas{display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:12px}
+  .rr{display:flex;gap:14px;align-items:flex-start;background:var(--panel);border:1px solid var(--line);padding:14px 16px}
+  .rr .ic{font-size:clamp(34px,3.6vw,52px);line-height:1;font-family:"Noto Color Emoji","Apple Color Emoji","Segoe UI Emoji",sans-serif}
+  .rr b{font-family:"Red Hat Display";font-weight:900;font-size:clamp(18px,1.9vw,28px)}
+  .rr .n{color:var(--muted);font-weight:700;font-size:.8em}
+  .rr small{font-size:clamp(15px,1.4vw,21px);color:var(--grey);line-height:1.35}
   .espera{font-family:"Red Hat Display";font-weight:800;color:#ffd76a}
+  main{padding-bottom:70px}
   .auto-bar{position:fixed;left:50%;bottom:16px;transform:translateX(-50%);display:flex;align-items:center;gap:14px;background:var(--panel);border:1px solid var(--line);padding:8px 10px 8px 16px;font-family:"Red Hat Display";font-weight:800;font-size:16px;z-index:50;overflow:hidden}
   .auto-bar i{position:absolute;left:0;bottom:0;height:3px;background:var(--blue2);width:0}
   .auto-bar button{appearance:none;border:1px solid var(--line);background:#000;color:var(--text);font-family:"Red Hat Display";font-weight:800;font-size:13px;padding:6px 10px;cursor:pointer;text-transform:uppercase;letter-spacing:1px}
@@ -185,6 +196,13 @@
     </div>
   </section>
 
+  <!-- REGLAS DE LA PARTIDA -->
+  <section id="v-reglas" class="hidden" style="width:100%;display:flex;flex-direction:column;align-items:center">
+    <div class="reglas"><h1 data-t>Cómo se juega</h1><div id="reglas-body"></div></div>
+    <div class="controls"><button class="btn" id="b-reglas" data-t>¡Adelante!</button></div>
+    <p class="hint" data-t>Atajo: barra espaciadora para avanzar</p>
+  </section>
+
   <!-- PRESENTACIÓN DE RONDA (modo concurso) -->
   <section id="v-ronda" class="hidden" style="width:100%;display:flex;flex-direction:column;align-items:center">
     <div class="ronda-intro">
@@ -241,7 +259,7 @@
 </div>
 <script src="concurso.js"></script>
 <script src="sonido.js"></script>
-<script src="i18n/ui.js?v=ac64bb53"></script>
+<script src="i18n/ui.js?v=4c6a9c6c"></script>
 <script src="i18n/marca.js?v=fe450482"></script>
 <script src="i18n/i18n.js?v=7837665f"></script>
 <script>
@@ -322,7 +340,7 @@ $("auto-pause").addEventListener("click", () => {
   pintarAuto();
 });
 
-function view(id){ ["v-setup","v-lobby","v-ronda","v-q","v-rank","v-end"].forEach(v => $(v).classList.toggle("hidden", v !== id)); }
+function view(id){ ["v-setup","v-lobby","v-reglas","v-ronda","v-q","v-rank","v-end"].forEach(v => $(v).classList.toggle("hidden", v !== id)); }
 
 async function createRoom(){
   $("setup-err").textContent = "";
@@ -350,7 +368,9 @@ async function createRoom(){
       try{ await rpc("ev_nueva_partida", {p_codigo: ult.codigo, p_secret: ult.secret, p_total: n, p_segundos: secs}); codigo = ult.codigo; sec = ult.secret; }
       catch(e){ store("sab:ev-ultima", null); pintaMisma(); $("setup-err").textContent = T("Esa sala ya no existe. Pulsa otra vez para crear una nueva."); $("b-create").disabled = false; return; }
     } else codigo = await rpc("ev_crear_sala", {p_secret: secret, p_total: n, p_segundos: secs});
-    S = {codigo, secret: sec, list, i: -1, segundos: secs, intro: -1, auto: $("s-auto").checked};
+    const cfg = {modo: concurso ? "concurso" : "clasico", rondas, porRonda, segundos: secs, total: n};
+    S = {codigo, secret: sec, list, i: -1, segundos: secs, intro: -1, auto: $("s-auto").checked, cfg};
+    rpc("ev_config", {p_codigo: codigo, p_secret: sec, p_config: cfg}).catch(() => {});   // los móviles enseñan las reglas en la sala de espera
     store("sab:ev-host", S);
     openLobby();
   }catch(e){ $("setup-err").textContent = T("No se pudo crear la sala:") + " " + e.message; }
@@ -387,6 +407,16 @@ async function nextQuestion(){
   const q = S.list[S.i];
   if (q.tipo && q.nueva && S.intro !== S.i) return showRound(q);
   startQuestion();
+}
+
+// Reglas de la partida antes de la primera pregunta
+function showRules(){
+  if (!S.cfg) return nextQuestion();
+  clearInterval(poll); cancelarAuto();
+  view("v-reglas");
+  $("reglas-body").innerHTML = reglasPartida(S.cfg, T, esc);
+  Sonido.fx("pregunta");
+  programar(S.cfg.modo === "concurso" ? 15 : 10, nextQuestion);
 }
 
 // Ronda de la pregunta siguiente (viaja en la pregunta para que los jugadores en remoto vean su presentación)
@@ -522,14 +552,16 @@ async function finish(){
 }
 
 function advance(){
-  if (!$("v-lobby").classList.contains("hidden") && !$("b-start").disabled) return nextQuestion();
+  if (!$("v-lobby").classList.contains("hidden") && !$("b-start").disabled) return showRules();
+  if (!$("v-reglas").classList.contains("hidden")) return nextQuestion();
   if (!$("v-ronda").classList.contains("hidden")) return startQuestion();
   if (!$("v-q").classList.contains("hidden")) return revealed ? showRanking() : reveal();
   if (!$("v-rank").classList.contains("hidden")) return nextQuestion();
 }
 
 $("b-create").addEventListener("click", createRoom);
-$("b-start").addEventListener("click", nextQuestion);
+$("b-start").addEventListener("click", showRules);
+$("b-reglas").addEventListener("click", nextQuestion);
 $("b-reveal").addEventListener("click", reveal);
 $("b-rank").addEventListener("click", showRanking);
 $("b-next").addEventListener("click", nextQuestion);

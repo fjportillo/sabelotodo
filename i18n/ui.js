@@ -3,6 +3,12 @@
    Si falta una traducción, se muestra el texto en castellano. */
 window.I18N = {
  "ca": {
+  "Cómo se juega": "Com es juga",
+  "Responde desde tu móvil antes de que se acabe el tiempo. Solo vale la primera respuesta.": "Respon des del mòbil abans que s'acabi el temps. Només val la primera resposta.",
+  "{n} preguntas · {s} segundos cada una": "{n} preguntes · {s} segons cadascuna",
+  "Responder rápido da ventaja en casi todas las rondas.": "Respondre ràpid dona avantatge a gairebé totes les rondes.",
+  "Cada acierto da 100 puntos, y hasta 100 más si respondes rápido.": "Cada encert dona 100 punts, i fins a 100 més si respons ràpid.",
+  "Nadie baja de 0 puntos.": "Ningú no baixa de 0 punts.",
   "{n} esperan la siguiente partida": "{n} esperen la propera partida",
   "🔁 Otra partida en esta sala": "🔁 Una altra partida en aquesta sala",
   "Nueva sala": "Sala nova",
@@ -575,6 +581,12 @@ window.I18N = {
   "las preguntas se adaptan a tu nivel: si aciertas, suben; si fallas, bajan.": "les preguntes s'adapten al teu nivell: si encertes, pugen; si falles, baixen."
  },
  "en": {
+  "Cómo se juega": "How to play",
+  "Responde desde tu móvil antes de que se acabe el tiempo. Solo vale la primera respuesta.": "Answer on your phone before time runs out. Only your first answer counts.",
+  "{n} preguntas · {s} segundos cada una": "{n} questions · {s} seconds each",
+  "Responder rápido da ventaja en casi todas las rondas.": "Answering fast gives you an edge in almost every round.",
+  "Cada acierto da 100 puntos, y hasta 100 más si respondes rápido.": "Each correct answer scores 100 points, plus up to 100 more for speed.",
+  "Nadie baja de 0 puntos.": "Nobody drops below 0 points.",
   "{n} esperan la siguiente partida": "{n} waiting for the next game",
   "🔁 Otra partida en esta sala": "🔁 Another game in this room",
   "Nueva sala": "New room",

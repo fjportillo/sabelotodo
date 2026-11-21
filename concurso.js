@@ -29,3 +29,19 @@ function lineasJugada(ps, tipo, T, esc){
   if (fallos.length) L.push(`<span class="menos">❌ ${T("Fallos: {n}", {n: fallos.length})}</span>`);
   return {L, robo: !!(robo && robado), primero: !!primero};
 }
+// Reglas de una partida (pantalla grande antes de empezar y sala de espera de los móviles).
+// cfg = {modo: "concurso"|"clasico", rondas: [...], porRonda, segundos, total}
+function reglasPartida(cfg, T, esc){
+  if (!cfg) return "";
+  const conc = cfg.modo === "concurso" && cfg.rondas && cfg.rondas.length;
+  const gen = [
+    "📱 " + T("Responde desde tu móvil antes de que se acabe el tiempo. Solo vale la primera respuesta."),
+    "⏱ " + T("{n} preguntas · {s} segundos cada una", {n: cfg.total, s: cfg.segundos}),
+    conc ? "⚡ " + T("Responder rápido da ventaja en casi todas las rondas.") : "⚡ " + T("Cada acierto da 100 puntos, y hasta 100 más si respondes rápido."),
+  ];
+  if (conc) gen.push("🛡️ " + T("Nadie baja de 0 puntos."));
+  let h = `<ul class="reglas-gen">${gen.map(g => `<li>${esc(g)}</li>`).join("")}</ul>`;
+  if (conc) h += `<div class="reglas-rondas">${cfg.rondas.map((k, i) => { const r = RONDAS[k]; if (!r) return "";
+    return `<div class="rr"><span class="ic">${r.ico}</span><div><b>${i + 1}. ${esc(T(r.nombre))}</b> <span class="n">· ${esc(T("{n} preguntas", {n: cfg.porRonda}))}</span><br><small>${esc(T(r.reglas))}</small></div></div>`; }).join("")}</div>`;
+  return h;
+}

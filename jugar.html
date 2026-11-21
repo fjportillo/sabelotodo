@@ -104,6 +104,13 @@
   .prox .ic{font-size:34px;line-height:1.1;font-family:"Noto Color Emoji","Apple Color Emoji","Segoe UI Emoji",sans-serif}
   .prox .nm{font-family:"Red Hat Display";font-weight:900;font-size:22px;margin:2px 0 4px}
   .prox p{margin:0;font-size:14px;color:var(--muted)}
+  .reglas-gen{list-style:none;padding:0;margin:0 0 10px;display:grid;gap:6px;font-size:14px;line-height:1.35}
+  .reglas-rondas{display:grid;gap:8px}
+  .rr{display:flex;gap:10px;align-items:flex-start;border-top:1px solid var(--line);padding-top:8px}
+  .rr .ic{font-size:26px;line-height:1;font-family:"Noto Color Emoji","Apple Color Emoji","Segoe UI Emoji",sans-serif}
+  .rr b{font-family:"Red Hat Display";font-weight:900;font-size:15px}
+  .rr .n{color:var(--muted);font-size:12px}
+  .rr small{font-size:13px;color:var(--muted);line-height:1.35}
   .snd-btn{appearance:none;background:transparent;border:1px solid #555;color:var(--text);font-size:16px;line-height:1;padding:6px 7px;cursor:pointer;flex:0 0 auto}
   .snd-btn.off{opacity:.35}
   .lang-sw{display:flex;border:1px solid #3a3b40;flex:0 0 auto}
@@ -149,6 +156,7 @@
     <div class="big" id="wait-title" data-t>¡Estás dentro!</div>
     <p class="center muted" id="wait-text" data-t>Mira la pantalla grande. La partida empezará enseguida.</p>
     <div class="conn" id="wait-players"></div>
+    <div class="card bloque hidden" id="wait-reglas"><h3 data-t>Cómo se juega</h3><div id="wait-reglas-body"></div></div>
   </section>
 
   <!-- PREGUNTA -->
@@ -189,7 +197,7 @@
 </div>
 <script src="concurso.js"></script>
 <script src="sonido.js"></script>
-<script src="i18n/ui.js?v=ac64bb53"></script>
+<script src="i18n/ui.js?v=4c6a9c6c"></script>
 <script src="i18n/marca.js?v=fe450482"></script>
 <script src="i18n/i18n.js?v=7837665f"></script>
 <script>
@@ -257,7 +265,9 @@ async function myStats(){
 async function poll(){
   clearTimeout(pollT);
   try{
-    const s = (await api(`ev_estado?select=estado,idx,total,segundos,pregunta,correcta,deadline,ahora,jugadores,respondidas,partida,en_espera&codigo=eq.${P.codigo}`))[0];
+    let s;
+    try{ s = (await api(`ev_estado?select=${CAMPOS}&codigo=eq.${P.codigo}`))[0]; }
+    catch(e){ if (CAMPOS.endsWith(",config") && /config/.test(e.message)){ CAMPOS = CAMPOS.slice(0, -7); } throw e; }   // base de datos sin reglas.sql
     if (!s){ sessionStorage.removeItem("sab:ev-player"); P = null; view("v-join"); $("join-err").textContent = ERR.SALA_NO_EXISTE; return; }
     offset = Date.parse(s.ahora) - Date.now();
     if (s.partida !== lastPart || myPart === null || myPart > s.partida){    // ¿en qué partida juego yo?
@@ -275,8 +285,13 @@ async function poll(){
 }
 
 // Lo que cambia sin que cambie la pantalla: quién hay en la sala y cuántos han respondido
-let nJug = -1;
+let CAMPOS = "estado,idx,total,segundos,pregunta,correcta,deadline,ahora,jugadores,respondidas,partida,en_espera,config";
+let nJug = -1, cfgVista = "";
 async function vivo(s){
+  if (s.estado === "lobby" || s.espero){                      // reglas de la partida que va a empezar
+    const c = JSON.stringify(s.config || null);
+    if (c !== cfgVista){ cfgVista = c; $("wait-reglas-body").innerHTML = reglasPartida(s.config, T, esc); $("wait-reglas").classList.toggle("hidden", !s.config); }
+  }
   if (s.estado === "lobby" && s.jugadores !== nJug){
     nJug = s.jugadores;
     try{
