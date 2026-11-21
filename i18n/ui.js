@@ -3,6 +3,8 @@
    Si falta una traducción, se muestra el texto en castellano. */
 window.I18N = {
  "ca": {
+  "Ese nombre ya está jugando en esta sala. Si eres tú, abre la partida en el mismo móvil y navegador que usabas; si no, elige otro nombre.": "Aquest nom ja està jugant en aquesta sala. Si ets tu, obre la partida al mateix mòbil i navegador que feies servir; si no, tria un altre nom.",
+  "Saldrás de la sala {code}. Si ha sido sin querer, vuelve a entrar con el mismo nombre y conservarás tus puntos.": "Sortiràs de la sala {code}. Si ha estat sense voler, torna a entrar amb el mateix nom i conservaràs els punts.",
   "La partida": "La partida",
   "Las preguntas": "Les preguntes",
   "Opciones": "Opcions",
@@ -591,6 +593,8 @@ window.I18N = {
   "las preguntas se adaptan a tu nivel: si aciertas, suben; si fallas, bajan.": "les preguntes s'adapten al teu nivell: si encertes, pugen; si falles, baixen."
  },
  "en": {
+  "Ese nombre ya está jugando en esta sala. Si eres tú, abre la partida en el mismo móvil y navegador que usabas; si no, elige otro nombre.": "That name is already playing in this room. If it's you, open the game on the same phone and browser you were using; otherwise, choose another name.",
+  "Saldrás de la sala {code}. Si ha sido sin querer, vuelve a entrar con el mismo nombre y conservarás tus puntos.": "You'll leave room {code}. If it was a mistake, rejoin with the same name and you'll keep your points.",
   "La partida": "The game",
   "Las preguntas": "The questions",
   "Opciones": "Options",

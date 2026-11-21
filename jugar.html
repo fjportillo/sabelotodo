@@ -197,7 +197,7 @@
 </div>
 <script src="concurso.js"></script>
 <script src="sonido.js"></script>
-<script src="i18n/ui.js?v=3c0d8b64"></script>
+<script src="i18n/ui.js?v=5a91daa6"></script>
 <script src="i18n/marca.js?v=fe450482"></script>
 <script src="i18n/i18n.js?v=7837665f"></script>
 <script>
@@ -207,7 +207,7 @@ const SUPABASE_KEY = "sb_publishable_LaMPVutoRf9rrjdmOWzBOw_ZDVX-W-1";
 const $ = id => document.getElementById(id);
 const esc = s => String(s).replace(/[&<>"']/g, m => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[m]));
 const SHAPES = ["▲","◆","●","■"];
-const ERR = {SALA_NO_EXISTE: T("No existe ninguna sala con ese código."), SALA_TERMINADA: T("Esa partida ya ha terminado."), ESPERANDO_SIGUIENTE: T("Entrarás en la siguiente partida."), NOMBRE_OCUPADO: T("Ese nombre ya está cogido en esta sala. Prueba otro."),
+const ERR = {SALA_NO_EXISTE: T("No existe ninguna sala con ese código."), SALA_TERMINADA: T("Esa partida ya ha terminado."), ESPERANDO_SIGUIENTE: T("Entrarás en la siguiente partida."), NOMBRE_OCUPADO: T("Ese nombre ya está jugando en esta sala. Si eres tú, abre la partida en el mismo móvil y navegador que usabas; si no, elige otro nombre."),
   NOMBRE_NO_VALIDO: T("Escribe un nombre (máx. 20 letras)."), SALA_LLENA: T("La sala está llena."), FUERA_DE_TIEMPO: T("¡Se acabó el tiempo!")};
 const nice = m => { for (const k in ERR) if (String(m).includes(k)) return ERR[k]; return T("Error de conexión. Inténtalo de nuevo."); };
 
@@ -220,8 +220,10 @@ async function api(path, opts = {}){
   return txt ? JSON.parse(txt) : null;
 }
 const rpc = (fn, args) => api("rpc/" + fn, {method: "POST", body: JSON.stringify(args)});
-function sget(k){ try{ return JSON.parse(sessionStorage.getItem(k)); }catch(e){ return null; } }
-function sset(k, v){ try{ sessionStorage.setItem(k, JSON.stringify(v)); }catch(e){} }
+// Se guarda en localStorage (no en la pestaña): si el jugador cierra la página sin querer, al volver sigue dentro
+function sget(k){ try{ return JSON.parse(localStorage.getItem(k)); }catch(e){ return null; } }
+function sset(k, v){ try{ localStorage.setItem(k, JSON.stringify(v)); }catch(e){} }
+function sdel(k){ try{ localStorage.removeItem(k); }catch(e){} }
 
 let P = null;               // {codigo, jugador, token, nombre}
 let lastKey = "", myAnswer = {}, offset = 0, tick = null, pollT = null, lastTipo = null, myPart = null, lastPart = null;
@@ -231,6 +233,7 @@ function view(id){ ["v-join","v-wait","v-q","v-res","v-end"].forEach(v => $(v).c
 const params = new URLSearchParams(location.search);
 if (params.get("sala")) $("in-code").value = params.get("sala").toUpperCase().slice(0, 4);
 (() => { const saved = sget("sab:ev-player"); if (saved && (!params.get("sala") || saved.codigo === params.get("sala").toUpperCase())){ P = saved; start(); } })();
+if (!P && sget("sab:ev-nombre")) $("in-name").value = sget("sab:ev-nombre");      // al volver a entrar, su nombre de antes
 if (!P) setTimeout(() => ($("in-code").value ? $("in-name") : $("in-code")).focus(), 100);
 
 async function join(){
@@ -243,7 +246,7 @@ async function join(){
     const r = await rpc("ev_unirse", {p_codigo: codigo, p_nombre: nombre});
     const row = Array.isArray(r) ? r[0] : r;
     P = {codigo, jugador: row.jugador, token: row.token, nombre};
-    sset("sab:ev-player", P); start();
+    sset("sab:ev-player", P); sset("sab:ev-nombre", nombre); start();
   }catch(e){ $("join-err").textContent = nice(e.message); }
   $("b-join").disabled = false;
 }
@@ -268,11 +271,11 @@ async function poll(){
     let s;
     try{ s = (await api(`ev_estado?select=${CAMPOS}&codigo=eq.${P.codigo}`))[0]; }
     catch(e){ if (CAMPOS.endsWith(",config") && /config/.test(e.message)){ CAMPOS = CAMPOS.slice(0, -7); } throw e; }   // base de datos sin reglas.sql
-    if (!s){ sessionStorage.removeItem("sab:ev-player"); P = null; view("v-join"); $("join-err").textContent = ERR.SALA_NO_EXISTE; return; }
+    if (!s){ sdel("sab:ev-player"); P = null; view("v-join"); if (params.get("sala")) $("join-err").textContent = ERR.SALA_NO_EXISTE; return; }
     offset = Date.parse(s.ahora) - Date.now();
     if (s.partida !== lastPart || myPart === null || myPart > s.partida){    // ¿en qué partida juego yo?
       const yo = (await api(`ev_jugadores?select=partida&jugador=eq.${P.jugador}`))[0];
-      if (!yo){ sessionStorage.removeItem("sab:ev-player"); P = null; view("v-join"); $("join-err").textContent = T("Has salido de la sala."); return; }
+      if (!yo){ sdel("sab:ev-player"); P = null; view("v-join"); $("join-err").textContent = T("Has salido de la sala."); return; }
       if (lastPart !== null && s.partida !== lastPart){ myAnswer = {}; saveAns(); }   // empieza otra partida en la sala
       myPart = yo.partida; lastPart = s.partida;
     }
@@ -444,12 +447,12 @@ async function answer(idx, k){
 /* ---------- Salir ---------- */
 function exitGame(){
   if (!P){ location.href = "./"; return; }
-  $("x-text").textContent = T("Saldrás de la sala {code} y tus puntos de esta partida se perderán. Podrás volver a entrar con el código, pero empezarás de cero.", {code: P.codigo});
+  $("x-text").textContent = T("Saldrás de la sala {code}. Si ha sido sin querer, vuelve a entrar con el mismo nombre y conservarás tus puntos.", {code: P.codigo});
   $("x-modal").classList.remove("hidden");
 }
 async function doExit(){
   $("x-yes").disabled = true; clearTimeout(pollT); clearInterval(tick);
-  if (P){ try{ await rpc("ev_salir", {p_jugador: P.jugador, p_token: P.token}); }catch(e){} try{ sessionStorage.removeItem("sab:ev-player"); sessionStorage.removeItem("sab:ev-ans-" + P.codigo); }catch(e){} }
+  if (P){ try{ await rpc("ev_salir", {p_jugador: P.jugador, p_token: P.token}); }catch(e){} sdel("sab:ev-player"); }
   location.href = "./";
 }
 $("b-exit").addEventListener("click", exitGame);
