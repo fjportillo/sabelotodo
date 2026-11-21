@@ -46,11 +46,13 @@
   .opt:active{transform:scale(.97)}
   .o0{background:var(--o0)} .o1{background:var(--o1)} .o2{background:var(--o2);color:#1a1a1a} .o3{background:var(--o3);color:#1a1a1a}
   .opt:disabled{opacity:.25} .opt.mine{opacity:1;outline:5px solid #fff;outline-offset:-5px}
-  .res{padding:30px 20px;text-align:center}
+  .res{display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:2px 12px;padding:12px 14px;text-align:left}
   .res.ok{background:var(--ok);color:#06150d} .res.bad{background:var(--bad);color:#fff} .res.none{background:var(--panel);border:1px solid var(--line)}
-  .res .ic{font-size:70px;line-height:1}
-  .res .tt{font-family:"Red Hat Display";font-weight:900;font-size:30px;margin-top:8px}
-  .res .ex{font-size:16px;margin-top:8px}
+  .res .ic{font-size:40px;line-height:1;grid-row:span 2}
+  .res .tt{font-family:"Red Hat Display";font-weight:900;font-size:22px;margin:0}
+  .res .ex{font-size:14px;margin:0;grid-column:2}
+  .res .yo{grid-column:3;grid-row:1 / span 2;text-align:right;font-family:"Red Hat Display";font-weight:900;font-size:22px;line-height:1.1}
+  .res .yo small{display:block;font-size:12px;font-weight:700;opacity:.8}
   .stat{display:flex;justify-content:space-around;font-family:"Red Hat Display";text-align:center}
   .stat b{display:block;font-size:30px;font-weight:900}
   .stat span{font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:1px}
@@ -72,24 +74,24 @@
   .q-ronda.nueva{animation:pop .5s;background:var(--panel);border:1px solid var(--line);padding:10px}
   @keyframes pop{from{transform:scale(.8);opacity:0}to{transform:scale(1);opacity:1}}
   .qbar .vale{color:#ffd76a}
-  .res .pq{font-family:"Red Hat Display";font-weight:900;font-size:26px;margin-top:12px}
+  .res .pq{font-family:"Red Hat Display";font-weight:900;font-size:18px;margin-top:8px;grid-column:1 / -1;text-align:center}
   @media (max-width:430px){ header .t{display:none} header{gap:8px;padding:10px} }
   /* Para quien juega en remoto: todo lo que enseña la pantalla grande */
   .conn{text-align:center;margin-top:18px}
   .conn .n{font-family:"Red Hat Display";font-weight:800;color:var(--muted);font-size:14px;margin-bottom:8px}
   .conn .chips{display:flex;flex-wrap:wrap;gap:6px;justify-content:center}
   .conn .chips span{background:var(--panel);border:1px solid var(--line);padding:5px 10px;font-size:14px}
-  .bloque{margin-top:14px}
+  .bloque{margin-top:10px;padding:12px 14px}
   .bloque h3{font-family:"Red Hat Display";font-weight:900;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin:0 0 8px}
-  .vt{display:grid;grid-template-columns:22px 1fr auto;gap:8px;align-items:center;margin:6px 0;font-size:14px}
-  .vt .bar{position:relative;background:#000;border:1px solid var(--line);height:26px;overflow:hidden}
+  .vt{display:grid;grid-template-columns:18px 1fr auto;gap:6px;align-items:center;margin:4px 0;font-size:13px}
+  .vt .bar{position:relative;background:#000;border:1px solid var(--line);height:22px;overflow:hidden}
   .vt .bar i{position:absolute;left:0;top:0;bottom:0;opacity:.85}
-  .vt .bar span{position:relative;padding:0 8px;line-height:26px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;display:block}
+  .vt .bar span{position:relative;padding:0 8px;line-height:22px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;display:block}
   .vt.ok .bar{border-color:var(--ok)} .vt.ok b{color:var(--ok)}
   .vt .pc{font-family:"Red Hat Display";font-weight:900;min-width:44px;text-align:right}
-  .jugada{font-family:"Red Hat Display";font-weight:800;font-size:16px;line-height:1.45;text-align:center;margin-top:12px}
+  .jugada{font-family:"Red Hat Display";font-weight:800;font-size:15px;line-height:1.4;text-align:center;margin-top:10px}
   .jugada .menos{color:var(--bad)}
-  .rk{display:grid;grid-template-columns:34px 1fr auto;gap:8px;align-items:center;padding:7px 4px;border-bottom:1px solid var(--line);font-size:15px}
+  .rk{display:grid;grid-template-columns:30px 1fr auto;gap:8px;align-items:center;padding:5px 4px;border-bottom:1px solid var(--line);font-size:15px}
   .rk:last-child{border-bottom:0}
   .rk .p{font-family:"Red Hat Display";font-weight:900;text-align:center}
   .rk .nm{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
@@ -97,9 +99,9 @@
   .rk .dl{font-size:12px;margin-left:6px} .rk .dl.mas{color:var(--ok)} .rk .dl.menos{color:var(--bad)}
   .rk.yo{background:rgba(255,255,255,.07);outline:1px solid var(--blue2)}
   .rk.gap{display:block;text-align:center;color:var(--muted);padding:2px}
-  .prox{margin-top:14px;text-align:center;border:1px solid var(--blue2);background:var(--panel);padding:14px;animation:pop .5s}
+  .prox{margin-top:10px;text-align:center;border:1px solid var(--blue2);background:var(--panel);padding:10px 12px;animation:pop .5s}
   .prox .k{font-family:"Red Hat Display";font-weight:900;font-size:11px;letter-spacing:3px;text-transform:uppercase;color:var(--muted)}
-  .prox .ic{font-size:44px;line-height:1.1;font-family:"Noto Color Emoji","Apple Color Emoji","Segoe UI Emoji",sans-serif}
+  .prox .ic{font-size:34px;line-height:1.1;font-family:"Noto Color Emoji","Apple Color Emoji","Segoe UI Emoji",sans-serif}
   .prox .nm{font-family:"Red Hat Display";font-weight:900;font-size:22px;margin:2px 0 4px}
   .prox p{margin:0;font-size:14px;color:var(--muted)}
   .snd-btn{appearance:none;background:transparent;border:1px solid #555;color:var(--text);font-size:16px;line-height:1;padding:6px 7px;cursor:pointer;flex:0 0 auto}
@@ -152,7 +154,7 @@
   <!-- PREGUNTA -->
   <section id="v-q" class="hidden" style="display:flex;flex-direction:column;gap:12px;flex:1">
     <div class="q-ronda hidden" id="q-ronda"></div>
-    <div class="qbar"><span id="q-num"></span><span class="vale" id="q-vale"></span><span class="tm" id="q-tm"></span></div>
+    <div class="qbar"><span id="q-num"></span><span class="vale" id="q-vale"></span><span id="q-cnt" class="muted"></span><span class="tm" id="q-tm"></span></div>
     <div class="qvis hidden" id="q-vis"></div>
     <div class="qtext" id="q-text"></div>
     <div class="opts" id="q-opts"></div>
@@ -161,12 +163,13 @@
 
   <!-- RESULTADO -->
   <section id="v-res" class="hidden">
-    <div class="res" id="res-box"><div class="ic" id="res-ic"></div><div class="tt" id="res-tt"></div><div class="ex" id="res-ex"></div><div class="pq hidden" id="res-pq"></div></div>
-    <div class="card stat" style="margin-top:14px"><div><b id="res-pos">–</b><span data-t>Puesto</span></div><div><b id="res-pts">0</b><span data-t>Puntos</span></div><div><b id="res-ok">0</b><span data-t>Aciertos</span></div></div>
+    <div class="res" id="res-box"><div class="ic" id="res-ic"></div><div class="tt" id="res-tt"></div><div class="ex" id="res-ex"></div>
+      <div class="yo"><span id="res-pos">–</span><small><span id="res-pts">0</span> <span data-t>pts</span> · <span id="res-ok">0</span> ✔</small></div>
+      <div class="pq hidden" id="res-pq"></div></div>
     <div class="jugada hidden" id="res-jugada"></div>
-    <div class="card bloque" id="res-votos-box"><h3 data-t>Así ha respondido la gente</h3><div id="res-votos"></div></div>
     <div class="card bloque" id="res-rank-box"><h3 data-t>Clasificación</h3><div id="res-rank"></div></div>
     <div class="prox hidden" id="res-prox"></div>
+    <div class="card bloque" id="res-votos-box"><h3 data-t>Así ha respondido la gente</h3><div id="res-votos"></div></div>
     <p class="center muted" data-t>Espera a la siguiente pregunta…</p>
   </section>
 
@@ -281,6 +284,7 @@ async function vivo(s){
       $("wait-players").innerHTML = `<div class="n">${esc(T("Jugadores conectados: {n}", {n: js.length}))}</div><div class="chips">${js.map(j => `<span>${esc(j.nombre)}</span>`).join("")}</div>`;
     }catch(e){}
   }
+  if (s.estado === "pregunta" && !s.espero) $("q-cnt").textContent = "👥 " + s.respondidas + "/" + s.jugadores;
   if (s.estado === "pregunta" && myAnswer[s.idx] !== undefined && myAnswer[s.idx] >= 0)
     $("q-msg").textContent = T("Respuesta enviada ✅") + " · " + T("{a}/{b} han respondido", {a: s.respondidas, b: s.jugadores});
 }
