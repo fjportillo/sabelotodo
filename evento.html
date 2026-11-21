@@ -88,6 +88,22 @@
   .xmodal .yes{background:var(--bad);color:#fff} .xmodal .no{background:#000;color:var(--text);border:1px solid var(--line) !important}
   header .room{margin-left:auto}
   header .exit-btn{margin-left:18px}
+  /* Modo concurso */
+  .rondas{display:flex;flex-wrap:wrap;gap:8px}
+  .rondas label{display:flex;align-items:center;gap:6px;margin:0;background:#000;border:1px solid var(--line);padding:8px 12px;cursor:pointer;font-size:15px}
+  .rondas input{accent-color:var(--blue);width:18px;height:18px;margin:0}
+  .rondas label:has(input:not(:checked)){opacity:.45}
+  .ronda-intro{text-align:center;max-width:1100px}
+  .ronda-intro .ic{font-size:clamp(90px,14vw,180px);line-height:1;font-family:"Noto Color Emoji","Apple Color Emoji","Segoe UI Emoji",sans-serif;animation:pop .5s}
+  .ronda-intro .k{font-family:"Red Hat Display";font-weight:900;letter-spacing:6px;text-transform:uppercase;color:var(--muted);font-size:clamp(16px,2vw,26px);margin-top:10px}
+  .ronda-intro h1{font-size:clamp(54px,9vw,130px);margin:4px 0 14px}
+  .ronda-intro p{font-family:"Red Hat Display";font-weight:700;font-size:clamp(22px,3vw,42px);line-height:1.3;margin:0}
+  .q-ronda{font-family:"Red Hat Display";font-weight:800;font-size:clamp(15px,1.6vw,24px);color:var(--blue2);margin:-4px 0 10px;text-align:center}
+  .q-ronda b{color:var(--text)}
+  .vale{font-family:"Red Hat Display";font-weight:900;font-size:clamp(16px,1.8vw,28px);color:#ffd76a;text-align:center;min-height:1.2em}
+  .jugada{font-family:"Red Hat Display";font-weight:900;font-size:clamp(20px,2.6vw,40px);text-align:center;margin-top:16px;line-height:1.35}
+  .jugada .menos{color:var(--bad)} .jugada .mas{color:var(--ok)}
+  .rank-row .dl{font-size:.65em;margin-left:12px;font-weight:900} .rank-row .dl.mas{color:var(--ok)} .rank-row .dl.menos{color:var(--bad)}
   .lang-sw{display:flex;border:1px solid #3a3b40;flex:0 0 auto}
   .lang-sw button{appearance:none;cursor:pointer;background:transparent;color:#9a9a94;border:0;font-family:"Red Hat Display";font-weight:800;font-size:12px;letter-spacing:1px;padding:6px 8px}
   .lang-sw button+button{border-left:1px solid #3a3b40}
@@ -117,8 +133,16 @@
   <section id="v-setup" class="card">
     <h1 data-t>Modo evento</h1>
     <p class="muted center" data-t>Proyecta esta pantalla. Cada jugador responde desde su móvil escaneando el QR.</p>
+    <label for="s-modo" data-t>Tipo de partida</label>
+    <select id="s-modo"><option value="concurso" data-t>Concurso por rondas</option><option value="clasico" data-t>Clásica (todas las preguntas puntúan igual)</option></select>
+    <div id="s-rondas-box">
+      <label data-t>Rondas</label>
+      <div class="rondas" id="s-rondas"></div>
+      <label for="s-porronda" data-t>Preguntas por ronda</label>
+      <select id="s-porronda"><option>2</option><option selected>3</option><option>4</option><option>5</option></select>
+    </div>
     <div class="row">
-      <div><label for="s-count" data-t>Preguntas</label>
+      <div id="s-count-box"><label for="s-count" data-t>Preguntas</label>
         <select id="s-count"><option>5</option><option selected>10</option><option>15</option><option>20</option></select></div>
       <div><label for="s-secs" data-t>Segundos por pregunta</label>
         <select id="s-secs"><option>15</option><option selected>20</option><option>30</option></select></div>
@@ -148,6 +172,18 @@
     </div>
   </section>
 
+  <!-- PRESENTACIÓN DE RONDA (modo concurso) -->
+  <section id="v-ronda" class="hidden" style="width:100%;display:flex;flex-direction:column;align-items:center">
+    <div class="ronda-intro">
+      <div class="ic" id="r-ic"></div>
+      <div class="k" id="r-k"></div>
+      <h1 id="r-nombre"></h1>
+      <p id="r-reglas"></p>
+    </div>
+    <div class="controls"><button class="btn" id="b-ronda" data-t>¡Adelante!</button></div>
+    <p class="hint" data-t>Atajo: barra espaciadora para avanzar</p>
+  </section>
+
   <!-- PREGUNTA / RESULTADO -->
   <section id="v-q" class="hidden" style="width:100%;display:flex;flex-direction:column;align-items:center">
     <div class="q-top">
@@ -155,9 +191,12 @@
       <div class="timer" id="q-timer">20</div>
       <span class="answered"><b id="q-ans">0</b>/<span id="q-players">0</span> <span data-t>han respondido</span></span>
     </div>
+    <div class="q-ronda hidden" id="q-ronda"></div>
     <div class="q-vis hidden" id="q-vis"></div>
     <h2 class="q-text" id="q-text"></h2>
+    <div class="vale" id="q-vale"></div>
     <div class="opts" id="q-opts"></div>
+    <div class="jugada hidden" id="q-jugada"></div>
     <div class="controls">
       <button class="btn hidden" id="b-reveal" data-t>Mostrar respuesta</button>
       <button class="btn hidden" id="b-rank" data-t>Ver clasificación</button>
@@ -185,7 +224,8 @@
   <div class="box"><h4 data-t>¿Salir del modo evento?</h4><p id="x-text"></p>
     <div class="acts"><button class="yes" id="x-yes" data-t>Sí, salir</button><button class="no" id="x-no" data-t>Cancelar</button></div></div>
 </div>
-<script src="i18n/ui.js?v=602917aa"></script>
+<script src="concurso.js"></script>
+<script src="i18n/ui.js?v=a1e45a12"></script>
 <script src="i18n/marca.js?v=fe450482"></script>
 <script src="i18n/i18n.js?v=7837665f"></script>
 <script>
@@ -241,11 +281,15 @@ async function loadBank(){
 /* ---------- Estado del presentador ---------- */
 let S = null;        // {codigo, secret, list, i, segundos}
 let poll = null, tick = null, offset = 0, revealed = false;
-function view(id){ ["v-setup","v-lobby","v-q","v-rank","v-end"].forEach(v => $(v).classList.toggle("hidden", v !== id)); }
+function view(id){ ["v-setup","v-lobby","v-ronda","v-q","v-rank","v-end"].forEach(v => $(v).classList.toggle("hidden", v !== id)); }
 
 async function createRoom(){
   $("setup-err").textContent = "";
-  const cat = $("s-cat").value, diff = $("s-diff").value, n = +$("s-count").value, secs = +$("s-secs").value;
+  const cat = $("s-cat").value, diff = $("s-diff").value, secs = +$("s-secs").value;
+  const concurso = $("s-modo").value === "concurso";
+  const rondas = concurso ? [...document.querySelectorAll("#s-rondas input:checked")].map(x => x.value) : [];
+  if (concurso && !rondas.length){ $("setup-err").textContent = T("Elige al menos una ronda."); return; }
+  const porRonda = +$("s-porronda").value, n = concurso ? rondas.length * porRonda : +$("s-count").value;
   let pool = BANK.filter(b => (!cat || b.cat === cat) && (!diff || b.diff === diff));
   if (pool.length < n){ $("setup-err").textContent = T("Solo hay {n} preguntas con esa combinación. Elige menos preguntas u otra categoría.", {n: pool.length}); return; }
   // Mismo orden de respuestas en los tres idiomas: cada móvil muestra la pregunta en su idioma
@@ -255,11 +299,12 @@ async function createRoom(){
     for (const l of ["ca", "en"]){ const t = I18NX.translateQ(TRMAPS[l], b); tr[l] = {texto: t.texto, opciones: perm.map(i => t.base[i] || base[i])}; }
     return {...b, opts, correct: perm.indexOf(0), tr};
   });
+  if (concurso) list.forEach((q, i) => { q.tipo = rondas[Math.floor(i / porRonda)]; q.nueva = i % porRonda === 0; q.ronda = Math.floor(i / porRonda) + 1; q.rondas = rondas.length; });
   const secret = (crypto.randomUUID ? crypto.randomUUID() : Math.random().toString(36).slice(2)) + Math.random().toString(36).slice(2);
   $("b-create").disabled = true;
   try{
     const codigo = await rpc("ev_crear_sala", {p_secret: secret, p_total: n, p_segundos: secs});
-    S = {codigo, secret, list, i: -1, segundos: secs};
+    S = {codigo, secret, list, i: -1, segundos: secs, intro: -1};
     store("sab:ev-host", S);
     openLobby();
   }catch(e){ $("setup-err").textContent = T("No se pudo crear la sala:") + " " + e.message; }
@@ -292,8 +337,29 @@ async function nextQuestion(){
   clearInterval(poll); clearInterval(tick);
   S.i++; store("sab:ev-host", S);
   if (S.i >= S.list.length) return finish();
+  const q = S.list[S.i];
+  if (q.tipo && q.nueva && S.intro !== S.i) return showRound(q);
+  startQuestion();
+}
+
+function showRound(q){
+  S.intro = S.i; store("sab:ev-host", S);
+  const r = RONDAS[q.tipo];
+  view("v-ronda");
+  $("r-ic").textContent = r.ico;
+  $("r-k").textContent = q.tipo === "final" ? T("Última ronda") : T("Ronda {i} de {n}", {i: q.ronda, n: q.rondas});
+  $("r-nombre").textContent = T(r.nombre);
+  $("r-reglas").textContent = T(r.reglas);
+}
+
+async function startQuestion(){
+  clearInterval(poll); clearInterval(tick);
   const q = S.list[S.i]; revealed = false;
   view("v-q");
+  const r = q.tipo && RONDAS[q.tipo];
+  $("q-ronda").classList.toggle("hidden", !r);
+  if (r) $("q-ronda").innerHTML = `${r.ico} <b>${esc(T(r.nombre))}</b> · ${esc(T(r.corto))}`;
+  $("q-vale").textContent = ""; $("q-jugada").classList.add("hidden");
   $("q-num").textContent = T("Pregunta {i} de {n}", {i: S.i + 1, n: S.list.length});
   const shown = LANG !== "es" && q.tr && q.tr[LANG] ? q.tr[LANG] : {texto: q.q, opciones: q.opts};
   $("q-text").textContent = shown.texto;
@@ -304,14 +370,16 @@ async function nextQuestion(){
   $("b-reveal").classList.remove("hidden"); $("b-rank").classList.add("hidden");
   $("q-ans").textContent = "0";
   try{
-    await rpc("ev_pregunta", {p_codigo: S.codigo, p_secret: S.secret, p_idx: S.i, p_pregunta: {texto: q.q, opciones: q.opts, cat: q.cat, vis: q.vis, tr: q.tr || null}});
+    await rpc("ev_pregunta", {p_codigo: S.codigo, p_secret: S.secret, p_idx: S.i, p_pregunta: {texto: q.q, opciones: q.opts, cat: q.cat, vis: q.vis, tr: q.tr || null, tipo: q.tipo || null}});
   }catch(e){ alert(T("Error de conexión:") + " " + e.message); return; }
   const st = (await api(`ev_estado?select=deadline,ahora,jugadores&codigo=eq.${S.codigo}`))[0];
   offset = Date.parse(st.ahora) - Date.now();
-  const deadline = Date.parse(st.deadline);
+  const deadline = Date.parse(st.deadline), inicio = deadline - S.segundos * 1000;
   $("q-players").textContent = st.jugadores;
   const draw = () => {
     const left = Math.max(0, Math.ceil((deadline - (Date.now() + offset)) / 1000));
+    const vale = valeAhora(q.tipo, Date.now() + offset - inicio, S.segundos);
+    if (vale !== null) $("q-vale").textContent = T("Acertar ahora vale {n} puntos", {n: vale});
     $("q-timer").textContent = left; $("q-timer").classList.toggle("low", left <= 5);
     if (left <= 0 && !revealed) reveal();
   };
@@ -322,7 +390,7 @@ async function nextQuestion(){
       $("q-ans").textContent = s.respondidas; $("q-players").textContent = s.jugadores;
       if (s.jugadores > 0 && s.respondidas >= s.jugadores && !revealed) reveal();
     }catch(e){}
-  }, 1000);
+  }, q.tipo ? 600 : 1000);
 }
 
 async function reveal(){
@@ -340,8 +408,26 @@ async function reveal(){
     q.opts.forEach((_, k) => { const v = (votes.find(x => x.opcion === k) || {votos: 0}).votos;
       $("n" + k).textContent = v; $("n" + k).classList.remove("hidden"); $("bar" + k).style.width = (v / total * 100) + "%"; });
   }catch(e){}
+  if (q.tipo) showPlay(q);
   $("b-reveal").classList.add("hidden"); $("b-rank").classList.remove("hidden");
   $("b-rank").textContent = S.i + 1 >= S.list.length ? T("Ver resultado final") : T("Ver clasificación");
+}
+
+// Lo que ha pasado en la pregunta según la ronda: el más rápido, robos, fallos…
+async function showPlay(q){
+  try{
+    const ps = await api(`ev_puntos?select=nombre,puntos,motivo&codigo=eq.${S.codigo}&idx=eq.${S.i}&order=puntos.desc`);
+    const by = m => ps.filter(p => p.motivo === m), L = [];
+    const robo = by("robo")[0], robado = by("robado")[0], primero = by("primero")[0], fallos = by("fallo");
+    if (robo && robado) L.push(`🦹 ${T("¡{a} roba {n} puntos a {b}!", {a: esc(robo.nombre), n: robo.puntos - 50, b: esc(robado.nombre)})}`);
+    if (q.tipo === "robo" && by("acierto").length) L.push(`✅ ${T("Aciertos: {n} (+50 cada uno)", {n: by("acierto").length + (robo ? 1 : 0)})}`);
+    if (primero) L.push(`⚡ ${T("¡{a} ha sido el más rápido! +{n}", {a: esc(primero.nombre), n: primero.puntos})}`);
+    else if (q.tipo === "rapido") L.push(T("Nadie ha acertado"));
+    if ((q.tipo === "contrarreloj" || q.tipo === "final") && by("acierto").length){ const b = by("acierto")[0]; L.push(`🏅 ${T("Mejor jugada: {a} +{n}", {a: esc(b.nombre), n: b.puntos})}`); }
+    if (q.tipo === "calentamiento") L.push(`✅ ${T("Aciertos: {n}", {n: by("acierto").length})}`);
+    if (fallos.length) L.push(`<span class="menos">❌ ${T("Fallos: {n}", {n: fallos.length})}</span>`);
+    if (L.length){ $("q-jugada").innerHTML = L.join("<br>"); $("q-jugada").classList.remove("hidden"); }
+  }catch(e){}
 }
 
 async function showRanking(){
@@ -350,7 +436,9 @@ async function showRanking(){
   $("rank-list").innerHTML = `<p class='muted center'>${T("Calculando…")}</p>`;
   try{
     const rows = await api(`ev_ranking?select=nombre,puntos,aciertos&codigo=eq.${S.codigo}&order=puntos.desc,aciertos.desc&limit=10`);
-    $("rank-list").innerHTML = rows.map((r, i) => `<div class="rank-row ${i < 3 ? "r" + (i+1) : ""}" style="animation-delay:${i * 80}ms"><span class="p">${["🥇","🥈","🥉"][i] || i + 1}</span><span class="nm">${esc(r.nombre)}</span><span class="pt">${r.puntos}</span></div>`).join("") || `<p class='muted center'>${T("Nadie ha puntuado todavía")}</p>`;
+    let dl = {}; try{ (await api(`ev_puntos?select=nombre,puntos&codigo=eq.${S.codigo}&idx=eq.${S.i}`)).forEach(p => dl[p.nombre] = p.puntos); }catch(e){}
+    const delta = n => dl[n] ? `<span class="dl ${dl[n] > 0 ? "mas" : "menos"}">${dl[n] > 0 ? "+" : "−"}${Math.abs(dl[n])}</span>` : "";
+    $("rank-list").innerHTML = rows.map((r, i) => `<div class="rank-row ${i < 3 ? "r" + (i+1) : ""}" style="animation-delay:${i * 80}ms"><span class="p">${["🥇","🥈","🥉"][i] || i + 1}</span><span class="nm">${esc(r.nombre)}</span><span class="pt">${r.puntos}${delta(r.nombre)}</span></div>`).join("") || `<p class='muted center'>${T("Nadie ha puntuado todavía")}</p>`;
   }catch(e){ $("rank-list").innerHTML = `<p class='err center'>${T("No se pudo cargar la clasificación")}</p>`; }
 }
 
@@ -369,6 +457,7 @@ async function finish(){
 
 function advance(){
   if (!$("v-lobby").classList.contains("hidden") && !$("b-start").disabled) return nextQuestion();
+  if (!$("v-ronda").classList.contains("hidden")) return startQuestion();
   if (!$("v-q").classList.contains("hidden")) return revealed ? showRanking() : reveal();
   if (!$("v-rank").classList.contains("hidden")) return nextQuestion();
 }
@@ -378,6 +467,11 @@ $("b-start").addEventListener("click", nextQuestion);
 $("b-reveal").addEventListener("click", reveal);
 $("b-rank").addEventListener("click", showRanking);
 $("b-next").addEventListener("click", nextQuestion);
+$("b-ronda").addEventListener("click", startQuestion);
+// Selector de rondas del modo concurso
+$("s-rondas").innerHTML = RONDAS_ORDEN.map(k => `<label title="${esc(T(RONDAS[k].reglas))}"><input type="checkbox" value="${k}" checked> ${RONDAS[k].ico} ${esc(T(RONDAS[k].nombre))}</label>`).join("");
+const setupModo = () => { const c = $("s-modo").value === "concurso"; $("s-rondas-box").classList.toggle("hidden", !c); $("s-count-box").classList.toggle("hidden", c); };
+$("s-modo").addEventListener("change", setupModo); setupModo();
 $("b-new").addEventListener("click", () => { S = null; $("room-tag").classList.add("hidden"); view("v-setup"); });
 document.addEventListener("keydown", e => { if (!$("x-modal").classList.contains("hidden")) return; if (e.key === " " || e.key === "Enter"){ if (document.activeElement && document.activeElement.tagName === "SELECT") return; e.preventDefault(); advance(); } });
 

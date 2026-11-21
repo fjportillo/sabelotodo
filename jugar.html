@@ -67,6 +67,13 @@
   .xmodal .acts button{flex:1;min-width:140px;appearance:none;border:0;cursor:pointer;font-family:"Red Hat Display";font-weight:900;text-transform:uppercase;letter-spacing:1px;font-size:15px;padding:14px}
   .xmodal .yes{background:var(--bad);color:#fff} .xmodal .no{background:#000;color:var(--text);border:1px solid var(--line) !important}
   header .exit-btn{margin-left:12px;padding:8px 10px;font-size:12px}
+  .q-ronda{font-family:"Red Hat Display";font-weight:800;font-size:14px;color:var(--blue2);text-align:center;line-height:1.3}
+  .q-ronda b{color:var(--text);font-size:16px}
+  .q-ronda.nueva{animation:pop .5s;background:var(--panel);border:1px solid var(--line);padding:10px}
+  @keyframes pop{from{transform:scale(.8);opacity:0}to{transform:scale(1);opacity:1}}
+  .qbar .vale{color:#ffd76a}
+  .res .pq{font-family:"Red Hat Display";font-weight:900;font-size:26px;margin-top:12px}
+  @media (max-width:430px){ header .t{display:none} header{gap:8px;padding:10px} }
   .lang-sw{display:flex;border:1px solid #3a3b40;flex:0 0 auto}
   .lang-sw button{appearance:none;cursor:pointer;background:transparent;color:#9a9a94;border:0;font-family:"Red Hat Display";font-weight:800;font-size:12px;letter-spacing:1px;padding:6px 8px}
   .lang-sw button+button{border-left:1px solid #3a3b40}
@@ -112,7 +119,8 @@
 
   <!-- PREGUNTA -->
   <section id="v-q" class="hidden" style="display:flex;flex-direction:column;gap:12px;flex:1">
-    <div class="qbar"><span id="q-num"></span><span class="tm" id="q-tm"></span></div>
+    <div class="q-ronda hidden" id="q-ronda"></div>
+    <div class="qbar"><span id="q-num"></span><span class="vale" id="q-vale"></span><span class="tm" id="q-tm"></span></div>
     <div class="qvis hidden" id="q-vis"></div>
     <div class="qtext" id="q-text"></div>
     <div class="opts" id="q-opts"></div>
@@ -121,7 +129,7 @@
 
   <!-- RESULTADO -->
   <section id="v-res" class="hidden">
-    <div class="res" id="res-box"><div class="ic" id="res-ic"></div><div class="tt" id="res-tt"></div><div class="ex" id="res-ex"></div></div>
+    <div class="res" id="res-box"><div class="ic" id="res-ic"></div><div class="tt" id="res-tt"></div><div class="ex" id="res-ex"></div><div class="pq hidden" id="res-pq"></div></div>
     <div class="card stat" style="margin-top:14px"><div><b id="res-pos">–</b><span data-t>Puesto</span></div><div><b id="res-pts">0</b><span data-t>Puntos</span></div><div><b id="res-ok">0</b><span data-t>Aciertos</span></div></div>
     <p class="center muted" data-t>Espera a la siguiente pregunta…</p>
   </section>
@@ -138,7 +146,8 @@
   <div class="box"><h4 data-t>¿Salir de la partida?</h4><p id="x-text"></p>
     <div class="acts"><button class="yes" id="x-yes" data-t>Sí, salir</button><button class="no" id="x-no" data-t>Cancelar</button></div></div>
 </div>
-<script src="i18n/ui.js?v=602917aa"></script>
+<script src="concurso.js"></script>
+<script src="i18n/ui.js?v=a1e45a12"></script>
 <script src="i18n/marca.js?v=fe450482"></script>
 <script src="i18n/i18n.js?v=7837665f"></script>
 <script>
@@ -165,7 +174,7 @@ function sget(k){ try{ return JSON.parse(sessionStorage.getItem(k)); }catch(e){ 
 function sset(k, v){ try{ sessionStorage.setItem(k, JSON.stringify(v)); }catch(e){} }
 
 let P = null;               // {codigo, jugador, token, nombre}
-let lastKey = "", myAnswer = {}, offset = 0, tick = null, pollT = null;
+let lastKey = "", myAnswer = {}, offset = 0, tick = null, pollT = null, lastTipo = null;
 const saveAns = () => P && sset("sab:ev-ans-" + P.codigo, myAnswer);
 function view(id){ ["v-join","v-wait","v-q","v-res","v-end"].forEach(v => $(v).classList.toggle("hidden", v !== id)); }
 
@@ -227,10 +236,17 @@ async function render(s){
     if (q.vis && !/^(img\/|https?:)|\.(png|jpe?g|webp|gif)$/i.test(q.vis)){ $("q-vis").textContent = q.vis; $("q-vis").classList.remove("hidden"); } else $("q-vis").classList.add("hidden");
     $("q-opts").innerHTML = (tq.opciones || q.opciones || []).map((o, k) => `<button class="opt o${k}" data-k="${k}"><span class="sh">${SHAPES[k]}</span><span>${esc(o)}</span></button>`).join("");
     $("q-opts").querySelectorAll(".opt").forEach(b => b.addEventListener("click", () => answer(s.idx, +b.dataset.k)));
+    const r = q.tipo && RONDAS[q.tipo];
+    $("q-ronda").classList.toggle("hidden", !r);
+    if (r){ $("q-ronda").innerHTML = `${r.ico} <b>${esc(T(r.nombre))}</b><br>${esc(T(r.corto))}`; $("q-ronda").classList.toggle("nueva", q.tipo !== lastTipo); }
+    lastTipo = q.tipo || null;
+    $("q-vale").textContent = "";
     $("q-msg").textContent = "";
     if (mine !== undefined) lock(mine, T("Respuesta enviada ✅ Mira la pantalla…"));
-    const deadline = Date.parse(s.deadline);
+    const deadline = Date.parse(s.deadline), inicio = deadline - s.segundos * 1000;
     const draw = () => { const left = Math.max(0, Math.ceil((deadline - (Date.now() + offset)) / 1000));
+      const vale = myAnswer[s.idx] === undefined ? valeAhora(q.tipo, Date.now() + offset - inicio, s.segundos) : null;
+      $("q-vale").textContent = vale !== null ? "💰 " + vale : "";
       $("q-tm").textContent = "⏱ " + left + " s"; $("q-tm").classList.toggle("low", left <= 5);
       if (left <= 0 && myAnswer[s.idx] === undefined) lock(-1, T("¡Se acabó el tiempo!")); };
     draw(); tick = setInterval(draw, 250);
@@ -246,6 +262,8 @@ async function render(s){
     const tqr = LANG !== "es" && q.tr && q.tr[LANG] ? q.tr[LANG] : q;
     $("res-ex").textContent = T("Respuesta:") + " " + ((tqr.opciones || q.opciones || [])[s.correcta] || "");
     if (navigator.vibrate) try{ navigator.vibrate(ok ? 80 : [60, 60, 60]); }catch(e){}
+    $("res-pq").classList.add("hidden");
+    if (q.tipo) myPlay(s.idx, ok && q.tipo === "rapido");
     const st = await myStats();
     if (st){ $("res-pos").textContent = st.pos ? "#" + st.pos : "–"; $("res-pts").textContent = st.pts; $("res-ok").textContent = st.ok; }
     return;
@@ -261,6 +279,21 @@ async function render(s){
   }
 }
 
+// Puntos ganados o perdidos en la pregunta (modo concurso)
+async function myPlay(idx, lento){
+  try{
+    const ps = await api(`ev_puntos?select=jugador,nombre,puntos,motivo&codigo=eq.${P.codigo}&idx=eq.${idx}`);
+    const me = ps.find(p => p.jugador === P.jugador), robado = ps.find(p => p.motivo === "robado"), robo = ps.find(p => p.motivo === "robo");
+    let t = "";
+    if (!me) t = lento ? "+0 · " + T("Otro fue más rápido") : "+0";
+    else if (me.motivo === "robo") t = `🦹 ${T("¡Has robado {n} puntos a {b}!", {n: me.puntos - 50, b: robado ? robado.nombre : "?"})} (+${me.puntos})`;
+    else if (me.motivo === "robado") t = `😱 ${T("¡{a} te ha robado {n} puntos!", {a: robo ? robo.nombre : "?", n: robo ? robo.puntos - 50 : -me.puntos})}`;
+    else if (me.motivo === "primero") t = `⚡ ${T("¡Has sido el más rápido!")} +${me.puntos}`;
+    else t = me.puntos > 0 ? "+" + me.puntos : me.puntos < 0 ? "−" + -me.puntos : "+0";
+    if (t){ $("res-pq").textContent = t; $("res-pq").classList.remove("hidden"); }
+  }catch(e){}
+}
+
 function lock(k, msg){
   $("q-opts").querySelectorAll(".opt").forEach(b => { b.disabled = true; b.classList.toggle("mine", +b.dataset.k === k); });
   $("q-msg").textContent = msg;
@@ -269,6 +302,7 @@ function lock(k, msg){
 async function answer(idx, k){
   if (myAnswer[idx] !== undefined) return;
   myAnswer[idx] = k; saveAns(); lock(k, T("Enviando…"));
+  if (navigator.vibrate) try{ navigator.vibrate(25); }catch(e){}
   try{ await rpc("ev_responder", {p_codigo: P.codigo, p_jugador: P.jugador, p_token: P.token, p_idx: idx, p_opcion: k}); $("q-msg").textContent = T("Respuesta enviada ✅ Mira la pantalla…"); }
   catch(e){ $("q-msg").textContent = nice(e.message); if (!String(e.message).includes("FUERA_DE_TIEMPO")) { delete myAnswer[idx]; saveAns(); $("q-opts").querySelectorAll(".opt").forEach(b => { b.disabled = false; b.classList.remove("mine"); }); } }
 }
