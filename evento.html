@@ -379,7 +379,7 @@ async function createRoom(){
     const cfg = {modo: concurso ? "concurso" : "clasico", rondas, porRonda, segundos: secs, total: n};
     S = {codigo, secret: sec, list, i: -1, segundos: secs, intro: -1, auto: $("s-auto").checked, cfg};
     rpc("ev_config", {p_codigo: codigo, p_secret: sec, p_config: cfg}).catch(() => {});   // los móviles enseñan las reglas en la sala de espera
-    store("sab:ev-host", S);
+    S.t = Date.now(); store("sab:ev-host", S);
     openLobby();
   }catch(e){ $("setup-err").textContent = T("No se pudo crear la sala:") + " " + e.message; }
   $("b-create").disabled = false;
@@ -604,7 +604,7 @@ function pintaMisma(misma){
     : `${esc(T("¿Seguir en la sala {c} con los mismos jugadores?", {c: u.codigo}))} <button class="linkbtn" id="s-misma-go">${esc(T("Usar esa sala"))}</button>`;
   $("s-misma-go").addEventListener("click", () => pintaMisma(!usarMisma));
 }
-{ const u = store("sab:ev-ultima"); pintaMisma(!!(u && u.t && Date.now() - u.t < 6 * 3600 * 1000)); }   // al abrir la página: solo si la última partida fue hace menos de 6 horas
+pintaMisma(false);   // al abrir la página, siempre sala nueva (seguir en la anterior hay que elegirlo)
 document.addEventListener("keydown", e => { if (!$("x-modal").classList.contains("hidden")) return; if (e.key === " " || e.key === "Enter"){ if (document.activeElement && document.activeElement.tagName === "SELECT") return; e.preventDefault(); advance(); } });
 
 /* ---------- Salir del modo evento ---------- */
@@ -630,7 +630,8 @@ document.addEventListener("keydown", e => { if (e.key === "Escape" && !$("x-moda
 
 loadBank().catch(e => { $("setup-info").textContent = T("No se pudieron cargar las preguntas."); });
 // Recuperar una sala si se recarga la página por error
-(() => { const s = store("sab:ev-host"); if (s && s.codigo && s.i === -1){ S = s; openLobby(); } })();
+// (solo si se recarga enseguida: una sala de espera abandonada no debe volver a abrirse otro día)
+(() => { const s = store("sab:ev-host"); if (s && s.codigo && s.i === -1 && s.t && Date.now() - s.t < 10 * 60 * 1000){ S = s; openLobby(); } else if (s && s.i === -1) store("sab:ev-host", null); })();
 </script>
 </body>
 </html>
