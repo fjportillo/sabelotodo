@@ -107,7 +107,9 @@
   .snd-btn{appearance:none;background:transparent;border:1px solid #555;color:var(--text);font-size:18px;line-height:1;padding:7px 9px;cursor:pointer;margin-left:10px}
   .snd-btn.off{opacity:.35;text-decoration:line-through}
   .chk{display:flex !important;align-items:center;gap:8px;margin-top:16px !important;cursor:pointer}
+  .chk.hidden{display:none !important}
   .chk input{width:18px;height:18px;accent-color:var(--blue);margin:0}
+  .espera{font-family:"Red Hat Display";font-weight:800;color:#ffd76a}
   .auto-bar{position:fixed;left:50%;bottom:16px;transform:translateX(-50%);display:flex;align-items:center;gap:14px;background:var(--panel);border:1px solid var(--line);padding:8px 10px 8px 16px;font-family:"Red Hat Display";font-weight:800;font-size:16px;z-index:50;overflow:hidden}
   .auto-bar i{position:absolute;left:0;bottom:0;height:3px;background:var(--blue2);width:0}
   .auto-bar button{appearance:none;border:1px solid var(--line);background:#000;color:var(--text);font-family:"Red Hat Display";font-weight:800;font-size:13px;padding:6px 10px;cursor:pointer;text-transform:uppercase;letter-spacing:1px}
@@ -161,6 +163,7 @@
       <div><label for="s-diff" data-t>Dificultad</label>
         <select id="s-diff"><option value="" data-t>Todas</option><option value="facil" data-t>Fácil</option><option value="media" data-t>Media</option><option value="dificil" data-t>Difícil</option></select></div>
     </div>
+    <label class="chk hidden" id="s-misma-box"><input type="checkbox" id="s-misma"> <span id="s-misma-txt"></span></label>
     <label class="chk"><input type="checkbox" id="s-auto" checked> <span data-t>Avance automático (las preguntas pasan solas)</span></label>
     <div class="controls"><button class="btn" id="b-create" disabled data-t>Crear sala</button></div>
     <div class="err center" id="setup-err"></div>
@@ -199,7 +202,7 @@
     <div class="q-top">
       <span id="q-num"></span>
       <div class="timer" id="q-timer">20</div>
-      <span class="answered"><b id="q-ans">0</b>/<span id="q-players">0</span> <span data-t>han respondido</span></span>
+      <span class="answered"><b id="q-ans">0</b>/<span id="q-players">0</span> <span data-t>han respondido</span> <span class="espera" id="q-espera"></span></span>
     </div>
     <div class="q-ronda hidden" id="q-ronda"></div>
     <div class="q-vis hidden" id="q-vis"></div>
@@ -226,7 +229,8 @@
     <h1 data-t>¡Campeones! 🏆</h1>
     <div class="podium" id="podium"></div>
     <div class="rank" id="end-list"></div>
-    <div class="controls"><button class="btn" id="b-new" data-t>Nueva partida</button></div>
+    <p class="espera center" id="end-espera"></p>
+    <div class="controls"><button class="btn" id="b-again" data-t>🔁 Otra partida en esta sala</button><button class="btn ghost" id="b-new" data-t>Nueva sala</button></div>
   </section>
 </main>
 
@@ -237,7 +241,7 @@
 </div>
 <script src="concurso.js"></script>
 <script src="sonido.js"></script>
-<script src="i18n/ui.js?v=a8984e76"></script>
+<script src="i18n/ui.js?v=ac64bb53"></script>
 <script src="i18n/marca.js?v=fe450482"></script>
 <script src="i18n/i18n.js?v=7837665f"></script>
 <script>
@@ -340,8 +344,13 @@ async function createRoom(){
   const secret = (crypto.randomUUID ? crypto.randomUUID() : Math.random().toString(36).slice(2)) + Math.random().toString(36).slice(2);
   $("b-create").disabled = true;
   try{
-    const codigo = await rpc("ev_crear_sala", {p_secret: secret, p_total: n, p_segundos: secs});
-    S = {codigo, secret, list, i: -1, segundos: secs, intro: -1, auto: $("s-auto").checked};
+    const ult = store("sab:ev-ultima"), misma = ult && $("s-misma").checked && !$("s-misma-box").classList.contains("hidden");
+    let codigo, sec = secret;
+    if (misma){
+      try{ await rpc("ev_nueva_partida", {p_codigo: ult.codigo, p_secret: ult.secret, p_total: n, p_segundos: secs}); codigo = ult.codigo; sec = ult.secret; }
+      catch(e){ store("sab:ev-ultima", null); pintaMisma(); $("setup-err").textContent = T("Esa sala ya no existe. Pulsa otra vez para crear una nueva."); $("b-create").disabled = false; return; }
+    } else codigo = await rpc("ev_crear_sala", {p_secret: secret, p_total: n, p_segundos: secs});
+    S = {codigo, secret: sec, list, i: -1, segundos: secs, intro: -1, auto: $("s-auto").checked};
     store("sab:ev-host", S);
     openLobby();
   }catch(e){ $("setup-err").textContent = T("No se pudo crear la sala:") + " " + e.message; }
@@ -361,7 +370,7 @@ function openLobby(){
   const seen = new Set();
   const refresh = async () => {
     try{
-      const ps = await api(`ev_jugadores?select=nombre&codigo=eq.${S.codigo}&order=creado.asc`);
+      const ps = await api(`ev_jugadores?select=nombre&codigo=eq.${S.codigo}&order=creado.asc`).catch(() => []);
       $("lobby-count").textContent = ps.length;
       for (const p of ps){ if (!seen.has(p.nombre)){ seen.add(p.nombre); Sonido.fx("respuesta"); const s = document.createElement("span"); s.textContent = p.nombre; $("lobby-players").appendChild(s); } }
       $("b-start").disabled = !ps.length;
@@ -437,8 +446,9 @@ async function startQuestion(){
   draw(); tick = setInterval(draw, 200);
   poll = setInterval(async () => {
     try{
-      const s = (await api(`ev_estado?select=respondidas,jugadores&codigo=eq.${S.codigo}`))[0];
+      const s = (await api(`ev_estado?select=respondidas,jugadores,en_espera&codigo=eq.${S.codigo}`))[0];
       if (s.respondidas > +$("q-ans").textContent) Sonido.fx("respuesta");
+      $("q-espera").textContent = s.en_espera ? "· ⏳ " + T("{n} esperan la siguiente partida", {n: s.en_espera}) : "";
       $("q-ans").textContent = s.respondidas; $("q-players").textContent = s.jugadores;
       if (s.jugadores > 0 && s.respondidas >= s.jugadores && !revealed) reveal();
     }catch(e){}
@@ -507,6 +517,8 @@ async function finish(){
     $("end-list").innerHTML = rows.slice(3, 15).map((r, i) => `<div class="rank-row"><span class="p">${i + 4}</span><span class="nm">${esc(r.nombre)}</span><span class="pt">${r.puntos}</span></div>`).join("");
   }catch(e){}
   store("sab:ev-host", null);
+  store("sab:ev-ultima", {codigo: S.codigo, secret: S.secret});        // para jugar otra partida en la misma sala
+  try{ const e = (await api(`ev_estado?select=en_espera&codigo=eq.${S.codigo}`))[0]; $("end-espera").textContent = e && e.en_espera ? "⏳ " + T("{n} esperan la siguiente partida", {n: e.en_espera}) : ""; }catch(e){ $("end-espera").textContent = ""; }
 }
 
 function advance(){
@@ -530,7 +542,17 @@ pintaSonido();
 $("s-rondas").innerHTML = RONDAS_ORDEN.map(k => `<label title="${esc(T(RONDAS[k].reglas))}"><input type="checkbox" value="${k}" checked> ${RONDAS[k].ico} ${esc(T(RONDAS[k].nombre))}</label>`).join("");
 const setupModo = () => { const c = $("s-modo").value === "concurso"; $("s-rondas-box").classList.toggle("hidden", !c); $("s-count-box").classList.toggle("hidden", c); };
 $("s-modo").addEventListener("change", setupModo); setupModo();
-$("b-new").addEventListener("click", () => { cancelarAuto(); Sonido.musica(null); S = null; $("room-tag").classList.add("hidden"); view("v-setup"); });
+$("b-new").addEventListener("click", () => { cancelarAuto(); Sonido.musica(null); S = null; $("room-tag").classList.add("hidden"); pintaMisma(false); view("v-setup"); });
+$("b-again").addEventListener("click", () => { cancelarAuto(); Sonido.musica(null); S = null; pintaMisma(true); view("v-setup"); });
+// Opción "misma sala" en la preparación, si la última partida se jugó en una sala que sigue abierta
+function pintaMisma(marcar){
+  const u = store("sab:ev-ultima");
+  $("s-misma-box").classList.toggle("hidden", !u);
+  if (!u) return;
+  $("s-misma-txt").textContent = T("Jugar en la misma sala {c} (los jugadores siguen conectados)", {c: u.codigo});
+  if (marcar !== undefined) $("s-misma").checked = marcar;
+}
+pintaMisma(true);
 document.addEventListener("keydown", e => { if (!$("x-modal").classList.contains("hidden")) return; if (e.key === " " || e.key === "Enter"){ if (document.activeElement && document.activeElement.tagName === "SELECT") return; e.preventDefault(); advance(); } });
 
 /* ---------- Salir del modo evento ---------- */

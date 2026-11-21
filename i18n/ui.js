@@ -3,6 +3,17 @@
    Si falta una traducción, se muestra el texto en castellano. */
 window.I18N = {
  "ca": {
+  "{n} esperan la siguiente partida": "{n} esperen la propera partida",
+  "🔁 Otra partida en esta sala": "🔁 Una altra partida en aquesta sala",
+  "Nueva sala": "Sala nova",
+  "Esa sala ya no existe. Pulsa otra vez para crear una nueva.": "Aquesta sala ja no existeix. Torna a prémer per crear-ne una de nova.",
+  "Jugar en la misma sala {c} (los jugadores siguen conectados)": "Jugar a la mateixa sala {c} (els jugadors continuen connectats)",
+  "Has salido de la sala.": "Has sortit de la sala.",
+  "Esta partida ha terminado. En cuanto el presentador empiece otra, entrarás tú también.": "Aquesta partida ha acabat. Quan el presentador en comenci una altra, hi entraràs tu també.",
+  "La partida ya ha empezado. Entrarás en la siguiente: espera aquí sin cerrar esta página.": "La partida ja ha començat. Entraràs a la següent: espera aquí sense tancar aquesta pàgina.",
+  "Ahora: pregunta {i}/{n}": "Ara: pregunta {i}/{n}",
+  "Si el presentador empieza otra partida en esta sala, entrarás automáticamente.": "Si el presentador comença una altra partida en aquesta sala, hi entraràs automàticament.",
+  "Entrarás en la siguiente partida.": "Entraràs a la propera partida.",
   "La partida empezará enseguida. Aquí verás las preguntas, los resultados y la clasificación.": "La partida començarà de seguida. Aquí veuràs les preguntes, els resultats i la classificació.",
   "Jugadores conectados: {n}": "Jugadors connectats: {n}",
   "Respuesta enviada ✅": "Resposta enviada ✅",
@@ -564,6 +575,17 @@ window.I18N = {
   "las preguntas se adaptan a tu nivel: si aciertas, suben; si fallas, bajan.": "les preguntes s'adapten al teu nivell: si encertes, pugen; si falles, baixen."
  },
  "en": {
+  "{n} esperan la siguiente partida": "{n} waiting for the next game",
+  "🔁 Otra partida en esta sala": "🔁 Another game in this room",
+  "Nueva sala": "New room",
+  "Esa sala ya no existe. Pulsa otra vez para crear una nueva.": "That room no longer exists. Press again to create a new one.",
+  "Jugar en la misma sala {c} (los jugadores siguen conectados)": "Play in the same room {c} (players stay connected)",
+  "Has salido de la sala.": "You have left the room.",
+  "Esta partida ha terminado. En cuanto el presentador empiece otra, entrarás tú también.": "This game has finished. As soon as the host starts another one, you'll join in.",
+  "La partida ya ha empezado. Entrarás en la siguiente: espera aquí sin cerrar esta página.": "The game has already started. You'll join the next one: wait here without closing this page.",
+  "Ahora: pregunta {i}/{n}": "Now: question {i}/{n}",
+  "Si el presentador empieza otra partida en esta sala, entrarás automáticamente.": "If the host starts another game in this room, you'll join automatically.",
+  "Entrarás en la siguiente partida.": "You'll join the next game.",
   "La partida empezará enseguida. Aquí verás las preguntas, los resultados y la clasificación.": "The game will start soon. Here you'll see the questions, the results and the leaderboard.",
   "Jugadores conectados: {n}": "Players connected: {n}",
   "Respuesta enviada ✅": "Answer sent ✅",

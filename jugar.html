@@ -176,6 +176,7 @@
     <div class="big" id="end-title" data-t>¡Partida terminada!</div>
     <div class="card stat" style="margin-top:16px"><div><b id="end-pos">–</b><span data-t>Puesto</span></div><div><b id="end-pts">0</b><span data-t>Puntos</span></div><div><b id="end-ok">0</b><span data-t>Aciertos</span></div></div>
     <div class="card bloque" id="end-rank-box"><h3 data-t>Clasificación final</h3><div id="end-rank"></div></div>
+    <p class="center muted" data-t>Si el presentador empieza otra partida en esta sala, entrarás automáticamente.</p>
     <a class="link" href="./" data-t>Jugar al quiz normal →</a>
   </section>
 </main>
@@ -185,7 +186,7 @@
 </div>
 <script src="concurso.js"></script>
 <script src="sonido.js"></script>
-<script src="i18n/ui.js?v=a8984e76"></script>
+<script src="i18n/ui.js?v=ac64bb53"></script>
 <script src="i18n/marca.js?v=fe450482"></script>
 <script src="i18n/i18n.js?v=7837665f"></script>
 <script>
@@ -195,7 +196,7 @@ const SUPABASE_KEY = "sb_publishable_LaMPVutoRf9rrjdmOWzBOw_ZDVX-W-1";
 const $ = id => document.getElementById(id);
 const esc = s => String(s).replace(/[&<>"']/g, m => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[m]));
 const SHAPES = ["▲","◆","●","■"];
-const ERR = {SALA_NO_EXISTE: T("No existe ninguna sala con ese código."), SALA_TERMINADA: T("Esa partida ya ha terminado."), NOMBRE_OCUPADO: T("Ese nombre ya está cogido en esta sala. Prueba otro."),
+const ERR = {SALA_NO_EXISTE: T("No existe ninguna sala con ese código."), SALA_TERMINADA: T("Esa partida ya ha terminado."), ESPERANDO_SIGUIENTE: T("Entrarás en la siguiente partida."), NOMBRE_OCUPADO: T("Ese nombre ya está cogido en esta sala. Prueba otro."),
   NOMBRE_NO_VALIDO: T("Escribe un nombre (máx. 20 letras)."), SALA_LLENA: T("La sala está llena."), FUERA_DE_TIEMPO: T("¡Se acabó el tiempo!")};
 const nice = m => { for (const k in ERR) if (String(m).includes(k)) return ERR[k]; return T("Error de conexión. Inténtalo de nuevo."); };
 
@@ -212,7 +213,7 @@ function sget(k){ try{ return JSON.parse(sessionStorage.getItem(k)); }catch(e){ 
 function sset(k, v){ try{ sessionStorage.setItem(k, JSON.stringify(v)); }catch(e){} }
 
 let P = null;               // {codigo, jugador, token, nombre}
-let lastKey = "", myAnswer = {}, offset = 0, tick = null, pollT = null, lastTipo = null;
+let lastKey = "", myAnswer = {}, offset = 0, tick = null, pollT = null, lastTipo = null, myPart = null, lastPart = null;
 const saveAns = () => P && sset("sab:ev-ans-" + P.codigo, myAnswer);
 function view(id){ ["v-join","v-wait","v-q","v-res","v-end"].forEach(v => $(v).classList.toggle("hidden", v !== id)); }
 
@@ -253,14 +254,21 @@ async function myStats(){
 async function poll(){
   clearTimeout(pollT);
   try{
-    const s = (await api(`ev_estado?select=estado,idx,total,segundos,pregunta,correcta,deadline,ahora,jugadores,respondidas&codigo=eq.${P.codigo}`))[0];
+    const s = (await api(`ev_estado?select=estado,idx,total,segundos,pregunta,correcta,deadline,ahora,jugadores,respondidas,partida,en_espera&codigo=eq.${P.codigo}`))[0];
     if (!s){ sessionStorage.removeItem("sab:ev-player"); P = null; view("v-join"); $("join-err").textContent = ERR.SALA_NO_EXISTE; return; }
     offset = Date.parse(s.ahora) - Date.now();
-    const key = s.estado + ":" + s.idx;
+    if (s.partida !== lastPart || myPart === null || myPart > s.partida){    // ¿en qué partida juego yo?
+      const yo = (await api(`ev_jugadores?select=partida&jugador=eq.${P.jugador}`))[0];
+      if (!yo){ sessionStorage.removeItem("sab:ev-player"); P = null; view("v-join"); $("join-err").textContent = T("Has salido de la sala."); return; }
+      if (lastPart !== null && s.partida !== lastPart){ myAnswer = {}; saveAns(); }   // empieza otra partida en la sala
+      myPart = yo.partida; lastPart = s.partida;
+    }
+    s.espero = myPart > s.partida;
+    const key = s.partida + ":" + (s.espero ? "w:" : "") + s.estado + ":" + s.idx;
     if (key !== lastKey){ lastKey = key; await render(s); }
     vivo(s);
   }catch(e){}
-  pollT = setTimeout(poll, 1000);
+  pollT = setTimeout(poll, lastKey.includes(":fin:") ? 3000 : 1000);
 }
 
 // Lo que cambia sin que cambie la pantalla: quién hay en la sala y cuántos han respondido
@@ -309,8 +317,23 @@ async function resultadoRemoto(s, q, tq){
   if (sg) $("res-prox").innerHTML = `<div class="k">${esc(q.sig.tipo === "final" ? T("Última ronda") : T("Próxima ronda") + " · " + T("Ronda {i} de {n}", {i: q.sig.ronda, n: q.sig.rondas}))}</div><div class="ic">${sg.ico}</div><div class="nm">${esc(T(sg.nombre))}</div><p>${esc(T(sg.reglas))}</p>`;
 }
 
+// Has entrado con la partida empezada: esperas la siguiente viendo cómo va esta
+async function renderEspera(s){
+  view("v-wait");
+  $("wait-title").textContent = T("¡Estás dentro, {name}!", {name: P.nombre});
+  $("wait-text").textContent = s.estado === "fin" ? T("Esta partida ha terminado. En cuanto el presentador empiece otra, entrarás tú también.")
+    : T("La partida ya ha empezado. Entrarás en la siguiente: espera aquí sin cerrar esta página.");
+  let h = s.estado !== "fin" ? `<div class="n">${esc(T("Ahora: pregunta {i}/{n}", {i: s.idx + 1, n: s.total}))}</div>` : "";
+  try{
+    const rows = await api(`ev_ranking?select=jugador,nombre,puntos,aciertos&codigo=eq.${P.codigo}&order=puntos.desc,aciertos.desc`);
+    if (rows.length) h += `<div class="card bloque" style="text-align:left"><h3>${esc(T("Clasificación"))}</h3>${rankHTML(rows, {}, 5)}</div>`;
+  }catch(e){}
+  $("wait-players").innerHTML = h;
+}
+
 async function render(s){
   clearInterval(tick);
+  if (s.espero && s.estado !== "lobby") return renderEspera(s);
   if (s.estado === "lobby"){ view("v-wait"); $("wait-title").textContent = T("¡Estás dentro, {name}!", {name: P.nombre}); $("wait-text").textContent = T("La partida empezará enseguida. Aquí verás las preguntas, los resultados y la clasificación."); nJug = -1; return; }
   if (s.estado === "pregunta"){
     view("v-q");
@@ -357,7 +380,7 @@ async function render(s){
     return;
   }
   if (s.estado === "fin"){
-    view("v-end"); clearTimeout(pollT);
+    view("v-end");
     const st = await myStats();
     if (st){ $("end-pos").textContent = st.pos ? "#" + st.pos : "–"; $("end-pts").textContent = st.pts; $("end-ok").textContent = st.ok + "/" + s.total;
       $("end-emoji").textContent = st.pos === 1 ? "👑" : st.pos === 2 ? "🥈" : st.pos === 3 ? "🥉" : "🧠";
@@ -365,7 +388,6 @@ async function render(s){
       $("end-title").textContent = st.pos === 1 ? T("¡Eres el campeón!") : st.pos && st.pos <= 3 ? T("¡Al podio!") : T("¡Gracias por jugar!"); }
     if (s.idx + 1 < s.total){ $("end-emoji").textContent = "🚪"; $("end-title").textContent = T("El presentador ha cerrado la partida"); }
     try{ const rows = await api(`ev_ranking?select=jugador,nombre,puntos,aciertos&codigo=eq.${P.codigo}&order=puntos.desc,aciertos.desc`); $("end-rank").innerHTML = rankHTML(rows, {}, 10); }catch(e){}
-    sessionStorage.removeItem("sab:ev-player");
   }
 }
 
