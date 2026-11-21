@@ -74,6 +74,34 @@
   .qbar .vale{color:#ffd76a}
   .res .pq{font-family:"Red Hat Display";font-weight:900;font-size:26px;margin-top:12px}
   @media (max-width:430px){ header .t{display:none} header{gap:8px;padding:10px} }
+  /* Para quien juega en remoto: todo lo que enseña la pantalla grande */
+  .conn{text-align:center;margin-top:18px}
+  .conn .n{font-family:"Red Hat Display";font-weight:800;color:var(--muted);font-size:14px;margin-bottom:8px}
+  .conn .chips{display:flex;flex-wrap:wrap;gap:6px;justify-content:center}
+  .conn .chips span{background:var(--panel);border:1px solid var(--line);padding:5px 10px;font-size:14px}
+  .bloque{margin-top:14px}
+  .bloque h3{font-family:"Red Hat Display";font-weight:900;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin:0 0 8px}
+  .vt{display:grid;grid-template-columns:22px 1fr auto;gap:8px;align-items:center;margin:6px 0;font-size:14px}
+  .vt .bar{position:relative;background:#000;border:1px solid var(--line);height:26px;overflow:hidden}
+  .vt .bar i{position:absolute;left:0;top:0;bottom:0;opacity:.85}
+  .vt .bar span{position:relative;padding:0 8px;line-height:26px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;display:block}
+  .vt.ok .bar{border-color:var(--ok)} .vt.ok b{color:var(--ok)}
+  .vt .pc{font-family:"Red Hat Display";font-weight:900;min-width:44px;text-align:right}
+  .jugada{font-family:"Red Hat Display";font-weight:800;font-size:16px;line-height:1.45;text-align:center;margin-top:12px}
+  .jugada .menos{color:var(--bad)}
+  .rk{display:grid;grid-template-columns:34px 1fr auto;gap:8px;align-items:center;padding:7px 4px;border-bottom:1px solid var(--line);font-size:15px}
+  .rk:last-child{border-bottom:0}
+  .rk .p{font-family:"Red Hat Display";font-weight:900;text-align:center}
+  .rk .nm{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  .rk .pt{font-family:"Red Hat Display";font-weight:900}
+  .rk .dl{font-size:12px;margin-left:6px} .rk .dl.mas{color:var(--ok)} .rk .dl.menos{color:var(--bad)}
+  .rk.yo{background:rgba(255,255,255,.07);outline:1px solid var(--blue2)}
+  .rk.gap{display:block;text-align:center;color:var(--muted);padding:2px}
+  .prox{margin-top:14px;text-align:center;border:1px solid var(--blue2);background:var(--panel);padding:14px;animation:pop .5s}
+  .prox .k{font-family:"Red Hat Display";font-weight:900;font-size:11px;letter-spacing:3px;text-transform:uppercase;color:var(--muted)}
+  .prox .ic{font-size:44px;line-height:1.1;font-family:"Noto Color Emoji","Apple Color Emoji","Segoe UI Emoji",sans-serif}
+  .prox .nm{font-family:"Red Hat Display";font-weight:900;font-size:22px;margin:2px 0 4px}
+  .prox p{margin:0;font-size:14px;color:var(--muted)}
   .snd-btn{appearance:none;background:transparent;border:1px solid #555;color:var(--text);font-size:16px;line-height:1;padding:6px 7px;cursor:pointer;flex:0 0 auto}
   .snd-btn.off{opacity:.35}
   .lang-sw{display:flex;border:1px solid #3a3b40;flex:0 0 auto}
@@ -118,6 +146,7 @@
     <div class="wait-emoji">🧠</div>
     <div class="big" id="wait-title" data-t>¡Estás dentro!</div>
     <p class="center muted" id="wait-text" data-t>Mira la pantalla grande. La partida empezará enseguida.</p>
+    <div class="conn" id="wait-players"></div>
   </section>
 
   <!-- PREGUNTA -->
@@ -134,6 +163,10 @@
   <section id="v-res" class="hidden">
     <div class="res" id="res-box"><div class="ic" id="res-ic"></div><div class="tt" id="res-tt"></div><div class="ex" id="res-ex"></div><div class="pq hidden" id="res-pq"></div></div>
     <div class="card stat" style="margin-top:14px"><div><b id="res-pos">–</b><span data-t>Puesto</span></div><div><b id="res-pts">0</b><span data-t>Puntos</span></div><div><b id="res-ok">0</b><span data-t>Aciertos</span></div></div>
+    <div class="jugada hidden" id="res-jugada"></div>
+    <div class="card bloque" id="res-votos-box"><h3 data-t>Así ha respondido la gente</h3><div id="res-votos"></div></div>
+    <div class="card bloque" id="res-rank-box"><h3 data-t>Clasificación</h3><div id="res-rank"></div></div>
+    <div class="prox hidden" id="res-prox"></div>
     <p class="center muted" data-t>Espera a la siguiente pregunta…</p>
   </section>
 
@@ -142,6 +175,7 @@
     <div class="wait-emoji" id="end-emoji">🏆</div>
     <div class="big" id="end-title" data-t>¡Partida terminada!</div>
     <div class="card stat" style="margin-top:16px"><div><b id="end-pos">–</b><span data-t>Puesto</span></div><div><b id="end-pts">0</b><span data-t>Puntos</span></div><div><b id="end-ok">0</b><span data-t>Aciertos</span></div></div>
+    <div class="card bloque" id="end-rank-box"><h3 data-t>Clasificación final</h3><div id="end-rank"></div></div>
     <a class="link" href="./" data-t>Jugar al quiz normal →</a>
   </section>
 </main>
@@ -151,7 +185,7 @@
 </div>
 <script src="concurso.js"></script>
 <script src="sonido.js"></script>
-<script src="i18n/ui.js?v=cd54f768"></script>
+<script src="i18n/ui.js?v=a8984e76"></script>
 <script src="i18n/marca.js?v=fe450482"></script>
 <script src="i18n/i18n.js?v=7837665f"></script>
 <script>
@@ -219,18 +253,65 @@ async function myStats(){
 async function poll(){
   clearTimeout(pollT);
   try{
-    const s = (await api(`ev_estado?select=estado,idx,total,segundos,pregunta,correcta,deadline,ahora&codigo=eq.${P.codigo}`))[0];
+    const s = (await api(`ev_estado?select=estado,idx,total,segundos,pregunta,correcta,deadline,ahora,jugadores,respondidas&codigo=eq.${P.codigo}`))[0];
     if (!s){ sessionStorage.removeItem("sab:ev-player"); P = null; view("v-join"); $("join-err").textContent = ERR.SALA_NO_EXISTE; return; }
     offset = Date.parse(s.ahora) - Date.now();
     const key = s.estado + ":" + s.idx;
-    if (key !== lastKey){ lastKey = key; render(s); }
+    if (key !== lastKey){ lastKey = key; await render(s); }
+    vivo(s);
   }catch(e){}
   pollT = setTimeout(poll, 1000);
 }
 
+// Lo que cambia sin que cambie la pantalla: quién hay en la sala y cuántos han respondido
+let nJug = -1;
+async function vivo(s){
+  if (s.estado === "lobby" && s.jugadores !== nJug){
+    nJug = s.jugadores;
+    try{
+      const js = await api(`ev_jugadores?select=nombre&codigo=eq.${P.codigo}&order=creado.asc`);
+      $("wait-players").innerHTML = `<div class="n">${esc(T("Jugadores conectados: {n}", {n: js.length}))}</div><div class="chips">${js.map(j => `<span>${esc(j.nombre)}</span>`).join("")}</div>`;
+    }catch(e){}
+  }
+  if (s.estado === "pregunta" && myAnswer[s.idx] !== undefined && myAnswer[s.idx] >= 0)
+    $("q-msg").textContent = T("Respuesta enviada ✅") + " · " + T("{a}/{b} han respondido", {a: s.respondidas, b: s.jugadores});
+}
+
+// Clasificación (los 5 primeros y tu puesto) con lo ganado o perdido en la última pregunta
+function rankHTML(rows, dl, max){
+  const yo = rows.findIndex(r => r.jugador === P.jugador);
+  const fila = (r, i) => { const d = dl[r.jugador];
+    return `<div class="rk ${i === yo ? "yo" : ""}"><span class="p">${["🥇","🥈","🥉"][i] || i + 1}</span><span class="nm">${esc(r.nombre)}${i === yo ? " · " + esc(T("Tú")) : ""}</span><span class="pt">${r.puntos}${d ? `<span class="dl ${d > 0 ? "mas" : "menos"}">${d > 0 ? "+" : "−"}${Math.abs(d)}</span>` : ""}</span></div>`; };
+  let h = rows.slice(0, max).map(fila).join("");
+  if (yo >= max) h += (yo > max ? `<div class="rk gap">···</div>` : "") + fila(rows[yo], yo);
+  return h;
+}
+
+async function resultadoRemoto(s, q, tq){
+  try{                                                      // reparto de respuestas
+    const vs = await api(`ev_votos?select=opcion,votos&codigo=eq.${P.codigo}&idx=eq.${s.idx}`);
+    const tot = vs.reduce((a, v) => a + v.votos, 0) || 1, ops = tq.opciones || q.opciones || [], mine = myAnswer[s.idx];
+    $("res-votos").innerHTML = ops.map((o, k) => { const v = (vs.find(x => x.opcion === k) || {}).votos || 0, pc = Math.round(v * 100 / tot);
+      return `<div class="vt ${k === s.correcta ? "ok" : ""}"><span>${SHAPES[k]}</span><div class="bar"><i class="o${k}" style="width:${pc}%"></i><span>${k === s.correcta ? "✔ " : ""}${esc(o)}${k === mine ? " ←" : ""}</span></div><b class="pc">${pc}%</b></div>`; }).join("");
+  }catch(e){ $("res-votos").innerHTML = ""; }
+  let ps = [];
+  if (q.tipo) try{ ps = await api(`ev_puntos?select=jugador,nombre,puntos,motivo&codigo=eq.${P.codigo}&idx=eq.${s.idx}`); }catch(e){}
+  const {L} = q.tipo ? lineasJugada(ps, q.tipo, T, esc) : {L: []};
+  $("res-jugada").innerHTML = L.join("<br>"); $("res-jugada").classList.toggle("hidden", !L.length);
+  try{                                                      // clasificación
+    const rows = await api(`ev_ranking?select=jugador,nombre,puntos,aciertos&codigo=eq.${P.codigo}&order=puntos.desc,aciertos.desc`);
+    if (!q.tipo) try{ ps = await api(`ev_puntos?select=jugador,puntos&codigo=eq.${P.codigo}&idx=eq.${s.idx}`); }catch(e){}
+    const dl = {}; ps.forEach(p => dl[p.jugador] = p.puntos);
+    $("res-rank").innerHTML = rankHTML(rows, dl, 5);
+  }catch(e){ $("res-rank").innerHTML = ""; }
+  const sg = q.sig && RONDAS[q.sig.tipo];                   // presentación de la ronda siguiente
+  $("res-prox").classList.toggle("hidden", !sg);
+  if (sg) $("res-prox").innerHTML = `<div class="k">${esc(q.sig.tipo === "final" ? T("Última ronda") : T("Próxima ronda") + " · " + T("Ronda {i} de {n}", {i: q.sig.ronda, n: q.sig.rondas}))}</div><div class="ic">${sg.ico}</div><div class="nm">${esc(T(sg.nombre))}</div><p>${esc(T(sg.reglas))}</p>`;
+}
+
 async function render(s){
   clearInterval(tick);
-  if (s.estado === "lobby"){ view("v-wait"); $("wait-title").textContent = T("¡Estás dentro, {name}!", {name: P.nombre}); $("wait-text").textContent = T("Mira la pantalla grande. La partida empezará enseguida."); return; }
+  if (s.estado === "lobby"){ view("v-wait"); $("wait-title").textContent = T("¡Estás dentro, {name}!", {name: P.nombre}); $("wait-text").textContent = T("La partida empezará enseguida. Aquí verás las preguntas, los resultados y la clasificación."); nJug = -1; return; }
   if (s.estado === "pregunta"){
     view("v-q");
     const q = s.pregunta || {}, mine = myAnswer[s.idx];
@@ -247,7 +328,7 @@ async function render(s){
     lastTipo = q.tipo || null;
     $("q-vale").textContent = "";
     $("q-msg").textContent = "";
-    if (mine !== undefined) lock(mine, T("Respuesta enviada ✅ Mira la pantalla…"));
+    if (mine !== undefined) lock(mine, T("Respuesta enviada ✅"));
     const deadline = Date.parse(s.deadline), inicio = deadline - s.segundos * 1000;
     const draw = () => { const left = Math.max(0, Math.ceil((deadline - (Date.now() + offset)) / 1000));
       const vale = myAnswer[s.idx] === undefined ? valeAhora(q.tipo, Date.now() + offset - inicio, s.segundos) : null;
@@ -270,6 +351,7 @@ async function render(s){
     Sonido.fx(mine === undefined || mine < 0 ? "tiempo" : ok ? "acierto" : "fallo");
     $("res-pq").classList.add("hidden");
     if (q.tipo) myPlay(s.idx, ok && q.tipo === "rapido");
+    resultadoRemoto(s, q, tqr);
     const st = await myStats();
     if (st){ $("res-pos").textContent = st.pos ? "#" + st.pos : "–"; $("res-pts").textContent = st.pts; $("res-ok").textContent = st.ok; }
     return;
@@ -282,6 +364,7 @@ async function render(s){
       if (st.pos && st.pos <= 3) Sonido.fx("podio");
       $("end-title").textContent = st.pos === 1 ? T("¡Eres el campeón!") : st.pos && st.pos <= 3 ? T("¡Al podio!") : T("¡Gracias por jugar!"); }
     if (s.idx + 1 < s.total){ $("end-emoji").textContent = "🚪"; $("end-title").textContent = T("El presentador ha cerrado la partida"); }
+    try{ const rows = await api(`ev_ranking?select=jugador,nombre,puntos,aciertos&codigo=eq.${P.codigo}&order=puntos.desc,aciertos.desc`); $("end-rank").innerHTML = rankHTML(rows, {}, 10); }catch(e){}
     sessionStorage.removeItem("sab:ev-player");
   }
 }
@@ -313,7 +396,7 @@ async function answer(idx, k){
   myAnswer[idx] = k; saveAns(); lock(k, T("Enviando…"));
   if (navigator.vibrate) try{ navigator.vibrate(25); }catch(e){}
   Sonido.fx("toque");
-  try{ await rpc("ev_responder", {p_codigo: P.codigo, p_jugador: P.jugador, p_token: P.token, p_idx: idx, p_opcion: k}); $("q-msg").textContent = T("Respuesta enviada ✅ Mira la pantalla…"); }
+  try{ await rpc("ev_responder", {p_codigo: P.codigo, p_jugador: P.jugador, p_token: P.token, p_idx: idx, p_opcion: k}); $("q-msg").textContent = T("Respuesta enviada ✅"); }
   catch(e){ $("q-msg").textContent = nice(e.message); if (!String(e.message).includes("FUERA_DE_TIEMPO")) { delete myAnswer[idx]; saveAns(); $("q-opts").querySelectorAll(".opt").forEach(b => { b.disabled = false; b.classList.remove("mine"); }); } }
 }
 

@@ -3,6 +3,14 @@
    Si falta una traducción, se muestra el texto en castellano. */
 window.I18N = {
  "ca": {
+  "La partida empezará enseguida. Aquí verás las preguntas, los resultados y la clasificación.": "La partida començarà de seguida. Aquí veuràs les preguntes, els resultats i la classificació.",
+  "Jugadores conectados: {n}": "Jugadors connectats: {n}",
+  "Respuesta enviada ✅": "Resposta enviada ✅",
+  "{a}/{b} han respondido": "{a}/{b} han respost",
+  "Así ha respondido la gente": "Així ha respost la gent",
+  "Clasificación final": "Classificació final",
+  "Tú": "Tu",
+  "Próxima ronda": "Propera ronda",
   "Música": "Música",
   "Efectos de sonido": "Efectes de so",
   "Avance automático (las preguntas pasan solas)": "Avanç automàtic (les preguntes passen soles)",
@@ -556,6 +564,14 @@ window.I18N = {
   "las preguntas se adaptan a tu nivel: si aciertas, suben; si fallas, bajan.": "les preguntes s'adapten al teu nivell: si encertes, pugen; si falles, baixen."
  },
  "en": {
+  "La partida empezará enseguida. Aquí verás las preguntas, los resultados y la clasificación.": "The game will start soon. Here you'll see the questions, the results and the leaderboard.",
+  "Jugadores conectados: {n}": "Players connected: {n}",
+  "Respuesta enviada ✅": "Answer sent ✅",
+  "{a}/{b} han respondido": "{a}/{b} have answered",
+  "Así ha respondido la gente": "How everyone answered",
+  "Clasificación final": "Final leaderboard",
+  "Tú": "You",
+  "Próxima ronda": "Next round",
   "Música": "Music",
   "Efectos de sonido": "Sound effects",
   "Avance automático (las preguntas pasan solas)": "Auto-advance (questions move on by themselves)",

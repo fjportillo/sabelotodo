@@ -237,7 +237,7 @@
 </div>
 <script src="concurso.js"></script>
 <script src="sonido.js"></script>
-<script src="i18n/ui.js?v=cd54f768"></script>
+<script src="i18n/ui.js?v=a8984e76"></script>
 <script src="i18n/marca.js?v=fe450482"></script>
 <script src="i18n/i18n.js?v=7837665f"></script>
 <script>
@@ -380,6 +380,12 @@ async function nextQuestion(){
   startQuestion();
 }
 
+// Ronda de la pregunta siguiente (viaja en la pregunta para que los jugadores en remoto vean su presentación)
+function sigRonda(){
+  const n = S.list[S.i + 1];
+  return n && n.tipo && n.nueva ? {tipo: n.tipo, ronda: n.ronda, rondas: n.rondas} : null;
+}
+
 function showRound(q){
   S.intro = S.i; store("sab:ev-host", S);
   const r = RONDAS[q.tipo];
@@ -412,7 +418,7 @@ async function startQuestion(){
   $("b-reveal").classList.remove("hidden"); $("b-rank").classList.add("hidden");
   $("q-ans").textContent = "0";
   try{
-    await rpc("ev_pregunta", {p_codigo: S.codigo, p_secret: S.secret, p_idx: S.i, p_pregunta: {texto: q.q, opciones: q.opts, cat: q.cat, vis: q.vis, tr: q.tr || null, tipo: q.tipo || null}});
+    await rpc("ev_pregunta", {p_codigo: S.codigo, p_secret: S.secret, p_idx: S.i, p_pregunta: {texto: q.q, opciones: q.opts, cat: q.cat, vis: q.vis, tr: q.tr || null, tipo: q.tipo || null, sig: sigRonda()}});
   }catch(e){ alert(T("Error de conexión:") + " " + e.message); return; }
   const st = (await api(`ev_estado?select=deadline,ahora,jugadores&codigo=eq.${S.codigo}`))[0];
   offset = Date.parse(st.ahora) - Date.now();
@@ -466,17 +472,9 @@ async function reveal(){
 async function showPlay(q){
   try{
     const ps = await api(`ev_puntos?select=nombre,puntos,motivo&codigo=eq.${S.codigo}&idx=eq.${S.i}&order=puntos.desc`);
-    const by = m => ps.filter(p => p.motivo === m), L = [];
-    const robo = by("robo")[0], robado = by("robado")[0], primero = by("primero")[0], fallos = by("fallo");
-    if (robo && robado) L.push(`🦹 ${T("¡{a} roba {n} puntos a {b}!", {a: esc(robo.nombre), n: robo.puntos - 50, b: esc(robado.nombre)})}`);
-    if (q.tipo === "robo" && by("acierto").length) L.push(`✅ ${T("Aciertos: {n} (+50 cada uno)", {n: by("acierto").length + (robo ? 1 : 0)})}`);
-    if (primero) L.push(`⚡ ${T("¡{a} ha sido el más rápido! +{n}", {a: esc(primero.nombre), n: primero.puntos})}`);
-    else if (q.tipo === "rapido") L.push(T("Nadie ha acertado"));
-    if ((q.tipo === "contrarreloj" || q.tipo === "final") && by("acierto").length){ const b = by("acierto")[0]; L.push(`🏅 ${T("Mejor jugada: {a} +{n}", {a: esc(b.nombre), n: b.puntos})}`); }
-    if (q.tipo === "calentamiento") L.push(`✅ ${T("Aciertos: {n}", {n: by("acierto").length})}`);
-    if (fallos.length) L.push(`<span class="menos">❌ ${T("Fallos: {n}", {n: fallos.length})}</span>`);
+    const {L, robo, primero} = lineasJugada(ps, q.tipo, T, esc);
     if (L.length){ $("q-jugada").innerHTML = L.join("<br>"); $("q-jugada").classList.remove("hidden"); }
-    if (robo && robado) setTimeout(() => Sonido.fx("robo"), 700); else if (primero) setTimeout(() => Sonido.fx("rayo"), 700);
+    if (robo) setTimeout(() => Sonido.fx("robo"), 700); else if (primero) setTimeout(() => Sonido.fx("rayo"), 700);
   }catch(e){}
 }
 
