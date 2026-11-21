@@ -396,8 +396,8 @@
   .reto-tag b{color:var(--blue2)}
   /* Aviso de reto especial (monográfico): hoy, en grande; mañana, como adelanto */
   .reto-esp{margin:10px 0 4px;padding:12px 14px;border:2px solid #c9c9c9;background:repeating-linear-gradient(135deg,#1b1b1d 0 10px,#232326 10px 20px);text-align:center}
-  .reto-esp .esp-k{display:block;font-family:"Red Hat Display";font-weight:900;font-size:12px;letter-spacing:4px;color:#ffd76a;text-transform:uppercase}
-  .reto-esp .esp-t{display:block;font-family:"Rubik Dirt","Red Hat Display",cursive;font-size:34px;line-height:1.1;margin:4px 0 2px;color:#e8e8e8;text-transform:uppercase;letter-spacing:2px}
+  .reto-esp .esp-k{display:block;font-family:"Red Hat Display";font-weight:900;font-size:12px;letter-spacing:3px;white-space:nowrap;color:#ffd76a;text-transform:uppercase}
+  .reto-esp .esp-t{display:block;font-family:"Rubik Dirt","Red Hat Display",cursive;font-size:clamp(18px,8vw,34px);line-height:1.1;margin:4px 0 2px;color:#e8e8e8;text-transform:uppercase;letter-spacing:2px;white-space:nowrap;overflow:hidden}
   .reto-esp .esp-s{display:block;font-size:13px;color:var(--muted)}
   .reto-esp.manana{border-style:dashed;border-color:#ffd76a;padding:8px 12px}
   .reto-esp.manana .esp-t{font-size:22px}
@@ -2023,6 +2023,15 @@ const Reto = (() => {
     return {...r, mode: "reto", num: num(), day: day(), name: $("name").value.trim(), pct, best: r.best ?? 0, verdict: r.verdict || T("{ok}/{total} en el reto de hoy", {ok: r.ok, total: r.total})};
   }
   let shownDay = "";
+  function fitEsp(){                       // el nombre del tema nunca se sale del recuadro (móviles estrechos, temas largos)
+    const t = document.querySelector("#reto-esp .esp-t"); if (!t || !t.clientWidth) return;   // oculto: se ajusta al mostrarse
+    const ajusta = () => { t.style.fontSize = ""; let f = parseFloat(getComputedStyle(t).fontSize);
+      while (t.scrollWidth > t.clientWidth + 1 && f > 12){ f -= 1; t.style.fontSize = f + "px"; } };
+    ajusta(); if (document.fonts && document.fonts.ready) document.fonts.ready.then(ajusta);
+  }
+  let espW = 0;                             // reajusta al mostrarse la pantalla o cambiar el ancho (no al cambiar la altura)
+  if (window.ResizeObserver) new ResizeObserver(e => { const w = Math.round(e[0].contentRect.width); if (w && w !== espW){ espW = w; fitEsp(); } }).observe($("reto-esp"));
+  else addEventListener("resize", fitEsp);
   function countdown(){
     const p = Object.fromEntries(new Intl.DateTimeFormat("en-GB", {timeZone: "Europe/Madrid", hour: "2-digit", minute: "2-digit", hourCycle: "h23"}).formatToParts(new Date()).map(x => [x.type, x.value]));
     const left = 1440 - (+p.hour * 60 + +p.minute);
@@ -2038,6 +2047,7 @@ const Reto = (() => {
     $("reto-esp").classList.toggle("manana", !espHoy && !!espMan);
     $("reto-esp").innerHTML = espHoy ? `<span class="esp-k">🤘 ${T("Reto especial")} 🤘</span><span class="esp-t">${esc(espHoy.tema)}</span><span class="esp-s">${T("Hoy, 10 preguntas sobre {tema}, casi todas difíciles. Solo para muy fans.", {tema: esc(espHoy.tema)})}</span>`
       : espMan ? `<span class="esp-k">🔜 ${T("Mañana, reto especial")}</span><span class="esp-t">${esc(espMan.tema)}</span><span class="esp-s">${T("¡Ve repasando!")}</span>` : "";
+    fitEsp();
     countdown();
     const key = norm($("name").value.trim()), r = mine(shownDay, key), pr = store("rmq-reto-prog");
     $("reto-todo").classList.toggle("hidden", !!r);
