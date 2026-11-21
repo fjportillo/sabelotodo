@@ -360,7 +360,7 @@ async function createRoom(){
   let pool = BANK.filter(b => (!cat || b.cat === cat) && (!diff || b.diff === diff));
   if (pool.length < n){ $("setup-err").textContent = T("Solo hay {n} preguntas con esa combinación. Elige menos preguntas u otra categoría.", {n: pool.length}); return; }
   // Mismo orden de respuestas en los tres idiomas: cada móvil muestra la pregunta en su idioma
-  const list = shuffle(pool).slice(0, n).map(b => {
+  const list = elegirPreguntas(pool, n).map(b => {
     const base = [b.c, ...b.wrong].slice(0, 4), perm = shuffle(base.map((_, i) => i)), opts = perm.map(i => base[i]);
     const tr = {};
     for (const l of ["ca", "en"]){ const t = I18NX.translateQ(TRMAPS[l], b); tr[l] = {texto: t.texto, opciones: perm.map(i => t.base[i] || base[i])}; }
@@ -422,6 +422,20 @@ async function nextQuestion(){
   startQuestion();
 }
 
+/* ---------- Preguntas sin repetir entre partidas ----------
+   Este dispositivo recuerda cuándo salió cada pregunta en el modo evento. Al preparar una partida se eligen primero
+   las que nunca han salido (al azar) y después las que salieron hace más tiempo. Se olvidan a los 60 días. */
+const claveQ = b => (b.q || "") + "|" + (b.vis || "");
+function usadas(){ const u = store("sab:ev-usadas") || {}, lim = Date.now() - 60 * 864e5; for (const k in u) if (u[k] < lim) delete u[k]; return u; }
+function elegirPreguntas(pool, n){
+  const u = usadas();
+  const nuevas = shuffle(pool.filter(b => !u[claveQ(b)]));
+  if (nuevas.length >= n) return nuevas.slice(0, n);
+  const viejas = pool.filter(b => u[claveQ(b)]).sort((a, b) => u[claveQ(a)] - u[claveQ(b)]);   // las que salieron hace más tiempo primero
+  return shuffle(nuevas.concat(viejas.slice(0, n - nuevas.length)));
+}
+function marcarUsada(q){ const u = usadas(); u[claveQ(q)] = Date.now(); store("sab:ev-usadas", u); }
+
 // Reglas de la partida antes de la primera pregunta
 function showRules(){
   if (!S.cfg) return nextQuestion();
@@ -460,6 +474,7 @@ async function startQuestion(){
   if (r) $("q-ronda").innerHTML = `${r.ico} <b>${esc(T(r.nombre))}</b> · ${esc(T(r.corto))}`;
   $("q-vale").textContent = ""; $("q-jugada").classList.add("hidden");
   Sonido.musica(q.tipo === "final" ? "final" : "pregunta"); Sonido.fx("pregunta");
+  marcarUsada(q);                           // cuenta como salida solo si llega a jugarse
   $("q-num").textContent = T("Pregunta {i} de {n}", {i: S.i + 1, n: S.list.length});
   const shown = LANG !== "es" && q.tr && q.tr[LANG] ? q.tr[LANG] : {texto: q.q, opciones: q.opts};
   $("q-text").textContent = shown.texto;
