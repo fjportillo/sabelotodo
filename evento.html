@@ -424,7 +424,7 @@ function showRules(){
   view("v-reglas");
   $("reglas-body").innerHTML = reglasPartida(S.cfg, T, esc);
   Sonido.fx("pregunta");
-  programar(S.cfg.modo === "concurso" ? 15 : 10, nextQuestion);
+  programar(S.cfg.modo === "concurso" ? 12 : 8, nextQuestion);
 }
 
 // Ronda de la pregunta siguiente (viaja en la pregunta para que los jugadores en remoto vean su presentación)
@@ -443,7 +443,7 @@ function showRound(q){
   $("r-reglas").textContent = T(r.reglas);
   Sonido.musica(null); Sonido.fx("ronda");
   setTimeout(() => { if (!$("v-ronda").classList.contains("hidden")) Sonido.musica("espera"); }, 1600);
-  programar(8, startQuestion);
+  programar(6, startQuestion);
 }
 
 async function startQuestion(){
@@ -512,7 +512,11 @@ async function reveal(){
   }catch(e){}
   if (q.tipo) await showPlay(q);
   $("b-reveal").classList.add("hidden"); $("b-rank").classList.remove("hidden");
-  programar(q.tipo ? 7 : 6, showRanking);
+  // En automático la clasificación sale solo al acabar cada ronda (en la clásica, cada 3 preguntas) y al final;
+  // el resto de veces se pasa directamente a la siguiente pregunta (los móviles ya enseñan la clasificación).
+  const sig = S.list[S.i + 1];
+  const tocaRanking = !sig || (q.tipo ? !!sig.nueva : (S.i + 1) % 3 === 0);
+  programar(!$("q-jugada").classList.contains("hidden") ? 5 : 4, tocaRanking ? showRanking : nextQuestion);
   $("b-rank").textContent = S.i + 1 >= S.list.length ? T("Ver resultado final") : T("Ver clasificación");
 }
 
@@ -539,7 +543,7 @@ async function showRanking(){
     $("rank-list").innerHTML = rows.map((r, i) => `<div class="rank-row ${i < 3 ? "r" + (i+1) : ""}" style="animation-delay:${i * 80}ms"><span class="p">${["🥇","🥈","🥉"][i] || i + 1}</span><span class="nm">${esc(r.nombre)}</span><span class="pt">${r.puntos}${delta(r.nombre)}</span></div>`).join("") || `<p class='muted center'>${T("Nadie ha puntuado todavía")}</p>`;
   }catch(e){ $("rank-list").innerHTML = `<p class='err center'>${T("No se pudo cargar la clasificación")}</p>`; }
   const sig = S.list[S.i + 1];
-  programar(sig && sig.tipo && sig.nueva ? 6 : 7, nextQuestion);
+  programar(5, nextQuestion);
 }
 
 async function finish(){
