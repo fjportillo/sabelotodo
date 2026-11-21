@@ -269,7 +269,7 @@ function lock(k, msg){
 async function answer(idx, k){
   if (myAnswer[idx] !== undefined) return;
   myAnswer[idx] = k; saveAns(); lock(k, T("Enviando…"));
-  try{ await rpc("ev_responder", {p_codigo: P.codigo, p_jugador: P.jugador, p_token: P.token, p_idx: idx, p_opcion: k}); $("q-msg").textContent = "Respuesta enviada ✅ Mira la pantalla…"; }
+  try{ await rpc("ev_responder", {p_codigo: P.codigo, p_jugador: P.jugador, p_token: P.token, p_idx: idx, p_opcion: k}); $("q-msg").textContent = T("Respuesta enviada ✅ Mira la pantalla…"); }
   catch(e){ $("q-msg").textContent = nice(e.message); if (!String(e.message).includes("FUERA_DE_TIEMPO")) { delete myAnswer[idx]; saveAns(); $("q-opts").querySelectorAll(".opt").forEach(b => { b.disabled = false; b.classList.remove("mine"); }); } }
 }
 
