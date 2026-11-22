@@ -1055,7 +1055,41 @@ function qid(q){ if (q._id) return q._id; let h = 0; const s = (q.key || q.q) + 
 /* Memoria de preguntas vistas en este dispositivo, de la más antigua a la más reciente.
    Volver a ver una pregunta la pasa al final, así al reciclar salen primero las que hace más tiempo que no se ven. */
 function seenPos(){ const m = new Map(); (store("rmq-seen") || []).forEach((id, i) => m.set(id, i)); return m; }
-function markSeen(q){ const id = qid(q), l = (store("rmq-seen") || []).filter(x => x !== id); l.push(id); store("rmq-seen", l.slice(-SEEN_MAX)); }
+function markSeen(q){
+  const id = qid(q), l = (store("rmq-seen") || []).filter(x => x !== id); l.push(id); store("rmq-seen", l.slice(-SEEN_MAX));
+  const p = (store("rmq-seen-pend") || []).filter(x => x !== id); p.push(id); store("rmq-seen-pend", p.slice(-1000));   // pendientes de subir
+}
+/* Vistas compartidas entre los dispositivos del mismo jugador (solo con PIN). Ver vistas_jugador.sql.
+   Para no gastar el plan gratuito de Supabase: sube solo las nuevas al acabar cada partida y descarga la lista completa
+   solo si otro dispositivo la ha cambiado (lo sabe por el número de versión). */
+const SeenSync = (() => {
+  let busy = false, lastPull = 0;
+  async function sync(force){
+    try{ if (busy || !HOF.online) return; }catch(e){ return; }
+    const k = norm(($("name").value || "").trim()), pin = pins()[k];
+    if (!k || !pin) return;
+    const off = store("rmq-sync-off"); if (off && Date.now() - off < 864e5) return;   // aún sin vistas_jugador.sql: reintentar mañana
+    const st = store("rmq-sync") || {}, ids = (store("rmq-seen-pend") || []).slice(0, 300);
+    if (!ids.length && !force && st.k === k && Date.now() - lastPull < 6e5) return;
+    busy = true;
+    try{
+      const r = await rpcCall("vistas_sync", {p_clave: k.slice(0, 40), p_pin: pin, p_ids: ids, p_ver: st.k === k ? st.ver ?? null : null});
+      lastPull = Date.now();
+      const sent = new Set(ids), pend = (store("rmq-seen-pend") || []).filter(x => !sent.has(x));
+      store("rmq-seen-pend", pend);
+      if (r && Array.isArray(r.ids)){                // otro dispositivo cambió la lista: se combina con la de aquí
+        const srv = new Set(r.ids), pp = new Set(pend), loc = store("rmq-seen") || [];
+        store("rmq-seen", loc.filter(x => !srv.has(x) && !pp.has(x)).concat(r.ids.filter(x => !pp.has(x)), loc.filter(x => pp.has(x))).slice(-SEEN_MAX));
+      }
+      if (r && r.ver != null) store("rmq-sync", {k, ver: r.ver});
+      if (pend.length && ids.length === 300) setTimeout(() => sync(), 2000);
+    }catch(e){
+      if (e.status === 404 || /vistas_sync|schema cache/i.test(e.message || "")) store("rmq-sync-off", Date.now());
+    }finally{ busy = false; }
+  }
+  document.addEventListener("visibilitychange", () => { if (document.visibilityState === "visible") sync(); });
+  return {sync};
+})();
 /* Primero las no vistas (en orden aleatorio) y después las vistas, de la que hace más tiempo a la más reciente */
 function porAntiguedad(list, pos = seenPos()){
   const fresh = shuffle(list.filter(q => !pos.has(qid(q))));
@@ -1211,7 +1245,7 @@ const Login = (() => {
         if (r !== "ok"){ $("l-pin1").value = ""; $("l-pin1").focus();
           return err(r === "bloqueado" ? T("Demasiados intentos. Espera 15 minutos.") : r === "error" ? T("No se pudo comprobar el PIN. Inténtalo de nuevo.") : T("PIN incorrecto. Prueba otra vez.")); }
       }
-      savePin(key, a); setUser(name); show("scr-start");
+      savePin(key, a); setUser(name); show("scr-start"); SeenSync.sync(true);
     } finally { busy = false; $("l-go").disabled = false; }
   }
   $("login-form").addEventListener("submit", e => { e.preventDefault(); submit(); });
@@ -1378,6 +1412,7 @@ function countSeen(shown){
     return {q: q.key || q.q, v: q.vis || "", r: answered ? 1 : 0, a: answered && !missed.has(q) ? 1 : 0};
   });
   if (items.length) rpcCall("contar_preguntas", {p: items.slice(0, 60)}).catch(() => {});
+  SeenSync.sync();
 }
 
 function finish(){
@@ -2526,6 +2561,7 @@ const Install = (() => {
     const k = norm($("name").value.trim()), pin = pins()[k];
     if (HOF.online && k && pin) rpcCall("pin_comprobar", {p_clave: k, p_pin: pin}).then(r => {   // PIN cambiado o restablecido: volver a entrar
       if (r === "mal" || r === "sin_pin"){ forgetPin(k); if (!$("scr-start").classList.contains("hidden")) show("scr-login"); }
+      else SeenSync.sync(true);
     }).catch(() => {});
     $("source").innerHTML = T("<b>{n}</b> preguntas cargadas · fuente: {src}", {n: BANK.length, src: esc(label)});
   }catch(e){
