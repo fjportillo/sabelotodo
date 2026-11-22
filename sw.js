@@ -1,7 +1,7 @@
 /* Service worker de Sabelotodo: permite instalar la web como app y jugar sin conexión.
    Estrategia: primero la red (para tener siempre la última versión y las preguntas nuevas) y,
    si no hay conexión, la copia guardada. Supabase y otras webs no pasan por aquí. */
-const CACHE = "sabelotodo-v3";
+const CACHE = "sabelotodo-v4";
 const SHELL = ["./", "index.html", "preguntas.csv", "logo.png", "manifest.webmanifest", "icons/icon-192.png", "icons/icon-512.png", "jugar.html", "evento.html", "concurso.js", "sonido.js", "i18n/ui.js", "i18n/i18n.js", "i18n/preguntas_ca.csv", "i18n/preguntas_en.csv"];
 
 self.addEventListener("install", e => {

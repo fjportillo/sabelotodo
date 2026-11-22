@@ -307,7 +307,7 @@ function parseCSV(text){
 }
 let BANK = [], TRMAPS = {ca: new Map(), en: new Map()};
 async function loadBank(){
-  const rows = parseCSV(await (await fetch("preguntas.csv?t=" + Date.now(), {cache: "no-store"})).text());
+  const rows = parseCSV(await (await fetch("preguntas.csv", {cache: "no-cache"})).text());
   const h = rows[0].map(x => x.trim().toLowerCase());
   const ix = n => h.indexOf(n);
   BANK = rows.slice(1).map(r => ({q: r[ix("pregunta")], c: r[ix("correcta")], wrong: [r[ix("incorrecta1")], r[ix("incorrecta2")], r[ix("incorrecta3")]].filter(Boolean),
