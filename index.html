@@ -1051,7 +1051,17 @@ async function translateBank(qs){
 }
 
 const SEEN_MAX = 12000;   // preguntas vistas que recuerda cada dispositivo para no repetirlas (cabe un banco de 10.000)
-function qid(q){ let h = 0; const s = (q.key || q.q) + "|" + (q.vis || ""); for (let i = 0; i < s.length; i++) h = (h * 31 + s.charCodeAt(i)) | 0; return h.toString(36); }
+function qid(q){ if (q._id) return q._id; let h = 0; const s = (q.key || q.q) + "|" + (q.vis || ""); for (let i = 0; i < s.length; i++) h = (h * 31 + s.charCodeAt(i)) | 0; return q._id = h.toString(36); }
+/* Memoria de preguntas vistas en este dispositivo, de la más antigua a la más reciente.
+   Volver a ver una pregunta la pasa al final, así al reciclar salen primero las que hace más tiempo que no se ven. */
+function seenPos(){ const m = new Map(); (store("rmq-seen") || []).forEach((id, i) => m.set(id, i)); return m; }
+function markSeen(q){ const id = qid(q), l = (store("rmq-seen") || []).filter(x => x !== id); l.push(id); store("rmq-seen", l.slice(-SEEN_MAX)); }
+/* Primero las no vistas (en orden aleatorio) y después las vistas, de la que hace más tiempo a la más reciente */
+function porAntiguedad(list, pos = seenPos()){
+  const fresh = shuffle(list.filter(q => !pos.has(qid(q))));
+  const old = shuffle(list.filter(q => pos.has(qid(q)))).sort((a, b) => pos.get(qid(a)) - pos.get(qid(b)));
+  return fresh.concat(old);
+}
 
 function shuffle(a){ a = a.slice(); for (let i=a.length-1;i>0;i--){ const j=Math.floor(Math.random()*(i+1)); [a[i],a[j]]=[a[j],a[i]]; } return a; }
 
@@ -1235,21 +1245,10 @@ function startGame(){
   let pool = BANK.filter(q => (!cat || q.cat === cat) && (auto || !diff || q.diff === diff));
   $("start-err").classList.add("hidden");
   if (!pool.length){ $("start-err").textContent = T("No hay preguntas con esa combinación de categoría y dificultad."); $("start-err").classList.remove("hidden"); return; }
-  // Evitar repeticiones: primero las preguntas que este dispositivo aún no ha visto
-  const seen = new Set(store("rmq-seen") || []);
-  let fresh = pool.filter(q => !seen.has(qid(q))), old = pool.filter(q => seen.has(qid(q)));
-  const need = n || pool.length;
-  if (fresh.length < need && old.length){            // casi todo visto: empezar ronda nueva
-    const keep = new Set(fresh.map(qid));
-    const enPool = new Set(pool.map(qid));
-    store("rmq-seen", [...seen].filter(id => !enPool.has(id) || keep.has(id)));
-  }
-  pool = shuffle(fresh).concat(shuffle(old));
+  // Evitar repeticiones: primero las que este dispositivo no ha visto nunca; después, las que hace más tiempo que vio
+  pool = porAntiguedad(pool);
   if (!cat) pool = porCategorias(pool);       // todas las categorías: que cada una pese lo mismo, tenga las preguntas que tenga
-  if (n) pool = pool.slice(0, n);
-  const nowSeen = new Set(store("rmq-seen") || []);
-  pool.forEach(q => nowSeen.add(qid(q)));
-  store("rmq-seen", [...nowSeen].slice(-SEEN_MAX));
+  if (n) pool = pool.slice(0, n);       // se marcan como vistas al mostrarse (renderQuestion), no al empezar
   store("rmq-opts", champ ? {...(store("rmq-opts") || {}), name, kind: KIND, v: 2} : {name, cat, diff, n, v: 2, kind: KIND});
   game = { name, list: pool.map(q => ({...q, options: shuffle([q.c, ...q.wrong])})),
            i: 0, score: 0, ok: 0, streak: 0, best: 0, misses: [], cat, diff, mode: "normal", grid: [], det: {}, kind: NEW_RULES ? KIND : null };
@@ -1276,7 +1275,7 @@ function porCategorias(list){
 /* Elige la pregunta de la posición i según el nivel actual (preferentemente no vista y no repetida).
    Sin categoría elegida, primero sortea la categoría (entre las que menos han salido en la partida) y luego la pregunta. */
 function autoPick(i){
-  const used = new Set(game.list.slice(0, i).map(qid)), seen = new Set(store("rmq-seen") || []);
+  const used = new Set(game.list.slice(0, i).map(qid)), pos = seenPos();
   const want = Math.max(0, Math.min(2, Math.round(game.auto.lvl)));
   for (const d of [0, 1, -1, 2, -2]){
     const lv = LEVELS[want + d]; if (!lv) continue;
@@ -1288,9 +1287,7 @@ function autoPick(i){
       const k = shuffle(cats.filter(k => (veces.get(k) || 0) === min))[0];
       c = c.filter(q => q.cat === k);
     }
-    const fresh = c.filter(q => !seen.has(qid(q)));
-    const q = shuffle(fresh.length ? fresh : c)[0];
-    seen.add(qid(q)); store("rmq-seen", [...seen].slice(-SEEN_MAX));
+    const q = porAntiguedad(c, pos)[0];     // no vista; si no queda ninguna, la que hace más tiempo que vio
     return {...q, options: shuffle([q.c, ...q.wrong])};
   }
   return game.list[i];
@@ -1298,6 +1295,7 @@ function autoPick(i){
 
 function renderQuestion(){
   const q = game.list[game.i];
+  markSeen(q);                                // también las del reto diario, para que no vuelvan a salir en otras partidas
   $("h-idx").textContent = game.i + 1;
   $("h-score").textContent = game.score;
   $("h-streak").textContent = game.streak;
@@ -1975,7 +1973,7 @@ const Reto = (() => {
   }
   ESPECIALES = parseEspeciales(ESP_EMBED);
   const espReady = fetch("retos_especiales.csv?t=" + Date.now(), {cache: "no-store"}).then(r => r.ok ? r.text() : Promise.reject())
-    .then(t => { ESPECIALES = parseEspeciales(t); }).catch(() => {}).finally(() => { try{ refresh(); }catch(e){} });
+    .then(t => { ESPECIALES = parseEspeciales(t); H = null; }).catch(() => {}).finally(() => { try{ refresh(); }catch(e){} });
   const espLoaded = () => Promise.race([espReady, new Promise(r => setTimeout(r, 3000))]);
   const especial = (d = day()) => { const e = ESPECIALES[d]; return e && BANK.filter(e.es).length >= 10 ? e : null; };   // si no hay 10 preguntas del tema, reto normal
   const num = (d = day()) => "#" + (Math.round((Date.parse(d) - Date.parse(EPOCH)) / 86400000) + 1) + (especial(d) ? " · 🤘 " + T("Especial {tema}", {tema: especial(d).tema}) : "");
@@ -1984,16 +1982,41 @@ const Reto = (() => {
   const RETO_REPARTO_DESDE = "2026-11-22";
   function sshuffle(a, r){ a = a.slice(); for (let i = a.length - 1; i > 0; i--){ const j = Math.floor(r() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; }
 
-  // Mismas preguntas y mismo orden de respuestas en todos los dispositivos
+  /* Desde esta fecha el reto no repite preguntas: en cada categoría salen primero las que aún no han salido en el ciclo
+     y, cuando se agotan, las que salieron hace más tiempo. El historial se recalcula día a día desde el inicio del ciclo
+     (365 días), igual en todos los dispositivos, así que todos ven el mismo reto. */
+  const RETO_SIN_REPETIR_DESDE = "2026-11-23", CICLO = 365;
+  const dnum = x => Math.round(Date.parse(x + "T00:00:00Z") / 86400000);
+  const dstr = n => new Date(n * 86400000).toISOString().slice(0, 10);
+  let baseOrd = null, baseSrc = null, H = null;
+  const ordenada = () => baseSrc === BANK ? baseOrd : (baseSrc = BANK, H = null, baseOrd = BANK.map(q => [qid(q) + "|" + (q.key || q.q), q]).sort((a, b) => a[0] < b[0] ? -1 : a[0] > b[0] ? 1 : 0).map(x => x[1]));
   function questions(d){
-    const r = rng(hash("sabelotodo-reto-" + d)), esp = especial(d);
-    const bank = esp ? BANK.filter(esp.es) : d >= NEW_RULES_FROM ? BANK.filter(q => !isLocalQ(q)) : BANK;
-    const older = esp ? bank : bank.filter(q => q.alta !== d);           // las añadidas ese mismo día no entran (por si se publican a media mañana)
-    const pool = (older.length >= 100 ? older : bank).map(q => [qid(q) + "|" + (q.key || q.q), q]).sort((a, b) => a[0] < b[0] ? -1 : a[0] > b[0] ? 1 : 0).map(x => x[1]);
+    if (d < RETO_SIN_REPETIR_DESDE) return pickDay(d, null);
+    ordenada();                                   // si cambió el banco (idioma, recarga), se rehace el historial
+    const ini = dnum(RETO_SIN_REPETIR_DESDE), start = ini + Math.floor((dnum(d) - ini) / CICLO) * CICLO;
+    if (!H || H.start !== start || H.x > dnum(d) + 1) H = {start, x: start, used: new Map(), picks: {}};
+    while (H.x <= dnum(d)){
+      const x = dstr(H.x), p = pickDay(x, H.used);
+      H.picks[x] = p; p.forEach(q => H.used.set(qid(q), H.x)); H.x++;
+    }
+    return H.picks[d];
+  }
+
+  // Mismas preguntas y mismo orden de respuestas en todos los dispositivos
+  function pickDay(d, used){
+    const r = rng(hash("sabelotodo-reto-" + d)), esp = especial(d), base = ordenada();
+    const bank = esp ? base.filter(esp.es) : d >= NEW_RULES_FROM ? (base.nl || (base.nl = base.filter(q => !isLocalQ(q)))) : base;
+    const older = esp ? bank : used ? bank.filter(q => !(q.alta && q.alta >= d))     // las añadidas ese día (o después) no entran
+                                    : bank.filter(q => q.alta !== d);
+    const pool = older.length >= 100 ? older : bank;
     let order = sshuffle(pool, r);
     if (!esp && d >= RETO_REPARTO_DESDE){       // turno de categorías: cada una con las mismas opciones de salir
       const g = new Map(); order.forEach(q => { if (!g.has(q.cat)) g.set(q.cat, []); g.get(q.cat).push(q); });
-      const grupos = sshuffle([...g.keys()].sort(), r).map(k => g.get(k)); order = [];
+      let grupos = sshuffle([...g.keys()].sort(), r).map(k => g.get(k)); order = [];
+      if (used) grupos = grupos.map(x => {            // dentro de cada categoría: primero las que no han salido en el ciclo, luego la que salió hace más
+        const nuevas = x.filter(q => !used.has(qid(q)));
+        return nuevas.length === x.length ? x : nuevas.concat(x.filter(q => used.has(qid(q))).sort((a, b) => used.get(qid(a)) - used.get(qid(b))));
+      });
       for (let i = 0; order.length < pool.length; i++) grupos.forEach(x => { if (x[i]) order.push(x[i]); });
     }
     const want = esp ? {...esp.want} : {facil: 3, media: 4, dificil: 3}, picked = [], cats = new Map();
