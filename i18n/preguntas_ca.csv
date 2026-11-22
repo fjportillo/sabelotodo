@@ -1509,3 +1509,278 @@ pregunta_es,visual,correcta_es,pregunta,correcta,incorrecta1,incorrecta2,incorre
 "¿Qué significan las siglas ""GPS""?",,Sistema de Posicionamiento Global,"Què volen dir les sigles ""GPS""?",Sistema de Posicionament Global,Gestor de Posició per Satèl·lit,Guia Personal de Satèl·lit,Grup de Posicionament Sincronitzat
 ¿Qué empresa fabrica las tarjetas gráficas GeForce?,,Nvidia,Quina empresa fabrica les targetes gràfiques GeForce?,,,,
 ¿Qué red social se llamó Twitter hasta 2023?,,X,Quina xarxa social es deia Twitter fins al 2023?,,,,
+¿Qué ciudad organizó los Juegos Olímpicos de verano de 1996?,,Atlanta,Quina ciutat va organitzar els Jocs Olímpics d'estiu del 1996?,Atlanta,Sydney,Atenes,Barcelona
+¿Qué ciudad organizó los Juegos Olímpicos de verano de 2000?,,Sídney,Quina ciutat va organitzar els Jocs Olímpics d'estiu del 2000?,Sydney,Atenes,Atlanta,Pequín
+¿Qué ciudad organizó los Juegos Olímpicos de verano de 2004?,,Atenas,Quina ciutat va organitzar els Jocs Olímpics d'estiu del 2004?,Atenes,Pequín,Sydney,Roma
+¿Qué ciudad organizó los Juegos Olímpicos de verano de 2008?,,Pekín,Quina ciutat va organitzar els Jocs Olímpics d'estiu del 2008?,Pequín,Londres,Atenes,Tòquio
+¿Qué ciudad organizó los Juegos Olímpicos de verano de 2012?,,Londres,Quina ciutat va organitzar els Jocs Olímpics d'estiu del 2012?,Londres,Pequín,Madrid,París
+¿Qué ciudad organizó los Juegos Olímpicos de verano de 2016?,,Río de Janeiro,Quina ciutat va organitzar els Jocs Olímpics d'estiu del 2016?,Rio de Janeiro,Londres,Tòquio,Madrid
+¿Qué ciudad organizó los Juegos Olímpicos de verano de 2020?,,Tokio,Quina ciutat va organitzar els Jocs Olímpics d'estiu del 2020?,Tòquio,Rio de Janeiro,París,Istanbul
+¿Qué ciudad organizó los Juegos Olímpicos de verano de 2024?,,París,Quina ciutat va organitzar els Jocs Olímpics d'estiu del 2024?,París,Los Angeles,Tòquio,Madrid
+¿Qué ciudad organizó los Juegos Olímpicos de verano de 1988?,,Seúl,Quina ciutat va organitzar els Jocs Olímpics d'estiu del 1988?,Seül,Los Angeles,Moscou,Barcelona
+¿Qué ciudad organizó los Juegos Olímpicos de verano de 1984?,,Los Ángeles,Quina ciutat va organitzar els Jocs Olímpics d'estiu del 1984?,Los Angeles,Moscou,Seül,Mont-real
+¿Qué ciudad organizó los Juegos Olímpicos de verano de 1980?,,Moscú,Quina ciutat va organitzar els Jocs Olímpics d'estiu del 1980?,Moscou,Mont-real,Los Angeles,Munic
+¿Qué ciudad organizó los Juegos Olímpicos de verano de 1976?,,Montreal,Quina ciutat va organitzar els Jocs Olímpics d'estiu del 1976?,Mont-real,Munic,Moscou,Ciutat de Mèxic
+¿Qué ciudad organizó los Juegos Olímpicos de verano de 1972?,,Múnich,Quina ciutat va organitzar els Jocs Olímpics d'estiu del 1972?,Munic,Ciutat de Mèxic,Mont-real,Tòquio
+¿Qué ciudad organizó los Juegos Olímpicos de verano de 1968?,,Ciudad de México,Quina ciutat va organitzar els Jocs Olímpics d'estiu del 1968?,Ciutat de Mèxic,Tòquio,Munic,Roma
+¿Qué ciudad organizó los Juegos Olímpicos de verano de 1960?,,Roma,Quina ciutat va organitzar els Jocs Olímpics d'estiu del 1960?,Roma,Tòquio,Melbourne,Londres
+¿Qué ciudad organizará los Juegos Olímpicos de verano de 2028?,,Los Ángeles,Quina ciutat organitzarà els Jocs Olímpics d'estiu del 2028?,Los Angeles,Brisbane,Madrid,Istanbul
+¿Dónde se celebraron los Juegos Olímpicos de invierno de 2026?,,Milán y Cortina d'Ampezzo,On es van celebrar els Jocs Olímpics d'hivern del 2026?,Milà i Cortina d'Ampezzo,Torí,Oslo,Salt Lake City
+¿Dónde se celebraron los Juegos Olímpicos de invierno de 2022?,,Pekín,On es van celebrar els Jocs Olímpics d'hivern del 2022?,Pequín,Pyeongchang,Sotxi,Oslo
+¿Dónde se celebraron los Juegos Olímpicos de invierno de 2018?,,Pyeongchang,On es van celebrar els Jocs Olímpics d'hivern del 2018?,Pyeongchang,Sotxi,Pequín,Vancouver
+¿Dónde se celebraron los Juegos Olímpicos de invierno de 2014?,,Sochi,On es van celebrar els Jocs Olímpics d'hivern del 2014?,Sotxi,Vancouver,Pyeongchang,Torí
+¿Dónde se celebraron los Juegos Olímpicos de invierno de 2010?,,Vancouver,On es van celebrar els Jocs Olímpics d'hivern del 2010?,Vancouver,Torí,Sotxi,Salt Lake City
+¿Qué país organizó el Mundial de fútbol masculino de 2022?,,Catar,Quin país va organitzar el Mundial de futbol masculí del 2022?,Qatar,Rússia,Brasil,Sud-àfrica
+¿Qué país organizó el Mundial de fútbol masculino de 2018?,,Rusia,Quin país va organitzar el Mundial de futbol masculí del 2018?,Rússia,Brasil,Qatar,Alemanya
+¿Qué país organizó el Mundial de fútbol masculino de 2014?,,Brasil,Quin país va organitzar el Mundial de futbol masculí del 2014?,Brasil,Sud-àfrica,Rússia,Argentina
+¿Qué país organizó el Mundial de fútbol masculino de 2010?,,Sudáfrica,Quin país va organitzar el Mundial de futbol masculí del 2010?,Sud-àfrica,Alemanya,Brasil,Corea del Sud i el Japó
+¿Qué país organizó el Mundial de fútbol masculino de 2006?,,Alemania,Quin país va organitzar el Mundial de futbol masculí del 2006?,Alemanya,França,Itàlia,Sud-àfrica
+¿Qué país organizó el Mundial de fútbol masculino de 2002?,,Corea del Sur y Japón,Quin país va organitzar el Mundial de futbol masculí del 2002?,Corea del Sud i el Japó,França,Alemanya,Xina
+¿Qué país organizó el Mundial de fútbol masculino de 1998?,,Francia,Quin país va organitzar el Mundial de futbol masculí del 1998?,França,EUA,Itàlia,Alemanya
+¿Qué país organizó el Mundial de fútbol masculino de 1994?,,EE. UU.,Quin país va organitzar el Mundial de futbol masculí del 1994?,EUA,Itàlia,França,Mèxic
+¿Qué país organizó el Mundial de fútbol masculino de 1990?,,Italia,Quin país va organitzar el Mundial de futbol masculí del 1990?,Itàlia,Mèxic,EUA,Espanya
+¿Qué país organizó el Mundial de fútbol masculino de 1986?,,México,Quin país va organitzar el Mundial de futbol masculí del 1986?,Mèxic,Espanya,Itàlia,Argentina
+¿Qué país organizó el Mundial de fútbol masculino de 1982?,,España,Quin país va organitzar el Mundial de futbol masculí del 1982?,Espanya,Itàlia,Mèxic,Argentina
+¿Qué selección ganó el Mundial de fútbol masculino de 2014?,,Alemania,Quina selecció va guanyar el Mundial de futbol masculí del 2014?,Alemanya,Argentina,Brasil,Països Baixos
+¿Qué selección ganó el Mundial de fútbol masculino de 2018?,,Francia,Quina selecció va guanyar el Mundial de futbol masculí del 2018?,França,Croàcia,Bèlgica,Anglaterra
+¿Qué selección ganó el Mundial de fútbol masculino de 2022?,,Argentina,Quina selecció va guanyar el Mundial de futbol masculí del 2022?,Argentina,França,Croàcia,Marroc
+¿Qué selección ganó el Mundial de fútbol masculino de 2006?,,Italia,Quina selecció va guanyar el Mundial de futbol masculí del 2006?,Itàlia,França,Alemanya,Portugal
+¿Qué selección ganó el Mundial de fútbol masculino de 2002?,,Brasil,Quina selecció va guanyar el Mundial de futbol masculí del 2002?,Brasil,Alemanya,Turquia,Corea del Sud
+¿Qué selección ganó el Mundial de fútbol masculino de 1998?,,Francia,Quina selecció va guanyar el Mundial de futbol masculí del 1998?,França,Brasil,Croàcia,Països Baixos
+¿Qué selección ganó el Mundial de fútbol masculino de 1986?,,Argentina,Quina selecció va guanyar el Mundial de futbol masculí del 1986?,Argentina,Alemanya Occidental,França,Bèlgica
+¿Qué selección ganó la Eurocopa masculina de 2024?,,España,Quina selecció va guanyar l'Eurocopa masculina del 2024?,Espanya,Anglaterra,França,Països Baixos
+¿Qué selección ganó la Eurocopa masculina de 2020?,,Italia,Quina selecció va guanyar l'Eurocopa masculina del 2020?,Itàlia,Anglaterra,Espanya,Dinamarca
+¿Qué selección ganó la Eurocopa masculina de 2016?,,Portugal,Quina selecció va guanyar l'Eurocopa masculina del 2016?,Portugal,França,Alemanya,Gal·les
+¿Qué selección ganó la Eurocopa masculina de 2004?,,Grecia,Quina selecció va guanyar l'Eurocopa masculina del 2004?,Grècia,Portugal,Països Baixos,República Txeca
+¿Qué selección ganó la Eurocopa masculina de 1988?,,Países Bajos,Quina selecció va guanyar l'Eurocopa masculina del 1988?,Països Baixos,Alemanya Occidental,Itàlia,Dinamarca
+¿Qué selección ganó la Eurocopa masculina de 1992?,,Dinamarca,Quina selecció va guanyar l'Eurocopa masculina del 1992?,Dinamarca,Alemanya,Països Baixos,Suècia
+¿Qué selección ganó el Mundial de fútbol femenino de 2023?,,España,Quina selecció va guanyar el Mundial de futbol femení del 2023?,Espanya,Anglaterra,Suècia,EUA
+¿Qué tres países organizarán el Mundial de fútbol de 2026?,,"EE. UU., Canadá y México",Quins tres països organitzaran el Mundial de futbol del 2026?,"EUA, Canadà i Mèxic","EUA, Mèxic i Cuba","Canadà, EUA i Jamaica","Mèxic, Colòmbia i EUA"
+¿Cuántos jugadores tiene un equipo de rugby XV en el campo?,,15,Quants jugadors té un equip de rugbi XV al camp?,,,,
+¿Cuántos jugadores tiene un equipo de voleibol en pista?,,6,Quants jugadors té un equip de voleibol a la pista?,,,,
+"¿Cuántos jugadores tiene un equipo de balonmano en pista, contando al portero?",,7,"Quants jugadors té un equip d'handbol a la pista, comptant el porter?",,,,
+¿Cuántos jugadores tiene un equipo de béisbol en el campo?,,9,Quants jugadors té un equip de beisbol al camp?,,,,
+"¿Cuántos jugadores tiene un equipo de hockey sobre hielo en pista, contando al portero?",,6,"Quants jugadors té un equip d'hoquei sobre gel a la pista, comptant el porter?",,,,
+¿Cuántos kilómetros mide exactamente una maratón?,,"42,195",Quants quilòmetres fa exactament una marató?,"42,195",40,42,"45,5"
+¿De qué color es el maillot del líder de la clasificación de la montaña del Tour de Francia?,,Blanco con lunares rojos,De quin color és el mallot del líder de la classificació de la muntanya del Tour de França?,Blanc amb pics vermells,Verd,Groc,Blau
+¿Cuántos Tours de Francia consecutivos ganó Miguel Induráin?,,5,Quants Tours de França consecutius va guanyar Miguel Induráin?,,,,
+¿De qué país es el ciclista Tadej Pogačar?,,Eslovenia,De quin país és el ciclista Tadej Pogačar?,Eslovènia,Croàcia,Eslovàquia,Dinamarca
+¿En qué años fue campeón del mundo de Fórmula 1 Fernando Alonso?,,2005 y 2006,En quins anys va ser campió del món de Fórmula 1 Fernando Alonso?,2005 i 2006,2006 i 2007,2004 i 2005,2007 i 2008
+¿De qué país es el piloto de Fórmula 1 Max Verstappen?,,Países Bajos,De quin país és el pilot de Fórmula 1 Max Verstappen?,Països Baixos,Bèlgica,Alemanya,Àustria
+¿En qué equipo de la NBA ganó Pau Gasol sus dos anillos?,,Los Angeles Lakers,En quin equip de l'NBA va guanyar Pau Gasol els seus dos anells?,,,,
+¿En qué equipo de la NBA ganó Michael Jordan sus seis anillos?,,Chicago Bulls,En quin equip de l'NBA va guanyar Michael Jordan els seus sis anells?,,,,
+¿En qué superficie se juega Roland Garros?,,Tierra batida,En quina superfície es juga Roland Garros?,Terra batuda,Gespa,Pista dura,Moqueta
+¿Cuántos títulos de Roland Garros ganó Rafa Nadal?,,14,Quants títols de Roland Garros va guanyar Rafa Nadal?,,,,
+¿En qué año ganó Carlos Alcaraz su primer Wimbledon?,,2023,En quin any va guanyar Carlos Alcaraz el seu primer Wimbledon?,,,,
+¿De qué país es el tenista Novak Djokovic?,,Serbia,De quin país és el tennista Novak Djokovic?,Sèrbia,Croàcia,Montenegro,Bòsnia i Hercegovina
+"¿Qué deporte de origen japonés significa ""camino de la suavidad""?",,Judo,"Quin esport d'origen japonès significa ""camí de la suavitat""?",,,,
+¿En qué país nació el taekwondo?,,Corea del Sur,A quin país va néixer el taekwondo?,Corea del Sud,Japó,Xina,Tailàndia
+¿Cuál es el récord mundial de los 100 metros lisos de Usain Bolt?,,"9,58 segundos",Quin és el rècord mundial dels 100 metres llisos d'Usain Bolt?,"9,58 segons","9,63 segons","9,69 segons","9,72 segons"
+¿Cuántas medallas de oro olímpicas ganó Michael Phelps?,,23,Quantes medalles d'or olímpiques va guanyar Michael Phelps?,,,,
+¿Cuántos Balones de Oro ha ganado Lionel Messi?,,8,Quantes Pilotes d'Or ha guanyat Lionel Messi?,,,,
+¿En qué campo se juega el torneo de golf Masters?,,Augusta National,A quin camp es juga el torneig de golf Masters?,,,,
+¿Qué golfista cántabro ganó tres Open Británicos y dos Masters?,,Severiano Ballesteros,Quin golfista càntabre va guanyar tres Open Britànics i dos Masters?,,,,
+¿De qué país es típica la feijoada?,,Brasil,De quin país és típica la feijoada?,Brasil,Portugal,Argentina,Colòmbia
+¿De qué país es típicos los pierogi?,,Polonia,De quin país és típics els pierogi?,Polònia,Rússia,Hongria,Romania
+¿De qué país es típica la poutine?,,Canadá,De quin país és típica la poutine?,Canadà,França,Bèlgica,EUA
+¿De qué país es típico el haggis?,,Escocia,De quin país és típic el haggis?,Escòcia,Irlanda,Gal·les,Noruega
+¿De qué país es típica la fondue de queso?,,Suiza,De quin país és típica la fondue de formatge?,Suïssa,França,Àustria,Itàlia
+¿De qué país es típico el tajín?,,Marruecos,De quin país és típic el tajín?,Marroc,Turquia,Índia,Etiòpia
+¿De qué país es típico el pho?,,Vietnam,De quin país és típic el pho?,Vietnam,Tailàndia,Xina,Japó
+¿De qué país es típico el bibimbap?,,Corea del Sur,De quin país és típic el bibimbap?,Corea del Sud,Japó,Xina,Vietnam
+¿De qué país es típica la sopa tom yum?,,Tailandia,De quin país és típica la sopa tom yum?,Tailàndia,Vietnam,Índia,Malàisia
+¿De qué país es típico el pastel de nata?,,Portugal,De quin país és típic el pastel de nata?,Portugal,Brasil,Espanya,França
+¿De qué país es típico el smørrebrød?,,Dinamarca,De quin país és típic el smørrebrød?,Dinamarca,Suècia,Noruega,Finlàndia
+¿De qué país es típicas las köttbullar?,,Suecia,De quin país és típiques les köttbullar?,Suècia,Dinamarca,Noruega,Finlàndia
+¿De qué país es típico el mole poblano?,,México,De quin país és típic el mole poblano?,Mèxic,Perú,Colòmbia,Xile
+¿De qué país es típico el pato laqueado?,,China,De quin país és típic l'ànec lacat?,Xina,Japó,Vietnam,Corea del Sud
+¿De qué país es típico el risotto?,,Italia,De quin país és típic el risotto?,Itàlia,França,Espanya,Grècia
+¿De qué país es típica la bullabesa?,,Francia,De quin país és típica la bullabessa?,França,Itàlia,Grècia,Portugal
+¿De qué país es típico el escalope vienés (Wiener Schnitzel)?,,Austria,De quin país és típic l'escalopa vienesa (Wiener Schnitzel)?,Àustria,Alemanya,Suïssa,Hongria
+¿De qué país es típica la tarta Sacher?,,Austria,De quin país és típica el pastís Sacher?,Àustria,Alemanya,Suïssa,Hongria
+¿De qué país es típico el tzatziki?,,Grecia,De quin país és típic el tzatziki?,Grècia,Turquia,Itàlia,Marroc
+¿De qué país es típica la injera?,,Etiopía,De quin país és típica la injera?,Etiòpia,Marroc,Índia,Turquia
+¿De qué país es típico el pastel de choclo?,,Chile,De quin país és típic el pastel de choclo?,Xile,Argentina,Perú,Mèxic
+¿De qué país es típico el ajiaco?,,Colombia,De quin país és típic el ajiaco?,Colòmbia,Veneçuela,Mèxic,Cuba
+¿De qué país es típico el ramen?,,Japón,De quin país és típic el ramen?,Japó,Xina,Corea del Sud,Vietnam
+¿De qué país es típico el biryani?,,India,De quin país és típic el biryani?,Índia,Tailàndia,Vietnam,Indonèsia
+¿De qué país es típico el tiramisú?,,Italia,De quin país és típic el tiramisú?,Itàlia,França,Àustria,Espanya
+¿De qué país es típico el chucrut?,,Alemania,De quin país és típic la xucrut?,Alemanya,Àustria,Polònia,Rússia
+¿De qué comunidad autónoma es típico el pulpo a feira?,,Galicia,De quina comunitat autònoma és típic el pop a feira?,Galícia,Astúries,Cantàbria,País Basc
+¿De qué comunidad autónoma es típico el salmorejo?,,Andalucía,De quina comunitat autònoma és típic el salmorejo?,Andalusia,Extremadura,Múrcia,Castella-la Manxa
+¿De qué comunidad autónoma es típica la escudella i carn d'olla?,,Cataluña,De quina comunitat autònoma és típica la escudella i carn d'olla?,Catalunya,Aragó,Comunitat Valenciana,Illes Balears
+¿De qué comunidad autónoma es típica la ensaimada?,,Islas Baleares,De quina comunitat autònoma és típica la ensaimada?,Illes Balears,Catalunya,Comunitat Valenciana,Múrcia
+¿De qué comunidad autónoma es típicas las papas arrugadas con mojo?,,Canarias,De quina comunitat autònoma és típiques les papes arrugades amb mojo?,Canàries,Andalusia,Múrcia,Illes Balears
+¿De qué comunidad autónoma es típico el marmitako?,,País Vasco,De quina comunitat autònoma és típic el marmitako?,País Basc,Cantàbria,Astúries,Galícia
+¿De qué comunidad autónoma es típico el cachopo?,,Asturias,De quina comunitat autònoma és típic el cachopo?,Astúries,Cantàbria,Galícia,Castella i Lleó
+¿De qué comunidad autónoma es típica la tarta de Santiago?,,Galicia,De quina comunitat autònoma és típica el pastís de Santiago?,Galícia,Astúries,Castella i Lleó,Navarra
+¿De qué comunidad autónoma es típico el pisto?,,Castilla-La Mancha,De quina comunitat autònoma és típic el pisto?,Castella-la Manxa,Andalusia,Múrcia,Extremadura
+¿De qué comunidad autónoma es típico el suquet de peix?,,Cataluña,De quina comunitat autònoma és típic el suquet de peix?,Catalunya,País Basc,Galícia,Andalusia
+¿De qué comunidad autónoma es típica la coca de recapte?,,Cataluña,De quina comunitat autònoma és típica la coca de recapte?,Catalunya,Illes Balears,Aragó,Múrcia
+¿De qué comunidad autónoma es típicos los fartons?,,Comunidad Valenciana,De quina comunitat autònoma és típics els fartons?,Comunitat Valenciana,Catalunya,Múrcia,Illes Balears
+¿De qué comunidad autónoma es típicas las migas extremeñas?,,Extremadura,De quina comunitat autònoma és típiques les molles extremenyes?,Extremadura,Galícia,Astúries,Cantàbria
+¿De qué comunidad autónoma es típico el cocido maragato?,,Castilla y León,De quina comunitat autònoma és típic el bullit maragato?,Castella i Lleó,Astúries,Galícia,La Rioja
+¿De qué comunidad autónoma es típico el zarangollo?,,Murcia,De quina comunitat autònoma és típic el zarangollo?,Múrcia,Andalusia,Aragó,Navarra
+¿De qué comunidad autónoma es típico el ternasco?,,Aragón,De quina comunitat autònoma és típic el ternasco?,Aragó,Navarra,La Rioja,Catalunya
+"¿Qué significa ""Eskerrik asko"" en euskera?",,Gracias,"Què vol dir ""Eskerrik asko"" en basc?",Gràcies,Bon dia,Adéu,Benvingut
+"¿Qué significa ""Schmetterling"" en alemán?",,Mariposa,"Què vol dir ""Schmetterling"" en alemany?",Papallona,Poma,Biblioteca,Finestra
+"¿Qué significa ""Hund"" en alemán?",,Perro,"Què vol dir ""Hund"" en alemany?",Gos,Gat,Casa,Pa
+"¿Qué significa ""Pomme"" en francés?",,Manzana,"Què vol dir ""Pomme"" en francès?",Poma,Pa,Aigua,Taula
+"¿Qué significa ""Fenêtre"" en francés?",,Ventana,"Què vol dir ""Fenêtre"" en francès?",Finestra,Taula,Cadira,Carrer
+"¿Qué significa ""Amico"" en italiano?",,Amigo,"Què vol dir ""Amico"" en italià?",Amic,Llibre,Cotxe,Casa
+"¿Qué significa ""Livro"" en portugués?",,Libro,"Què vol dir ""Livro"" en portuguès?",Llibre,Carrer,Taula,Amic
+"¿Qué significa ""Mizu"" en japonés?",,Agua,"Què vol dir ""Mizu"" en japonès?",Aigua,Pa,Lluna,Sol
+"¿Qué significa ""Neko"" en japonés?",,Gato,"Què vol dir ""Neko"" en japonès?",Gat,Gos,Casa,Lluna
+"¿Qué significa ""Sakura"" en japonés?",,Flor del cerezo,"Què vol dir ""Sakura"" en japonès?",Flor del cirerer,Lluna,Muntanya,Cor
+"¿Qué significa ""Kirche"" en alemán?",,Iglesia,"Què vol dir ""Kirche"" en alemany?",Església,Carrer,Biblioteca,Finestra
+"¿Qué significa ""Morgen"" en alemán?",,Mañana,"Què vol dir ""Morgen"" en alemany?",Demà,Ahir,Avui,Bona nit
+"¿Qué significa ""Hakuna matata"" en suajili?",,No hay problema,"Què vol dir ""Hakuna matata"" en suahili?",No hi ha problema,Bon dia,Benvingut,Fins després
+"¿Qué significa ""Aloha"" en hawaiano?",,Hola y adiós,"Què vol dir ""Aloha"" en hawaià?",Hola i adéu,Gràcies,Si us plau,Bona nit
+"¿Qué significa ""Salam"" en árabe?",,Paz,"Què vol dir ""Salam"" en àrab?",Pau,Gràcies,Amic,Aigua
+¿Cuál es la lengua oficial mayoritaria de Israel?,,Hebreo,Quina és la llengua oficial majoritària de Israel?,Hebreu,Àrab,Persa,Turc
+¿Cuál es la lengua oficial mayoritaria de Filipinas?,,Tagalo,Quina és la llengua oficial majoritària de Filipines?,Tagal,Malai,Castellà,Anglès
+¿Cuál es la lengua oficial mayoritaria de Bangladés?,,Bengalí,Quina és la llengua oficial majoritària de Bangladesh?,Bengalí,Hindi,Urdú,Malai
+¿Cuál es la lengua oficial mayoritaria de Hungría?,,Húngaro,Quina és la llengua oficial majoritària de Hongria?,Hongarès,Polonès,Alemany,Finès
+¿Cuál es la lengua oficial mayoritaria de Islandia?,,Islandés,Quina és la llengua oficial majoritària de Islàndia?,Islandès,Danès,Suec,Finès
+¿Con qué idioma europeo está emparentado el finés?,,Estonio,Amb quina llengua europea està emparentat el finès?,Estonià,Suec,Rus,Islandès
+¿Cuál es el equivalente romano de Zeus?,,Júpiter,Quin és l'equivalent romà de Zeus?,Júpiter,Saturn,Mart,Neptú
+¿Cuál es el equivalente romano de Hera?,,Juno,Quin és l'equivalent romà de Hera?,Juno,Venus,Minerva,Vesta
+¿Cuál es el equivalente romano de Afrodita?,,Venus,Quin és l'equivalent romà de Afrodita?,Venus,Diana,Juno,Minerva
+¿Cuál es el equivalente romano de Artemisa?,,Diana,Quin és l'equivalent romà de Àrtemis?,Diana,Venus,Ceres,Minerva
+¿Cuál es el equivalente romano de Hefesto?,,Vulcano,Quin és l'equivalent romà de Hefest?,Vulcà,Mart,Saturn,Mercuri
+¿Cuál es el equivalente romano de Dioniso?,,Baco,Quin és l'equivalent romà de Dionís?,Bacus,Mercuri,Febus,Saturn
+¿Cuál es el equivalente romano de Deméter?,,Ceres,Quin és l'equivalent romà de Demèter?,Ceres,Vesta,Juno,Flora
+¿Cuál es el equivalente romano de Poseidón?,,Neptuno,Quin és l'equivalent romà de Posidó?,Neptú,Plutó,Júpiter,Saturn
+¿Cuál es el equivalente romano de Hades?,,Plutón,Quin és l'equivalent romà de Hades?,Plutó,Neptú,Saturn,Vulcà
+¿Cuál es el equivalente romano de Hestia?,,Vesta,Quin és l'equivalent romà de Hèstia?,Vesta,Ceres,Juno,Prosèrpina
+¿Cuál es el equivalente romano de Cronos?,,Saturno,Quin és l'equivalent romà de Cronos?,Saturn,Júpiter,Plutó,Mart
+¿Qué dios nórdico vigila el puente arcoíris Bifröst?,,Heimdal,Quin déu nòrdic vigila el pont de l'arc de Sant Martí Bifröst?,Heimdall,Balder,Týr,Bragi
+"¿Qué dios nórdico, hijo de Odín y Frigg, murió alcanzado por una rama de muérdago?",,Baldr,"Quin déu nòrdic, fill d'Odin i Frigg, va morir ferit per una branca de vesc?",Balder,Heimdall,Týr,Freyr
+¿Qué dios nórdico de la guerra perdió una mano en las fauces del lobo Fenrir?,,Tyr,Quin déu nòrdic de la guerra va perdre una mà a les urpes del llop Fenrir?,Týr,Heimdall,Balder,Njörðr
+¿Qué diosa egipcia tenía forma de gata?,,Bastet,Quina deessa egípcia tenia forma de gata?,Bastet,Hathor,Isis,Ptah
+¿Qué dios egipcio tenía cabeza de cocodrilo?,,Sobek,Quin déu egipci tenia cap de cocodril?,Sobek,Set,Anubis,Thot
+¿Qué dios egipcio del caos y el desierto asesinó a su hermano Osiris?,,Set,Quin déu egipci del caos i el desert va assassinar el seu germà Osiris?,Set,Horus,Anubis,Sobek
+¿Qué dios egipcio con cabeza de halcón es hijo de Isis y Osiris?,,Horus,Quin déu egipci amb cap de falcó és fill d'Isis i Osiris?,Horus,Thot,Anubis,Set
+¿Qué príncipe troyano mató Aquiles frente a las murallas de Troya?,,Héctor,Quin príncep troià va matar Aquil·les davant les muralles de Troia?,Hèctor,Paris,Enees,Príam
+¿Qué príncipe troyano raptó a Helena?,,Paris,Quin príncep troià va raptar Helena?,Paris,Hèctor,Enees,Menelau
+¿Qué rey de Micenas dirigió a los griegos en la guerra de Troya?,,Agamenón,Quin rei de Micenes va dirigir els grecs a la guerra de Troia?,Agamèmnon,Menelau,Príam,Aquil·les
+¿Qué esposa de Ulises tejía y destejía un sudario para entretener a sus pretendientes?,,Penélope,Quina esposa d'Ulisses teixia i desteixia un sudari per entretenir els pretendents?,Penèlope,Helena,Circe,Calipso
+¿Qué hechicera convirtió en cerdos a los hombres de Ulises?,,Circe,Quina fetillera va convertir en porcs els homes d'Ulisses?,Circe,Calipso,Medea,Penèlope
+¿Cómo se llamaba el cíclope al que cegó Ulises?,,Polifemo,Com es deia el cíclop que va encegar Ulisses?,Polifem,Argos,Telèmac,Tritó
+¿Qué héroe montó a Pegaso para matar a la Quimera?,,Belerofonte,Quin heroi va muntar Pegàs per matar la Quimera?,Bel·lerofont,Perseu,Teseu,Jàson
+"¿Qué escultor se enamoró de la estatua que había creado, a la que Afrodita dio vida?",,Pigmalión,"Quin escultor es va enamorar de l'estàtua que havia creat, a la qual Afrodita va donar vida?",Pigmalió,Narcís,Orfeu,Teseu
+¿Qué cazadora griega perdió una carrera al detenerse a recoger manzanas de oro?,,Atalanta,Quina caçadora grega va perdre una cursa en aturar-se a recollir pomes d'or?,Atalanta,Àrtemis,Penèlope,Helena
+"¿Qué criaturas atraían a los marineros con su canto, y por ello Ulises se ató al mástil?",,Las sirenas,"Quines criatures atreien els mariners amb el seu cant, i per això Ulisses es va lligar al pal?",Les sirenes,Les harpies,Les gòrgones,Les amazones
+¿Qué caballero de la Mesa Redonda tuvo un romance con la reina Ginebra?,,Lancelot,Quin cavaller de la Taula Rodona va tenir un idil·li amb la reina Ginebra?,Lancelot,Galahad,Perceval,Morgana
+¿Cómo se llamaba el castillo y la corte del rey Arturo?,,Camelot,Com es deia el castell i la cort del rei Artús?,Camelot,Avaló,Tintagel,Glastonbury
+¿Qué objeto sagrado buscaban los caballeros de la Mesa Redonda?,,El Santo Grial,Quin objecte sagrat buscaven els cavallers de la Taula Rodona?,El Sant Graal,La llança de Longí,Excalibur,El velló d'or
+¿Qué diosa primordial griega personifica la Tierra?,,Gaia,Quina deessa primordial grega personifica la Terra?,Gea,Rea,Temis,Nix
+¿Qué dios griego de los sueños da nombre a la morfina?,,Morfeo,Quin déu grec dels somnis dona nom a la morfina?,Morfeu,Hipnos,Tànatos,Èol
+"¿Qué dios griego mitad cabra tocaba la flauta y da nombre al ""pánico""?",,Pan,"Quin déu grec meitat cabra tocava la flauta i dona nom al ""pànic""?",Pan,Dionís,Hermes,Tritó
+¿Qué diosa griega de la justicia se representa con los ojos vendados y una balanza?,,Temis,Quina deessa grega de la justícia es representa amb els ulls embenats i una balança?,Temis,Nèmesi,Atena,Hera
+¿Qué dios griego controlaba los vientos y se los dio a Ulises en un odre?,,Eolo,Quin déu grec controlava els vents i els va donar a Ulisses en un odre?,Èol,Posidó,Tritó,Hermes
+¿Qué diosa griega del arcoíris era mensajera de los dioses?,,Iris,Quina deessa grega de l'arc de Sant Martí era missatgera dels déus?,Iris,Eos,Selene,Hera
+¿Qué tribu mitológica estaba formada solo por mujeres guerreras?,,Las amazonas,Quina tribu mitològica estava formada només per dones guerreres?,Les amazones,Les muses,Les Moires,Les gòrgones
+¿Qué programador soviético creó el Tetris?,,Alekséi Pázhitnov,Quin programador soviètic va crear el Tetris?,Aleksei Pàjitnov,Ernő Rubik,Shigeru Miyamoto,Hideo Kojima
+"¿De qué país es el creador de Minecraft, Markus Persson?",,Suecia,"De quin país és el creador de Minecraft, Markus Persson?",Suècia,Noruega,Finlàndia,Dinamarca
+¿Qué empresa desarrolla Fortnite?,,Epic Games,Quina empresa desenvolupa Fortnite?,Epic Games,Valve,Activision,Riot Games
+"¿Qué empresa desarrolla la saga ""Grand Theft Auto""?",,Rockstar Games,"Quina empresa desenvolupa la saga ""Grand Theft Auto""?",Rockstar Games,Ubisoft,Electronic Arts,Bethesda
+"¿Qué diseñador creó ""Los Sims""?",,Will Wright,"Quin dissenyador va crear ""Els Sims""?",Will Wright,Sid Meier,Peter Molyneux,John Carmack
+¿De qué tipo es el Pokémon Pikachu?,,Eléctrico,De quin tipus és el Pokémon Pikachu?,Elèctric,Foc,Aigua,Planta
+¿Qué diseñador japonés creó a Mario y a Link?,,Shigeru Miyamoto,Quin dissenyador japonès va crear Mario i Link?,Shigeru Miyamoto,Hideo Kojima,Satoru Iwata,Hironobu Sakaguchi
+"¿Qué diseñador japonés es el creador de la saga ""Metal Gear""?",,Hideo Kojima,"Quin dissenyador japonès és el creador de la saga ""Metal Gear""?",Hideo Kojima,Shigeru Miyamoto,Hironobu Sakaguchi,Shinji Mikami
+"¿Cómo se llama la arqueóloga protagonista de ""Tomb Raider""?",,Lara Croft,"Com es diu l'arqueòloga protagonista de ""Tomb Raider""?",Lara Croft,Jill Valentine,Samus Aran,Ellie Williams
+"¿Qué empresa japonesa creó la saga ""Street Fighter""?",,Capcom,"Quina empresa japonesa va crear la saga ""Street Fighter""?",Capcom,Sega,Namco,SNK
+¿Qué empresa japonesa creó Pac-Man?,,Namco,Quina empresa japonesa va crear Pac-Man?,Namco,Nintendo,Taito,Sega
+¿Qué arquitecto húngaro inventó el cubo que lleva su nombre?,,Ernő Rubik,Quin arquitecte hongarès va inventar el cub que porta el seu nom?,Ernő Rubik,Aleksei Pàjitnov,Ole Kirk Christiansen,Klaus Teuber
+¿De qué país es la empresa Lego?,,Dinamarca,De quin país és l'empresa Lego?,Dinamarca,Suècia,Alemanya,Països Baixos
+¿Qué empresa fabrica la muñeca Barbie?,,Mattel,Quina empresa fabrica la nina Barbie?,Mattel,Hasbro,Famosa,Playmobil
+"¿Qué diseñador alemán creó el juego de mesa ""Catan""?",,Klaus Teuber,"Quin dissenyador alemany va crear el joc de taula ""Catan""?",Klaus Teuber,Uwe Rosenberg,Reiner Knizia,Wolfgang Kramer
+¿Cuántas piezas tiene cada jugador al empezar una partida de ajedrez?,,16,Quantes peces té cada jugador en començar una partida d'escacs?,16,12,14,18
+¿Qué dibujante belga creó a los Pitufos?,,Peyo,Quin dibuixant belga va crear els Barrufets?,Peyo,Hergé,Morris,Uderzo
+¿Qué dibujante argentino creó a Mafalda?,,Quino,Quin dibuixant argentí va crear la Mafalda?,Quino,Fontanarrosa,Mordillo,Oesterheld
+¿Qué dibujante creó a Snoopy y Charlie Brown?,,Charles M. Schulz,Quin dibuixant va crear Snoopy i Charlie Brown?,Charles M. Schulz,Jim Davis,Bill Watterson,Matt Groening
+¿Qué comida le encanta al gato Garfield?,,La lasaña,Quin menjar li encanta al gat Garfield?,La lasanya,La pizza,El peix,Les hamburgueses
+¿De qué planeta es Superman?,,Krypton,De quin planeta és Superman?,Krypton,Mart,Apokolips,Oa
+¿Cuál es la identidad secreta de Spider-Man?,,Peter Parker,Quina és la identitat secreta de Spider-Man?,Peter Parker,Bruce Wayne,Clark Kent,Tony Stark
+"¿Qué mangaka creó ""Dragon Ball""?",,Akira Toriyama,"Quin mangaka va crear ""Dragon Ball""?",Akira Toriyama,Eiichirō Oda,Masashi Kishimoto,Osamu Tezuka
+"¿Qué mangaka creó ""One Piece""?",,Eiichirō Oda,"Quin mangaka va crear ""One Piece""?",Eiichirō Oda,Akira Toriyama,Masashi Kishimoto,Tite Kubo
+¿De qué color es el gato cósmico Doraemon?,,Azul,De quin color és el gat còsmic Doraemon?,Blau,Vermell,Groc,Verd
+¿Qué famoso concurso de preguntas de TVE presentó Mayra Gómez Kemp?,,"Un, dos, tres... responda otra vez",Quin famós concurs de preguntes de TVE va presentar Mayra Gómez Kemp?,"Un, dos, tres... responda otra vez",Saber y ganar,Pasapalabra,El precio justo
+"¿Qué presentador condujo ""Saber y ganar"" durante más de 25 años?",,Jordi Hurtado,"Quin presentador va conduir ""Saber y ganar"" durant més de 25 anys?",Jordi Hurtado,Carlos Sobera,Christian Gálvez,Roberto Leal
+¿En qué ciudad se celebra la Fiesta de San Fermín?,,Pamplona,A quina ciutat se celebra la festa de Sant Fermí?,Pamplona,Bilbao,València,Sevilla
+¿En qué localidad valenciana se celebra la Tomatina?,,Buñol,A quina localitat valenciana se celebra la Tomatina?,Buñol,Xàtiva,Alzira,Requena
+¿Qué fiesta catalana consiste en levantar torres humanas?,,Los castells,Quina festa catalana consisteix a aixecar torres humanes?,Els castells,Els correfocs,La Patum,Els gegants
+"¿En qué ciudad se celebra el carnaval más famoso de España, junto con el de Santa Cruz de Tenerife?",,Cádiz,"A quina ciutat se celebra el carnaval més famós d'Espanya, juntament amb el de Santa Cruz de Tenerife?",Cadis,Sitges,Badajoz,Águilas
+¿En qué país está Machu Picchu?,,Perú,A quin país hi ha Machu Picchu?,Perú,Bolivia,Ecuador,Xile
+¿En qué país está Petra?,,Jordania,A quin país hi ha Petra?,Jordània,Egipte,Síria,Líban
+¿En qué país está el Taj Mahal?,,India,A quin país hi ha el Taj Mahal?,Índia,Pakistan,Bangladesh,Nepal
+¿En qué país está Angkor Wat?,,Camboya,A quin país hi ha Angkor Wat?,Cambodja,Tailandia,Laos,Vietnam
+¿En qué país está Chichén Itzá?,,México,A quin país hi ha Chichén Itzá?,Mèxic,Guatemala,Perú,Hondures
+¿En qué país está la Alhambra?,,España,A quin país hi ha l'Alhambra?,Espanya,Marruecos,Portugal,Tunísia
+¿En qué país está la Gran Muralla?,,China,A quin país hi ha la Gran Muralla?,Xina,Mongòlia,Japó,Corea del Sud
+¿En qué país está Stonehenge?,,Reino Unido,A quin país hi ha Stonehenge?,Regne Unit,Irlanda,França,Noruega
+¿En qué país está la Sagrada Familia?,,España,A quin país hi ha la Sagrada Família?,Espanya,Portugal,França,Itàlia
+¿En qué país está la torre inclinada de Pisa?,,Italia,A quin país hi ha la torre inclinada de Pisa?,Itàlia,Espanya,França,Grècia
+¿En qué país está el Partenón?,,Grecia,A quin país hi ha el Partenó?,Grècia,Itàlia,Turquia,Chipre
+¿En qué país está la Ópera de Sídney?,,Australia,A quin país hi ha l'Òpera de Sydney?,Austràlia,Nova Zelanda,Canadà,Regne Unit
+¿En qué país está el Cristo Redentor?,,Brasil,A quin país hi ha el Crist Redemptor?,Brasil,Argentina,Portugal,Mèxic
+¿En qué país está la Estatua de la Libertad?,,EE. UU.,A quin país hi ha l'Estàtua de la Llibertat?,EUA,França,Canadà,Regne Unit
+¿En qué país está el Kremlin?,,Rusia,A quin país hi ha el Kremlin?,Rússia,Ucraïna,Polònia,Bielorússia
+¿En qué país está la isla de Pascua?,,Chile,A quin país hi ha l'illa de Pasqua?,Xile,Perú,Nova Zelanda,Ecuador
+¿En qué país están las islas Galápagos?,,Ecuador,A quin país hi ha les illes Galápagos?,Ecuador,Perú,Xile,Colòmbia
+¿En qué país está el monte Kilimanjaro?,,Tanzania,A quin país hi ha el mont Kilimanjaro?,Tanzània,Kenya,Uganda,Etiopía
+¿En qué país está la Gran Barrera de Coral?,,Australia,A quin país hi ha la Gran Barrera de Corall?,Austràlia,Indonèsia,Filipinas,Nova Zelanda
+¿En qué país está el Gran Cañón?,,EE. UU.,A quin país hi ha el Gran Canyó?,EUA,Mèxic,Canadà,Perú
+"¿En qué país está el lago Titicaca, junto a Bolivia?",,Perú,"A quin país hi ha el llac Titicaca, juntament amb Bolívia?",Perú,Xile,Ecuador,Argentina
+¿En qué país está el templo de Borobudur?,,Indonesia,A quin país hi ha el temple de Borobudur?,Indonèsia,Cambodja,Tailandia,Malasia
+¿En qué país está la ciudad de Samarcanda?,,Uzbekistán,A quin país hi ha la ciutat de Samarcanda?,Uzbekistan,Kazakhstan,Irán,Afganistan
+¿En qué país está el monte Ararat?,,Turquía,A quin país hi ha el mont Ararat?,Turquia,Armènia,Irán,Geòrgia
+"¿En qué país están las cataratas de Iguazú, junto a Brasil?",,Argentina,"A quin país hi ha les cascades d'Iguaçú, juntament amb el Brasil?",Argentina,Paraguai,Uruguai,Bolivia
+¿En qué país están los fiordos de Geiranger?,,Noruega,A quin país hi ha els fiords de Geiranger?,Noruega,Suècia,Islàndia,Finlàndia
+"¿Qué reina inglesa, hija de Enrique VIII, reinó durante el siglo de oro isabelino?",,Isabel I,"Quina reina anglesa, filla d'Enric VIII, va regnar durant l'època isabelina?",Elisabet I,Victòria,Maria Estuard,Anna Bolena
+¿Qué monarca británico reinó durante casi todo el siglo XIX?,,Victoria,Quin monarca britànic va regnar durant gairebé tot el segle XIX?,Victòria,Elisabet I,Maria Estuard,Anna Bolena
+"¿Qué reina de Francia, esposa de Luis XVI, nació en Austria?",,María Antonieta,"Quina reina de França, esposa de Lluís XVI, va néixer a Àustria?",Maria Antonieta,Joana d'Arc,Caterina la Gran,Elisabet I
+¿Qué zar fundó San Petersburgo en 1703?,,Pedro el Grande,Quin tsar va fundar Sant Petersburg el 1703?,Pere el Gran,Ivan el Terrible,Caterina la Gran,Nicolau II
+¿Quién fue el último zar de Rusia?,,Nicolás II,Qui va ser l'últim tsar de Rússia?,Nicolau II,Pere el Gran,Ivan el Terrible,Caterina la Gran
+¿Qué emperador romano nacido en Hispania llevó el imperio a su máxima extensión?,,Trajano,Quin emperador romà nascut a Hispània va portar l'imperi a la seva màxima extensió?,Trajà,Adrià,August,Marc Aureli
+¿Qué emperador romano mandó construir una muralla en el norte de Britania?,,Adriano,Quin emperador romà va manar construir una muralla al nord de Britània?,Adrià,Trajà,Neró,Calígula
+"¿Qué emperador-filósofo romano escribió las ""Meditaciones""?",,Marco Aurelio,"Quin emperador filòsof romà va escriure les ""Meditacions""?",Marc Aureli,Adrià,August,Trajà
+¿Para qué faraón se construyó la Gran Pirámide de Guiza?,,Keops,Per a quin faraó es va construir la Gran Piràmide de Gizeh?,Kheops,Ramsès II,Tutankamon,Nefertiti
+¿Qué esclavo gladiador lideró una gran rebelión contra Roma?,,Espartaco,Quin esclau gladiador va liderar una gran rebel·lió contra Roma?,Espàrtac,Anníbal,Viriat,Àtila
+¿Qué caudillo lusitano resistió a Roma en el siglo II a. C.?,,Viriato,Quin cabdill lusità va resistir Roma al segle II aC?,Viriat,Espàrtac,Pelai,Anníbal
+"¿Qué rey de los hunos era conocido como el ""azote de Dios""?",,Atila,"Quin rei dels huns era conegut com el ""flagell de Déu""?",Àtila,Genguis Khan,Saladí,Anníbal
+¿Qué sultán recuperó Jerusalén para el islam en 1187?,,Saladino,Quin soldà va recuperar Jerusalem per a l'islam el 1187?,Saladí,Genguis Khan,Abd-ar-Rahman III,Boabdil
+¿Qué duque de Normandía conquistó Inglaterra en 1066?,,Guillermo el Conquistador,Quin duc de Normandia va conquerir Anglaterra el 1066?,Guillem el Conqueridor,Ricard Cor de Lleó,Carlemany,Enric VIII
+¿Qué joven campesina francesa lideró tropas en la guerra de los Cien Años?,,Juana de Arco,Quina jove pagesa francesa va liderar tropes a la guerra dels Cent Anys?,Joana d'Arc,Maria Antonieta,Caterina la Gran,Elisabet I
+¿Qué conquistador español derrotó al Imperio inca?,,Francisco Pizarro,Quin conqueridor espanyol va derrotar l'Imperi inca?,Francisco Pizarro,Hernán Cortés,Simón Bolívar,Amerigo Vespucci
+¿Qué libertador da nombre a Bolivia?,,Simón Bolívar,Quin llibertador dona nom a Bolívia?,Simón Bolívar,José de San Martín,Bernardo O'Higgins,Hernán Cortés
+¿Qué activista se negó a ceder su asiento en un autobús de Montgomery en 1955?,,Rosa Parks,Quina activista es va negar a cedir el seient en un autobús de Montgomery el 1955?,Rosa Parks,Frida Kahlo,Emmeline Pankhurst,Marie Curie
+¿Qué último líder de la URSS impulsó la perestroika?,,Mijaíl Gorbachov,Quin últim líder de l'URSS va impulsar la perestroika?,Mikhaïl Gorbatxov,Lenin,Stalin,Iuri Gagarin
+¿Qué astronauta acompañó a Neil Armstrong a pisar la Luna en 1969?,,Buzz Aldrin,Quin astronauta va acompanyar Neil Armstrong a trepitjar la Lluna el 1969?,Buzz Aldrin,Iuri Gagarin,Valentina Terèixkova,Laika
+¿Quién fue la primera mujer en viajar al espacio?,,Valentina Tereshkova,Qui va ser la primera dona a viatjar a l'espai?,Valentina Terèixkova,Marie Curie,Laika,Rosa Parks
+¿Cómo se llamaba la perra soviética que fue el primer animal en orbitar la Tierra?,,Laika,Com es deia la gossa soviètica que va ser el primer animal a orbitar la Terra?,Laika,Belka,Strelka,Valentina Terèixkova
+¿Qué diputada defendió el voto femenino en las Cortes españolas de 1931?,,Clara Campoamor,Quina diputada va defensar el vot femení a les Corts espanyoles del 1931?,Clara Campoamor,Victoria Kent,Emmeline Pankhurst,Rosa Parks
+¿Qué rey conquistó Mallorca y Valencia en el siglo XIII?,,Jaime I el Conquistador,Quin rei va conquerir Mallorca i València al segle XIII?,Jaume I el Conqueridor,Pere III el Gran,Alfons X el Savi,Ferran el Catòlic
+¿Qué rey castellano del siglo XIII impulsó la Escuela de Traductores de Toledo?,,Alfonso X el Sabio,Quin rei castellà del segle XIII va impulsar l'Escola de Traductors de Toledo?,Alfons X el Savi,Jaume I el Conqueridor,Ferran el Catòlic,Felip II
+¿Qué último rey nazarí entregó Granada en 1492?,,Boabdil,Quin últim rei nassarita va lliurar Granada el 1492?,Boabdil,Abd-ar-Rahman III,Saladí,Pelai
+¿Qué califa de Córdoba proclamó el califato en el año 929?,,Abderramán III,Quin califa de Còrdova va proclamar el califat l'any 929?,Abd-ar-Rahman III,Boabdil,Saladí,Pelai
+¿Qué rey de España fue también emperador del Sacro Imperio como Carlos V?,,Carlos I de España,Quin rei d'Espanya va ser també emperador del Sacre Imperi com a Carles V?,Carles I d'Espanya,Felip II,Ferran el Catòlic,Lluís XIV
+¿Qué rey español mandó construir el monasterio de El Escorial?,,Felipe II,Quin rei espanyol va manar construir el monestir de l'Escorial?,Felip II,Carles I d'Espanya,Ferran el Catòlic,Alfons X el Savi
+"¿Qué actor interpreta a Walter White en ""Breaking Bad""?",,Bryan Cranston,"Quin actor interpreta Walter White a ""Breaking Bad""?",Bryan Cranston,Aaron Paul,Bob Odenkirk,Giancarlo Esposito
+"¿En qué ciudad se desarrolla la serie ""Breaking Bad""?",,Albuquerque,"A quina ciutat es desenvolupa la sèrie ""Breaking Bad""?",Albuquerque,Phoenix,El Paso,Las Vegas
+"¿En qué pueblo ficticio de Indiana transcurre ""Stranger Things""?",,Hawkins,"A quin poble fictici d'Indiana transcorre ""Stranger Things""?",Hawkins,Springfield,Twin Peaks,Derry
+"¿Cómo se llama el líder del atraco en ""La casa de papel""?",,El Profesor,"Com es diu el líder de l'atracament a ""La casa de papel""?",El Professor,Berlín,Tòquio,Nairobi
+¿Qué serie de animación transcurre en Springfield?,,Los Simpson,Quina sèrie d'animació transcorre a Springfield?,Els Simpson,Padre de familia,South Park,Futurama
+¿Qué actriz interpretó a Hermione Granger en las películas de Harry Potter?,,Emma Watson,Quina actriu va interpretar Hermione Granger a les pel·lícules de Harry Potter?,Emma Watson,Emma Stone,Keira Knightley,Bonnie Wright
+"¿Qué actor interpreta a Sheldon Cooper en ""The Big Bang Theory""?",,Jim Parsons,"Quin actor interpreta Sheldon Cooper a ""The Big Bang Theory""?",Jim Parsons,Johnny Galecki,Simon Helberg,Kunal Nayyar
+¿Qué saga de películas tiene como protagonista a Ethan Hunt?,,Misión imposible,Quina saga de pel·lícules té com a protagonista Ethan Hunt?,Missió impossible,Bourne,James Bond,Fast & Furious
+"¿Qué actor ha interpretado a James Bond en ""Casino Royale"" y ""Skyfall""?",,Daniel Craig,"Quin actor ha interpretat James Bond a ""Casino Royale"" i ""Skyfall""?",Daniel Craig,Pierce Brosnan,Sean Connery,Roger Moore
+¿Qué película de Pixar transcurre dentro de la mente de una niña llamada Riley?,,Del revés,Quina pel·lícula de Pixar transcorre dins la ment d'una nena anomenada Riley?,Del revés,Coco,Soul,Up
+"¿En qué país se ambienta la película de Pixar ""Coco""?",,México,"A quin país s'ambienta la pel·lícula de Pixar ""Coco""?",Mèxic,Espanya,Colòmbia,Perú
+¿Qué película de Disney tiene como protagonista a una princesa con poderes de hielo llamada Elsa?,,Frozen,Quina pel·lícula de Disney té com a protagonista una princesa amb poders de gel anomenada Elsa?,Frozen,Enredados,Brave,Vaiana
+¿Qué película ganó el Óscar a la mejor película en 2024 (ceremonia)?,,Oppenheimer,Quina pel·lícula va guanyar l'Oscar a la millor pel·lícula el 2024 (cerimònia)?,Oppenheimer,Barbie,Pobres criatures,Els assassins de la lluna
+¿Qué festival de cine entrega la Concha de Oro?,,San Sebastián,Quin festival de cinema lliura la Conxa d'Or?,Sant Sebastià,Cannes,Màlaga,Sitges
+¿En qué localidad catalana se celebra un famoso festival de cine fantástico?,,Sitges,A quina localitat catalana se celebra un famós festival de cinema fantàstic?,Sitges,Girona,Reus,Figueres
+¿Qué premio entrega la Academia de cine española?,,Los Goya,Quin premi lliura l'Acadèmia de cinema espanyola?,Els Goya,Els Gaudí,Els Feroz,Els Ondas
+¿Qué premios entrega la Acadèmia del Cinema Català?,,Los Gaudí,Quins premis lliura l'Acadèmia del Cinema Català?,Els Gaudí,Els Goya,Els Max,Els Butaca

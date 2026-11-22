@@ -1509,3 +1509,278 @@ pregunta_es,visual,correcta_es,pregunta,correcta,incorrecta1,incorrecta2,incorre
 "¿Qué significan las siglas ""GPS""?",,Sistema de Posicionamiento Global,"What does ""GPS"" stand for?",Global Positioning System,Satellite Position Manager,Personal Satellite Guide,Synchronised Positioning Group
 ¿Qué empresa fabrica las tarjetas gráficas GeForce?,,Nvidia,Which company makes GeForce graphics cards?,,,,
 ¿Qué red social se llamó Twitter hasta 2023?,,X,Which social network was called Twitter until 2023?,,,,
+¿Qué ciudad organizó los Juegos Olímpicos de verano de 1996?,,Atlanta,Which city hosted the 1996 Summer Olympics?,Atlanta,Sydney,Athens,Barcelona
+¿Qué ciudad organizó los Juegos Olímpicos de verano de 2000?,,Sídney,Which city hosted the 2000 Summer Olympics?,Sydney,Athens,Atlanta,Beijing
+¿Qué ciudad organizó los Juegos Olímpicos de verano de 2004?,,Atenas,Which city hosted the 2004 Summer Olympics?,Athens,Beijing,Sydney,Rome
+¿Qué ciudad organizó los Juegos Olímpicos de verano de 2008?,,Pekín,Which city hosted the 2008 Summer Olympics?,Beijing,London,Athens,Tokyo
+¿Qué ciudad organizó los Juegos Olímpicos de verano de 2012?,,Londres,Which city hosted the 2012 Summer Olympics?,London,Beijing,Madrid,Paris
+¿Qué ciudad organizó los Juegos Olímpicos de verano de 2016?,,Río de Janeiro,Which city hosted the 2016 Summer Olympics?,Rio de Janeiro,London,Tokyo,Madrid
+¿Qué ciudad organizó los Juegos Olímpicos de verano de 2020?,,Tokio,Which city hosted the 2020 Summer Olympics?,Tokyo,Rio de Janeiro,Paris,Istanbul
+¿Qué ciudad organizó los Juegos Olímpicos de verano de 2024?,,París,Which city hosted the 2024 Summer Olympics?,Paris,Los Angeles,Tokyo,Madrid
+¿Qué ciudad organizó los Juegos Olímpicos de verano de 1988?,,Seúl,Which city hosted the 1988 Summer Olympics?,Seoul,Los Angeles,Moscow,Barcelona
+¿Qué ciudad organizó los Juegos Olímpicos de verano de 1984?,,Los Ángeles,Which city hosted the 1984 Summer Olympics?,Los Angeles,Moscow,Seoul,Montreal
+¿Qué ciudad organizó los Juegos Olímpicos de verano de 1980?,,Moscú,Which city hosted the 1980 Summer Olympics?,Moscow,Montreal,Los Angeles,Munich
+¿Qué ciudad organizó los Juegos Olímpicos de verano de 1976?,,Montreal,Which city hosted the 1976 Summer Olympics?,Montreal,Munich,Moscow,Mexico City
+¿Qué ciudad organizó los Juegos Olímpicos de verano de 1972?,,Múnich,Which city hosted the 1972 Summer Olympics?,Munich,Mexico City,Montreal,Tokyo
+¿Qué ciudad organizó los Juegos Olímpicos de verano de 1968?,,Ciudad de México,Which city hosted the 1968 Summer Olympics?,Mexico City,Tokyo,Munich,Rome
+¿Qué ciudad organizó los Juegos Olímpicos de verano de 1960?,,Roma,Which city hosted the 1960 Summer Olympics?,Rome,Tokyo,Melbourne,London
+¿Qué ciudad organizará los Juegos Olímpicos de verano de 2028?,,Los Ángeles,Which city will host the 2028 Summer Olympics?,Los Angeles,Brisbane,Madrid,Istanbul
+¿Dónde se celebraron los Juegos Olímpicos de invierno de 2026?,,Milán y Cortina d'Ampezzo,Where were the 2026 Winter Olympics held?,Milan and Cortina d'Ampezzo,Turin,Oslo,Salt Lake City
+¿Dónde se celebraron los Juegos Olímpicos de invierno de 2022?,,Pekín,Where were the 2022 Winter Olympics held?,Beijing,Pyeongchang,Sochi,Oslo
+¿Dónde se celebraron los Juegos Olímpicos de invierno de 2018?,,Pyeongchang,Where were the 2018 Winter Olympics held?,Pyeongchang,Sochi,Beijing,Vancouver
+¿Dónde se celebraron los Juegos Olímpicos de invierno de 2014?,,Sochi,Where were the 2014 Winter Olympics held?,Sochi,Vancouver,Pyeongchang,Turin
+¿Dónde se celebraron los Juegos Olímpicos de invierno de 2010?,,Vancouver,Where were the 2010 Winter Olympics held?,Vancouver,Turin,Sochi,Salt Lake City
+¿Qué país organizó el Mundial de fútbol masculino de 2022?,,Catar,Which country hosted the 2022 men's FIFA World Cup?,Qatar,Russia,Brazil,South Africa
+¿Qué país organizó el Mundial de fútbol masculino de 2018?,,Rusia,Which country hosted the 2018 men's FIFA World Cup?,Russia,Brazil,Qatar,Germany
+¿Qué país organizó el Mundial de fútbol masculino de 2014?,,Brasil,Which country hosted the 2014 men's FIFA World Cup?,Brazil,South Africa,Russia,Argentina
+¿Qué país organizó el Mundial de fútbol masculino de 2010?,,Sudáfrica,Which country hosted the 2010 men's FIFA World Cup?,South Africa,Germany,Brazil,South Korea and Japan
+¿Qué país organizó el Mundial de fútbol masculino de 2006?,,Alemania,Which country hosted the 2006 men's FIFA World Cup?,Germany,France,Italy,South Africa
+¿Qué país organizó el Mundial de fútbol masculino de 2002?,,Corea del Sur y Japón,Which country hosted the 2002 men's FIFA World Cup?,South Korea and Japan,France,Germany,China
+¿Qué país organizó el Mundial de fútbol masculino de 1998?,,Francia,Which country hosted the 1998 men's FIFA World Cup?,France,USA,Italy,Germany
+¿Qué país organizó el Mundial de fútbol masculino de 1994?,,EE. UU.,Which country hosted the 1994 men's FIFA World Cup?,USA,Italy,France,Mexico
+¿Qué país organizó el Mundial de fútbol masculino de 1990?,,Italia,Which country hosted the 1990 men's FIFA World Cup?,Italy,Mexico,USA,Spain
+¿Qué país organizó el Mundial de fútbol masculino de 1986?,,México,Which country hosted the 1986 men's FIFA World Cup?,Mexico,Spain,Italy,Argentina
+¿Qué país organizó el Mundial de fútbol masculino de 1982?,,España,Which country hosted the 1982 men's FIFA World Cup?,Spain,Italy,Mexico,Argentina
+¿Qué selección ganó el Mundial de fútbol masculino de 2014?,,Alemania,Which team won the 2014 men's FIFA World Cup?,Germany,Argentina,Brazil,The Netherlands
+¿Qué selección ganó el Mundial de fútbol masculino de 2018?,,Francia,Which team won the 2018 men's FIFA World Cup?,France,Croatia,Belgium,England
+¿Qué selección ganó el Mundial de fútbol masculino de 2022?,,Argentina,Which team won the 2022 men's FIFA World Cup?,Argentina,France,Croatia,Morocco
+¿Qué selección ganó el Mundial de fútbol masculino de 2006?,,Italia,Which team won the 2006 men's FIFA World Cup?,Italy,France,Germany,Portugal
+¿Qué selección ganó el Mundial de fútbol masculino de 2002?,,Brasil,Which team won the 2002 men's FIFA World Cup?,Brazil,Germany,Turkey,South Korea
+¿Qué selección ganó el Mundial de fútbol masculino de 1998?,,Francia,Which team won the 1998 men's FIFA World Cup?,France,Brazil,Croatia,The Netherlands
+¿Qué selección ganó el Mundial de fútbol masculino de 1986?,,Argentina,Which team won the 1986 men's FIFA World Cup?,Argentina,West Germany,France,Belgium
+¿Qué selección ganó la Eurocopa masculina de 2024?,,España,Which team won the men's UEFA European Championship in 2024?,Spain,England,France,The Netherlands
+¿Qué selección ganó la Eurocopa masculina de 2020?,,Italia,Which team won the men's UEFA European Championship in 2020?,Italy,England,Spain,Denmark
+¿Qué selección ganó la Eurocopa masculina de 2016?,,Portugal,Which team won the men's UEFA European Championship in 2016?,Portugal,France,Germany,Wales
+¿Qué selección ganó la Eurocopa masculina de 2004?,,Grecia,Which team won the men's UEFA European Championship in 2004?,Greece,Portugal,The Netherlands,Czech Republic
+¿Qué selección ganó la Eurocopa masculina de 1988?,,Países Bajos,Which team won the men's UEFA European Championship in 1988?,The Netherlands,West Germany,Italy,Denmark
+¿Qué selección ganó la Eurocopa masculina de 1992?,,Dinamarca,Which team won the men's UEFA European Championship in 1992?,Denmark,Germany,The Netherlands,Sweden
+¿Qué selección ganó el Mundial de fútbol femenino de 2023?,,España,Which team won the 2023 FIFA Women's World Cup?,Spain,England,Sweden,USA
+¿Qué tres países organizarán el Mundial de fútbol de 2026?,,"EE. UU., Canadá y México",Which three countries will host the 2026 FIFA World Cup?,"USA, Canada and Mexico","USA, Mexico and Cuba","Canada, USA and Jamaica","Mexico, Colombia and USA"
+¿Cuántos jugadores tiene un equipo de rugby XV en el campo?,,15,How many players does a rugby union team have on the field?,,,,
+¿Cuántos jugadores tiene un equipo de voleibol en pista?,,6,How many players does a volleyball team have on court?,,,,
+"¿Cuántos jugadores tiene un equipo de balonmano en pista, contando al portero?",,7,"How many players does a handball team have on court, including the goalkeeper?",,,,
+¿Cuántos jugadores tiene un equipo de béisbol en el campo?,,9,How many players does a baseball team have on the field?,,,,
+"¿Cuántos jugadores tiene un equipo de hockey sobre hielo en pista, contando al portero?",,6,"How many players does an ice hockey team have on the ice, including the goalkeeper?",,,,
+¿Cuántos kilómetros mide exactamente una maratón?,,"42,195",How many kilometres exactly is a marathon?,42.195,40,42,45.5
+¿De qué color es el maillot del líder de la clasificación de la montaña del Tour de Francia?,,Blanco con lunares rojos,What colour is the jersey of the King of the Mountains in the Tour de France?,White with red polka dots,Green,Yellow,Blue
+¿Cuántos Tours de Francia consecutivos ganó Miguel Induráin?,,5,How many consecutive Tours de France did Miguel Induráin win?,,,,
+¿De qué país es el ciclista Tadej Pogačar?,,Eslovenia,Which country is cyclist Tadej Pogačar from?,Slovenia,Croatia,Slovakia,Denmark
+¿En qué años fue campeón del mundo de Fórmula 1 Fernando Alonso?,,2005 y 2006,In which years was Fernando Alonso Formula 1 world champion?,2005 and 2006,2006 and 2007,2004 and 2005,2007 and 2008
+¿De qué país es el piloto de Fórmula 1 Max Verstappen?,,Países Bajos,Which country is Formula 1 driver Max Verstappen from?,The Netherlands,Belgium,Germany,Austria
+¿En qué equipo de la NBA ganó Pau Gasol sus dos anillos?,,Los Angeles Lakers,With which NBA team did Pau Gasol win his two rings?,,,,
+¿En qué equipo de la NBA ganó Michael Jordan sus seis anillos?,,Chicago Bulls,With which NBA team did Michael Jordan win his six rings?,,,,
+¿En qué superficie se juega Roland Garros?,,Tierra batida,On which surface is Roland Garros played?,Clay,Grass,Hard court,Carpet
+¿Cuántos títulos de Roland Garros ganó Rafa Nadal?,,14,How many Roland Garros titles did Rafa Nadal win?,,,,
+¿En qué año ganó Carlos Alcaraz su primer Wimbledon?,,2023,In what year did Carlos Alcaraz win his first Wimbledon?,,,,
+¿De qué país es el tenista Novak Djokovic?,,Serbia,Which country is tennis player Novak Djokovic from?,Serbia,Croatia,Montenegro,Bosnia and Herzegovina
+"¿Qué deporte de origen japonés significa ""camino de la suavidad""?",,Judo,"Which sport of Japanese origin means ""the gentle way""?",,,,
+¿En qué país nació el taekwondo?,,Corea del Sur,In which country did taekwondo originate?,South Korea,Japan,China,Thailand
+¿Cuál es el récord mundial de los 100 metros lisos de Usain Bolt?,,"9,58 segundos",What is Usain Bolt's 100 metres world record?,9.58 seconds,9.63 seconds,9.69 seconds,9.72 seconds
+¿Cuántas medallas de oro olímpicas ganó Michael Phelps?,,23,How many Olympic gold medals did Michael Phelps win?,,,,
+¿Cuántos Balones de Oro ha ganado Lionel Messi?,,8,How many Ballon d'Or awards has Lionel Messi won?,,,,
+¿En qué campo se juega el torneo de golf Masters?,,Augusta National,At which course is the Masters golf tournament played?,,,,
+¿Qué golfista cántabro ganó tres Open Británicos y dos Masters?,,Severiano Ballesteros,Which Cantabrian golfer won three Open Championships and two Masters?,,,,
+¿De qué país es típica la feijoada?,,Brasil,Which country is feijoada typical of?,Brazil,Portugal,Argentina,Colombia
+¿De qué país es típicos los pierogi?,,Polonia,Which country is pierogi typical of?,Poland,Russia,Hungary,Romania
+¿De qué país es típica la poutine?,,Canadá,Which country is poutine typical of?,Canada,France,Belgium,USA
+¿De qué país es típico el haggis?,,Escocia,Which country is haggis typical of?,Scotland,Ireland,Wales,Norway
+¿De qué país es típica la fondue de queso?,,Suiza,Which country is cheese fondue typical of?,Switzerland,France,Austria,Italy
+¿De qué país es típico el tajín?,,Marruecos,Which country is tajín typical of?,Morocco,Turkey,India,Ethiopia
+¿De qué país es típico el pho?,,Vietnam,Which country is pho typical of?,Vietnam,Thailand,China,Japan
+¿De qué país es típico el bibimbap?,,Corea del Sur,Which country is bibimbap typical of?,South Korea,Japan,China,Vietnam
+¿De qué país es típica la sopa tom yum?,,Tailandia,Which country is tom yum soup typical of?,Thailand,Vietnam,India,Malaysia
+¿De qué país es típico el pastel de nata?,,Portugal,Which country is pastde nata typical of?,Portugal,Brazil,Spain,France
+¿De qué país es típico el smørrebrød?,,Dinamarca,Which country is smørrebrød typical of?,Denmark,Sweden,Norway,Finland
+¿De qué país es típicas las köttbullar?,,Suecia,Which country is köttbullar typical of?,Sweden,Denmark,Norway,Finland
+¿De qué país es típico el mole poblano?,,México,Which country is mole poblano typical of?,Mexico,Peru,Colombia,Chile
+¿De qué país es típico el pato laqueado?,,China,Which country is Peking duck typical of?,China,Japan,Vietnam,South Korea
+¿De qué país es típico el risotto?,,Italia,Which country is risotto typical of?,Italy,France,Spain,Greece
+¿De qué país es típica la bullabesa?,,Francia,Which country is bullabesa typical of?,France,Italy,Greece,Portugal
+¿De qué país es típico el escalope vienés (Wiener Schnitzel)?,,Austria,Which country is Wiener Schnitzel typical of?,Austria,Germany,Switzerland,Hungary
+¿De qué país es típica la tarta Sacher?,,Austria,Which country is Sachertorte typical of?,Austria,Germany,Switzerland,Hungary
+¿De qué país es típico el tzatziki?,,Grecia,Which country is tzatziki typical of?,Greece,Turkey,Italy,Morocco
+¿De qué país es típica la injera?,,Etiopía,Which country is injera typical of?,Ethiopia,Morocco,India,Turkey
+¿De qué país es típico el pastel de choclo?,,Chile,Which country is pastde choclo typical of?,Chile,Argentina,Peru,Mexico
+¿De qué país es típico el ajiaco?,,Colombia,Which country is ajiaco typical of?,Colombia,Venezuela,Mexico,Cuba
+¿De qué país es típico el ramen?,,Japón,Which country is ramen typical of?,Japan,China,South Korea,Vietnam
+¿De qué país es típico el biryani?,,India,Which country is biryani typical of?,India,Thailand,Vietnam,Indonesia
+¿De qué país es típico el tiramisú?,,Italia,Which country is tiramisú typical of?,Italy,France,Austria,Spain
+¿De qué país es típico el chucrut?,,Alemania,Which country is chucrut typical of?,Germany,Austria,Poland,Russia
+¿De qué comunidad autónoma es típico el pulpo a feira?,,Galicia,Which Spanish region is pulpo a feira typical of?,Galicia,Asturias,Cantabria,Basque Country
+¿De qué comunidad autónoma es típico el salmorejo?,,Andalucía,Which Spanish region is salmorejo typical of?,Andalusia,Extremadura,Murcia,Castile-La Mancha
+¿De qué comunidad autónoma es típica la escudella i carn d'olla?,,Cataluña,Which Spanish region is escudeli carn d'olla typical of?,Catalonia,Aragon,Valencian Community,Balearic Islands
+¿De qué comunidad autónoma es típica la ensaimada?,,Islas Baleares,Which Spanish region is ensaimada typical of?,Balearic Islands,Catalonia,Valencian Community,Murcia
+¿De qué comunidad autónoma es típicas las papas arrugadas con mojo?,,Canarias,Which Spanish region is papas arrugadas con mojo typical of?,Canary Islands,Andalusia,Murcia,Balearic Islands
+¿De qué comunidad autónoma es típico el marmitako?,,País Vasco,Which Spanish region is marmitako typical of?,Basque Country,Cantabria,Asturias,Galicia
+¿De qué comunidad autónoma es típico el cachopo?,,Asturias,Which Spanish region is cachopo typical of?,Asturias,Cantabria,Galicia,Castile and León
+¿De qué comunidad autónoma es típica la tarta de Santiago?,,Galicia,Which Spanish region is tarta de Santiago typical of?,Galicia,Asturias,Castile and León,Navarre
+¿De qué comunidad autónoma es típico el pisto?,,Castilla-La Mancha,Which Spanish region is pisto typical of?,Castile-La Mancha,Andalusia,Murcia,Extremadura
+¿De qué comunidad autónoma es típico el suquet de peix?,,Cataluña,Which Spanish region is suquet de peix typical of?,Catalonia,Basque Country,Galicia,Andalusia
+¿De qué comunidad autónoma es típica la coca de recapte?,,Cataluña,Which Spanish region is coca de recapte typical of?,Catalonia,Balearic Islands,Aragon,Murcia
+¿De qué comunidad autónoma es típicos los fartons?,,Comunidad Valenciana,Which Spanish region is fartons typical of?,Valencian Community,Catalonia,Murcia,Balearic Islands
+¿De qué comunidad autónoma es típicas las migas extremeñas?,,Extremadura,Which Spanish region is migas extremeñas typical of?,Extremadura,Galicia,Asturias,Cantabria
+¿De qué comunidad autónoma es típico el cocido maragato?,,Castilla y León,Which Spanish region is cocido maragato typical of?,Castile and León,Asturias,Galicia,La Rioja
+¿De qué comunidad autónoma es típico el zarangollo?,,Murcia,Which Spanish region is zarangollo typical of?,Murcia,Andalusia,Aragon,Navarre
+¿De qué comunidad autónoma es típico el ternasco?,,Aragón,Which Spanish region is ternasco typical of?,Aragon,Navarre,La Rioja,Catalonia
+"¿Qué significa ""Eskerrik asko"" en euskera?",,Gracias,"What does ""Eskerrik asko"" mean in Basque?",Thank you,Good morning,Goodbye,Welcome
+"¿Qué significa ""Schmetterling"" en alemán?",,Mariposa,"What does ""Schmetterling"" mean in German?",Butterfly,Apple,Library,Window
+"¿Qué significa ""Hund"" en alemán?",,Perro,"What does ""Hund"" mean in German?",Dog,Cat,House,Bread
+"¿Qué significa ""Pomme"" en francés?",,Manzana,"What does ""Pomme"" mean in French?",Apple,Bread,Water,Table
+"¿Qué significa ""Fenêtre"" en francés?",,Ventana,"What does ""Fenêtre"" mean in French?",Window,Table,Chair,Street
+"¿Qué significa ""Amico"" en italiano?",,Amigo,"What does ""Amico"" mean in Italian?",Friend,Book,Car,House
+"¿Qué significa ""Livro"" en portugués?",,Libro,"What does ""Livro"" mean in Portuguese?",Book,Street,Table,Friend
+"¿Qué significa ""Mizu"" en japonés?",,Agua,"What does ""Mizu"" mean in Japanese?",Water,Bread,Moon,Sun
+"¿Qué significa ""Neko"" en japonés?",,Gato,"What does ""Neko"" mean in Japanese?",Cat,Dog,House,Moon
+"¿Qué significa ""Sakura"" en japonés?",,Flor del cerezo,"What does ""Sakura"" mean in Japanese?",Cherry blossom,Moon,Mountain,Heart
+"¿Qué significa ""Kirche"" en alemán?",,Iglesia,"What does ""Kirche"" mean in German?",Church,Street,Library,Window
+"¿Qué significa ""Morgen"" en alemán?",,Mañana,"What does ""Morgen"" mean in German?",Tomorrow,Yesterday,Today,Good night
+"¿Qué significa ""Hakuna matata"" en suajili?",,No hay problema,"What does ""Hakuna matata"" mean in Swahili?",No worries,Good morning,Welcome,See you later
+"¿Qué significa ""Aloha"" en hawaiano?",,Hola y adiós,"What does ""Aloha"" mean in Hawaiian?",Hello and goodbye,Thank you,Please,Good night
+"¿Qué significa ""Salam"" en árabe?",,Paz,"What does ""Salam"" mean in Arabic?",Peace,Thank you,Friend,Water
+¿Cuál es la lengua oficial mayoritaria de Israel?,,Hebreo,What is the main official language of Israel?,Hebrew,Arabic,Persian,Turkish
+¿Cuál es la lengua oficial mayoritaria de Filipinas?,,Tagalo,What is the main official language of Philippines?,Tagalog,Malay,Spanish,English
+¿Cuál es la lengua oficial mayoritaria de Bangladés?,,Bengalí,What is the main official language of Bangladesh?,Bengali,Hindi,Urdu,Malay
+¿Cuál es la lengua oficial mayoritaria de Hungría?,,Húngaro,What is the main official language of Hungary?,Hungarian,Polish,German,Finnish
+¿Cuál es la lengua oficial mayoritaria de Islandia?,,Islandés,What is the main official language of Iceland?,Icelandic,Danish,Swedish,Finnish
+¿Con qué idioma europeo está emparentado el finés?,,Estonio,Which European language is Finnish related to?,Estonian,Swedish,Russian,Icelandic
+¿Cuál es el equivalente romano de Zeus?,,Júpiter,What is the Roman equivalent of Zeus?,Jupiter,Saturn,Mars,Neptune
+¿Cuál es el equivalente romano de Hera?,,Juno,What is the Roman equivalent of Hera?,Juno,Venus,Minerva,Vesta
+¿Cuál es el equivalente romano de Afrodita?,,Venus,What is the Roman equivalent of Aphrodite?,Venus,Diana,Juno,Minerva
+¿Cuál es el equivalente romano de Artemisa?,,Diana,What is the Roman equivalent of Artemis?,Diana,Venus,Ceres,Minerva
+¿Cuál es el equivalente romano de Hefesto?,,Vulcano,What is the Roman equivalent of Hephaestus?,Vulcan,Mars,Saturn,Mercury
+¿Cuál es el equivalente romano de Dioniso?,,Baco,What is the Roman equivalent of Dionysus?,Bacchus,Mercury,Phoebus,Saturn
+¿Cuál es el equivalente romano de Deméter?,,Ceres,What is the Roman equivalent of Demeter?,Ceres,Vesta,Juno,Flora
+¿Cuál es el equivalente romano de Poseidón?,,Neptuno,What is the Roman equivalent of Poseidon?,Neptune,Pluto,Jupiter,Saturn
+¿Cuál es el equivalente romano de Hades?,,Plutón,What is the Roman equivalent of Hades?,Pluto,Neptune,Saturn,Vulcan
+¿Cuál es el equivalente romano de Hestia?,,Vesta,What is the Roman equivalent of Hestia?,Vesta,Ceres,Juno,Proserpina
+¿Cuál es el equivalente romano de Cronos?,,Saturno,What is the Roman equivalent of Cronus?,Saturn,Jupiter,Pluto,Mars
+¿Qué dios nórdico vigila el puente arcoíris Bifröst?,,Heimdal,Which Norse god guards the rainbow bridge Bifröst?,Heimdall,Baldr,Týr,Bragi
+"¿Qué dios nórdico, hijo de Odín y Frigg, murió alcanzado por una rama de muérdago?",,Baldr,"Which Norse god, son of Odin and Frigg, was killed by a sprig of mistletoe?",Baldr,Heimdall,Týr,Freyr
+¿Qué dios nórdico de la guerra perdió una mano en las fauces del lobo Fenrir?,,Tyr,Which Norse war god lost a hand to the wolf Fenrir?,Týr,Heimdall,Baldr,Njörd
+¿Qué diosa egipcia tenía forma de gata?,,Bastet,Which Egyptian goddess had the form of a cat?,Bastet,Hathor,Isis,Ptah
+¿Qué dios egipcio tenía cabeza de cocodrilo?,,Sobek,Which Egyptian god had the head of a crocodile?,Sobek,Set,Anubis,Thoth
+¿Qué dios egipcio del caos y el desierto asesinó a su hermano Osiris?,,Set,Which Egyptian god of chaos and the desert murdered his brother Osiris?,Set,Horus,Anubis,Sobek
+¿Qué dios egipcio con cabeza de halcón es hijo de Isis y Osiris?,,Horus,Which falcon-headed Egyptian god is the son of Isis and Osiris?,Horus,Thoth,Anubis,Set
+¿Qué príncipe troyano mató Aquiles frente a las murallas de Troya?,,Héctor,Which Trojan prince did Achilles kill before the walls of Troy?,Hector,Paris,Aeneas,Priam
+¿Qué príncipe troyano raptó a Helena?,,Paris,Which Trojan prince abducted Helen?,Paris,Hector,Aeneas,Menelaus
+¿Qué rey de Micenas dirigió a los griegos en la guerra de Troya?,,Agamenón,Which king of Mycenae led the Greeks in the Trojan War?,Agamemnon,Menelaus,Priam,Achilles
+¿Qué esposa de Ulises tejía y destejía un sudario para entretener a sus pretendientes?,,Penélope,Which wife of Odysseus wove and unwove a shroud to put off her suitors?,Penelope,Helen,Circe,Calypso
+¿Qué hechicera convirtió en cerdos a los hombres de Ulises?,,Circe,Which sorceress turned Odysseus's men into pigs?,Circe,Calypso,Medea,Penelope
+¿Cómo se llamaba el cíclope al que cegó Ulises?,,Polifemo,What was the name of the Cyclops blinded by Odysseus?,Polyphemus,Argos,Telemachus,Triton
+¿Qué héroe montó a Pegaso para matar a la Quimera?,,Belerofonte,Which hero rode Pegasus to kill the Chimera?,Bellerophon,Perseus,Theseus,Jason
+"¿Qué escultor se enamoró de la estatua que había creado, a la que Afrodita dio vida?",,Pigmalión,"Which sculptor fell in love with the statue he had made, which Aphrodite brought to life?",Pygmalion,Narcissus,Orpheus,Theseus
+¿Qué cazadora griega perdió una carrera al detenerse a recoger manzanas de oro?,,Atalanta,Which Greek huntress lost a race by stopping to pick up golden apples?,Atalanta,Artemis,Penelope,Helen
+"¿Qué criaturas atraían a los marineros con su canto, y por ello Ulises se ató al mástil?",,Las sirenas,"Which creatures lured sailors with their song, making Odysseus tie himself to the mast?",The Sirens,The Harpies,The Gorgons,The Amazons
+¿Qué caballero de la Mesa Redonda tuvo un romance con la reina Ginebra?,,Lancelot,Which Knight of the Round Table had an affair with Queen Guinevere?,Lancelot,Galahad,Percival,Morgan le Fay
+¿Cómo se llamaba el castillo y la corte del rey Arturo?,,Camelot,What was the name of King Arthur's castle and court?,Camelot,Avalon,Tintagel,Glastonbury
+¿Qué objeto sagrado buscaban los caballeros de la Mesa Redonda?,,El Santo Grial,Which sacred object did the Knights of the Round Table seek?,The Holy Grail,The Spear of Longinus,Excalibur,The Golden Fleece
+¿Qué diosa primordial griega personifica la Tierra?,,Gaia,Which primordial Greek goddess personifies the Earth?,Gaia,Rhea,Themis,Nyx
+¿Qué dios griego de los sueños da nombre a la morfina?,,Morfeo,Which Greek god of dreams gives his name to morphine?,Morpheus,Hypnos,Thanatos,Aeolus
+"¿Qué dios griego mitad cabra tocaba la flauta y da nombre al ""pánico""?",,Pan,"Which half-goat Greek god played the pipes and gives his name to ""panic""?",Pan,Dionysus,Hermes,Triton
+¿Qué diosa griega de la justicia se representa con los ojos vendados y una balanza?,,Temis,Which Greek goddess of justice is depicted blindfolded with scales?,Themis,Nemesis,Athena,Hera
+¿Qué dios griego controlaba los vientos y se los dio a Ulises en un odre?,,Eolo,Which Greek god controlled the winds and gave them to Odysseus in a bag?,Aeolus,Poseidon,Triton,Hermes
+¿Qué diosa griega del arcoíris era mensajera de los dioses?,,Iris,Which Greek rainbow goddess was a messenger of the gods?,Iris,Eos,Selene,Hera
+¿Qué tribu mitológica estaba formada solo por mujeres guerreras?,,Las amazonas,Which mythological tribe consisted only of warrior women?,The Amazons,The Muses,The Fates,The Gorgons
+¿Qué programador soviético creó el Tetris?,,Alekséi Pázhitnov,Which Soviet programmer created Tetris?,Alexey Pajitnov,Ernő Rubik,Shigeru Miyamoto,Hideo Kojima
+"¿De qué país es el creador de Minecraft, Markus Persson?",,Suecia,"Which country is Minecraft's creator, Markus Persson, from?",Sweden,Norway,Finland,Denmark
+¿Qué empresa desarrolla Fortnite?,,Epic Games,Which company develops Fortnite?,Epic Games,Valve,Activision,Riot Games
+"¿Qué empresa desarrolla la saga ""Grand Theft Auto""?",,Rockstar Games,"Which company develops the ""Grand Theft Auto"" series?",Rockstar Games,Ubisoft,Electronic Arts,Bethesda
+"¿Qué diseñador creó ""Los Sims""?",,Will Wright,"Which designer created ""The Sims""?",Will Wright,Sid Meier,Peter Molyneux,John Carmack
+¿De qué tipo es el Pokémon Pikachu?,,Eléctrico,What type is the Pokémon Pikachu?,Electric,Fire,Water,Grass
+¿Qué diseñador japonés creó a Mario y a Link?,,Shigeru Miyamoto,Which Japanese designer created Mario and Link?,Shigeru Miyamoto,Hideo Kojima,Satoru Iwata,Hironobu Sakaguchi
+"¿Qué diseñador japonés es el creador de la saga ""Metal Gear""?",,Hideo Kojima,"Which Japanese designer created the ""Metal Gear"" series?",Hideo Kojima,Shigeru Miyamoto,Hironobu Sakaguchi,Shinji Mikami
+"¿Cómo se llama la arqueóloga protagonista de ""Tomb Raider""?",,Lara Croft,"What is the name of the archaeologist heroine of ""Tomb Raider""?",Lara Croft,Jill Valentine,Samus Aran,Ellie Williams
+"¿Qué empresa japonesa creó la saga ""Street Fighter""?",,Capcom,"Which Japanese company created the ""Street Fighter"" series?",Capcom,Sega,Namco,SNK
+¿Qué empresa japonesa creó Pac-Man?,,Namco,Which Japanese company created Pac-Man?,Namco,Nintendo,Taito,Sega
+¿Qué arquitecto húngaro inventó el cubo que lleva su nombre?,,Ernő Rubik,Which Hungarian architect invented the cube that bears his name?,Ernő Rubik,Alexey Pajitnov,Ole Kirk Christiansen,Klaus Teuber
+¿De qué país es la empresa Lego?,,Dinamarca,Which country is the Lego company from?,Denmark,Sweden,Germany,The Netherlands
+¿Qué empresa fabrica la muñeca Barbie?,,Mattel,Which company makes the Barbie doll?,Mattel,Hasbro,Famosa,Playmobil
+"¿Qué diseñador alemán creó el juego de mesa ""Catan""?",,Klaus Teuber,"Which German designer created the board game ""Catan""?",Klaus Teuber,Uwe Rosenberg,Reiner Knizia,Wolfgang Kramer
+¿Cuántas piezas tiene cada jugador al empezar una partida de ajedrez?,,16,How many pieces does each player have at the start of a chess game?,16,12,14,18
+¿Qué dibujante belga creó a los Pitufos?,,Peyo,Which Belgian cartoonist created the Smurfs?,Peyo,Hergé,Morris,Uderzo
+¿Qué dibujante argentino creó a Mafalda?,,Quino,Which Argentine cartoonist created Mafalda?,Quino,Fontanarrosa,Mordillo,Oesterheld
+¿Qué dibujante creó a Snoopy y Charlie Brown?,,Charles M. Schulz,Which cartoonist created Snoopy and Charlie Brown?,Charles M. Schulz,Jim Davis,Bill Watterson,Matt Groening
+¿Qué comida le encanta al gato Garfield?,,La lasaña,Which food does Garfield the cat love?,Lasagne,Pizza,Fish,Burgers
+¿De qué planeta es Superman?,,Krypton,Which planet is Superman from?,Krypton,Mars,Apokolips,Oa
+¿Cuál es la identidad secreta de Spider-Man?,,Peter Parker,What is Spider-Man's secret identity?,Peter Parker,Bruce Wayne,Clark Kent,Tony Stark
+"¿Qué mangaka creó ""Dragon Ball""?",,Akira Toriyama,"Which manga artist created ""Dragon Ball""?",Akira Toriyama,Eiichirō Oda,Masashi Kishimoto,Osamu Tezuka
+"¿Qué mangaka creó ""One Piece""?",,Eiichirō Oda,"Which manga artist created ""One Piece""?",Eiichirō Oda,Akira Toriyama,Masashi Kishimoto,Tite Kubo
+¿De qué color es el gato cósmico Doraemon?,,Azul,What colour is the robot cat Doraemon?,Blue,Red,Yellow,Green
+¿Qué famoso concurso de preguntas de TVE presentó Mayra Gómez Kemp?,,"Un, dos, tres... responda otra vez",Which famous TVE quiz show did Mayra Gómez Kemp present?,"Un, dos, tres... responda otra vez",Saber y ganar,Pasapalabra,El precio justo
+"¿Qué presentador condujo ""Saber y ganar"" durante más de 25 años?",,Jordi Hurtado,"Which presenter hosted ""Saber y ganar"" for over 25 years?",Jordi Hurtado,Carlos Sobera,Christian Gálvez,Roberto Leal
+¿En qué ciudad se celebra la Fiesta de San Fermín?,,Pamplona,In which city is the San Fermín festival held?,Pamplona,Bilbao,Valencia,Seville
+¿En qué localidad valenciana se celebra la Tomatina?,,Buñol,In which Valencian town is La Tomatina held?,Buñol,Xàtiva,Alzira,Requena
+¿Qué fiesta catalana consiste en levantar torres humanas?,,Los castells,Which Catalan tradition consists of building human towers?,Castells,Correfocs,La Patum,Gegants
+"¿En qué ciudad se celebra el carnaval más famoso de España, junto con el de Santa Cruz de Tenerife?",,Cádiz,"Which city holds Spain's most famous carnival, along with Santa Cruz de Tenerife?",Cadiz,Sitges,Badajoz,Águilas
+¿En qué país está Machu Picchu?,,Perú,Which country is Machu Picchu in?,Peru,Bolivia,Ecuador,Chile
+¿En qué país está Petra?,,Jordania,Which country is Petra in?,Jordan,Egypt,Syria,Lebanon
+¿En qué país está el Taj Mahal?,,India,Which country is the Taj Mahal in?,India,Pakistan,Bangladesh,Nepal
+¿En qué país está Angkor Wat?,,Camboya,Which country is Angkor Wat in?,Cambodia,Tailandia,Laos,Vietnam
+¿En qué país está Chichén Itzá?,,México,Which country is Chichen Itza in?,Mexico,Guatemala,Peru,Honduras
+¿En qué país está la Alhambra?,,España,Which country is the Alhambra in?,Spain,Marruecos,Portugal,Tunisia
+¿En qué país está la Gran Muralla?,,China,Which country is the Great Wall in?,China,Mongolia,Japan,South Korea
+¿En qué país está Stonehenge?,,Reino Unido,Which country is Stonehenge in?,United Kingdom,Ireland,France,Norway
+¿En qué país está la Sagrada Familia?,,España,Which country is the Sagrada Família in?,Spain,Portugal,France,Italy
+¿En qué país está la torre inclinada de Pisa?,,Italia,Which country is the Leaning Tower of Pisa in?,Italy,Spain,France,Greece
+¿En qué país está el Partenón?,,Grecia,Which country is the Parthenon in?,Greece,Italy,Turkey,Chipre
+¿En qué país está la Ópera de Sídney?,,Australia,Which country is the Sydney Opera House in?,Australia,New Zealand,Canada,United Kingdom
+¿En qué país está el Cristo Redentor?,,Brasil,Which country is Christ the Redeemer in?,Brazil,Argentina,Portugal,Mexico
+¿En qué país está la Estatua de la Libertad?,,EE. UU.,Which country is the Statue of Liberty in?,USA,France,Canada,United Kingdom
+¿En qué país está el Kremlin?,,Rusia,Which country is the Kremlin in?,Russia,Ukraine,Poland,Belarus
+¿En qué país está la isla de Pascua?,,Chile,Which country is Easter Island in?,Chile,Peru,New Zealand,Ecuador
+¿En qué país están las islas Galápagos?,,Ecuador,Which country is the Galápagos Islands in?,Ecuador,Peru,Chile,Colombia
+¿En qué país está el monte Kilimanjaro?,,Tanzania,Which country is Mount Kilimanjaro in?,Tanzania,Kenya,Uganda,Etiopía
+¿En qué país está la Gran Barrera de Coral?,,Australia,Which country is the Great Barrier Reef in?,Australia,Indonesia,Filipinas,New Zealand
+¿En qué país está el Gran Cañón?,,EE. UU.,Which country is the Grand Canyon in?,USA,Mexico,Canada,Peru
+"¿En qué país está el lago Titicaca, junto a Bolivia?",,Perú,"Which country is Lake Titicaca, together with Bolivia in?",Peru,Chile,Ecuador,Argentina
+¿En qué país está el templo de Borobudur?,,Indonesia,Which country is the Borobudur temple in?,Indonesia,Cambodia,Tailandia,Malasia
+¿En qué país está la ciudad de Samarcanda?,,Uzbekistán,Which country is the city of Samarkand in?,Uzbekistan,Kazakhstan,Irán,Afghanistan
+¿En qué país está el monte Ararat?,,Turquía,Which country is Mount Ararat in?,Turkey,Armenia,Irán,Georgia
+"¿En qué país están las cataratas de Iguazú, junto a Brasil?",,Argentina,"Which country is the Iguazu Falls, together with Brazil in?",Argentina,Paraguay,Uruguay,Bolivia
+¿En qué país están los fiordos de Geiranger?,,Noruega,Which country is the Geiranger fjords in?,Norway,Sweden,Iceland,Finland
+"¿Qué reina inglesa, hija de Enrique VIII, reinó durante el siglo de oro isabelino?",,Isabel I,"Which English queen, daughter of Henry VIII, reigned during the Elizabethan golden age?",Elizabeth I,Victoria,"Mary, Queen of Scots",Anne Boleyn
+¿Qué monarca británico reinó durante casi todo el siglo XIX?,,Victoria,Which British monarch reigned for most of the 19th century?,Victoria,Elizabeth I,"Mary, Queen of Scots",Anne Boleyn
+"¿Qué reina de Francia, esposa de Luis XVI, nació en Austria?",,María Antonieta,"Which queen of France, wife of Louis XVI, was born in Austria?",Marie Antoinette,Joan of Arc,Catherine the Great,Elizabeth I
+¿Qué zar fundó San Petersburgo en 1703?,,Pedro el Grande,Which tsar founded Saint Petersburg in 1703?,Peter the Great,Ivan the Terrible,Catherine the Great,Nicholas II
+¿Quién fue el último zar de Rusia?,,Nicolás II,Who was the last tsar of Russia?,Nicholas II,Peter the Great,Ivan the Terrible,Catherine the Great
+¿Qué emperador romano nacido en Hispania llevó el imperio a su máxima extensión?,,Trajano,Which Hispania-born Roman emperor took the empire to its greatest extent?,Trajan,Hadrian,Augustus,Marcus Aurelius
+¿Qué emperador romano mandó construir una muralla en el norte de Britania?,,Adriano,Which Roman emperor ordered a wall built in northern Britain?,Hadrian,Trajan,Nero,Caligula
+"¿Qué emperador-filósofo romano escribió las ""Meditaciones""?",,Marco Aurelio,"Which Roman philosopher-emperor wrote the ""Meditations""?",Marcus Aurelius,Hadrian,Augustus,Trajan
+¿Para qué faraón se construyó la Gran Pirámide de Guiza?,,Keops,For which pharaoh was the Great Pyramid of Giza built?,Khufu,Ramesses II,Tutankhamun,Nefertiti
+¿Qué esclavo gladiador lideró una gran rebelión contra Roma?,,Espartaco,Which gladiator slave led a great revolt against Rome?,Spartacus,Hannibal,Viriathus,Attila
+¿Qué caudillo lusitano resistió a Roma en el siglo II a. C.?,,Viriato,Which Lusitanian leader resisted Rome in the 2nd century BC?,Viriathus,Spartacus,Pelagius,Hannibal
+"¿Qué rey de los hunos era conocido como el ""azote de Dios""?",,Atila,"Which king of the Huns was known as the ""Scourge of God""?",Attila,Genghis Khan,Saladin,Hannibal
+¿Qué sultán recuperó Jerusalén para el islam en 1187?,,Saladino,Which sultan recaptured Jerusalem for Islam in 1187?,Saladin,Genghis Khan,Abd al-Rahman III,Boabdil
+¿Qué duque de Normandía conquistó Inglaterra en 1066?,,Guillermo el Conquistador,Which Duke of Normandy conquered England in 1066?,William the Conqueror,Richard the Lionheart,Charlemagne,Henry VIII
+¿Qué joven campesina francesa lideró tropas en la guerra de los Cien Años?,,Juana de Arco,Which young French peasant woman led troops in the Hundred Years' War?,Joan of Arc,Marie Antoinette,Catherine the Great,Elizabeth I
+¿Qué conquistador español derrotó al Imperio inca?,,Francisco Pizarro,Which Spanish conquistador defeated the Inca Empire?,Francisco Pizarro,Hernán Cortés,Simón Bolívar,Amerigo Vespucci
+¿Qué libertador da nombre a Bolivia?,,Simón Bolívar,Which liberator is Bolivia named after?,Simón Bolívar,José de San Martín,Bernardo O'Higgins,Hernán Cortés
+¿Qué activista se negó a ceder su asiento en un autobús de Montgomery en 1955?,,Rosa Parks,Which activist refused to give up her bus seat in Montgomery in 1955?,Rosa Parks,Frida Kahlo,Emmeline Pankhurst,Marie Curie
+¿Qué último líder de la URSS impulsó la perestroika?,,Mijaíl Gorbachov,Which last leader of the USSR drove perestroika?,Mikhail Gorbachev,Lenin,Stalin,Yuri Gagarin
+¿Qué astronauta acompañó a Neil Armstrong a pisar la Luna en 1969?,,Buzz Aldrin,Which astronaut joined Neil Armstrong in walking on the Moon in 1969?,Buzz Aldrin,Yuri Gagarin,Valentina Tereshkova,Laika
+¿Quién fue la primera mujer en viajar al espacio?,,Valentina Tereshkova,Who was the first woman to travel to space?,Valentina Tereshkova,Marie Curie,Laika,Rosa Parks
+¿Cómo se llamaba la perra soviética que fue el primer animal en orbitar la Tierra?,,Laika,What was the name of the Soviet dog that was the first animal to orbit the Earth?,Laika,Belka,Strelka,Valentina Tereshkova
+¿Qué diputada defendió el voto femenino en las Cortes españolas de 1931?,,Clara Campoamor,Which MP defended women's suffrage in the Spanish Cortes in 1931?,Clara Campoamor,Victoria Kent,Emmeline Pankhurst,Rosa Parks
+¿Qué rey conquistó Mallorca y Valencia en el siglo XIII?,,Jaime I el Conquistador,Which king conquered Majorca and Valencia in the 13th century?,James I the Conqueror,Peter III the Great,Alfonso X the Wise,Ferdinand II of Aragon
+¿Qué rey castellano del siglo XIII impulsó la Escuela de Traductores de Toledo?,,Alfonso X el Sabio,Which 13th-century Castilian king promoted the Toledo School of Translators?,Alfonso X the Wise,James I the Conqueror,Ferdinand II of Aragon,Philip II
+¿Qué último rey nazarí entregó Granada en 1492?,,Boabdil,Which last Nasrid king surrendered Granada in 1492?,Boabdil,Abd al-Rahman III,Saladin,Pelagius
+¿Qué califa de Córdoba proclamó el califato en el año 929?,,Abderramán III,Which ruler of Córdoba proclaimed the caliphate in 929?,Abd al-Rahman III,Boabdil,Saladin,Pelagius
+¿Qué rey de España fue también emperador del Sacro Imperio como Carlos V?,,Carlos I de España,Which Spanish king was also Holy Roman Emperor as Charles V?,Charles I of Spain,Philip II,Ferdinand II of Aragon,Louis XIV
+¿Qué rey español mandó construir el monasterio de El Escorial?,,Felipe II,Which Spanish king had the Monastery of El Escorial built?,Philip II,Charles I of Spain,Ferdinand II of Aragon,Alfonso X the Wise
+"¿Qué actor interpreta a Walter White en ""Breaking Bad""?",,Bryan Cranston,"Which actor plays Walter White in ""Breaking Bad""?",Bryan Cranston,Aaron Paul,Bob Odenkirk,Giancarlo Esposito
+"¿En qué ciudad se desarrolla la serie ""Breaking Bad""?",,Albuquerque,"In which city is ""Breaking Bad"" set?",Albuquerque,Phoenix,El Paso,Las Vegas
+"¿En qué pueblo ficticio de Indiana transcurre ""Stranger Things""?",,Hawkins,"In which fictional Indiana town is ""Stranger Things"" set?",Hawkins,Springfield,Twin Peaks,Derry
+"¿Cómo se llama el líder del atraco en ""La casa de papel""?",,El Profesor,"What is the heist leader called in ""Money Heist""?",The Professor,Berlin,Tokyo,Nairobi
+¿Qué serie de animación transcurre en Springfield?,,Los Simpson,Which animated series is set in Springfield?,The Simpsons,Family Guy,South Park,Futurama
+¿Qué actriz interpretó a Hermione Granger en las películas de Harry Potter?,,Emma Watson,Which actress played Hermione Granger in the Harry Potter films?,Emma Watson,Emma Stone,Keira Knightley,Bonnie Wright
+"¿Qué actor interpreta a Sheldon Cooper en ""The Big Bang Theory""?",,Jim Parsons,"Which actor plays Sheldon Cooper in ""The Big Bang Theory""?",Jim Parsons,Johnny Galecki,Simon Helberg,Kunal Nayyar
+¿Qué saga de películas tiene como protagonista a Ethan Hunt?,,Misión imposible,Which film series features Ethan Hunt?,Mission: Impossible,Bourne,James Bond,Fast & Furious
+"¿Qué actor ha interpretado a James Bond en ""Casino Royale"" y ""Skyfall""?",,Daniel Craig,"Which actor played James Bond in ""Casino Royale"" and ""Skyfall""?",Daniel Craig,Pierce Brosnan,Sean Connery,Roger Moore
+¿Qué película de Pixar transcurre dentro de la mente de una niña llamada Riley?,,Del revés,Which Pixar film takes place inside the mind of a girl named Riley?,Inside Out,Coco,Soul,Up
+"¿En qué país se ambienta la película de Pixar ""Coco""?",,México,"In which country is Pixar's ""Coco"" set?",Mexico,Spain,Colombia,Peru
+¿Qué película de Disney tiene como protagonista a una princesa con poderes de hielo llamada Elsa?,,Frozen,Which Disney film features an ice-powered princess named Elsa?,Frozen,Tangled,Brave,Moana
+¿Qué película ganó el Óscar a la mejor película en 2024 (ceremonia)?,,Oppenheimer,Which film won the Oscar for Best Picture at the 2024 ceremony?,Oppenheimer,Barbie,Poor Things,Killers of the Flower Moon
+¿Qué festival de cine entrega la Concha de Oro?,,San Sebastián,Which film festival awards the Golden Shell?,San Sebastián,Cannes,Málaga,Sitges
+¿En qué localidad catalana se celebra un famoso festival de cine fantástico?,,Sitges,In which Catalan town is a famous fantasy film festival held?,Sitges,Girona,Reus,Figueres
+¿Qué premio entrega la Academia de cine española?,,Los Goya,Which award does the Spanish Film Academy present?,The Goyas,The Gaudí Awards,The Feroz Awards,The Ondas
+¿Qué premios entrega la Acadèmia del Cinema Català?,,Los Gaudí,Which awards does the Catalan Film Academy present?,The Gaudí Awards,The Goyas,The Max Awards,The Butaca Awards
