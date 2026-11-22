@@ -1120,6 +1120,20 @@ function rememberName(key){ const s = myNames(); s.add(key); store("rmq-mynames"
 const pins = () => store("rmq-pins") || {};
 function savePin(key, pin){ const p = pins(); p[key] = pin; store("rmq-pins", p); }
 function forgetPin(key){ const p = pins(); delete p[key]; store("rmq-pins", p); }
+/* Identificador aleatorio de este navegador (no es nada personal). Con dispositivos.sql permite ver si dos nombres
+   se usan desde el mismo aparato. Se envía como mucho una vez al día por jugador. */
+function registrarDispositivo(k, pin){
+  try{
+    if (!HOF.online || !k || !pin) return;
+    let d = store("rmq-disp");
+    if (!d){ d = crypto.randomUUID ? crypto.randomUUID() : Date.now().toString(36) + Math.random().toString(36).slice(2, 12); store("rmq-disp", d); }
+    const hoy = new Date().toISOString().slice(0, 10), hecho = store("rmq-disp-hoy") || {};
+    if (hecho[k] === hoy) return;
+    rpcCall("registrar_dispositivo", {p_clave: k.slice(0, 40), p_pin: pin, p_disp: d})
+      .then(() => { const h = store("rmq-disp-hoy") || {}; for (const x in h) if (h[x] !== hoy) delete h[x]; h[k] = hoy; store("rmq-disp-hoy", h); })
+      .catch(() => {});
+  }catch(e){}
+}
 async function rpcCall(fn, args){
   const h = {apikey: SUPABASE_KEY, "Content-Type": "application/json"};
   if (SUPABASE_KEY.startsWith("eyJ")) h.Authorization = "Bearer " + SUPABASE_KEY;
@@ -1245,7 +1259,7 @@ const Login = (() => {
         if (r !== "ok"){ $("l-pin1").value = ""; $("l-pin1").focus();
           return err(r === "bloqueado" ? T("Demasiados intentos. Espera 15 minutos.") : r === "error" ? T("No se pudo comprobar el PIN. Inténtalo de nuevo.") : T("PIN incorrecto. Prueba otra vez.")); }
       }
-      savePin(key, a); setUser(name); show("scr-start"); SeenSync.sync(true);
+      savePin(key, a); setUser(name); show("scr-start"); SeenSync.sync(true); registrarDispositivo(key, a);
     } finally { busy = false; $("l-go").disabled = false; }
   }
   $("login-form").addEventListener("submit", e => { e.preventDefault(); submit(); });
@@ -1599,6 +1613,7 @@ const HOF = (() => {
       try{
         const r = await rpcCall("guardar_partida2", {p_nombre: g.name.slice(0, 24), p_clave: g.key.slice(0, 40), p_puntos: g.score, p_aciertos: g.ok, p_total: g.total, p_pin: pin,
           p_modo: g.mode || "normal", p_racha: g.racha || 0, p_detalle: g.det || null, p_cuadro: g.grid || null});
+        registrarDispositivo(g.key, pin);
         return (r === "repetido" && rpcCall.reintentos) ? "ok" : r;   // el 1er intento sí llegó a guardarse
       }catch(e){ if (e.status !== 404) throw e; }      // aún sin retos_perfil.sql: método anterior
       try{
@@ -2561,7 +2576,7 @@ const Install = (() => {
     const k = norm($("name").value.trim()), pin = pins()[k];
     if (HOF.online && k && pin) rpcCall("pin_comprobar", {p_clave: k, p_pin: pin}).then(r => {   // PIN cambiado o restablecido: volver a entrar
       if (r === "mal" || r === "sin_pin"){ forgetPin(k); if (!$("scr-start").classList.contains("hidden")) show("scr-login"); }
-      else SeenSync.sync(true);
+      else { SeenSync.sync(true); registrarDispositivo(k, pin); }
     }).catch(() => {});
     $("source").innerHTML = T("<b>{n}</b> preguntas cargadas · fuente: {src}", {n: BANK.length, src: esc(label)});
   }catch(e){
