@@ -201,7 +201,7 @@
 </div>
 <script src="concurso.js"></script>
 <script src="sonido.js"></script>
-<script src="i18n/ui.js?v=92a83fe7"></script>
+<script src="i18n/ui.js?v=99effa43"></script>
 <script src="i18n/marca.js?v=fe450482"></script>
 <script src="i18n/i18n.js?v=7837665f"></script>
 <script>
@@ -376,7 +376,7 @@ async function resultadoRemoto(s, q, tq){
   }catch(e){ $("res-rank").innerHTML = ""; }
   const sg = q.sig && RONDAS[q.sig.tipo];                   // presentación de la ronda siguiente
   $("res-prox").classList.toggle("hidden", !sg);
-  if (sg) $("res-prox").innerHTML = `<div class="k">${esc(q.sig.tipo === "final" ? T("Última ronda") : T("Próxima ronda") + " · " + T("Ronda {i} de {n}", {i: q.sig.ronda, n: q.sig.rondas}))}</div><div class="ic">${sg.ico}</div><div class="nm">${esc(T(sg.nombre))}</div><p>${esc(T(sg.reglas))}</p>`;
+  if (sg) $("res-prox").innerHTML = `<div class="k">${esc(q.sig.tipo === "golpe" ? T("Pregunta final") : q.sig.tipo === "final" ? T("Última ronda") : T("Próxima ronda") + " · " + T("Ronda {i} de {n}", {i: q.sig.ronda, n: q.sig.rondas}))}</div><div class="ic">${sg.ico}</div><div class="nm">${esc(T(sg.nombre))}</div><p>${esc(T(sg.reglas))}</p>`;
 }
 
 // Has entrado con la partida empezada: esperas la siguiente viendo cómo va esta
@@ -435,7 +435,7 @@ async function render(s){
     if (navigator.vibrate) try{ navigator.vibrate(ok ? 80 : [60, 60, 60]); }catch(e){}
     Sonido.fx(mine === undefined || mine < 0 ? "tiempo" : ok ? "acierto" : "fallo");
     $("res-pq").classList.add("hidden");
-    if (q.tipo) myPlay(s.idx, ok && q.tipo === "rapido");
+    if (q.tipo) myPlay(s.idx, ok && (q.tipo === "rapido" || q.tipo === "golpe"));
     resultadoRemoto(s, q, tqr);
     const st = await myStats();
     if (st){ $("res-pos").textContent = st.pos ? "#" + st.pos : "–"; $("res-pts").textContent = st.pts; $("res-ok").textContent = st.ok; }
@@ -457,15 +457,17 @@ async function render(s){
 async function myPlay(idx, lento){
   try{
     const ps = await api(`ev_puntos?select=jugador,nombre,puntos,motivo&codigo=eq.${P.codigo}&idx=eq.${idx}`);
-    const me = ps.find(p => p.jugador === P.jugador), robado = ps.find(p => p.motivo === "robado"), robo = ps.find(p => p.motivo === "robo");
+    const me = ps.find(p => p.jugador === P.jugador), robado = ps.find(p => p.motivo === "robado"), robo = ps.find(p => p.motivo === "robo"), golpe = ps.find(p => p.motivo === "golpe");
     let t = "";
     if (!me) t = lento ? "+0 · " + T("Otro fue más rápido") : "+0";
     else if (me.motivo === "robo") t = `🦹 ${T("¡Has robado {n} puntos a {b}!", {n: me.puntos - 50, b: robado ? robado.nombre : "?"})} (+${me.puntos})`;
     else if (me.motivo === "robado") t = `😱 ${T("¡{a} te ha robado {n} puntos!", {a: robo ? robo.nombre : "?", n: robo ? robo.puntos - 50 : -me.puntos})}`;
+    else if (me.motivo === "golpe") t = `💀 ${T("¡Golpe final! Robas {n} puntos", {n: me.puntos})}`;
+    else if (me.motivo === "golpeado") t = `😱 ${T("¡{a} te ha robado {n} puntos!", {a: golpe ? golpe.nombre : "?", n: -me.puntos})}`;
     else if (me.motivo === "primero") t = `⚡ ${T("¡Has sido el más rápido!")} +${me.puntos}`;
     else t = me.puntos > 0 ? "+" + me.puntos : me.puntos < 0 ? "−" + -me.puntos : "+0";
     if (t){ $("res-pq").textContent = t; $("res-pq").classList.remove("hidden"); }
-    if (me && (me.motivo === "robo" || me.motivo === "robado")) setTimeout(() => Sonido.fx("robo"), 600);
+    if (me && ["robo", "robado", "golpe", "golpeado"].includes(me.motivo)) setTimeout(() => Sonido.fx("robo"), 600);
     else if (me && me.motivo === "primero") setTimeout(() => Sonido.fx("rayo"), 600);
   }catch(e){}
 }

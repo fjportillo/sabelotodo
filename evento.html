@@ -183,6 +183,7 @@
         <select id="s-diff"><option value="" data-t>Todas</option><option value="facil" data-t>Fácil</option><option value="media" data-t>Media</option><option value="dificil" data-t>Difícil</option></select></div>
     </div>
     <div class="setup-sec" data-t>Opciones</div>
+    <label class="chk"><input type="checkbox" id="s-golpe"> <span data-t>💀 Golpe final: una última pregunta muy difícil; el primero que acierte roba 300 puntos a cada uno de los demás</span></label>
     <label class="chk"><input type="checkbox" id="s-auto" checked> <span data-t>Avance automático (las preguntas pasan solas)</span></label>
     <div class="controls"><button class="btn" id="b-create" disabled>Crear sala</button></div>
     <div class="err center" id="setup-err"></div>
@@ -267,7 +268,7 @@
 </div>
 <script src="concurso.js"></script>
 <script src="sonido.js"></script>
-<script src="i18n/ui.js?v=92a83fe7"></script>
+<script src="i18n/ui.js?v=99effa43"></script>
 <script src="i18n/marca.js?v=fe450482"></script>
 <script src="i18n/i18n.js?v=7837665f"></script>
 <script>
@@ -360,23 +361,29 @@ async function createRoom(){
   let pool = BANK.filter(b => (!cat || b.cat === cat) && (!diff || b.diff === diff));
   if (pool.length < n){ $("setup-err").textContent = T("Solo hay {n} preguntas con esa combinación. Elige menos preguntas u otra categoría.", {n: pool.length}); return; }
   // Mismo orden de respuestas en los tres idiomas: cada móvil muestra la pregunta en su idioma
-  const list = elegirPreguntas(pool, n).map(b => {
+  const prep = b => {
     const base = [b.c, ...b.wrong].slice(0, 4), perm = shuffle(base.map((_, i) => i)), opts = perm.map(i => base[i]);
     const tr = {};
     for (const l of ["ca", "en"]){ const t = I18NX.translateQ(TRMAPS[l], b); tr[l] = {texto: t.texto, opciones: perm.map(i => t.base[i] || base[i])}; }
     return {...b, opts, correct: perm.indexOf(0), tr};
-  });
+  };
+  const list = elegirPreguntas(pool, n).map(prep);
   if (concurso) list.forEach((q, i) => { q.tipo = rondas[Math.floor(i / porRonda)]; q.nueva = i % porRonda === 0; q.ronda = Math.floor(i / porRonda) + 1; q.rondas = rondas.length; });
+  if ($("s-golpe").checked){                 // golpe final: una pregunta extra, la más difícil que se encuentre
+    const g = await preguntaGolpe(BANK.filter(b => !cat || b.cat === cat), list);
+    if (g) list.push({...prep(g), tipo: "golpe", nueva: true});
+  }
+  const total = list.length, golpe = list.some(q => q.tipo === "golpe");
   const secret = (crypto.randomUUID ? crypto.randomUUID() : Math.random().toString(36).slice(2)) + Math.random().toString(36).slice(2);
   $("b-create").disabled = true;
   try{
     const ult = store("sab:ev-ultima"), misma = ult && usarMisma;
     let codigo, sec = secret;
     if (misma){
-      try{ await rpc("ev_nueva_partida", {p_codigo: ult.codigo, p_secret: ult.secret, p_total: n, p_segundos: secs}); codigo = ult.codigo; sec = ult.secret; }
+      try{ await rpc("ev_nueva_partida", {p_codigo: ult.codigo, p_secret: ult.secret, p_total: total, p_segundos: secs}); codigo = ult.codigo; sec = ult.secret; }
       catch(e){ store("sab:ev-ultima", null); pintaMisma(); $("setup-err").textContent = T("Esa sala ya no existe. Pulsa otra vez para crear una nueva."); $("b-create").disabled = false; return; }
-    } else codigo = await rpc("ev_crear_sala", {p_secret: secret, p_total: n, p_segundos: secs});
-    const cfg = {modo: concurso ? "concurso" : "clasico", rondas, porRonda, segundos: secs, total: n};
+    } else codigo = await rpc("ev_crear_sala", {p_secret: secret, p_total: total, p_segundos: secs});
+    const cfg = {modo: concurso ? "concurso" : "clasico", rondas, porRonda, segundos: secs, total, golpe};
     S = {codigo, secret: sec, list, i: -1, segundos: secs, intro: -1, auto: $("s-auto").checked, cfg};
     rpc("ev_config", {p_codigo: codigo, p_secret: sec, p_config: cfg}).catch(() => {});   // los móviles enseñan las reglas en la sala de espera
     S.t = Date.now(); store("sab:ev-host", S);
@@ -434,6 +441,20 @@ function elegirPreguntas(pool, n){
   const viejas = pool.filter(b => u[claveQ(b)]).sort((a, b) => u[claveQ(a)] - u[claveQ(b)]);   // las que salieron hace más tiempo primero
   return shuffle(nuevas.concat(viejas.slice(0, n - nuevas.length)));
 }
+/* Pregunta del golpe final: difícil, sin imagen, que no esté ya en la partida. Si hay estadísticas (preguntas_ranking),
+   entre las que acierta como mucho el 30 % de la gente; si no, cualquier difícil. Primero las que nunca han salido aquí. */
+async function preguntaGolpe(pool, ya){
+  const dentro = new Set(ya.map(claveQ)), u = usadas();
+  let cand = pool.filter(b => b.diff === "dificil" && !b.vis && !dentro.has(claveQ(b)));
+  if (!cand.length) cand = BANK.filter(b => b.diff === "dificil" && !dentro.has(claveQ(b)));
+  if (!cand.length) return null;
+  const pct = new Map();
+  try{ (await api("preguntas_ranking?select=pregunta,visual,pct_aciertos&respuestas=gte.5&pct_aciertos=lte.30&limit=2000"))
+         .forEach(r => pct.set(r.pregunta + "|" + (r.visual || ""), r.pct_aciertos)); }catch(e){}
+  const duras = cand.filter(b => pct.has(b.q + "|" + (b.vis || "")));
+  const base = duras.length >= 5 ? duras : cand, nuevas = base.filter(b => !u[claveQ(b)]);
+  return shuffle(nuevas.length ? nuevas : base)[0];
+}
 function marcarUsada(q){ const u = usadas(); u[claveQ(q)] = Date.now(); store("sab:ev-usadas", u); }
 
 // Reglas de la partida antes de la primera pregunta
@@ -457,7 +478,7 @@ function showRound(q){
   const r = RONDAS[q.tipo];
   view("v-ronda");
   $("r-ic").textContent = r.ico;
-  $("r-k").textContent = q.tipo === "final" ? T("Última ronda") : T("Ronda {i} de {n}", {i: q.ronda, n: q.rondas});
+  $("r-k").textContent = q.tipo === "golpe" ? T("Pregunta final") : q.tipo === "final" ? T("Última ronda") : T("Ronda {i} de {n}", {i: q.ronda, n: q.rondas});
   $("r-nombre").textContent = T(r.nombre);
   $("r-reglas").textContent = T(r.reglas);
   Sonido.musica(null); Sonido.fx("ronda");
@@ -473,7 +494,7 @@ async function startQuestion(){
   $("q-ronda").classList.toggle("hidden", !r);
   if (r) $("q-ronda").innerHTML = `${r.ico} <b>${esc(T(r.nombre))}</b> · ${esc(T(r.corto))}`;
   $("q-vale").textContent = ""; $("q-jugada").classList.add("hidden");
-  Sonido.musica(q.tipo === "final" ? "final" : "pregunta"); Sonido.fx("pregunta");
+  Sonido.musica(q.tipo === "final" || q.tipo === "golpe" ? "final" : "pregunta"); Sonido.fx("pregunta");
   marcarUsada(q);                           // cuenta como salida solo si llega a jugarse
   $("q-num").textContent = T("Pregunta {i} de {n}", {i: S.i + 1, n: S.list.length});
   const shown = LANG !== "es" && q.tr && q.tr[LANG] ? q.tr[LANG] : {texto: q.q, opciones: q.opts};
@@ -535,7 +556,7 @@ async function reveal(){
   // En automático la clasificación sale solo al acabar cada ronda (en la clásica, cada 3 preguntas) y al final;
   // el resto de veces se pasa directamente a la siguiente pregunta (los móviles ya enseñan la clasificación).
   const sig = S.list[S.i + 1];
-  const tocaRanking = !sig || (q.tipo ? !!sig.nueva : (S.i + 1) % 3 === 0);
+  const tocaRanking = !sig || sig.tipo === "golpe" || (q.tipo ? !!sig.nueva : (S.i + 1) % 3 === 0);
   programar(!$("q-jugada").classList.contains("hidden") ? 5 : 4, tocaRanking ? showRanking : nextQuestion);
   $("b-rank").textContent = S.i + 1 >= S.list.length ? T("Ver resultado final") : T("Ver clasificación");
 }
