@@ -2014,9 +2014,12 @@ const Reto = (() => {
     for (const row of parseCSV(txt || "").slice(1)){
       const [fecha, tema, palabras, reparto] = row.map(x => (x || "").trim());
       if (!/^\d{4}-\d{2}-\d{2}$/.test(fecha) || !tema || !palabras) continue;
-      const words = palabras.split("|").map(nrm).map(w => w.trim()).filter(Boolean);
+      const partes = palabras.split("|").map(w => w.trim()).filter(Boolean);
+      const cats = partes.filter(w => /^cat:/i.test(w)).map(w => w.slice(4).trim().toLowerCase());     // "cat:Punk internacional" = toda la categoría
+      const words = partes.filter(w => !/^cat:/i.test(w)).map(nrm).map(w => w.trim()).filter(Boolean);
       const [f, m, di] = (reparto || "1-2-7").split("-").map(n => Math.max(0, parseInt(n, 10) || 0));
-      const es = q => { const t = nrm((q.key || q.q) + " " + (q.cEs || q.c)); return words.some(w => t.includes(w)); };
+      const es = q => { if (cats.includes((q.cat || "").toLowerCase())) return true;
+        const t = nrm((q.key || q.q) + " " + (q.cEs || q.c)); return words.some(w => t.includes(w)); };
       out[fecha] = {tema, want: {facil: f, media: m, dificil: di}, es};
     }
     return out;
@@ -2068,6 +2071,9 @@ const Reto = (() => {
         return nuevas.length === x.length ? x : nuevas.concat(x.filter(q => used.has(qid(q))).sort((a, b) => used.get(qid(a)) - used.get(qid(b))));
       });
       for (let i = 0; order.length < pool.length; i++) grupos.forEach(x => { if (x[i]) order.push(x[i]); });
+    } else if (esp && used){                     // reto especial: primero las del tema que aún no han salido en el ciclo
+      const nuevas = order.filter(q => !used.has(qid(q)));
+      order = nuevas.concat(order.filter(q => used.has(qid(q))).sort((a, b) => used.get(qid(a)) - used.get(qid(b))));
     }
     const want = esp ? {...esp.want} : {facil: 3, media: 4, dificil: 3}, picked = [], cats = new Map();
     for (const pass of esp ? [98, 99] : [1, 2, 99]) for (const q of order){
