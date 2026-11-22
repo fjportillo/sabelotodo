@@ -1184,3 +1184,328 @@ pregunta_es,visual,correcta_es,pregunta,correcta,incorrecta1,incorrecta2,incorre
 ¿Qué científico formuló el principio de incertidumbre?,,Werner Heisenberg,Quin científic va formular el principi d'incertesa?,Werner Heisenberg,Erwin Schrödinger,Paul Dirac,Max Born
 ¿Cuál es el elemento químico de número atómico 1?,,Hidrógeno,Quin és l'element químic de nombre atòmic 1?,Hidrogen,Heli,Liti,Carboni
 ¿Qué químico francés es considerado el padre de la química moderna y formuló la conservación de la masa?,,Antoine Lavoisier,Quin químic francès és considerat el pare de la química moderna i va formular la conservació de la massa?,Antoine Lavoisier,Louis Pasteur,Joseph Proust,Pierre Curie
+¿Cuál es la capital de Hungría?,,Budapest,Quina és la capital de Hongria?,Budapest,Debrecen,Szeged,Viena
+¿Cuál es la capital de Austria?,,Viena,Quina és la capital de Àustria?,Viena,Salzburg,Graz,Innsbruck
+¿Cuál es la capital de Bélgica?,,Bruselas,Quina és la capital de Bèlgica?,Brussel·les,Anvers,Bruges,Lieja
+¿Cuál es la capital de Eslovaquia?,,Bratislava,Quina és la capital de Eslovàquia?,Bratislava,Košice,Budapest,Viena
+¿Cuál es la capital de Croacia?,,Zagreb,Quina és la capital de Croàcia?,Zagreb,Split,Dubrovnik,Belgrad
+¿Cuál es la capital de Serbia?,,Belgrado,Quina és la capital de Sèrbia?,Belgrad,Novi Sad,Zagreb,Sofia
+¿Cuál es la capital de Rumanía?,,Bucarest,Quina és la capital de Romania?,Bucarest,Cluj-Napoca,Timişoara,Constanța
+¿Cuál es la capital de Bulgaria?,,Sofía,Quina és la capital de Bulgària?,Sofia,Plovdiv,Varna,Bucarest
+¿Cuál es la capital de Ucrania?,,Kiev,Quina és la capital de Ucraïna?,Kíiv,Khàrkiv,Odessa,Lviv
+¿Cuál es la capital de Bielorrusia?,,Minsk,Quina és la capital de Bielorússia?,Minsk,Hómiel,Brest,Vílnius
+¿Cuál es la capital de Lituania?,,Vilna,Quina és la capital de Lituània?,Vílnius,Kaunas,Klaipėda,Riga
+¿Cuál es la capital de Letonia?,,Riga,Quina és la capital de Letònia?,Riga,Daugavpils,Tallinn,Vílnius
+¿Cuál es la capital de Estonia?,,Tallin,Quina és la capital de Estònia?,Tallinn,Tartu,Pärnu,Riga
+¿Cuál es la capital de Albania?,,Tirana,Quina és la capital de Albània?,Tirana,Durrës,Shkodër,Skopje
+¿Cuál es la capital de Macedonia del Norte?,,Skopie,Quina és la capital de Macedònia del Nord?,Skopje,Ohrid,Bitola,Tirana
+¿Cuál es la capital de Bosnia y Herzegovina?,,Sarajevo,Quina és la capital de Bòsnia i Hercegovina?,Sarajevo,Mostar,Banja Luka,Zagreb
+¿Cuál es la capital de Montenegro?,,Podgorica,Quina és la capital de Montenegro?,Podgorica,Kotor,Budva,Sarajevo
+¿Cuál es la capital de Chipre?,,Nicosia,Quina és la capital de Xipre?,Nicòsia,Limassol,Làrnaca,Atenes
+¿Cuál es la capital de Georgia?,,Tiflis,Quina és la capital de Geòrgia?,Tbilisi,Batumi,Kutaissi,Erevan
+¿Cuál es la capital de Armenia?,,Ereván,Quina és la capital de Armènia?,Erevan,Gyumri,Tbilisi,Bakú
+¿Cuál es la capital de Azerbaiyán?,,Bakú,Quina és la capital de Azerbaidjan?,Bakú,Gandja,Erevan,Tbilisi
+¿Cuál es la capital de Irán?,,Teherán,Quina és la capital de Iran?,Teheran,Isfahan,Xiraz,Bagdad
+¿Cuál es la capital de Irak?,,Bagdad,Quina és la capital de Iraq?,Bagdad,Bàssora,Mossul,Damasc
+¿Cuál es la capital de Siria?,,Damasco,Quina és la capital de Síria?,Damasc,Alep,Homs,Beirut
+¿Cuál es la capital de Jordania?,,Amán,Quina és la capital de Jordània?,Amman,Àqaba,Zarqa,Damasc
+¿Cuál es la capital de Líbano?,,Beirut,Quina és la capital de Líban?,Beirut,Trípoli (Líban),Sidó,Damasc
+¿Cuál es la capital de Arabia Saudí?,,Riad,Quina és la capital de Aràbia Saudita?,Riad,Jiddah,la Meca,Doha
+¿Cuál es la capital de Emiratos Árabes Unidos?,,Abu Dabi,Quina és la capital de Emirats Àrabs Units?,Abu Dhabi,Dubai,Xarjah,Doha
+¿Cuál es la capital de Catar?,,Doha,Quina és la capital de Qatar?,Doha,Al-Rayyan,Al-Wakra,Abu Dhabi
+¿Cuál es la capital de Afganistán?,,Kabul,Quina és la capital de Afganistan?,Kabul,Kandahar,Herat,Islamabad
+¿Cuál es la capital de Pakistán?,,Islamabad,Quina és la capital de Pakistan?,Islamabad,Karachi,Lahore,Kabul
+¿Cuál es la capital de India?,,Nueva Delhi,Quina és la capital de Índia?,Nova Delhi,Bombai,Calcuta,Katmandú
+¿Cuál es la capital de Nepal?,,Katmandú,Quina és la capital de Nepal?,Katmandú,Pokhara,Lalitpur,Nova Delhi
+¿Cuál es la capital de Bangladés?,,Daca,Quina és la capital de Bangladesh?,Dacca,Chittagong,Khulna,Calcuta
+¿Cuál es la capital de Tailandia?,,Bangkok,Quina és la capital de Tailàndia?,Bangkok,Chiang Mai,Phuket,Vientiane
+¿Cuál es la capital de Camboya?,,Nom Pen,Quina és la capital de Cambodja?,Phnom Penh,Siem Reap,Battambang,Bangkok
+¿Cuál es la capital de Laos?,,Vientián,Quina és la capital de Laos?,Vientiane,Luang Prabang,Pakse,Phnom Penh
+¿Cuál es la capital de Malasia?,,Kuala Lumpur,Quina és la capital de Malàisia?,Kuala Lumpur,George Town,Johor Bahru,Manila
+¿Cuál es la capital de Filipinas?,,Manila,Quina és la capital de Filipines?,Manila,Cebu,Davao,Kuala Lumpur
+¿Cuál es la capital de Corea del Sur?,,Seúl,Quina és la capital de Corea del Sud?,Seül,Busan,Incheon,Pyongyang
+¿Cuál es la capital de Corea del Norte?,,Pionyang,Quina és la capital de Corea del Nord?,Pyongyang,Kaesong,Hamhung,Seül
+¿Cuál es la capital de China?,,Pekín,Quina és la capital de Xina?,Pequín,Xangai,Hong Kong,Seül
+¿Cuál es la capital de Uzbekistán?,,Taskent,Quina és la capital de Uzbekistan?,Taixkent,Samarcanda,Bukharà,Bakú
+¿Cuál es la capital de Kenia?,,Nairobi,Quina és la capital de Kenya?,Nairobi,Mombasa,Kisumu,Addis Abeba
+¿Cuál es la capital de Etiopía?,,Adís Abeba,Quina és la capital de Etiòpia?,Addis Abeba,Dire Dawa,Gondar,Nairobi
+¿Cuál es la capital de Nigeria?,,Abuya,Quina és la capital de Nigèria?,Abuja,Lagos,Kano,Accra
+¿Cuál es la capital de Ghana?,,Acra,Quina és la capital de Ghana?,Accra,Kumasi,Tamale,Abuja
+¿Cuál es la capital de Senegal?,,Dakar,Quina és la capital de Senegal?,Dakar,Saint-Louis,Thiès,Accra
+¿Cuál es la capital de Argelia?,,Argel,Quina és la capital de Algèria?,Alger,Orà,Constantina,Trípoli
+¿Cuál es la capital de Libia?,,Trípoli,Quina és la capital de Líbia?,Trípoli,Bengasi,Misrata,Alger
+¿Cuál es la capital de Sudán?,,Jartum,Quina és la capital de Sudan?,Khartum,Omdurman,Port Sudan,Addis Abeba
+¿Cuál es la capital de Tanzania?,,Dodoma,Quina és la capital de Tanzània?,Dodoma,Dar es Salaam,Arusha,Nairobi
+¿Cuál es la capital de Uganda?,,Kampala,Quina és la capital de Uganda?,Kampala,Entebbe,Gulu,Nairobi
+¿Cuál es la capital de Angola?,,Luanda,Quina és la capital de Angola?,Luanda,Huambo,Benguela,Maputo
+¿Cuál es la capital de Mozambique?,,Maputo,Quina és la capital de Moçambic?,Maputo,Beira,Nampula,Luanda
+¿Cuál es la capital de Madagascar?,,Antananarivo,Quina és la capital de Madagascar?,Antananarivo,Toamasina,Maputo,Harare
+¿Cuál es la capital de Zimbabue?,,Harare,Quina és la capital de Zimbàbue?,Harare,Bulawayo,Maputo,Luanda
+¿Cuál es la capital de Costa de Marfil?,,Yamusukro,Quina és la capital de Costa d'Ivori?,Yamoussoukro,Abidjan,Bouaké,Dakar
+¿Cuál es la capital de Camerún?,,Yaundé,Quina és la capital de Camerun?,Yaoundé,Douala,Garoua,Abuja
+¿Cuál es la capital de Chile?,,Santiago,Quina és la capital de Xile?,Santiago,Valparaíso,Concepción,Montevideo
+¿Cuál es la capital de Venezuela?,,Caracas,Quina és la capital de Veneçuela?,Caracas,Maracaibo,Valencia (Veneçuela),Quito
+¿Cuál es la capital de Ecuador?,,Quito,Quina és la capital de Equador?,Quito,Guayaquil,Cuenca,Caracas
+¿Cuál es la capital de Uruguay?,,Montevideo,Quina és la capital de Uruguai?,Montevideo,Punta del Este,Salto,Asunción
+¿Cuál es la capital de Paraguay?,,Asunción,Quina és la capital de Paraguai?,Asunción,Ciudad del Este,Encarnación,Montevideo
+¿Cuál es la capital de Cuba?,,La Habana,Quina és la capital de Cuba?,l'Havana,Santiago de Cuba,Varadero,Kingston
+¿Cuál es la capital de Brasil?,,Brasilia,Quina és la capital de Brasil?,Brasília,Rio de Janeiro,São Paulo,Montevideo
+¿Cuál es la capital de EE. UU.?,,Washington D. C.,Quina és la capital de EUA?,Washington DC,Nova York,Filadèlfia,Los Angeles
+¿Cuál es la capital de Jamaica?,,Kingston,Quina és la capital de Jamaica?,Kingston,Montego Bay,Ocho Ríos,l'Havana
+¿Cuál es la capital de Costa Rica?,,San José,Quina és la capital de Costa Rica?,San José,Limón,Alajuela,Managua
+¿Cuál es la capital de Honduras?,,Tegucigalpa,Quina és la capital de Hondures?,Tegucigalpa,San Pedro Sula,La Ceiba,Managua
+¿Cuál es la capital de Nicaragua?,,Managua,Quina és la capital de Nicaragua?,Managua,León (Nicaragua),Granada (Nicaragua),Tegucigalpa
+"¿En qué año fue la toma de la Bastilla, inicio de la Revolución francesa?",,1789,"En quin any va ser la presa de la Bastilla, inici de la Revolució francesa?",,,,
+¿En qué año pisó el ser humano la Luna por primera vez?,,1969,En quin any va trepitjar l'ésser humà la Lluna per primera vegada?,,,,
+¿En qué año se declaró la independencia de Estados Unidos?,,1776,En quin any es va declarar la independència dels Estats Units?,,,,
+¿En qué año se aprobó la actual Constitución española?,,1978,En quin any es va aprovar l'actual Constitució espanyola?,,,,
+¿En qué año cayó Constantinopla en manos de los otomanos?,,1453,En quin any va caure Constantinoble en mans dels otomans?,,,,
+¿En qué año se libró la batalla de Waterloo?,,1815,En quin any es va lliurar la batalla de Waterloo?,,,,
+¿En qué año triunfó la Revolución rusa de octubre?,,1917,En quin any va triomfar la Revolució russa d'octubre?,,,,
+¿En qué año empezaron a circular los billetes y monedas de euro?,,2002,En quin any van començar a circular els bitllets i les monedes d'euro?,,,,
+¿En qué año se descubrió la tumba de Tutankamón?,,1922,En quin any es va descobrir la tomba de Tutankamon?,,,,
+¿En qué año se hundió el Titanic?,,1912,En quin any es va enfonsar el Titanic?,,,,
+¿En qué año fue coronado emperador Carlomagno?,,800,En quin any va ser coronat emperador Carlemany?,,,,
+¿En qué año se libró la batalla de Hastings?,,1066,En quin any es va lliurar la batalla de Hastings?,,,,
+¿En qué año se firmó la Carta Magna en Inglaterra?,,1215,En quin any es va signar la Carta Magna a Anglaterra?,,,,
+¿En qué año se proclamó el Imperio alemán unificado?,,1871,En quin any es va proclamar l'Imperi alemany unificat?,,,,
+¿En qué año realizaron los hermanos Wright su primer vuelo a motor?,,1903,En quin any van fer els germans Wright el seu primer vol a motor?,,,,
+¿En qué año empezó la Guerra Civil española?,,1936,En quin any va començar la Guerra Civil espanyola?,,,,
+¿En qué año se convirtió Nelson Mandela en presidente de Sudáfrica?,,1994,En quin any es va convertir Nelson Mandela en president de Sud-àfrica?,,,,
+"¿En qué año se firmó el Tratado de Maastricht, que creó la Unión Europea?",,1992,"En quin any es va signar el Tractat de Maastricht, que va crear la Unió Europea?",,,,
+¿En qué año completó la expedición de Magallanes y Elcano la primera vuelta al mundo?,,1522,En quin any va completar l'expedició de Magalhães i Elcano la primera volta al món?,,,,
+¿En qué año fue la Revolución de los Claveles en Portugal?,,1974,En quin any va ser la Revolució dels Clavells a Portugal?,,,,
+¿En qué año se independizó la India del Reino Unido?,,1947,En quin any es va independitzar l'Índia del Regne Unit?,,,,
+¿En qué año tuvo lugar la crisis de los misiles de Cuba?,,1962,En quin any va tenir lloc la crisi dels míssils de Cuba?,,,,
+"¿En qué año lanzó la URSS el Sputnik, el primer satélite artificial?",,1957,"En quin any va llançar l'URSS l'Sputnik, el primer satèl·lit artificial?",,,,
+¿En qué año viajó Yuri Gagarin al espacio?,,1961,En quin any va viatjar Iuri Gagarin a l'espai?,,,,
+¿En qué año se celebró el referéndum del Brexit?,,2016,En quin any es va celebrar el referèndum del Brexit?,,,,
+¿En qué año se completó la unificación de Italia con la proclamación del Reino de Italia?,,1861,"En quin any es va proclamar el Regne d'Itàlia, que culminava la unificació?",,,,
+¿En qué año se abolió la esclavitud en Estados Unidos con la Decimotercera Enmienda?,,1865,En quin any es va abolir l'esclavitud als Estats Units amb la Tretzena Esmena?,,,,
+¿En qué año fueron las revueltas estudiantiles del Mayo francés?,,1968,En quin any van ser les revoltes estudiantils del Maig francès?,,,,
+¿En qué año se celebró la Exposición Universal de Sevilla?,,1992,En quin any es va celebrar l'Exposició Universal de Sevilla?,,,,
+¿En qué año se celebró la Exposición Universal de Barcelona que dejó el Pabellón Alemán de Mies van der Rohe?,,1929,En quin any es va celebrar l'Exposició Internacional de Barcelona que va deixar el Pavelló Alemany de Mies van der Rohe?,,,,
+"¿En qué año se celebró la primera Exposición Universal de Barcelona, en el parque de la Ciutadella?",,1888,"En quin any es va celebrar la primera Exposició Universal de Barcelona, al parc de la Ciutadella?",,,,
+¿En qué año se inauguró el canal de Panamá?,,1914,En quin any es va inaugurar el canal de Panamà?,,,,
+"¿Quién escribió ""Rayuela""?",,Julio Cortázar,"Qui va escriure ""Rayuela""?",Julio Cortázar,Jorge Luis Borges,Ernesto Sabato,Adolfo Bioy Casares
+"¿Quién escribió ""Pedro Páramo""?",,Juan Rulfo,"Qui va escriure ""Pedro Páramo""?",Juan Rulfo,Carlos Fuentes,Octavio Paz,Juan José Arreola
+"¿Quién escribió ""La sombra del viento""?",,Carlos Ruiz Zafón,"Qui va escriure ""L'ombra del vent""?",Carlos Ruiz Zafón,Arturo Pérez-Reverte,Javier Marías,Eduardo Mendoza
+"¿Quién escribió ""La Regenta""?",,"Leopoldo Alas ""Clarín""","Qui va escriure ""La Regenta""?","Leopoldo Alas ""Clarín""",Benito Pérez Galdós,Emilia Pardo Bazán,Juan Valera
+"¿Quién escribió ""Niebla""?",,Miguel de Unamuno,"Qui va escriure ""Boira""?",Miguel de Unamuno,Pío Baroja,Azorín,Ramón del Valle-Inclán
+"¿Quién escribió ""Los santos inocentes""?",,Miguel Delibes,"Qui va escriure ""Els sants innocents""?",Miguel Delibes,Camilo José Cela,Ana María Matute,Francisco Umbral
+"¿Quién escribió ""Solitud""?",,Víctor Català,"Qui va escriure ""Solitud""?",Víctor Català,Mercè Rodoreda,Narcís Oller,Joaquim Ruyra
+"¿Quién escribió ""Yo confieso""?",,Jaume Cabré,"Qui va escriure ""Jo confesso""?",Jaume Cabré,Albert Sánchez Piñol,Quim Monzó,Joan Margarit
+"¿Quién escribió ""Pan negro""?",,Emili Teixidor,"Qui va escriure ""Pa negre""?",Emili Teixidor,Jaume Cabré,Maria Barbal,Quim Monzó
+"¿Quién escribió ""Rebelión en la granja""?",,George Orwell,"Qui va escriure ""La rebel·lió dels animals""?",George Orwell,Aldous Huxley,Ray Bradbury,H. G. Wells
+"¿Quién escribió ""Matar a un ruiseñor""?",,Harper Lee,"Qui va escriure ""Matar un rossinyol""?",Harper Lee,Truman Capote,John Steinbeck,William Faulkner
+"¿Quién escribió ""El gran Gatsby""?",,F. Scott Fitzgerald,"Qui va escriure ""El gran Gatsby""?",F. Scott Fitzgerald,Ernest Hemingway,John Steinbeck,William Faulkner
+"¿Quién escribió ""Moby Dick""?",,Herman Melville,"Qui va escriure ""Moby Dick""?",Herman Melville,Mark Twain,Nathaniel Hawthorne,Jack London
+"¿Quién escribió ""El extranjero""?",,Albert Camus,"Qui va escriure ""L'estranger""?",Albert Camus,Jean-Paul Sartre,Simone de Beauvoir,André Gide
+"¿Quién escribió ""En busca del tiempo perdido""?",,Marcel Proust,"Qui va escriure ""A la recerca del temps perdut""?",Marcel Proust,Gustave Flaubert,Émile Zola,André Gide
+"¿Quién escribió ""Madame Bovary""?",,Gustave Flaubert,"Qui va escriure ""Madame Bovary""?",Gustave Flaubert,Honoré de Balzac,Émile Zola,Stendhal
+"¿Quién escribió ""El conde de Montecristo""?",,Alexandre Dumas,"Qui va escriure ""El comte de Montecristo""?",Alexandre Dumas,Victor Hugo,Jules Verne,Honoré de Balzac
+"¿Quién escribió ""Cumbres borrascosas""?",,Emily Brontë,"Qui va escriure ""Cims borrascosos""?",Emily Brontë,Charlotte Brontë,Jane Austen,Anne Brontë
+"¿Quién escribió ""Jane Eyre""?",,Charlotte Brontë,"Qui va escriure ""Jane Eyre""?",Charlotte Brontë,Emily Brontë,Jane Austen,George Eliot
+"¿Quién escribió ""Ensayo sobre la ceguera""?",,José Saramago,"Qui va escriure ""Assaig sobre la ceguesa""?",José Saramago,Fernando Pessoa,António Lobo Antunes,Eça de Queirós
+"¿Quién escribió ""La ciudad y los perros""?",,Mario Vargas Llosa,"Qui va escriure ""La ciutat i els gossos""?",Mario Vargas Llosa,Gabriel García Márquez,Julio Cortázar,Alfredo Bryce Echenique
+"¿Quién escribió ""Veinte poemas de amor y una canción desesperada""?",,Pablo Neruda,"Qui va escriure ""Vint poemes d'amor i una cançó desesperada""?",Pablo Neruda,Gabriela Mistral,Mario Benedetti,Octavio Paz
+"¿Quién escribió ""Platero y yo""?",,Juan Ramón Jiménez,"Qui va escriure ""Platero i jo""?",Juan Ramón Jiménez,Antonio Machado,Federico García Lorca,Miguel de Unamuno
+"¿Quién escribió ""El túnel""?",,Ernesto Sabato,"Qui va escriure ""El túnel""?",Ernesto Sabato,Jorge Luis Borges,Julio Cortázar,Juan Carlos Onetti
+"¿Quién escribió ""Los pilares de la Tierra""?",,Ken Follett,"Qui va escriure ""Els pilars de la Terra""?",Ken Follett,Noah Gordon,John Grisham,Dan Brown
+"¿Quién escribió ""El código Da Vinci""?",,Dan Brown,"Qui va escriure ""El codi Da Vinci""?",Dan Brown,Ken Follett,John Grisham,Stieg Larsson
+"¿Quién escribió ""Fahrenheit 451""?",,Ray Bradbury,"Qui va escriure ""Fahrenheit 451""?",Ray Bradbury,George Orwell,Isaac Asimov,Aldous Huxley
+"¿Quién escribió ""Fausto""?",,Johann Wolfgang von Goethe,"Qui va escriure ""Faust""?",Johann Wolfgang von Goethe,Friedrich Schiller,Heinrich Heine,Thomas Mann
+"¿Quién escribió ""La vida es sueño""?",,Pedro Calderón de la Barca,"Qui va escriure ""La vida és somni""?",Pedro Calderón de la Barca,Lope de Vega,Tirso de Molina,Miguel de Cervantes
+"¿Quién escribió ""Fuenteovejuna""?",,Lope de Vega,"Qui va escriure ""Fuenteovejuna""?",Lope de Vega,Calderón de la Barca,Tirso de Molina,Miguel de Cervantes
+"¿Quién escribió ""Lolita""?",,Vladimir Nabokov,"Qui va escriure ""Lolita""?",Vladimir Nabokov,Philip Roth,J. D. Salinger,Saul Bellow
+"¿Quién escribió ""El guardián entre el centeno""?",,J. D. Salinger,"Qui va escriure ""El vigilant en el camp de sègol""?",J. D. Salinger,Jack Kerouac,John Steinbeck,Truman Capote
+"¿Quién escribió ""Las uvas de la ira""?",,John Steinbeck,"Qui va escriure ""El raïm de la ira""?",John Steinbeck,William Faulkner,Ernest Hemingway,John Dos Passos
+"¿Quién escribió ""La isla del tesoro""?",,Robert Louis Stevenson,"Qui va escriure ""L'illa del tresor""?",Robert Louis Stevenson,Daniel Defoe,Jules Verne,Jonathan Swift
+"¿Quién escribió ""Robinson Crusoe""?",,Daniel Defoe,"Qui va escriure ""Robinson Crusoe""?",Daniel Defoe,Jonathan Swift,Robert Louis Stevenson,Walter Scott
+"¿Quién escribió ""Los viajes de Gulliver""?",,Jonathan Swift,"Qui va escriure ""Els viatges de Gulliver""?",Jonathan Swift,Daniel Defoe,Lewis Carroll,Jules Verne
+"¿Quién escribió ""Peter Pan""?",,J. M. Barrie,"Qui va escriure ""Peter Pan""?",J. M. Barrie,Lewis Carroll,Roald Dahl,Kenneth Grahame
+"¿Quién escribió ""Charlie y la fábrica de chocolate""?",,Roald Dahl,"Qui va escriure ""Charlie i la fàbrica de xocolata""?",Roald Dahl,Lewis Carroll,Enid Blyton,J. M. Barrie
+"¿Quién escribió ""La Eneida""?",,Virgilio,"Qui va escriure ""L'Eneida""?",Virgili,Homer,Ovidio,Horacio
+"¿Quién escribió ""Edipo rey""?",,Sófocles,"Qui va escriure ""Èdip rei""?",Sòfocles,Esquilo,Eurípides,Aristófanes
+"¿Quién escribió ""El Decamerón""?",,Boccaccio,"Qui va escriure ""El Decameró""?",Boccaccio,Dante Alighieri,Petrarca,Maquiavelo
+"¿Quién escribió ""El príncipe""?",,Nicolás Maquiavelo,"Qui va escriure ""El príncep""?",Nicolás Maquiavelo,Erasmo de Róterdam,Tomás Moro,Dante Alighieri
+"¿Quién pintó ""La última cena""?",,Leonardo da Vinci,"Qui va pintar ""L'últim sopar""?",Leonardo da Vinci,Miquel Àngel,Rafael,Ticià
+"¿Quién pintó ""La maja desnuda""?",,Francisco de Goya,"Qui va pintar ""La maja nua""?",Francisco de Goya,Diego Velázquez,Bartolomé Esteban Murillo,Francisco de Zurbarán
+"¿Quién pintó ""Saturno devorando a su hijo""?",,Francisco de Goya,"Qui va pintar ""Saturn devorant el seu fill""?",Francisco de Goya,Peter Paul Rubens,el Greco,José de Ribera
+"¿Quién pintó ""Las señoritas de Avignon""?",,Pablo Picasso,"Qui va pintar ""Les senyoretes d'Avinyó""?",Pablo Picasso,Georges Braque,Henri Matisse,Juan Gris
+"¿Quién pintó ""Impresión, sol naciente""?",,Claude Monet,"Qui va pintar ""Impressió, sol naixent""?",Claude Monet,Édouard Manet,Pierre-Auguste Renoir,Camille Pissarro
+"¿Quién pintó ""La libertad guiando al pueblo""?",,Eugène Delacroix,"Qui va pintar ""La llibertat guiant el poble""?",Eugène Delacroix,Jacques-Louis David,Théodore Géricault,Gustave Courbet
+"¿Quién pintó ""La balsa de la Medusa""?",,Théodore Géricault,"Qui va pintar ""El rai de la Medusa""?",Théodore Géricault,Eugène Delacroix,Jacques-Louis David,J. M. W. Turner
+"¿Quién pintó ""American Gothic""?",,Grant Wood,"Qui va pintar ""American Gothic""?",Grant Wood,Edward Hopper,Norman Rockwell,Andrew Wyeth
+"¿Quién pintó ""Halcones de la noche""?",,Edward Hopper,"Qui va pintar ""Nighthawks""?",Edward Hopper,Grant Wood,Norman Rockwell,Andy Warhol
+"¿Quién pintó ""La gran ola de Kanagawa""?",,Katsushika Hokusai,"Qui va pintar ""La gran onada de Kanagawa""?",Katsushika Hokusai,Utagawa Hiroshige,Kitagawa Utamaro,Sesshū Tōyō
+"¿Quién pintó ""El hijo del hombre""?",,René Magritte,"Qui va pintar ""El fill de l'home""?",René Magritte,Salvador Dalí,Max Ernst,Giorgio de Chirico
+"¿Quién pintó ""El carro de heno""?",,John Constable,"Qui va pintar ""El carro de fenc""?",John Constable,J. M. W. Turner,Thomas Gainsborough,William Blake
+"¿Quién pintó ""La creación de Adán""?",,Miguel Ángel,"Qui va pintar ""La creació d'Adam""?",Miquel Àngel,Rafael,Leonardo da Vinci,Ticià
+"¿Quién pintó ""La escuela de Atenas""?",,Rafael,"Qui va pintar ""L'escola d'Atenes""?",Rafael,Miquel Àngel,Leonardo da Vinci,Sandro Botticelli
+"¿Quién pintó ""El entierro del conde de Orgaz""?",,El Greco,"Qui va pintar ""L'enterrament del comte d'Orgaz""?",el Greco,Diego Velázquez,Ticià,Francisco de Zurbarán
+"¿Quién pintó ""Latas de sopa Campbell""?",,Andy Warhol,"Qui va pintar ""Llaunes de sopa Campbell""?",Andy Warhol,Roy Lichtenstein,Jasper Johns,Keith Haring
+"¿Quién pintó ""Almuerzo de remeros""?",,Pierre-Auguste Renoir,"Qui va pintar ""L'esmorzar dels remers""?",Pierre-Auguste Renoir,Claude Monet,Édouard Manet,Edgar Degas
+"¿Quién pintó ""Paseo a orillas del mar""?",,Joaquín Sorolla,"Qui va pintar ""Passeig vora el mar""?",Joaquín Sorolla,Ramon Casas,Santiago Rusiñol,Ignacio Zuloaga
+"¿Quién esculpió ""El David""?",,Miguel Ángel,"Qui va esculpir ""El David""?",Miquel Àngel,Donatello,Gian Lorenzo Bernini,Leonardo da Vinci
+"¿Quién esculpió ""Apolo y Dafne""?",,Gian Lorenzo Bernini,"Qui va esculpir ""Apol·lo i Dafne""?",Gian Lorenzo Bernini,Antonio Canova,Miquel Àngel,Donatello
+"¿Quién compuso ""Claro de luna (Clair de lune)""?",,Claude Debussy,"Qui va compondre ""Clar de lluna (Clair de lune)""?",Claude Debussy,Maurice Ravel,Erik Satie,Gabriel Fauré
+"¿Quién compuso ""Gymnopédies""?",,Erik Satie,"Qui va compondre ""Gymnopédies""?",Erik Satie,Claude Debussy,Maurice Ravel,Francis Poulenc
+"¿Quién compuso ""Las bodas de Fígaro""?",,Wolfgang Amadeus Mozart,"Qui va compondre ""Les noces de Fígaro""?",Wolfgang Amadeus Mozart,Gioachino Rossini,Joseph Haydn,Gaetano Donizetti
+"¿Quién compuso ""Aida""?",,Giuseppe Verdi,"Qui va compondre ""Aida""?",Giuseppe Verdi,Giacomo Puccini,Richard Wagner,Gaetano Donizetti
+"¿Quién compuso ""Tosca""?",,Giacomo Puccini,"Qui va compondre ""Tosca""?",Giacomo Puccini,Giuseppe Verdi,Gioachino Rossini,Vincenzo Bellini
+"¿Quién compuso ""La cabalgata de las valquirias""?",,Richard Wagner,"Qui va compondre ""La cavalcada de les valquíries""?",Richard Wagner,Richard Strauss,Anton Bruckner,Gustav Mahler
+"¿Quién compuso ""Las variaciones Goldberg""?",,Johann Sebastian Bach,"Qui va compondre ""Les variacions Goldberg""?",Johann Sebastian Bach,Georg Friedrich Händel,Domenico Scarlatti,Joseph Haydn
+"¿Quién compuso ""El Danubio azul""?",,Johann Strauss II,"Qui va compondre ""El Danubi blau""?",Johann Strauss II,Franz Lehár,Richard Strauss,Franz Schubert
+"¿Quién compuso ""Una noche en el monte pelado""?",,Modest Músorgski,"Qui va compondre ""Una nit a la muntanya pelada""?",Modest Músorgski,Nikolái Rimski-Kórsakov,Aleksandr Borodín,Piotr Ilich Chaikovski
+"¿Quién compuso ""Scheherezade""?",,Nikolái Rimski-Kórsakov,"Qui va compondre ""Xahrazad""?",Nikolái Rimski-Kórsakov,Modest Músorgski,Aleksandr Borodín,Mili Balákirev
+"¿Quién compuso ""Pedro y el lobo""?",,Serguéi Prokófiev,"Qui va compondre ""Pere i el llop""?",Serguéi Prokófiev,Ígor Stravinski,Dmitri Shostakóvich,Piotr Ilich Chaikovski
+"¿Quién compuso ""Carmina Burana""?",,Carl Orff,"Qui va compondre ""Carmina Burana""?",Carl Orff,Richard Strauss,Gustav Holst,Paul Hindemith
+"¿Quién compuso ""Los planetas""?",,Gustav Holst,"Qui va compondre ""Els planetes""?",Gustav Holst,Edward Elgar,Benjamin Britten,Ralph Vaughan Williams
+"¿Quién compuso ""West Side Story""?",,Leonard Bernstein,"Qui va compondre ""West Side Story""?",Leonard Bernstein,George Gershwin,Stephen Sondheim,Richard Rodgers
+"¿Quién compuso ""El carnaval de los animales""?",,Camille Saint-Saëns,"Qui va compondre ""El carnaval dels animals""?",Camille Saint-Saëns,Maurice Ravel,Georges Bizet,Jacques Offenbach
+"¿Quién compuso ""La Marsellesa""?",,Claude-Joseph Rouget de Lisle,"Qui va compondre ""La Marsellesa""?",Claude-Joseph Rouget de Lisle,Hector Berlioz,Jacques Offenbach,Charles Gounod
+"¿Quién grabó ""Bohemian Rhapsody"" (1975)?",,Queen,"Qui va gravar ""Bohemian Rhapsody"" (1975)?",,,,
+"¿Quién grabó ""Dancing Queen"" (1976)?",,ABBA,"Qui va gravar ""Dancing Queen"" (1976)?",,,,
+"¿Quién grabó ""Like a Prayer"" (1989)?",,Madonna,"Qui va gravar ""Like a Prayer"" (1989)?",,,,
+"¿Quién grabó ""I Will Always Love You"" (1992)?",,Whitney Houston,"Qui va gravar ""I Will Always Love You"" (1992)?",,,,
+"¿Quién grabó ""My Heart Will Go On"" (1997)?",,Celine Dion,"Qui va gravar ""My Heart Will Go On"" (1997)?",,,,
+"¿Quién grabó ""Rolling in the Deep"" (2010)?",,Adele,"Qui va gravar ""Rolling in the Deep"" (2010)?",,,,
+"¿Quién grabó ""Rehab"" (2006)?",,Amy Winehouse,"Qui va gravar ""Rehab"" (2006)?",,,,
+"¿Quién grabó ""No Woman, No Cry"" (1974)?",,Bob Marley,"Qui va gravar ""No Woman, No Cry"" (1974)?",,,,
+"¿Quién grabó ""Love Me Tender"" (1956)?",,Elvis Presley,"Qui va gravar ""Love Me Tender"" (1956)?",,,,
+"¿Quién grabó ""My Way"" (1969)?",,Frank Sinatra,"Qui va gravar ""My Way"" (1969)?",,,,
+"¿Quién grabó ""What a Wonderful World"" (1967)?",,Louis Armstrong,"Qui va gravar ""What a Wonderful World"" (1967)?",,,,
+"¿Quién grabó ""Imagine"" (1971)?",,John Lennon,"Qui va gravar ""Imagine"" (1971)?",,,,
+"¿Quién grabó ""Hallelujah"" (1984)?",,Leonard Cohen,"Qui va gravar ""Hallelujah"" (1984)?",,,,
+"¿Quién grabó ""The Sound of Silence"" (1964)?",,Simon & Garfunkel,"Qui va gravar ""The Sound of Silence"" (1964)?",,,,
+"¿Quién grabó ""Superstition"" (1972)?",,Stevie Wonder,"Qui va gravar ""Superstition"" (1972)?",,,,
+"¿Quién grabó ""What's Going On"" (1971)?",,Marvin Gaye,"Qui va gravar ""What's Going On"" (1971)?",,,,
+"¿Quién grabó ""Respect"" (1967)?",,Aretha Franklin,"Qui va gravar ""Respect"" (1967)?",,,,
+"¿Quién grabó ""I Will Survive"" (1978)?",,Gloria Gaynor,"Qui va gravar ""I Will Survive"" (1978)?",,,,
+"¿Quién grabó ""Get Lucky"" (2013)?",,Daft Punk,"Qui va gravar ""Get Lucky"" (2013)?",,,,
+"¿Quién grabó ""Livin' la Vida Loca"" (1999)?",,Ricky Martin,"Qui va gravar ""Livin' la Vida Loca"" (1999)?",,,,
+"¿Quién grabó ""Macarena"" (1993)?",,Los del Río,"Qui va gravar ""Macarena"" (1993)?",,,,
+"¿Quién grabó ""Hijo de la Luna"" (1986)?",,Mecano,"Qui va gravar ""Hijo de la Luna"" (1986)?",,,,
+"¿Quién grabó ""Escándalo"" (1992)?",,Raphael,"Qui va gravar ""Escándalo"" (1992)?",,,,
+"¿Quién grabó ""Libre"" (1972)?",,Nino Bravo,"Qui va gravar ""Libre"" (1972)?",,,,
+"¿Quién grabó ""Bon dia"" (1997)?",,Els Pets,"Qui va gravar ""Bon dia"" (1997)?",,,,
+"¿Quién grabó ""Boig per tu"" (1990)?",,Sau,"Qui va gravar ""Boig per tu"" (1990)?",,,,
+"¿Quién grabó ""Shake It Off"" (2014)?",,Taylor Swift,"Qui va gravar ""Shake It Off"" (2014)?",,,,
+"¿Quién grabó ""Bad Guy"" (2019)?",,Billie Eilish,"Qui va gravar ""Bad Guy"" (2019)?",,,,
+"¿Quién grabó ""Shape of You"" (2017)?",,Ed Sheeran,"Qui va gravar ""Shape of You"" (2017)?",,,,
+"¿Quién grabó ""Blinding Lights"" (2019)?",,The Weeknd,"Qui va gravar ""Blinding Lights"" (2019)?",,,,
+"¿Quién grabó ""As It Was"" (2022)?",,Harry Styles,"Qui va gravar ""As It Was"" (2022)?",,,,
+"¿Quién grabó ""Tití me preguntó"" (2022)?",,Bad Bunny,"Qui va gravar ""Tití me preguntó"" (2022)?",,,,
+"¿Quién dirigió la película ""El padrino""?",,Francis Ford Coppola,"Qui va dirigir la pel·lícula ""El padrí""?",Francis Ford Coppola,Martin Scorsese,Brian De Palma,Sergio Leone
+"¿Quién dirigió la película ""Ciudadano Kane""?",,Orson Welles,"Qui va dirigir la pel·lícula ""Ciutadà Kane""?",Orson Welles,Alfred Hitchcock,John Ford,Howard Hawks
+"¿Quién dirigió la película ""La naranja mecánica""?",,Stanley Kubrick,"Qui va dirigir la pel·lícula ""La taronja mecànica""?",Stanley Kubrick,Ridley Scott,Terry Gilliam,David Lynch
+"¿Quién dirigió la película ""Tiburón""?",,Steven Spielberg,"Qui va dirigir la pel·lícula ""Tauró""?",Steven Spielberg,George Lucas,John Carpenter,James Cameron
+"¿Quién dirigió la película ""Blade Runner""?",,Ridley Scott,"Qui va dirigir la pel·lícula ""Blade Runner""?",Ridley Scott,James Cameron,John Carpenter,Terry Gilliam
+"¿Quién dirigió la película ""Origen""?",,Christopher Nolan,"Qui va dirigir la pel·lícula ""Origen""?",Christopher Nolan,Denis Villeneuve,David Fincher,Darren Aronofsky
+"¿Quién dirigió la película ""Oppenheimer""?",,Christopher Nolan,"Qui va dirigir la pel·lícula ""Oppenheimer""?",Christopher Nolan,Steven Spielberg,Denis Villeneuve,David Fincher
+"¿Quién dirigió la película ""El club de la lucha""?",,David Fincher,"Qui va dirigir la pel·lícula ""El club de la lluita""?",David Fincher,Christopher Nolan,Darren Aronofsky,Danny Boyle
+"¿Quién dirigió la película ""Parásitos""?",,Bong Joon-ho,"Qui va dirigir la pel·lícula ""Paràsits""?",Bong Joon-ho,Park Chan-wook,Hirokazu Kore-eda,Kim Ki-duk
+"¿Quién dirigió la película ""La dolce vita""?",,Federico Fellini,"Qui va dirigir la pel·lícula ""La dolce vita""?",Federico Fellini,Michelangelo Antonioni,Luchino Visconti,Pier Paolo Pasolini
+"¿Quién dirigió la película ""Amélie""?",,Jean-Pierre Jeunet,"Qui va dirigir la pel·lícula ""Amélie""?",Jean-Pierre Jeunet,Luc Besson,François Ozon,Michel Gondry
+"¿Quién dirigió la película ""Lo imposible""?",,J. A. Bayona,"Qui va dirigir la pel·lícula ""L'impossible""?",J. A. Bayona,Alejandro Amenábar,Daniel Monzón,Rodrigo Sorogoyen
+"¿Quién dirigió la película ""La sociedad de la nieve""?",,J. A. Bayona,"Qui va dirigir la pel·lícula ""La societat de la neu""?",J. A. Bayona,Alejandro Amenábar,Rodrigo Sorogoyen,Paco Plaza
+"¿Quién dirigió la película ""Alcarràs""?",,Carla Simón,"Qui va dirigir la pel·lícula ""Alcarràs""?",Carla Simón,Isabel Coixet,Icíar Bollaín,Mar Coll
+"¿Quién dirigió la película ""El laberinto del fauno""?",,Guillermo del Toro,"Qui va dirigir la pel·lícula ""El laberint del faune""?",Guillermo del Toro,Alfonso Cuarón,Alejandro G. Iñárritu,J. A. Bayona
+"¿Quién dirigió la película ""Roma""?",,Alfonso Cuarón,"Qui va dirigir la pel·lícula ""Roma""?",Alfonso Cuarón,Guillermo del Toro,Alejandro G. Iñárritu,Carlos Reygadas
+"¿Quién dirigió la película ""El renacido""?",,Alejandro G. Iñárritu,"Qui va dirigir la pel·lícula ""El renascut""?",Alejandro G. Iñárritu,Alfonso Cuarón,Guillermo del Toro,Denis Villeneuve
+"¿Quién dirigió la película ""Regreso al futuro""?",,Robert Zemeckis,"Qui va dirigir la pel·lícula ""Retorn al futur""?",Robert Zemeckis,Steven Spielberg,Joe Dante,Ron Howard
+"¿Quién dirigió la película ""Forrest Gump""?",,Robert Zemeckis,"Qui va dirigir la pel·lícula ""Forrest Gump""?",Robert Zemeckis,Ron Howard,Rob Reiner,Steven Spielberg
+"¿Quién dirigió la película ""Dune""?",,Denis Villeneuve,"Qui va dirigir la pel·lícula ""Dune""?",Denis Villeneuve,Christopher Nolan,Ridley Scott,David Lynch
+"¿Quién dirigió la película ""Barbie""?",,Greta Gerwig,"Qui va dirigir la pel·lícula ""Barbie""?",Greta Gerwig,Sofia Coppola,Olivia Wilde,Noah Baumbach
+"¿Quién dirigió la película ""Pesadilla antes de Navidad""?",,Henry Selick,"Qui va dirigir la pel·lícula ""Malson abans de Nadal""?",Henry Selick,Tim Burton,Wes Anderson,Mike Johnson
+"¿Quién dirigió la película ""El gran hotel Budapest""?",,Wes Anderson,"Qui va dirigir la pel·lícula ""El gran hotel Budapest""?",Wes Anderson,Sofia Coppola,Noah Baumbach,Spike Jonze
+"¿Quién dirigió la película ""Con faldas y a lo loco""?",,Billy Wilder,"Qui va dirigir la pel·lícula ""Amb faldilles i a la boja""?",Billy Wilder,Howard Hawks,Frank Capra,George Cukor
+"¿Quién dirigió la película ""Casablanca""?",,Michael Curtiz,"Qui va dirigir la pel·lícula ""Casablanca""?",Michael Curtiz,John Huston,Howard Hawks,Billy Wilder
+"¿Quién dirigió la película ""Lo que el viento se llevó""?",,Victor Fleming,"Qui va dirigir la pel·lícula ""Allò que el vent s'endugué""?",Victor Fleming,George Cukor,Frank Capra,William Wyler
+¿Qué elemento químico tiene el símbolo Cu?,,Cobre,Quin element químic té el símbol Cu?,Coure,Calci,Cobalt,Crom
+¿Qué elemento químico tiene el símbolo Pb?,,Plomo,Quin element químic té el símbol Pb?,Plom,Platí,Pal·ladi,Fòsfor
+¿Qué elemento químico tiene el símbolo Sn?,,Estaño,Quin element químic té el símbol Sn?,Estany,Sofre,Silici,Sodi
+¿Qué elemento químico tiene el símbolo Zn?,,Cinc,Quin element químic té el símbol Zn?,Zinc,Seleni,Estany,Cobalt
+¿Qué elemento químico tiene el símbolo Hg?,,Mercurio,Quin element químic té el símbol Hg?,Mercuri,Heli,Ferro,Magnesi
+¿Qué elemento químico tiene el símbolo Ca?,,Calcio,Quin element químic té el símbol Ca?,Calci,Carboni,Coure,Crom
+¿Qué elemento químico tiene el símbolo Mg?,,Magnesio,Quin element químic té el símbol Mg?,Magnesi,Manganès,Mercuri,Bari
+¿Qué elemento químico tiene el símbolo S?,,Azufre,Quin element químic té el símbol S?,Sofre,Sodi,Silici,Estany
+¿Qué elemento químico tiene el símbolo P?,,Fósforo,Quin element químic té el símbol P?,Fòsfor,Potassi,Plom,Poloni
+¿Qué elemento químico tiene el símbolo Cl?,,Cloro,Quin element químic té el símbol Cl?,Clor,Calci,Coure,Crom
+¿Qué elemento químico tiene el símbolo F?,,Flúor,Quin element químic té el símbol F?,Fluor,Fòsfor,Ferro,Bor
+¿Qué elemento químico tiene el símbolo I?,,Yodo,Quin element químic té el símbol I?,Iode,Iridi,Ferro,Heli
+¿Qué elemento químico tiene el símbolo He?,,Helio,Quin element químic té el símbol He?,Heli,Ferro,Mercuri,Argó
+¿Qué elemento químico tiene el símbolo Ni?,,Níquel,Quin element químic té el símbol Ni?,Níquel,Nitrogen,Neodimi,Sodi
+¿Qué elemento químico tiene el símbolo U?,,Uranio,Quin element químic té el símbol U?,Urani,Plutoni,Radi,Poloni
+¿Qué elemento químico tiene el símbolo Pt?,,Platino,Quin element químic té el símbol Pt?,Platí,Plom,Plutoni,Pal·ladi
+¿Qué elemento químico tiene el símbolo Si?,,Silicio,Quin element químic té el símbol Si?,Silici,Sofre,Seleni,Estany
+¿Qué elemento químico tiene el símbolo N?,,Nitrógeno,Quin element químic té el símbol N?,Nitrogen,Níquel,Sodi,Neodimi
+¿Qué elemento químico tiene el símbolo Li?,,Litio,Quin element químic té el símbol Li?,Liti,Plom,Zinc,Calci
+¿Qué elemento químico tiene el símbolo Ti?,,Titanio,Quin element químic té el símbol Ti?,Titani,Estany,Crom,Silici
+¿Qué elemento químico tiene el símbolo Cr?,,Cromo,Quin element químic té el símbol Cr?,Crom,Coure,Cobalt,Calci
+¿Qué elemento químico tiene el símbolo Mn?,,Manganeso,Quin element químic té el símbol Mn?,Manganès,Magnesi,Mercuri,Níquel
+¿Qué elemento químico tiene el símbolo Br?,,Bromo,Quin element químic té el símbol Br?,Brom,Bor,Bari,Bismut
+¿Qué elemento químico tiene el símbolo B?,,Boro,Quin element químic té el símbol B?,Bor,Brom,Bari,Bismut
+¿Qué elemento químico tiene el símbolo As?,,Arsénico,Quin element químic té el símbol As?,Arsènic,Plata,Argó,Antimoni
+¿Qué elemento químico tiene el símbolo Sb?,,Antimonio,Quin element químic té el símbol Sb?,Antimoni,Estany,Sofre,Seleni
+¿Qué elemento químico tiene el símbolo Pu?,,Plutonio,Quin element químic té el símbol Pu?,Plutoni,Platí,Poloni,Urani
+¿Qué elemento químico tiene el símbolo Os?,,Osmio,Quin element químic té el símbol Os?,Osmi,Or,Iridi,Platí
+¿Qué elemento químico tiene el símbolo Ga?,,Galio,Quin element químic té el símbol Ga?,Gal·li,Germani,Or,Calci
+¿Qué elemento químico tiene el símbolo Rn?,,Radón,Quin element químic té el símbol Rn?,Radó,Radi,Xenó,Criptó
+¿Qué elemento químico tiene el símbolo Kr?,,Kriptón,Quin element químic té el símbol Kr?,Criptó,Potassi,Crom,Xenó
+¿Qué unidad del Sistema Internacional mide la fuerza?,,Newton,Quina unitat del Sistema Internacional mesura la força?,Newton,Joule,Pascal,Watt
+¿Qué unidad del Sistema Internacional mide la energía?,,Julio,Quina unitat del Sistema Internacional mesura l'energia?,Joule,Watt,Newton,Volt
+¿Qué unidad del Sistema Internacional mide la presión?,,Pascal,Quina unitat del Sistema Internacional mesura la pressió?,Pascal,Newton,Bar,Joule
+¿Qué unidad mide la intensidad de corriente eléctrica?,,Amperio,Quina unitat mesura la intensitat de corrent elèctric?,Ampere,Volt,Ohm,Coulomb
+¿Qué unidad mide la carga eléctrica?,,Culombio,Quina unitat mesura la càrrega elèctrica?,Coulomb,Ampere,Farad,Tesla
+¿Qué unidad del Sistema Internacional mide la cantidad de sustancia?,,Mol,Quina unitat del Sistema Internacional mesura la quantitat de substància?,Mol,Quilogram,Candela,Kelvin
+¿Qué unidad del Sistema Internacional mide la intensidad luminosa?,,Candela,Quina unitat del Sistema Internacional mesura la intensitat lluminosa?,Candela,Lux,Lumen,Watt
+¿Qué unidad mide la intensidad de un campo magnético?,,Tesla,Quina unitat mesura la intensitat d'un camp magnètic?,Tesla,Farad,Henry,Weber
+¿Cuántos metros tiene un kilómetro?,,1.000,Quants metres té un quilòmetre?,1.000,100,10.000,1.024
+¿Qué unidad de distancia equivale a la distancia media entre la Tierra y el Sol?,,Unidad astronómica,Quina unitat de distància equival a la distància mitjana entre la Terra i el Sol?,Unitat astronòmica,Any llum,Pàrsec,Milla nàutica
+¿Qué científico descubrió el electrón en 1897?,,J. J. Thomson,Quin científic va descobrir l'electró el 1897?,J. J. Thomson,Ernest Rutherford,Niels Bohr,James Chadwick
+¿Qué científico descubrió el neutrón en 1932?,,James Chadwick,Quin científic va descobrir el neutró el 1932?,James Chadwick,Ernest Rutherford,J. J. Thomson,Enrico Fermi
+¿Qué físico danés propuso un modelo atómico con órbitas cuantizadas en 1913?,,Niels Bohr,Quin físic danès va proposar un model atòmic amb òrbites quantitzades el 1913?,Niels Bohr,Max Planck,Erwin Schrödinger,Ernest Rutherford
+¿Qué físico es famoso por el experimento mental del gato encerrado en una caja?,,Erwin Schrödinger,Quin físic és famós per l'experiment mental del gat tancat en una caixa?,Erwin Schrödinger,Werner Heisenberg,Max Planck,Paul Dirac
+¿Qué científico inventó el pararrayos?,,Benjamin Franklin,Quin científic va inventar el parallamps?,Benjamin Franklin,Thomas Edison,Nikola Tesla,Michael Faraday
+¿Qué científico británico descubrió la inducción electromagnética?,,Michael Faraday,Quin científic britànic va descobrir la inducció electromagnètica?,Michael Faraday,James Clerk Maxwell,Isaac Newton,Humphry Davy
+¿Qué científico unificó electricidad y magnetismo en sus famosas ecuaciones?,,James Clerk Maxwell,Quin científic va unificar electricitat i magnetisme en les seves famoses equacions?,James Clerk Maxwell,Michael Faraday,André-Marie Ampère,Heinrich Hertz
+¿Qué astrónomo formuló las tres leyes del movimiento planetario?,,Johannes Kepler,Quin astrònom va formular les tres lleis del moviment planetari?,Johannes Kepler,Tycho Brahe,Galileo Galilei,Nicolau Copèrnic
+¿Qué científico propuso la teoría de la deriva continental?,,Alfred Wegener,Quin científic va proposar la teoria de la deriva continental?,Alfred Wegener,Charles Lyell,James Hutton,Alexander von Humboldt
+¿Qué naturalista sueco creó el sistema de nomenclatura binomial de las especies?,,Carlos Linneo,Quin naturalista suec va crear el sistema de nomenclatura binomial de les espècies?,Carl von Linné,Charles Darwin,Georges Cuvier,Jean-Baptiste Lamarck
+¿Qué científico británico predijo que los agujeros negros emiten radiación?,,Stephen Hawking,Quin científic britànic va predir que els forats negres emeten radiació?,Stephen Hawking,Roger Penrose,Kip Thorne,Paul Dirac
+¿Qué científica descubrió los púlsares en 1967?,,Jocelyn Bell Burnell,Quina científica va descobrir els púlsars el 1967?,Jocelyn Bell Burnell,Vera Rubin,Henrietta Leavitt,Cecilia Payne
+¿Qué matemática es considerada la primera programadora de la historia?,,Ada Lovelace,Quina matemàtica és considerada la primera programadora de la història?,Ada Lovelace,Grace Hopper,Hedy Lamarr,Emmy Noether
+"¿Qué planeta tiene la luna Titán, con una atmósfera densa?",,Saturno,"Quin planeta té la lluna Tità, amb una atmosfera densa?",Saturn,Júpiter,Urà,Neptú
+¿Qué planeta tiene las lunas Fobos y Deimos?,,Marte,Quin planeta té les llunes Fobos i Deimos?,Mart,Júpiter,Venus,Saturn
+¿Qué planeta es el más lejano del Sol en el sistema solar?,,Neptuno,Quin planeta és el més llunyà del Sol al sistema solar?,Neptú,Urà,Saturn,Plutó
+¿Qué sonda de la NASA fue la primera en salir del sistema solar al espacio interestelar?,,Voyager 1,Quina sonda de la NASA va ser la primera a sortir del sistema solar a l'espai interestel·lar?,Voyager 1,Pioneer 10,New Horizons,Voyager 2
+"¿Qué telescopio espacial, lanzado en 2021, observa sobre todo en infrarrojo?",,James Webb,"Quin telescopi espacial, llançat el 2021, observa sobretot en infraroig?",James Webb,Hubble,Kepler,Spitzer
+¿Qué nombre recibe la estrella más brillante del cielo nocturno?,,Sirio,Com es diu l'estrella més brillant del cel nocturn?,Sírius,Polaris,Vega,Betelgeuse
+¿En qué constelación está la estrella Betelgeuse?,,Orión,A quina constel·lació hi ha l'estrella Betelgeuse?,Orió,Ossa Major,Escorpí,Cassiopea
+¿Qué animal es el único marsupial de América del Norte?,,Zarigüeya,Quin animal és l'únic marsupial d'Amèrica del Nord?,Opòssum,Ós rentador,Coatí,Armadillo
+¿Qué mamífero pone huevos y tiene pico de pato?,,Ornitorrinco,Quin mamífer pon ous i té bec d'ànec?,Ornitorinc,Equidna,Castor,Llúdriga
+¿Cuál es el único continente sin hormigas autóctonas?,,Antártida,Quin és l'únic continent sense formigues autòctones?,Antàrtida,Oceania,Europa,Amèrica del Sud
+¿Qué flor es el símbolo nacional de Japón junto al crisantemo?,,Flor del cerezo,Quina flor és el símbol nacional del Japó juntament amb el crisantem?,Flor del cirerer,Lotus,Orquídia,Camèlia
+¿Qué pez de agua dulce de América del Sur es famoso por sus dientes afilados?,,Piraña,Quin peix d'aigua dolça d'Amèrica del Sud és famós per les dents esmolades?,Piranya,Barracuda,Peix tigre,Anguila
+¿Qué animal es el mamífero más pequeño del mundo por masa?,,Musarañita etrusca,Quin animal és el mamífer més petit del món per massa?,Musaranya nana,Ratpenat borinot,Ratolí domèstic,Rata cellarda
+"¿Qué grupo de animales incluye a ranas, sapos y salamandras?",,Anfibios,"Quin grup d'animals inclou granotes, gripaus i salamandres?",Amfibis,Rèptils,Peixos,Crustacis
+¿Qué ave puede volar hacia atrás?,,Colibrí,Quin ocell pot volar cap enrere?,Colibrí,Oreneta,Falcó,Falciot
+¿Qué animal tiene las huellas dactilares más parecidas a las humanas?,,Koala,Quin animal té les empremtes dactilars més semblants a les humanes?,Koala,Ximpanzé,Goril·la,Orangutan
+¿Qué animal hiberna y es protagonista del Día de la Marmota en EE. UU.?,,Marmota,Quin animal hiberna i és el protagonista del Dia de la Marmota als EUA?,Marmota,Esquirol,Castor,Ós rentador
+¿Qué insecto es el principal polinizador de muchos cultivos?,,Abeja,Quin insecte és el principal pol·linitzador de molts conreus?,Abella,Papallona,Vespa,Escarabat
+¿En qué continente viven los lémures en estado salvaje?,,África (Madagascar),En quin continent viuen els lèmurs en estat salvatge?,Àfrica (Madagascar),Àsia,Amèrica del Sud,Oceania
+¿Qué es un cefalópodo?,,Un molusco como el pulpo o el calamar,Què és un cefalòpode?,Un mol·lusc com el pop o el calamar,Un peix cartilaginós,Un crustaci,Un tipus de corall
+¿Qué mamífero marino del Mediterráneo está en peligro crítico y fue habitual en las costas españolas?,,Foca monje,Quin mamífer marí de la Mediterrània està en perill crític i era habitual a les costes espanyoles?,Foca mediterrània,Dofí mular,Orca,Morsa
+¿Qué animal construye presas en los ríos?,,Castor,Quin animal construeix preses als rius?,Castor,Llúdriga,Rata mesquera,Visó
+¿Qué empresa creó el sistema operativo Android antes de que la comprara Google?,,Android Inc.,Quina empresa va crear el sistema operatiu Android abans que la comprés Google?,,,,
+¿Quién fundó Facebook en 2004?,,Mark Zuckerberg,Qui va fundar Facebook el 2004?,,,,
+¿Quiénes fundaron Google?,,Larry Page y Sergey Brin,Qui va fundar Google?,Larry Page i Sergey Brin,Bill Gates i Paul Allen,Steve Jobs i Steve Wozniak,Jerry Yang i David Filo
+¿Quién creó el núcleo del sistema operativo Linux?,,Linus Torvalds,Qui va crear el nucli del sistema operatiu Linux?,,,,
+¿A quién se atribuye la patente del teléfono en 1876?,,Alexander Graham Bell,A qui s'atribueix la patent del telèfon el 1876?,,,,
+"¿Qué ingeniero español inventó una máquina que jugaba finales de ajedrez, El Ajedrecista?",,Leonardo Torres Quevedo,"Quin enginyer espanyol va inventar una màquina que jugava finals d'escacs, El Ajedrecista?",,,,
+¿Qué empresa japonesa creó la PlayStation?,,Sony,Quina empresa japonesa va crear la PlayStation?,,,,
+"¿Qué significan las siglas ""GPS""?",,Sistema de Posicionamiento Global,"Què volen dir les sigles ""GPS""?",Sistema de Posicionament Global,Gestor de Posició per Satèl·lit,Guia Personal de Satèl·lit,Grup de Posicionament Sincronitzat
+¿Qué empresa fabrica las tarjetas gráficas GeForce?,,Nvidia,Quina empresa fabrica les targetes gràfiques GeForce?,,,,
+¿Qué red social se llamó Twitter hasta 2023?,,X,Quina xarxa social es deia Twitter fins al 2023?,,,,
