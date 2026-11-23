@@ -121,6 +121,7 @@
   .lang-sw button.on{background:var(--text);color:#111}
   /* ⚔️ Dentro del duelo (iframe del anfitrión): cabecera compacta, que arriba ya está la barra del duelo */
   .en-duelo header img, .en-duelo header .t{display:none}
+  .btn.sec{background:transparent;color:var(--text);border:1px solid var(--line,#333);margin:4px 0 14px;width:100%}
   .anfitrion-aviso{position:fixed;left:50%;bottom:14px;transform:translateX(-50%);z-index:40;background:#000;border:1px solid var(--line,#333);
     padding:10px 14px;font-size:14px;text-align:center;width:min(92vw,420px)}
   .anfitrion-aviso.hidden{display:none}
@@ -150,6 +151,7 @@
   <section id="v-join" class="card">
     <h1>Sabelo<em>todo</em></h1>
     <div class="sub" data-t>Quiz en directo</div>
+    <button class="btn sec hidden" id="b-volver"></button>
     <label for="in-code" data-t>Código de la sala</label>
     <input id="in-code" maxlength="4" autocomplete="off" placeholder="ABCD">
     <label for="in-name" data-t>Tu nombre</label>
@@ -207,7 +209,7 @@
 </div>
 <script src="concurso.js"></script>
 <script src="sonido.js"></script>
-<script src="i18n/ui.js?v=d82d535b"></script>
+<script src="i18n/ui.js?v=dc3f9761"></script>
 <script src="i18n/marca.js?v=fe450482"></script>
 <script src="i18n/i18n.js?v=7837665f"></script>
 <script>
@@ -243,7 +245,19 @@ function view(id){ ["v-join","v-wait","v-q","v-res","v-end"].forEach(v => $(v).c
 const params = new URLSearchParams(location.search);
 if (params.has("duelo")) document.documentElement.classList.add("en-duelo");
 if (params.get("sala")) $("in-code").value = params.get("sala").toUpperCase().slice(0, 4);
-(() => { const saved = sget("sab:ev-player"); if (saved && (!params.get("sala") || saved.codigo === params.get("sala").toUpperCase())){ P = saved; setTimeout(start, 0); } })();   // setTimeout: poll() y sus variables se definen más abajo
+/* Volver a entrar solo: únicamente si la dirección trae el código de esa misma sala (recargar, QR, enlace).
+   Si se entra sin código (menú «Tengo un código de sala»), se pide el código y la sala anterior queda como botón. */
+(() => {
+  const saved = sget("sab:ev-player"), sala = (params.get("sala") || "").toUpperCase();
+  if (!saved) return;
+  if (sala && saved.codigo === sala){ P = saved; setTimeout(start, 0); return; }    // setTimeout: poll() y sus variables se definen más abajo
+  if (!sala){
+    const b = $("b-volver");
+    b.textContent = "↩ " + T("Volver a la sala {c} como {n}", {c: saved.codigo, n: saved.nombre});
+    b.classList.remove("hidden");
+    b.addEventListener("click", () => { P = saved; start(); });
+  }
+})();
 if (!P && sget("sab:ev-nombre")) $("in-name").value = sget("sab:ev-nombre");      // al volver a entrar, su nombre de antes
 if (!P) setTimeout(() => ($("in-code").value ? $("in-name") : $("in-code")).focus(), 100);
 
@@ -278,6 +292,8 @@ async function join(){
 
 function start(){
   myAnswer = sget("sab:ev-ans-" + P.codigo) || {};
+  try{ const u = new URL(location.href); if (u.searchParams.get("sala") !== P.codigo){ u.searchParams.set("sala", P.codigo); history.replaceState(null, "", u); } }catch(e){}   // al recargar, vuelve a esta sala
+  $("b-volver").classList.add("hidden");
   $("me").classList.remove("hidden"); $("me-name").textContent = P.nombre; $("me-room").textContent = P.codigo;
   view("v-wait"); poll();
 }
