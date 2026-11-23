@@ -119,6 +119,11 @@
   .lang-sw button{appearance:none;cursor:pointer;background:transparent;color:#9a9a94;border:0;font-family:"Red Hat Display";font-weight:800;font-size:12px;letter-spacing:1px;padding:6px 8px}
   .lang-sw button+button{border-left:1px solid #3a3b40}
   .lang-sw button.on{background:var(--text);color:#111}
+  /* ⚔️ Dentro del duelo (iframe del anfitrión): cabecera compacta, que arriba ya está la barra del duelo */
+  .en-duelo header img, .en-duelo header .t{display:none}
+  .anfitrion-aviso{position:fixed;left:50%;bottom:14px;transform:translateX(-50%);z-index:40;background:#000;border:1px solid var(--line,#333);
+    padding:10px 14px;font-size:14px;text-align:center;width:min(92vw,420px)}
+  .anfitrion-aviso.hidden{display:none}
 
   :root{--bg:#0b1324;--panel:#121c33;--line:#26365a;--text:#f1f5f9;--muted:#94a3b8;--grey:#e2e8f0;--blue:#0d9488;--blue2:#5eead4;--gold:#ffd166}
   header{background:linear-gradient(90deg,#0f172a,#0d9488);border-bottom:3px solid var(--blue2)}
@@ -139,6 +144,7 @@
   <button class="snd-btn" id="b-sfx" title="Efectos de sonido" data-t-title>🔊</button>
   <button class="exit-btn" id="b-exit" title="Salir" data-t-title data-t>✕ Salir</button>
 </header>
+<div class="anfitrion-aviso hidden" id="anf-aviso" role="status"></div>
 <main>
   <!-- UNIRSE -->
   <section id="v-join" class="card">
@@ -201,7 +207,7 @@
 </div>
 <script src="concurso.js"></script>
 <script src="sonido.js"></script>
-<script src="i18n/ui.js?v=99effa43"></script>
+<script src="i18n/ui.js?v=d82d535b"></script>
 <script src="i18n/marca.js?v=fe450482"></script>
 <script src="i18n/i18n.js?v=7837665f"></script>
 <script>
@@ -235,8 +241,9 @@ const saveAns = () => P && sset("sab:ev-ans-" + P.codigo, myAnswer);
 function view(id){ ["v-join","v-wait","v-q","v-res","v-end"].forEach(v => $(v).classList.toggle("hidden", v !== id)); }
 
 const params = new URLSearchParams(location.search);
+if (params.has("duelo")) document.documentElement.classList.add("en-duelo");
 if (params.get("sala")) $("in-code").value = params.get("sala").toUpperCase().slice(0, 4);
-(() => { const saved = sget("sab:ev-player"); if (saved && (!params.get("sala") || saved.codigo === params.get("sala").toUpperCase())){ P = saved; start(); } })();
+(() => { const saved = sget("sab:ev-player"); if (saved && (!params.get("sala") || saved.codigo === params.get("sala").toUpperCase())){ P = saved; setTimeout(start, 0); } })();   // setTimeout: poll() y sus variables se definen más abajo
 if (!P && sget("sab:ev-nombre")) $("in-name").value = sget("sab:ev-nombre");      // al volver a entrar, su nombre de antes
 if (!P) setTimeout(() => ($("in-code").value ? $("in-name") : $("in-code")).focus(), 100);
 
@@ -316,6 +323,7 @@ async function poll(){
     const key = s.partida + ":" + (s.espero ? "w:" : "") + s.estado + ":" + s.idx;
     if (key !== lastKey){ lastKey = key; await render(s); }
     vivo(s);
+    avisoAnfitrion(s);
     espera = s.estado === "fin" ? 6000
            : s.estado === "lobby" || s.espero ? 3000
            : s.estado === "pregunta" && myAnswer[s.idx] !== undefined ? 2000
@@ -326,7 +334,18 @@ async function poll(){
   if (document.hidden) espera = Math.max(espera, 5000);
   pollT = setTimeout(poll, espera);
 }
-document.addEventListener("visibilitychange", () => { if (!document.hidden && P) poll(); });   // al volver a la pantalla, al momento
+document.addEventListener("visibilitychange", () => { if (!document.hidden && P) poll(); });
+/* ⚔️ En un duelo la partida avanza desde el móvil de quien abrió la sala: si se queda parada (ha cerrado la app,
+   se le ha apagado la pantalla…), se avisa a los demás. Solo en duelos (config.duelo) y fuera de la sala de espera. */
+let anfClave = "", anfDesde = 0;
+function avisoAnfitrion(s){
+  const k = s.partida + ":" + s.estado + ":" + s.idx;
+  if (k !== anfClave){ anfClave = k; anfDesde = Date.now(); }
+  const cfg = s.config || {}, lim = s.estado === "pregunta" ? (s.segundos || 20) * 1000 + 15000 : 30000;
+  const parado = cfg.duelo && !s.espero && (s.estado === "pregunta" || s.estado === "resultado") && Date.now() - anfDesde > lim;
+  $("anf-aviso").textContent = parado ? "⏳ " + T("Esperando al anfitrión… Si ha cerrado la app, tiene que volver a abrir el duelo.") : "";
+  $("anf-aviso").classList.toggle("hidden", !parado);
+}   // al volver a la pantalla, al momento
 
 // Lo que cambia sin que cambie la pantalla: quién hay en la sala y cuántos han respondido
 let nJug = -1, cfgVista = "";
