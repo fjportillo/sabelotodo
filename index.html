@@ -1492,7 +1492,7 @@ function finish(){
       $("mypos").textContent = String(e.message).includes("PIN_INCORRECTO")
         ? T("🔒 No se guardó la puntuación: este nombre está protegido con otro PIN.")
         : String(e.message).includes("NOMBRE_OFENSIVO") ? T("🚫 No se guardó la puntuación: el nombre no está permitido. Cambia de usuario y elige otro.")
-        : (isReto && RetoPend.esRed(e)) ? (RetoPend.add({name: record.name, key: record.key, score: record.score, ok: record.ok, total: record.total, racha: record.racha, det: record.det, grid: record.grid, day: res.day}),
+        : (isReto && RetoPend.esRed(e)) ? (RetoPend.add({name: record.name, key: record.key, score: record.score, ok: record.ok, total: record.total, racha: record.racha, det: record.det, grid: record.grid, day: res.day, at: new Date().toISOString()}),
             T("📴 Partida guardada en este dispositivo: se subirá al Hall of Fame en cuanto vuelva la conexión."))
         : T("⚠️ No se pudo guardar la puntuación en el Hall of Fame (¿sin conexión?).");
     }
@@ -1676,7 +1676,7 @@ const RetoPend = (() => {
         if (corte){ left.push(r); continue; }
         try{
           await rpcCall("guardar_partida2", {p_nombre: r.name.slice(0, 24), p_clave: r.key.slice(0, 40), p_puntos: r.score, p_aciertos: r.ok, p_total: r.total,
-            p_pin: pins()[r.key] || null, p_modo: "reto", p_racha: r.racha || 0, p_detalle: r.det || null, p_cuadro: r.grid || null, p_fecha: r.day});
+            p_pin: pins()[r.key] || null, p_modo: "reto", p_racha: r.racha || 0, p_detalle: r.det || null, p_cuadro: r.grid || null, p_fecha: r.day, p_jugado: r.at || null});
           subidos++;                                                              // "ok" o "repetido": en ambos casos ya consta en el servidor
         }catch(e){
           if (esRed(e)){ corte = true; left.push(r); }
