@@ -2246,7 +2246,7 @@ pregunta_es,visual,correcta_es,pregunta,correcta,incorrecta1,incorrecta2,incorre
 ¿Qué arquitecto diseñó el pabellón de Alemania para la Exposición Internacional de Barcelona de 1929?,,Ludwig Mies van der Rohe,Which architect designed the German Pavilion for the 1929 Barcelona International Exposition?,Ludwig Mies van der Rohe,Walter Gropius,Le Corbusier,Josep Lluís Sert
 "¿Qué poeta estadounidense publicó ""Hojas de hierba""?",,Walt Whitman,"Which American poet published ""Leaves of Grass""?",Walt Whitman,Emily Dickinson,Robert Frost,Edgar Allan Poe
 ¿Con qué selección nacional juega Kylian Mbappé?,,Francia,Which national team does Kylian Mbappé play for?,France,Belgium,Cameroon,Portugal
-"¿Qué deporte practica Alexia Putellas, doble Balón de Oro?",,Fútbol,Which sport does two-time Ballon d'Or winner Alexia Putellas play?,Football,Basketball,Tennis,Handball
+"¿Qué deporte practica Alexia Putellas, ganadora de varios Balones de Oro?",,Fútbol,Which sport does multiple Ballon d'Or winner Alexia Putellas play?,Football,Basketball,Tennis,Handball
 ¿De qué color es el maillot del líder de la Vuelta a España?,,Rojo,What colour is the leader's jersey in the Vuelta a España?,Red,Yellow,Pink,Green
 "¿En qué prueba atlética es plusmarquista mundial Armand ""Mondo"" Duplantis?",,Salto con pértiga,"In which athletics event does Armand ""Mondo"" Duplantis hold the world record?",Pole vault,High jump,Long jump,Triple jump
 ¿Qué deporte practica la estadounidense Lindsey Vonn?,,Esquí alpino,Which sport does American Lindsey Vonn compete in?,Alpine skiing,Figure skating,Snowboarding,Biathlon
@@ -2765,3 +2765,38 @@ pregunta_es,visual,correcta_es,pregunta,correcta,incorrecta1,incorrecta2,incorre
 ¿Qué diosa de la mitología china creó a los primeros humanos modelándolos con barro?,,Nüwa,Which goddess of Chinese mythology created the first humans by moulding them from clay?,Nüwa,Chang'e,Xiwangmu,Mazu
 "¿Qué dios patrón de Babilonia venció a la diosa del caos Tiamat, según el poema ""Enuma Elish""?",,Marduk,"Which patron god of Babylon defeated the chaos goddess Tiamat, according to the poem ""Enuma Elish""?",Marduk,Enlil,Ashur,Nabu
 ¿Qué bruja del folclore eslavo vive en una cabaña que se sostiene sobre patas de gallina?,,Baba Yagá,Which witch from Slavic folklore lives in a hut standing on chicken legs?,Baba Yaga,La Befana,Morgan le Fay,Circe
+¿Qué río pasa por Lisboa?,,Tajo,Which river flows through Lisbon?,Tagus,Douro,Guadiana,Minho
+¿Qué océano baña la costa este de Estados Unidos?,,Atlántico,Which ocean borders the east coast of the United States?,Atlantic,Pacific,Indian,Arctic
+¿Qué mar baña las costas de Croacia?,,Adriático,Which sea washes the coast of Croatia?,Adriatic,Aegean,Ionian,Tyrrhenian
+¿Cuál es el país más poblado de África?,,Nigeria,Which is the most populous country in Africa?,Nigeria,Ethiopia,Egypt,Democratic Republic of the Congo
+"¿En qué país está el lago Balatón, el mayor de Europa central?",,Hungría,"In which country is Lake Balaton, the largest lake in Central Europe?",Hungary,Austria,Slovakia,Czechia
+¿En qué ciudad fue asesinado Julio César?,,Roma,In which city was Julius Caesar assassinated?,Rome,Alexandria,Ravenna,Pompeii
+¿Qué monumento de la antigua Roma era un anfiteatro para combates de gladiadores?,,Coliseo,Which ancient Roman monument was an amphitheatre for gladiator fights?,Colosseum,Pantheon,Circus Maximus,Roman Forum
+¿Qué navegante portugués dio nombre al océano Pacífico?,,Fernando de Magallanes,Which Portuguese navigator gave the Pacific Ocean its name?,Ferdinand Magellan,Vasco da Gama,Bartolomeu Dias,Pedro Álvares Cabral
+"¿Qué liga comercial medieval unió ciudades del norte de Europa como Lübeck, Hamburgo y Bergen?",,Liga Hanseática,"Which medieval trading league united northern European cities such as Lübeck, Hamburg and Bergen?",Hanseatic League,Delian League,Lombard League,League of Cambrai
+¿Cuál es el planeta más pequeño del sistema solar?,,Mercurio,What is the smallest planet in the solar system?,Mercury,Mars,Venus,Pluto
+¿Qué instrumento usa el médico para escuchar el corazón y los pulmones?,,Estetoscopio,Which instrument does a doctor use to listen to the heart and lungs?,Stethoscope,Otoscope,Blood pressure monitor,Thermometer
+¿Cuál es el planeta más denso del sistema solar?,,Tierra,Which is the densest planet in the solar system?,Earth,Mercury,Venus,Jupiter
+¿En qué ciudad está el Museo del Louvre?,,París,In which city is the Louvre Museum?,Paris,London,Rome,Madrid
+"¿Qué escultor italiano hizo el ""Éxtasis de santa Teresa"" en Roma?",,Gian Lorenzo Bernini,"Which Italian sculptor made the ""Ecstasy of Saint Teresa"" in Rome?",Gian Lorenzo Bernini,Antonio Canova,Donatello,Benvenuto Cellini
+¿Cuántos anillos tiene la bandera olímpica?,,5,How many rings are there on the Olympic flag?,5,4,6,7
+¿Qué futbolista española ganó en 2026 su tercer Balón de Oro femenino?,,Alexia Putellas,Which Spanish footballer won her third women's Ballon d'Or in 2026?,Alexia Putellas,Aitana Bonmatí,Salma Paralluelo,Mariona Caldentey
+"¿Qué selección ganó la Eurocopa femenina de 2025, tras vencer a España en la final?",,Inglaterra,Which national team won the 2025 Women's Euro after beating Spain in the final?,England,Germany,France,Sweden
+"¿Qué selección ganó la Copa Davis de 2025, la tercera seguida, venciendo a España en la final?",,Italia,"Which team won the 2025 Davis Cup, its third in a row, beating Spain in the final?",Italy,Australia,Germany,Netherlands
+¿Qué juego consiste en adivinar el personaje del rival con preguntas de sí o no sobre una cuadrícula de caras?,,¿Quién es quién?,Which game involves guessing your opponent's character with yes-or-no questions about a grid of faces?,Guess Who?,Cluedo,Pictionary,Taboo
+¿Qué juego de mesa se juega con canicas sobre un tablero en forma de estrella de seis puntas?,,Damas chinas,Which board game is played with marbles on a six-pointed star-shaped board?,Chinese checkers,Ludo,Game of the Goose,Mancala
+¿Qué personaje de Astérix cayó de pequeño en la marmita de la poción mágica?,,Obélix,Which Asterix character fell into the cauldron of magic potion as a baby?,Obelix,Asterix,Getafix,Vitalstatistix
+¿Qué animal es Bambi?,,Un ciervo,What kind of animal is Bambi?,A deer,A rabbit,A fox,A moose
+¿Qué princesa de Disney tiene una larguísima melena mágica y vive encerrada en una torre?,,Rapunzel,Which Disney princess has extremely long magic hair and lives locked in a tower?,Rapunzel,Ariel,Aurora,Merida
+¿Qué instrumento musical de fuelle tiene teclado o botones y se toca colgado del pecho?,,Acordeón,Which bellows-driven musical instrument has keys or buttons and is played strapped to the chest?,Accordion,Harmonica,Organ,Melodica
+¿Qué instrumento de percusión tiene láminas de madera que se golpean con baquetas?,,Xilófono,Which percussion instrument has wooden bars that are struck with mallets?,Xylophone,Triangle,Timpani,Tambourine
+¿Qué cereal es la base del risotto?,,Arroz,Which cereal is the basis of risotto?,Rice,Wheat,Barley,Corn
+¿Qué queso suizo se funde tradicionalmente junto al fuego para rasparlo sobre patatas?,,Raclette,Which Swiss cheese is traditionally melted by the fire and scraped over potatoes?,Raclette,Gruyère,Emmental,Appenzeller
+¿Qué buscador de internet es el más usado del mundo?,,Google,Which internet search engine is the most used in the world?,Google,Bing,Yahoo,DuckDuckGo
+¿Qué empresa británica diseña la arquitectura de procesadores que usan casi todos los teléfonos móviles?,,Arm,Which British company designs the processor architecture used in almost all mobile phones?,Arm,Intel,AMD,Qualcomm
+"¿Qué planta es la que crece más rápido del mundo, hasta casi un metro al día en algunas especies?",,Bambú,"Which plant is the fastest-growing in the world, up to almost a metre a day in some species?",Bamboo,Kudzu,Eucalyptus,Willow
+¿Qué animal tiene los ojos más grandes del reino animal?,,Calamar colosal,Which animal has the largest eyes in the animal kingdom?,Colossal squid,Blue whale,Sperm whale,Swordfish
+"¿Qué significa la palabra inglesa ""butterfly""?",,Mariposa,"What does the English word ""butterfly"" mean in Spanish?",Mariposa,Mantequilla,Mosca,Pájaro
+"¿Qué significa la palabra inglesa ""kitchen""?",,Cocina,"What does the English word ""kitchen"" mean in Spanish?",Cocina,Pollo,Niño,Cuchillo
+¿Qué legendaria ciudad de oro buscaron los conquistadores españoles en América del Sur?,,El Dorado,Which legendary city of gold did the Spanish conquistadors search for in South America?,El Dorado,Cibola,Shangri-La,Atlantis
+"¿Qué isla legendaria, descrita por Platón, se hundió en el mar en un solo día?",,Atlántida,"Which legendary island, described by Plato, sank into the sea in a single day?",Atlantis,Avalon,Thule,Hyperborea

@@ -2017,9 +2017,11 @@ const Reto = (() => {
       if (!/^\d{4}-\d{2}-\d{2}$/.test(fecha) || !tema || !palabras) continue;
       const partes = palabras.split("|").map(w => w.trim()).filter(Boolean);
       const cats = partes.filter(w => /^cat:/i.test(w)).map(w => w.slice(4).trim().toLowerCase());     // "cat:Punk internacional" = toda la categoría
-      const words = partes.filter(w => !/^cat:/i.test(w)).map(nrm).map(w => w.trim()).filter(Boolean);
+      const altas = partes.filter(w => /^alta:/i.test(w)).map(w => w.slice(5).trim());     // "alta:2026-11-27" = solo las añadidas ese día
+      const words = partes.filter(w => !/^(cat|alta):/i.test(w)).map(nrm).map(w => w.trim()).filter(Boolean);
       const [f, m, di] = (reparto || "1-2-7").split("-").map(n => Math.max(0, parseInt(n, 10) || 0));
-      const es = q => { if (cats.includes((q.cat || "").toLowerCase())) return true;
+      const es = q => { if (altas.length && !altas.includes(q.alta)) return false;
+        if (cats.includes((q.cat || "").toLowerCase())) return true;
         const t = nrm((q.key || q.q) + " " + (q.cEs || q.c)); return words.some(w => t.includes(w)); };
       out[fecha] = {tema, want: {facil: f, media: m, dificil: di}, es};
     }

@@ -2246,7 +2246,7 @@ pregunta_es,visual,correcta_es,pregunta,correcta,incorrecta1,incorrecta2,incorre
 ¿Qué arquitecto diseñó el pabellón de Alemania para la Exposición Internacional de Barcelona de 1929?,,Ludwig Mies van der Rohe,Quin arquitecte va dissenyar el pavelló d'Alemanya per a l'Exposició Internacional de Barcelona del 1929?,Ludwig Mies van der Rohe,Walter Gropius,Le Corbusier,Josep Lluís Sert
 "¿Qué poeta estadounidense publicó ""Hojas de hierba""?",,Walt Whitman,"Quin poeta nord-americà va publicar ""Fulles d'herba""?",Walt Whitman,Emily Dickinson,Robert Frost,Edgar Allan Poe
 ¿Con qué selección nacional juega Kylian Mbappé?,,Francia,Amb quina selecció nacional juga Kylian Mbappé?,França,Bèlgica,Camerun,Portugal
-"¿Qué deporte practica Alexia Putellas, doble Balón de Oro?",,Fútbol,"Quin esport practica Alexia Putellas, doble Pilota d'Or?",Futbol,Bàsquet,Tennis,Handbol
+"¿Qué deporte practica Alexia Putellas, ganadora de varios Balones de Oro?",,Fútbol,"Quin esport practica Alexia Putellas, guanyadora de diverses Pilotes d'Or?",Futbol,Bàsquet,Tennis,Handbol
 ¿De qué color es el maillot del líder de la Vuelta a España?,,Rojo,De quin color és el mallot del líder de la Volta a Espanya?,Vermell,Groc,Rosa,Verd
 "¿En qué prueba atlética es plusmarquista mundial Armand ""Mondo"" Duplantis?",,Salto con pértiga,"En quina prova atlètica té el rècord mundial Armand ""Mondo"" Duplantis?",Salt amb perxa,Salt d'alçada,Salt de llargada,Triple salt
 ¿Qué deporte practica la estadounidense Lindsey Vonn?,,Esquí alpino,Quin esport practica la nord-americana Lindsey Vonn?,Esquí alpí,Patinatge artístic,Surf de neu,Biatló
@@ -2765,3 +2765,38 @@ pregunta_es,visual,correcta_es,pregunta,correcta,incorrecta1,incorrecta2,incorre
 ¿Qué diosa de la mitología china creó a los primeros humanos modelándolos con barro?,,Nüwa,Quina deessa de la mitologia xinesa va crear els primers humans modelant-los amb fang?,Nüwa,Chang'e,Xiwangmu,Mazu
 "¿Qué dios patrón de Babilonia venció a la diosa del caos Tiamat, según el poema ""Enuma Elish""?",,Marduk,"Quin déu patró de Babilònia va vèncer la deessa del caos Tiamat, segons el poema ""Enuma Elix""?",Marduk,Enlil,Assur,Nabu
 ¿Qué bruja del folclore eslavo vive en una cabaña que se sostiene sobre patas de gallina?,,Baba Yagá,Quina bruixa del folklore eslau viu en una cabana que s'aguanta sobre potes de gallina?,Baba Iagà,La Befana,Morgana,Circe
+¿Qué río pasa por Lisboa?,,Tajo,Quin riu passa per Lisboa?,Tajo,Duero,Guadiana,Minho
+¿Qué océano baña la costa este de Estados Unidos?,,Atlántico,Quin oceà banya la costa est dels Estats Units?,Atlàntic,Pacífic,Índic,Àrtic
+¿Qué mar baña las costas de Croacia?,,Adriático,Quin mar banya les costes de Croàcia?,Adriàtic,Egeu,Jònic,Tirrè
+¿Cuál es el país más poblado de África?,,Nigeria,Quin és el país més poblat d'Àfrica?,Nigèria,Etiòpia,Egipte,República Democràtica del Congo
+"¿En qué país está el lago Balatón, el mayor de Europa central?",,Hungría,"A quin país és el llac Balaton, el més gran de l'Europa central?",Hongria,Àustria,Eslovàquia,Txèquia
+¿En qué ciudad fue asesinado Julio César?,,Roma,A quina ciutat van assassinar Juli Cèsar?,Roma,Alexandria,Ravenna,Pompeia
+¿Qué monumento de la antigua Roma era un anfiteatro para combates de gladiadores?,,Coliseo,Quin monument de l'antiga Roma era un amfiteatre per a combats de gladiadors?,Colosseu,Panteó,Circ Màxim,Fòrum Romà
+¿Qué navegante portugués dio nombre al océano Pacífico?,,Fernando de Magallanes,Quin navegant portuguès va donar nom a l'oceà Pacífic?,Ferran Magallanes,Vasco da Gama,Bartolomeu Dias,Pedro Álvares Cabral
+"¿Qué liga comercial medieval unió ciudades del norte de Europa como Lübeck, Hamburgo y Bergen?",,Liga Hanseática,"Quina lliga comercial medieval va unir ciutats del nord d'Europa com Lübeck, Hamburg i Bergen?",Lliga Hanseàtica,Lliga de Delos,Lliga Llombarda,Lliga de Cambrai
+¿Cuál es el planeta más pequeño del sistema solar?,,Mercurio,Quin és el planeta més petit del sistema solar?,Mercuri,Mart,Venus,Plutó
+¿Qué instrumento usa el médico para escuchar el corazón y los pulmones?,,Estetoscopio,Quin instrument fa servir el metge per escoltar el cor i els pulmons?,Estetoscopi,Otoscopi,Tensiòmetre,Termòmetre
+¿Cuál es el planeta más denso del sistema solar?,,Tierra,Quin és el planeta més dens del sistema solar?,Terra,Mercuri,Venus,Júpiter
+¿En qué ciudad está el Museo del Louvre?,,París,A quina ciutat és el Museu del Louvre?,París,Londres,Roma,Madrid
+"¿Qué escultor italiano hizo el ""Éxtasis de santa Teresa"" en Roma?",,Gian Lorenzo Bernini,Quin escultor italià va fer l'«Èxtasi de santa Teresa» a Roma?,Gian Lorenzo Bernini,Antonio Canova,Donatello,Benvenuto Cellini
+¿Cuántos anillos tiene la bandera olímpica?,,5,Quantes anelles té la bandera olímpica?,5,4,6,7
+¿Qué futbolista española ganó en 2026 su tercer Balón de Oro femenino?,,Alexia Putellas,Quina futbolista espanyola va guanyar el 2026 la seva tercera Pilota d'Or femenina?,Alexia Putellas,Aitana Bonmatí,Salma Paralluelo,Mariona Caldentey
+"¿Qué selección ganó la Eurocopa femenina de 2025, tras vencer a España en la final?",,Inglaterra,"Quina selecció va guanyar l'Eurocopa femenina del 2025, després de vèncer Espanya a la final?",Anglaterra,Alemanya,França,Suècia
+"¿Qué selección ganó la Copa Davis de 2025, la tercera seguida, venciendo a España en la final?",,Italia,"Quina selecció va guanyar la Copa Davis del 2025, la tercera seguida, vencent Espanya a la final?",Itàlia,Austràlia,Alemanya,Països Baixos
+¿Qué juego consiste en adivinar el personaje del rival con preguntas de sí o no sobre una cuadrícula de caras?,,¿Quién es quién?,Quin joc consisteix a endevinar el personatge del rival amb preguntes de sí o no sobre una quadrícula de cares?,Qui és qui?,Cluedo,Pictionary,Tabú
+¿Qué juego de mesa se juega con canicas sobre un tablero en forma de estrella de seis puntas?,,Damas chinas,Quin joc de taula es juga amb bales sobre un tauler en forma d'estrella de sis puntes?,Dames xineses,Parxís,Joc de l'oca,Mancala
+¿Qué personaje de Astérix cayó de pequeño en la marmita de la poción mágica?,,Obélix,Quin personatge d'Astèrix va caure de petit a la marmita de la poció màgica?,Obèlix,Astèrix,Panoramix,Copdegarrix
+¿Qué animal es Bambi?,,Un ciervo,Quin animal és Bambi?,Un cérvol,Un conill,Una guineu,Un ant
+¿Qué princesa de Disney tiene una larguísima melena mágica y vive encerrada en una torre?,,Rapunzel,Quina princesa de Disney té una cabellera llarguíssima i màgica i viu tancada en una torre?,Rapunzel,Ariel,Aurora,Mérida
+¿Qué instrumento musical de fuelle tiene teclado o botones y se toca colgado del pecho?,,Acordeón,Quin instrument musical de manxa té teclat o botons i es toca penjat al pit?,Acordió,Harmònica,Orgue,Melòdica
+¿Qué instrumento de percusión tiene láminas de madera que se golpean con baquetas?,,Xilófono,Quin instrument de percussió té làmines de fusta que es colpegen amb baquetes?,Xilòfon,Triangle,Timbal,Pandereta
+¿Qué cereal es la base del risotto?,,Arroz,Quin cereal és la base del risotto?,Arròs,Blat,Ordi,Blat de moro
+¿Qué queso suizo se funde tradicionalmente junto al fuego para rasparlo sobre patatas?,,Raclette,Quin formatge suís es fon tradicionalment vora el foc per raspar-lo sobre patates?,Raclette,Gruyère,Emmental,Appenzeller
+¿Qué buscador de internet es el más usado del mundo?,,Google,Quin cercador d'internet és el més utilitzat del món?,Google,Bing,Yahoo,DuckDuckGo
+¿Qué empresa británica diseña la arquitectura de procesadores que usan casi todos los teléfonos móviles?,,Arm,Quina empresa britànica dissenya l'arquitectura de processadors que fan servir gairebé tots els telèfons mòbils?,Arm,Intel,AMD,Qualcomm
+"¿Qué planta es la que crece más rápido del mundo, hasta casi un metro al día en algunas especies?",,Bambú,"Quina planta és la que creix més ràpid del món, fins a gairebé un metre al dia en algunes espècies?",Bambú,Kudzu,Eucaliptus,Salze
+¿Qué animal tiene los ojos más grandes del reino animal?,,Calamar colosal,Quin animal té els ulls més grans del regne animal?,Calamar colossal,Balena blava,Catxalot,Peix espasa
+"¿Qué significa la palabra inglesa ""butterfly""?",,Mariposa,Què vol dir la paraula anglesa «butterfly»?,Papallona,Mantega,Mosca,Ocell
+"¿Qué significa la palabra inglesa ""kitchen""?",,Cocina,Què vol dir la paraula anglesa «kitchen»?,Cuina,Pollastre,Nen,Ganivet
+¿Qué legendaria ciudad de oro buscaron los conquistadores españoles en América del Sur?,,El Dorado,Quina llegendària ciutat d'or van buscar els conqueridors espanyols a l'Amèrica del Sud?,El Dorado,Cíbola,Shangri-La,Atlàntida
+"¿Qué isla legendaria, descrita por Platón, se hundió en el mar en un solo día?",,Atlántida,"Quina illa llegendària, descrita per Plató, es va enfonsar al mar en un sol dia?",Atlàntida,Avalon,Thule,Hiperbòria
